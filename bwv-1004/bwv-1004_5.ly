@@ -11,7 +11,7 @@
 
 \header {
         title = "Partita II BWV 1004"
-        subtitle = "\"Sechs Sonaten für Violine\""
+        subtitle = "Sechs Sonaten für Violine"
         piece = "5. Chaconne"
         mutopiatitle = "BWV 1004 Chaconne"
         composer = "Johann Sebastian Bach (1685-1750)"
@@ -1127,7 +1127,7 @@ melody = << \melodyOne \\ \melodyTwo \\ \melodyThree \\ \melodyFour >>
 % The score definition
 \score {
 	\context Staff <<
-        \set Staff.instrumentName = "Violine"
+        \set Staff.instrumentName = "Guitar"
         { \clef treble \key d \minor \time 3/4
         \set Score.currentBarNumber = #2
         \partial 2 \melody  }
