@@ -37,27 +37,29 @@ voiceFive = #(context-spec-music (make-voice-props-set 4) 'Voice)
 
 melodyOne =  \relative a' {
 	\voiceOne
-	a4. a8 | % 1
-	e'4 e4. e8 | % 2
-	f4 d4. c8 | % 3
-	bes4 a g16 [( f e f ) ] | % 4
-	g16 [ ( e )  f ( d ) ] a'4. a8 | % 5
+	a4.-1 a8 | % 1
+	e'4-0 e4. e8 | % 2
+	f4-1 d4.-4 c8\2-4 | % 3
+	bes4-1 a-1 g16-0 f-2_( e-1) f  | % 4
+	g16-4 [ _( e-1 )  f-2 _( d ) ] a'4. a8 | % 5
 	e'4 e4. e8 | % 6
-	f4 d4. d8 | % 7
-	bes'4 a8. [ g32 f ] g8. [ e16 ] | % 8
-	f8. s16 s2 | % 9 - Var 02
-	e8 s8 e8 s8 s4 | % 10
-	f8 s8 d8. [ f16]  e8. [ d16] | % 11
-	d8 s8 cis8 r8 r8. a'16 | % 12
-	f8 s8  s2 | % 13 - Var 03
+	f4 d4. d8\3-4 | % 7
+	bes'4-2 a8.-4^\markup {"II"} [ g32-4 _( f-1) ] g8. [ e16-0 ] | % 8
+	f8.-1 s16 s2 | % 9 - Var 02
+	e4-0 e2-0 | % 10
+	e4 d8.-4 [ f16-1 ]  e8.-0 [ d16-2 ] | % 11
+	\textSpannerUp
+	\override TextSpanner.bound-details.left.text = "II"
+	d4-2 cis4.. \startTextSpan a'16-4 \stopTextSpan | % 12
+	f8-1 s8  s2 | % 13 - Var 03
 	e8 r8 e8 r8 s4 | % 14
-	e8 r8  d8. [ f16 ] e8. [ cis16 ] | % 15
-	d8. [ e16 ] d4 ( cis8.)  [ d16 ] | % 16
-	d8. [ e16 ] f8. [ g32 a ] bes8. [ f16 ] | % 17
-	e8. [ bes'16 ] a8. [ g16 ] a8. [ fis16 ]  | % 18
-	g8. [ f16 ] e8. [ d32 cis ] d8. [ e16 ] | % 19
-	f8. [ g16 ] e8. [ f16 ] g8. [ e16 ] | % 20
-	f8. [ d32 e ] f8. [ g32 a  ] bes8. [ f16 ] | % 21
+	e8 r8  d8. [ f16 ] e8. [ cis16-4 ] | % 15
+	d8.-4 [ e16-4 ] d4-4 ( cis8.)^\markup {"tr"}  [ d16 ] | % 16
+	d8.-4 [ e16\2-3 ] f8.-4 [ g32-1 a-3 ] bes8.-4 [ f16-2 ] | % 17
+	e8.-2 [ bes'16-4 ] a8.-4 [ g16-1 ] a8. [ fis16-2 ]  | % 18
+	g8.-4 [ f16-1 ] e8.-0 [ d32-4_( cis-2) ] d8. [ e16 ] | % 19
+	f8.-1 [ g16-4 ] e8.-0 [ f16-1 ] g8.-1 [ e16-0 ] | % 20
+	f8.-1 [ d32\2-1_( e-3) ] f8.-4 [ g32 a  ] bes8. [ f16 ] | % 21
 	e8. [ bes'16 ] a8. [ g16 ] a8. [ fis16 ] | % 22
 	g8. [ f16 ] e8. [ d32 cis ] d8. [ e16 ] | % 23
 	f8. [ g16 ] d8. [ cis32 b ] cis8. [ g16 ] | % 24
@@ -336,28 +338,28 @@ melodyOne =  \relative a' {
 
 
 melodyTwo =  \relative f' {
-	\voiceThree
-	f2 | % 1
-	bes4 a2 | % 2
-	a4 s2 | % 3
-	g4 f4 s4 | % 4
+	\voiceTwo
+	f2-2 | % 1
+	bes4-1 a2-4 | % 2
+	d4-4 s2 | % 3
+	g,4-4 f4-2 s4 | % 4
 	s4 f2 | % 5
 	bes4 a2 | % 6
-	a4 s2 | % 7
-	d4 cis8. s16 s4 | % 8
-	d8. s16 s2| % 9
-	bes8 s8 a8 s8 s4 | % 10
-	a8 s8 s2 | % 11
-	e8. [ d16 ] e8. [ g16 ] f8. [ e16 ] | % 12
-	d'8 s8 s2 | % 13
+	d4 s2 | % 7
+	d4-4 cis2 | % 8
+	d8.-4 s16 s2| % 9
+	bes4-1 a2-1 | % 10
+	a4-1 s2 | % 11
+	e8.-1 ^[ d16-0 ] e8. ^[ g16-4 ] f8.-2 e16 | % 12
+	d'8-4 s8 s2 | % 13
 	bes8 s8 a8 s8 s4 | % 14
 	a8 s8 s2 | % 15
-	f8. [ g16 ] e2 | % 16
+	f8.-3 [ g16-3 ] e2-1 | % 16
   	d8 s8 s2 | % 17
     s2. | % 18
 	s2. | % 19
 	s2. | % 20
-	s2. | % 21
+	d8.-3 s2 d16 | % 21
 	s2. | % 22
 	s2 s8 s16 d16 | % 23
     d4 e s4 | % 24
@@ -598,22 +600,22 @@ melodyTwo =  \relative f' {
   }
 
 melodyThree =  \relative d' {
-	\voiceFive
+	\voiceThree
 	s2 | % 1
-	g4 g2 | % 2
-	f4 f2 | % 3
+	g4-4 g2-1 | % 2
+	a4-2 f2-3 | % 3
 	s2. | % 4
-	s2. | % 5
-	g4 g2  | % 6
-	f4 f2 | % 7
-	e4 e8. s16 s4 | % 8
-	s2.| % 9
-	g8. [ f16 ] g8. [ bes16 ] a8. [ g16 ] | % 10
-	f8. [ e16 ] f8. [ a16] g8. [ f16]  | % 11
+	a,4 s2 | % 5
+	g'4 g2  | % 6
+	a4 f2 | % 7
+	e4-3 e2 | % 8
+	d8.-0 ^[ e16-2 ] f8.-3 ^[ g32-0 _( a-2) ] bes8.-3 ^[ a16 ] | % 9
+	g8.-4 f16-2 g8.-4 bes16-2 a8.-1 g16-0 | % 10
+	f8.-2 e16-2 f8.-3 a16-2 g8.-0 f16-1 | % 11
 	s2 s8 s16 cis'16 | % 12
-	d,8. [ e16 ] f8. [g32 a ] bes8. [ a16 ] | % 13
+	d,8.-0 [ e16 ] f8. [g32 a ]( bes8.) [ a16 ] | % 13
 	g8. [ f16 ] g8. [ bes16 ] a8. [ g16 ] | % 14
-	f8. [ e16 ] f8. [ a16 ] g8. [ e16 ] | % 15
+	f8. [ e16 ] f8. [ a16 ] g8. [ e16-3 ] | % 15
 	s2. | % 16
 	s2. | % 17
 	s2. | % 18
@@ -860,28 +862,28 @@ melodyThree =  \relative d' {
    }
 
 melodyFour =  \relative f' {
-	\voiceTwo
-	d2 | % 1
-	d4 cis2 | % 2
-	d4 bes2 | % 3
-	g4 a cis | % 4
-	d8 s8 d2 | % 5
+	\voiceFour
+	d2-4 | % 1
+	d4-3 cis2-3 | % 2
+	d4 bes2-1 | % 3
+	g4-3 a cis-3 | % 4
+	d,4 d'2 | % 5
 	d4 cis2 | % 6
 	d4 bes2 | % 7
-	g4 a8. s16 s4  | % 8
-	d8. [ e16 ] f8. [ g32 a ] bes8. [ a16] | % 9
-	d,8 r8 cis8 r8 s4 | % 10
-	d8 r8 bes8 r8 r8. g16 | % 11
-	a8 r8 r4 r8. a16 | % 12
-	d8 s8 s2 | % 13
-	d8 r8 cis8 r8 s4 | % 14
-	d8 r8 bes8 r8 r8. bes16 | % 15
-	a8. [ g16 ] a2 | % 16
-	d8 s8 s4 r8. d'16  | % 17
-	cis4 c r8. c16 | % 18
-	b4 bes4 r8. bes16 | % 19
-	a8. [ b16 ] cis8. [ d16 ] e8. [ cis16 ] | % 20
-   	d8. s2 d16 | % 21
+	g4-1 a2 | % 8
+	d,8. s16 s2| %9
+	d'4-3 cis2-3 | % 10
+	d4-4 bes4..-1 g16-4 | % 11
+	a4 a4.. a16 | % 12
+	d,8. s16 s2 | % 13
+	d'4 cis2 | % 14
+	d4 bes4.. bes16-1 | % 15
+	a8. [ g16-2 ] a2 | % 16
+	d,4 s4.. d''16-3  | % 17
+	cis4-3 c-3 r8. c16-1 | % 18
+	b4 bes4-3 r8. bes16-3 | % 19
+	a8.-2 [ b16 ] cis8.-2 [ d16-3 ] e8.-3 [ cis16-2 ] | % 20
+   	d4 s2 | % 21
 	cis4 c r8 r16 c16 | % 22
 	b4 bes r8 r16 gis16  | % 23
 	a4 a r8 r16 a,16 | % 24
@@ -1122,16 +1124,21 @@ melodyFour =  \relative f' {
     }
 
 
-melody = << \melodyOne \\ \melodyTwo \\ \melodyThree \\ \melodyFour >>
+melody = <<
+  %\partCombine
+  %\autoBeamOff
+  \melodyOne \\ \melodyTwo \\ \melodyThree \\ \melodyFour
+>>
 
 % The score definition
 \score {
-	\context Staff <<
-        \set Staff.instrumentName = "Guitar"
-        { \clef treble \key d \minor \time 3/4
-        \set Score.currentBarNumber = #2
-        \partial 2 \melody  }
-    >>
-	\layout { }
- 	 \midi { }
+  \new Staff
+  <<
+    \set Staff.instrumentName = "Guitar"
+    { \clef treble \key d \minor \time 3/4
+    \set Score.currentBarNumber = #2
+    \partial 2 \melody  }
+  >>
+  \layout { }
+  \midi { }
 }
