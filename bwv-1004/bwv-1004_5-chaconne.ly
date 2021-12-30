@@ -425,7 +425,7 @@
   s2. |
 
   % 71
-  d,16 [ bes,32 ( c d16 ) f ] d [ bes d f ] g32 [ ( a bes c d e f g ) ] |
+  d,16-1 [ bes,32-1 _( c-3) d16-0 f-3 ] d [ bes d f ] g32\4-2 [ _( a-4) bes-1 _( c-2) d-2 _( e-4) f-1 _( g-3) ] |
   s2. |
   s2. |
   s2. |
