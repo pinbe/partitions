@@ -68,6 +68,7 @@
   d4-4 bes4..-1 g16-4 |
 
   % 12
+  \override TextSpanner.bound-details.left.text = "II"
   d4-2 cis4.. \startTextSpan a'16-4 \stopTextSpan |
   e8.-1 ^[ d16-0 ] e8. ^[ g16-4 ] f8.-2 e16 |
   s2 s8 s16 cis'16 |
@@ -92,22 +93,22 @@
   d4 bes4.. bes16-1 |
 
   % 16
-  d8.-4 [ e16-4 ] d4-4 ( cis8.)^\markup {"tr"}  [ d16 ] |
+  d8.-4 [ e16-4 ] d4-4 ( cis8.)\trill  [ d16 ] |
   f8.-3 [ g16-3 ] e2-1 |
   s2. |
   a8. [ g16-2 ] a2 |
 
   % 17
   d8.-4 [ e16\2-3 ] f8.-4 [ g32-1 a-3 ] bes8.-4 [ f16-2 ] |
-  d8 s8 s2 |
+  d4 s4.. d'16-3 |
   s2. |
-  d,4 s4.. d''16-3  |
+  d,4 s2 |
 
   % 18
   e8.-2 [ bes'16-4 ] a8.-4 [ g16-1 ] a8. [ fis16-2 ]  |
   s2. |
   s2. |
-  cis4-3 c-3 r8. c16-1 |
+  cis''4-3 c-3 r8. c16-1 |
 
   % 19
   g8.-4 [ f16-1 ] e8.-0 [ d32-4_( cis-2) ] d8. [ e16 ] |
@@ -119,310 +120,312 @@
   f8.-1 [ g16-4 ] e8.-0 [ f16-1 ] g8.-1 [ e16-0 ] |
   s2. |
   s2. |
-  a8.-2 [ b16 ] cis8.-2 [ d16-3 ] e8.-3 [ cis16-2 ] |
+  a8.-2 [ b16-0 ] cis8.-2 [ d16-3 ] e8.-3 [ cis16-2 ] |
 
   % 21
   f8.-1 [ d32\2-1_( e-3) ] f8.-4 [ g32 a  ] bes8. [ f16 ] |
-  d8.-3 s2 d16 |
+  d4-3 r4 r8. d16-3 |
   s2. |
-  d4 s2 |
+  d,4 s2 |
 
   % 22
   e8. [ bes'16 ] a8. [ g16 ] a8. [ fis16 ] |
   s2. |
   s2. |
-  cis4 c r8 r16 c16 |
+  cis'4 c r8. c16 |
 
   % 23
-  g8. [ f16 ] e8. [ d32 cis ] d8. [ e16 ] |
-  s2 s8 s16 d16 |
-  s2. |
-  b4 bes r8 r16 gis16  |
+  g8. [ f16 ] e8. [ d32_( cis) ] d8. [ e16-0 ] |
+  s2 s8 s16 d16-4 |
+  b'4 bes r8. gis16-2  |
+  s2 s8. bes,16-1 |
 
   % 24
-  f8. [ g16 ] d8. [ cis32 b ] cis8. [ g16 ] |
-  d4 e s4 |
-  s2. |
-  a4 a r8 r16 a,16 |
+  f8.-1 [ g16-4 ] d8. [ cis32-2_( b-0) ] cis8. [ g16-0 ] |
+  d4-4 e2 |
+  a4-2 s2 |
+  a4 a r8 r16 a16 |
 
   % 25
-  f8 [ f' e d cis d ] |
+  f8-1 [ f'\2-4 e-3 d-1 cis-1 d-2 ] |
   s2. |
   s2. |
-  d8 s8 s2 |
+  d,4 s2 |
 
   % 26
-  g,8 [ a16 ( bes ) ] cis,8 [ bes' a g ] |
+  g,8-0 [ a16-1 _( bes-2 ) ] cis,8-3 [ bes'-2 a-1 g-0 ] |
   s2. |
   s2. |
-  d8 s8 s2 |
+  d'4 cis2 |
 
   % 27
-  f8 [ g16 ( a ) ] bes,8 [ d g d'16 ( cis ) ] |
+  f8- [ g16-0 _( a ) ] bes,8-1 [ d g d'16-4 _( cis-2 ) ] |
   s2. |
   s2. |
-  d8 s8 s2 |
+  d4-4 bes2-1 |
 
   % 28
-  d8 [ f,8 ] e16 [ f g bes ] a [ g f e ] |
+  d8 [ f,8-1 ] e16-1 _( [ f-3) g-0 bes-3 _( ] a-1) [ g f e ] |
   s2. |
   s2. |
-  s8 g,8 a16 s8. s4 |
+  s8 g8-4 a2 |
 
   % 29
-  f16 [ ( a d f ) ] f [ ( e g f ] e [ d cis d ) ] |
+  f16-3 a-2 d-4 f-1 f _( e-0) g-4 _( f) e-0 d cis-1 \glissando d-1 |
   s2. |
   s2. |
-  d16 s16 s8 s2 |
+  d,4 d'2 |
 
   % 30
-  g,16 [ bes fis g ] cis, [( e g )  bes ] a [ g e' g, ] |
+  g,16-4 bes-1 fis-2 g-0  cis,-3  e-1 g-0 bes-2 _( a-1) g-0 e'-0 g,-0 |
   s2. |
   s2. |
-  s2. |
+  d4-3 cis2 |
 
   % 31
-  f16 [ cis d a ] bes [ ( d g ) a ] bes [ es cis d ] |
+  f16-2 cis-3 d-0 a-0 bes-1 d-0 g-0 a-2 bes-3 ees-4 cis-2 _( d-4) |
   s2. |
   s2. |
-  s2. |
+  r4 bes2 |
 
   % 32
-  gis,16 [(  b d ) f ] e [ g cis, d ] a, [ ( e' d' ) cis ] |
+  gis,16 b-0 d-4 f^\markup {"I"} e g-4 cis,-2 d-4 a, e'-1 d'-3 _( cis-2) |
   s2. |
   s2. |
-  s2. |
+  b4-2 bes-1 a |
 
   % 33
-  d8 [ f bes a gis d, ] |
+  d8-3 \glissando f-\2-3 bes-4 a-2 gis-1 d, |
   s2. |
   s2. |
-  s2. |
+  d,4 r r8 d'-2 |
 
   % 34
-  cis8 [ e' a g fis c, ] |
+  cis8 e'\2-3 a-4 g-1 fis-1 c, |
   s2. |
   s2. |
-  s2. |
+  cis4-2 r r8 c-2 |
 
   % 35
-  b8 [ d' g f e bes, ] |
+  b8 d'-3 g-4 f-1 e-0 bes, |
   s2. |
   s2. |
-  s2. |
+  b4-2 r r8 bes-2 |
 
   % 36
-  a16 [ f'' e d ] cis8 [ a8 e'8 g,8 ] |
+  a16 f''-1 _( e-0) d-3 cis8-2 a-1 e'-0 g,-0 |
   s2. |
   s2. |
-  s2. |
+  a4 a2 |
 
   % 37
-  f16  [ d f a ] d [ ( f bes ) a ] gis [ b gis e ] |
+  f16-2 d-0 _( f) a-1 d\3-3 f\2-2 bes-1 a-1 gis\2-3 b-1 gis e-0 |
   s2. |
   s2. |
-  s2. |
+  d,4 d'2 |
 
   % 38
-  cis16 [ ( e a ) g ] fis [ a fis c ] a [ fis d c ] |
+  \override TextSpanner.bound-details.left.text = "II"
+  cis,16 e'-3 a-4 g-1 fis \startTextSpan a-4 fis d-3 a fis-4 \stopTextSpan d-0 c-3 |
   s2. |
   s2. |
-  s2. |
+  cis4 c2-2 |
 
   % 39
-  b16 [ ( d g ) fis ] g [ es' ( d cis ) ] bes' [( a gis ) a ] |
+  b16-2 d-0 g-0 fis-4 g-0 ees'-4 _( d-3) cis-2 bes'-4 _( a-3) gis-2 _( a) |
   s2. |
   s2. |
-  s2. |
+  b4 bes2-1 |
 
   % 40
-  f16 [ e d c ] bes [ ( a gis ) a ] cis, [ g' f e ] |
+  f16-1 _( e-0) d-4 _( c-1) bes-4 _( a-2) gis-1 _( a-2) cis,-3 g'-4 _( f-2) e-1 |
   s2. |
   s2. |
-  s2. |
+  a4 a cis-3 |
 
   % 41
-  f16 [ d e f ] g [ a b cis ] d [ f, e d ] |
+  f16-2 _( d-0) e-1 _( f-2) g-0 _( a-1) b-0 _( cis-1) d-3 f,-2 _( e-1) d-0 |
   s2. |
   s2. |
-  s2. |
+  d,2 r4 |
 
   % 42
-  a16 [ ( e' d' ) cis ] d, [(  fis a ) c ] c [ bes c a ] |
+  \override TextSpanner.bound-details.left.text = "II"
+  a16 e' \startTextSpan d'-2 cis \stopTextSpan d,-3 fis-2 a-1 c-4 c bes-1 _( c-4) a-1 |
   s2. |
   s2. |
-  s2. |
+  a'4 d2 |
 
   % 43
-  bes16 [ g f es ] d [ c bes a ] g [ ( g' es' ) d ] |
+  bes16-1 g-4 _( f-1)  ees\5-4 d-3 _( c-1) bes-1 a-0 g-3 g'-0 ees'-2 d-1 |
   s2. |
   s2. |
-  s2. |
+  g,2-3 g4 |
 
   % 44
-  cis16 [ e a, g ] f [ d' e, d ] a [ ( e' d' ) cis ] |
+  cis16-1 e-0 a,-2 g-0 f-3 d'-4 e,-1 d-0 a e'-1 d'-4 cis-2 |
   s2. |
   s2. |
-  s2. |
+  a4 a a |
 
   % 45
-  g'16 [ (e f cis ) ] d [( c bes a ] g [ f e d ] ) |
+  g'16-4 _( e-0) f-1 cis-2 d-4 _( c-1) bes-4 _( a-2) g-0 f-2 _( e-1) d-0 |
   s2. |
   s2. |
-  s2. |
+  d,4 d'4 r4 |
 
   % 46
-  cis16 [ bes' a g ] fis [ d a' d, ] c [ bes c a ] |
+  cis16-3  bes'-2 _( a-1) g-0 fis-2 ( d-0) a'-1 d,-0 c-3 bes-1 _( c) a |
   s2. |
   s2. |
-  s2. |
+  cis4 d4 r4 |
 
   % 47
-  bes16 [ ( g a bes ] c [ d e fis ] g [ a bes a ] ) |
+  bes16-1 g-4 a-0 _( bes-1) c-2 _( d-4) e-1 _( fis-3) g-0 _( a-1) bes-2 _( a) |
   s2. |
   s2. |
   s2. |
 
   % 48
-  gis16 [ a e f ] g [ cis,( d ) gis, ] ( a ) [ f' e cis ] |
+  gis16-1 _( a-2) e-1 _( f-2) g-0  cis,-1 _( d-2) gis,-3 a-0 f'-2 _( e-1) cis-3 |
   s2. |
   s2. |
   s2. |
 
   % 49
-  d16 [ d' ( a g ] f [ e d c ] bes ) [ d' g, f ] |
+  d16-0 d'-4 a-2 g-0 f-3 e-2 d-0 c-3 bes-1 d'-4 g,-0 f-4 |
   s2. |
   s2. |
-  s2. |
+  d,2 bes'4 |
 
   % 50
-  e16 [ c' ( g f ] e [ d c bes ] a ) [ c' f, es ] |
+  e16-2 c'-1 g-0 f-4 e-2 d-0 c-3 bes-1 a c'-2 f,-4 es-2 |
   s2. |
   s2. |
-  s2. |
+  c2-3 a4-0 |
 
   % 51
-  d16 [ bes' ( f es ] d [ c bes a ] g ) [ bes' e, d] |
+  d16-0 bes'-4 f-3 ees-1 d-0 c-3 bes-1 a-0 g bes'-2 e,-1 d-0 |
   s2. |
   s2. |
-  s2. |
+  bes2-1 g4-4 |
 
   % 52
-  cis16 [ a cis e ] a [ e a cis ] e [ g, a e ] |
+  cis16-3 a-0 _( cis) e^\markup{"II"} a e a cis-2 e-0 g,-0 _( a-2) e-1 |
   s2. |
   s2. |
-  s2. |
+  r2 a4 |
 
   % 53
-  f16 [ d f a ] d [ a d f ] bes, [ g' ( a bes ) ] |
+  f16-3 d-0 _( f) a-2 d-4 a d f-1 bes, g' _( a-3) bes-4 |
   s2. |
   s2. |
-  s2. |
+  d,2 r4 |
 
   % 54
-  e,16 [ c, e g ] c [ g c e ] a, [ f' ( g a ) ] |
+  e,16-0 c,-3 e-2 g-0 c-1 g c e a,-2 f'-1 _( g-2) a-4 |
   s2. |
   s2. |
   s2. |
 
   % 55
-  d,16 [ bes, d f ] bes [ f bes d ] g, [ e' ( f g ) ] |
+  d,16-2 bes,-1 d-0 f-2 bes-3 f bes d-4 g,-0 e'-0 _( f-1) g-4 |
   s2. |
   s2. |
   s2. |
 
   % 56
-  cis,16 [ a cis e ] a [ e a cis ] e [ g, ( f e ) ] |
+  cis,16-2 a-1 cis e-0 a\2-2 e-0 a cis-1 e-4 g,\3-3 f-1 e-0 |
   s2. |
   s2. |
-  s2. |
+  a'2 a4 |
 
   % 57
-  f8 s4 f8 g8 s8 |
+  f4-1 r8 f8 g4-4 |
+  d8-4 [ a8-2] d,8-0 [ d'8] bes16-3 a ^( bes) g-0 |
   s2. |
-  s2. |
-  d'8 [ a8 ] d,8 [ d'8 ] bes16 [ ( a bes ) g ] |
+  d,4 s2 |
 
   % 58
-  e8 s4 e8 f8 s8 |
+  e4-0 s8 e8 f4 |
+  c8-1 [ g8-0] c,8-3 [ c'8] a16-2 g-0 ^( a) f -3 |
   s2. |
   s2. |
-  c8 [ g8 ] c,8 [ c'8 ] a16 [ ( g a ) f ] |
 
   % 59
-  d8 s4 d8 e8 s8 |
+  d4-4 r8 d8 e4-0 |
+  bes8-3 [ f8-2] bes,8-1 [ bes'8 ] g16-4 f-2 ^( g) e-1  |
   s2. |
   s2. |
-  bes8 [ f8 ] bes,8 [ bes'8 ] g16 [ ( f g) e ]  |
 
   % 60
-  s4. a8 a16 [ ( g ) a (e) ] |
-  a8 [ d ] d16 [ ( cis ) d ( b )] cis8 s8 |
-  s4 e8 s8 s4 |
-  f16 [( e ) f ( d ) ] a8 s8 s4 |
+  s4. a8-4 a16 g-2 _( a-4) e-0 ] |
+  \stemUp a8 [ d-3 ] \stemNeutral d16-2 ^( cis) d-2 ^( b) cis4 |
+  f16-2 ^( e) f ^( d-0) e4 e |
+  a'4 a a |
 
   % 61
   f8 s8 d8 s8 s4 |
-  s2. |
-  s2. |
-  d'16 [ ( cis d ) a ] f [( e f ) d ] bes [ g' d' bes' ] |
+  \stemUp d16-4 cis-2 _( d) a-2 f-3 e-2 _( f) d-0 bes-\6-3 g'-0 d'-2 bes'-1 |
+  d8 r8 s2 |
+  d,8 r8 s2 |
 
   % 62
   e8 s8 c8 s8 s4 |
+  \stemDown c,16-1 b-0 ^( c) g-0 e-2 d-0 ^( e) c-3 a-0 f'-1 c'-3 a'-4 |
   s2. |
   s2. |
-  c,16 [( b c ) g ] e [ ( d e ) c ] a [ f' c' a' ]  |
 
   % 63
-  d8 s8 bes8 s8 g,16 [ e' b' g' ]   |
+  d8-4 s8 bes8 s8 g,16-4 e'-1 b'-0 g'-2 |
+  f,16-3 ees-1 ^( f) d-0 d-4 c ^( d-4) bes-1 s4 |
   s2. |
   s2. |
-  f,16 [ (es) f ( d ) ] d [( c ) d ( bes ) ] s4 |
 
   % 64
-  a,,16 [ e' cis' g' ] a,, [ f' d' f ] a,, [ g' cis e ] |
+  a,,16 e'-1 cis'-2 g'-4 a,, f'-3 d'-4 f-1 a,, g'-0 cis-2 e-0 |
   s2. |
   s2. |
   s2. |
 
   % 65
-  d16 [ a32 ( g f16 e ) ] d [ c bes a ] bes [ d'32 ( c bes a g f ) ] |
+  d16-3 a32-1 _( g-0) f16-3 e-1 d-0 c-3 _( bes-1) a-0 bes-1 d'32\3-4 _( c-2) bes-2 _( a -1) g\4-4 _( f-2) ] |
   s2. |
   s2. |
-  d16 s16 s8 s2 |
+  d4 s2 |
 
   % 66
-  e16 [ g32 (f e16 d ) ] c [ bes a g ] a [ c'32 ( bes a g f es )] |
+  e16-1 [ g32-4 _(f-2) e16-1 d-0 ] c-3 [ bes-1 _( a-0) g-4 ] a [ c'32\3-4 _( bes-2) a-1 _( g-0) f-3 _( ees-1)] |
   s2. |
   s2. |
-  c16 s16 s8 s2  |
+  s2.  |
 
   % 67
-  d16 [ f32 (es d16 c ) ] bes [ d32 ( c bes16 a )] g [ bes'32 (a g f e d ) ] |
+  d16-0 [ f32-3 _( ees-1) d16 c ] bes-1 [ d32-4 _( c-2) bes16 a ] g-4 [ bes'32-2 _( a-1) g-4 _( f-2) e-1 _( d) ] |
   s2. |
   s2. |
-  bes16 s16 s8 s2  |
+  s2. |
 
   % 68
-  cis32 [( b a b cis d e f )] g [ (a bes a g f e d )] cis16 [ (e'32 d cis b a g )] |
+  cis32-3 [ _( b-1) a-0 _( b-1) cis-3 _( d-4) e-1 _( f-2)] g [ _( a) bes-2 _( a-1) g-4 _( f-2) e-1 _( d-0)] cis16-3 [ e'32-\2-4 _( d-2) cis-1 _( b-0) a-1 _( g-0)] |
   s2. |
   s2. |
   s2. |
 
   % 69
-  f16 [ d32 ( e f16 ) a ] f [ d f a ] bes32 [ (c d e f g a bes ] |
+  f16-2 [ d32-0 _( e-1) f16 a-1 ] f-2 [ d-4 f a ] bes32-1 [ _(c-3) d-1 _( e-3) f-2 _( g-4) a-1 _( bes-2) ] |
   s2. |
   s2. |
-  s2. |
+  d4 s2 |
 
   % 70
-  e,16 ) [ c,32 ( d e16 ) g ] e [ c e g ] a32 [ ( bes c d e f g a ] |
+  e,16-0 [ c,32-2 _( d-4) e16-1 g-0 ] e [ c e g ] a32-2 [ _( bes-3) c-1 _( d-3) e-3 _( f-4) g-1 _( a-3) ] |
   s2. |
   s2. |
   s2. |
 
   % 71
-  d,16 ) [ bes,32 ( c d16 ) f ] d [ bes d f ] g32 [ ( a bes c d e f g ) ] |
+  d,16 [ bes,32 ( c d16 ) f ] d [ bes d f ] g32 [ ( a bes c d e f g ) ] |
   s2. |
   s2. |
   s2. |
@@ -1548,13 +1551,16 @@
   \new Staff {
     \clef "treble_8"
     \key d \minor \time 3/4
+    \set Score.currentBarNumber = #2
     \partial 2
     <<
-      \partCombine
-      \autoBeamOff
-      \relative \voiceA
-      \relative \voiceB
-      \relative \voiceC
+      %\partCombine
+      %\autoBeamOff
+      %\partCombineChords
+      
+      \relative \voiceA \\
+      \relative \voiceB \\
+      \relative \voiceC \\
       \relative \voiceD
     >>
   }
