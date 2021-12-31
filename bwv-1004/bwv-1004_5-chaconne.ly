@@ -189,7 +189,7 @@
   r4 bes2 |
 
   % 32
-  gis,16 b-0 d-4 f^\markup {"I"} e g-4 cis,-2 d-4 a, e'-1 d'-3 _( cis-2) |
+  gis,16-1 b-0 d-4 f-1 e g-4 cis,-2 d-4 a, e'-1 d'-3 _( cis-2) |
   s2. |
   s2. |
   b4-2 bes-1 a |
@@ -229,7 +229,7 @@
   cis,16 e'-3 a-4 g-1 fis \startTextSpan a-4 fis d-3 a fis-4 \stopTextSpan d-0 c-3 |
   s2. |
   s2. |
-  cis4 c2-2 |
+  cis4-2 c2-2 |
 
   % 39
   b16-2 d-0 g-0 fis-4 g-0 ees'-4 _( d-3) cis-2 bes'-4 _( a-3) gis-2 _( a) |
@@ -317,13 +317,13 @@
   r2 a4 |
 
   % 53
-  f16-3 d-0 _( f) a-2 d-4 a d f-1 bes, g' _( a-3) bes-4 |
+  f16-3 d-0 _( f) a-2 d-4 a d f-1 bes,^\markup{"III"} g' _( a-3) bes-4 |
   s2. |
   s2. |
   d,2 r4 |
 
   % 54
-  e,16-0 c,-3 e-2 g-0 c-1 g c e a,-2 f'-1 _( g-2) a-4 |
+  e,16-0 c,-3 e-2 g-0 c-1 g c e a,-2 f'-1 _( g-3) a-4 |
   s2. |
   s2. |
   s2. |
@@ -425,82 +425,82 @@
   s2. |
 
   % 71
-  d,16-1 [ bes,32-1 _( c-3) d16-0 f-3 ] d [ bes d f ] g32\4-2 [ _( a-4) bes-1 _( c-2) d-2 _( e-4) f-1 _( g-3) ] |
+  d,16-1 [ bes,32-1 _( c-3) d16-0 f-3 ] d [ bes d f ] g32\4-2 [ _( a-4) bes-1 _( c-3) d-2 _( e-4) f-1 _( g-3) ] |
   s2. |
   s2. |
   s2. |
 
   % 72
-  cis,32 [ bes' ( a g f e d c ) ] bes [ ( a g f e d cis b ) ] a [ ( b cis d e f g e ) ] |
+  cis,32\3-2 [ bes'-3 _( a-1) g-4 f-2 _( e-1) d\3-3 _( c-1) ] bes\3-2 [ _( a-1) g-4 _( f-2) e-1 _( d-0) cis-3 _( b-1) ] a-0 [ _( b-1) cis-3 _( d-4) e-1 _( f-2) g-4 _( e-1) ] |
   s2. |
   s2. |
-  s2. |
+  d4 s2 |
 
   % 73
-  f32 [ ( d e f g a b cis )] d [ ( b cis d e f g a ) ] bes16 [ d,, c \trill bes ] |
+  f32-2 _( d-0) e-1 _( f-2) g-0 _( a-1) b-0 cis-1 d-1 b-\3-2 _( cis-4) d-1 e-3 _( f-4) g-1 a-3 bes16 d,,-3 c-1 \trill bes-1 |
   s2. |
   s2. |
-  s2. |
+  d4 s2 |
 
   % 74
-  c32 [ d e fis g a bes c ] d [ a bes c d e fis g ] a16 [ c,, bes^\markup { (tr) } a ] |
+  c32-2 _( d-4) e-1 _( fis-3) g-0 _( a-1) bes-2 c-4 d-2 a-1 _( bes-2) c-4 d-2 _( e-4) fis-1 g-2 a16-4 c,,-3 bes-1^\markup { (tr) } a-0 |
   s2. |
   s2. |
   s2. |
 
   % 75
-  bes32 [ d e fis g a bes c ] d [ g, a bes c d e fis ] g [ a bes a g f e d ] |
+  bes32-1 _( d-4) e-1 _( fis-3) g-0 _( a-2) bes-3 c-1 d-3 g,-0 _( a-2) bes-3 c-1 _( d-3) e-0 fis-1 g-1 _( a-3) bes-4 _( a-3) g-1 f-4 _( e-3) d-1 |
   s2. |
   s2. |
   s2. |
 
   % 76
-  cis32 [ a' g f e d cis b ] a [ b cis d e f g a ] bes [ g e cis a g f e ] |
+  cis32\3-4 a'-3 _( g-1) f-4 e-3 _( d-1) cis-1 _( b-0) a-1 _( b-3) cis-1 \glissando d-1 e-3 _( f-4) g-1 a-3 bes-4 _( g-1) e-0 cis-2 a-1 _( g-0) f-3 _( e-1) |
   s2. |
   s2. |
   s2. |
 
   % 77
-  d16  [ a' d e ] f [ d bes a ] gis [ b d f ] |
+  d16-0  a'-2 d-4 e-0 f-1 d bes-3 a-2 gis-1 b d-4 f^\markup{"I"} |
   s2. |
   s2. |
-  s2. |
+  d4 r d'-0 |
 
   % 78
-  c,16[ e a c ] e [ c a g ] fis [ a c es ] |
+  c,16-4 e-2 a-3 c-1 e-0 c a g-0 fis-3 a-1 c-4 ees-3 |
   s2. |
   s2. |
-  s2. |
+  c4 r c-2 |
 
   % 79
-  bes,16 [ d g bes ] d [ bes g f ] e [ g bes cis ] |
+  bes,16-1 d-0 g-0 bes-3 d-4 bes g-0 f-4 e-2 g-0 bes-4 cis-3 |
   s2. |
   s2. |
-  s2. |
+  bes4 r bes |
 
   % 80
-  a,16 [ d f a ] d [ a f d ] a [ e' g cis ] |
+  a,16 d-0 f-3 a-2 d-4 a f d a e'-1 g-0 cis-2 |
   s2. |
   s2. |
-  s2. |
+  a4 r a |
 
   % 81
-  d,16 [ (bes'') bes (gis) ] gis [ (f) f (d) ] d [ b gis e ] |
+  d,,16 bes'''-1 bes gis\2-4 gis f-1 f d\3-2 d b-0 gis\3-1 e-2 |
   s2. |
   s2. |
-  s2. |
+  d,2 r4 |
 
   % 82
-  cis16 [ (a'') a (fis) ] fis [ (es) es (c) ] c [ a fis d ] |
+  cis16-1 a''-2 a fis\2-4 fis ees-1 ees c\3-2 c a-4 fis-1 d-2 |
   s2. |
   s2. |
-  s2. |
+  cis'2 r4 |
 
   % 83
-  b16 [ (g'') g (es) ] es [ (cis) cis (bes) ] bes [ g e cis ] |
+  b16-1 g''-2 g ees\2-3 ees cis-1 cis bes\3-2 bes g-4 e-1 cis-3 |
   s2. |
   s2. |
-  s2. |
+  b2 r4 |
 
   % 84
   a16 [ (cis) cis (e) ] e [ (g32 f) g16 (bes32 a) ] bes16 [ cis32 (d e16) g, ] |
