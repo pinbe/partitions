@@ -557,20 +557,17 @@ fingeringVoiceC = {
   f32\5-2 d-0 \rightHandFinger #2 a''\2-4 \rightHandFinger #4 d,, \rightHandFinger #2 f32 \rightHandFinger #1 d \rightHandFinger #2 a'' \rightHandFinger #4 d,, \rightHandFinger #2
   f32 d a'' d,, f32 d a'' d,,
   f32 d a'' d,, f32 d a'' d,, |
-  
   s2. |
-  f8 [ f] f [ f] f [ f] |
   d,4 \rightHandFinger #1 s2 |
+  f'8 [ f] f [ f] f [ f] |
 
   % 90
   e32 d-0 g'-4 d, e32 d g' d,
   e32 d-0 g'-4 d, e32 d g' d,
-  e32 cis'-2 g'-4 cis, e32 cis g' cis, |
+  e32 cis'-2 g'-4 cis, e,32 cis' g' cis, |
   s2. |
   s2. |
-  e'8-2 [ e]
-  e8-3  [ e]
-  e8-3  [ e]|
+  e8-2 [ e] e-3  [ e] e-3 [ e]|
 
   % 91
   d,32 d-0 f'-2 d, d d f' d, 
@@ -585,46 +582,59 @@ fingeringVoiceC = {
   g,32 \startTextSpan bes'-4 e bes g,32 a'-3 f'-2 a,
   g,32 g' e' g, \stopTextSpan  g, ^\markup{"III"} f' d' f,
   \override TextSpanner.bound-details.left.text = "II"
-  a,32 \startTextSpan f' e'-2 f, a,32 f' cis' f, \stopTextSpan |
+  a,32 \startTextSpan e' d'-2 e, a,32 e' cis' e, \stopTextSpan |
   s2. |
   s2. |
   g,8 [ g] g [ g-3] a [ a] |
 
   % 93
-  d2. |
-  f2. |
+  d,32 ^\markup{"III"} f' d' f, d f d' f,
+  a, f'-3 d'-4 f, a, f' d' f,
+  bes, f'-3 d'-4 f, bes, f' d' f, |
   s2. |
-  d4 a bes |
+  s2. |
+  d,8 [ d'-4] a [ a] bes-1 [ bes] |
 
   % 94
-  es2. |
-  fis2. |
+  c32-2 fis-3 ees'-4 fis, c32 fis ees' fis,
+  bes,32 fis' ees' fis, bes,32 fis' ees' fis,
+  a,32 fis' ees' fis, a,32 fis' ees' fis, |
   s2. |
-  c4 bes a |
+  d4 s2 |
+  c8 [ c] bes-1 [ bes] a [ a] |
 
   % 95
-  d2. |
-  g4 f e |
+  bes,32-1 g'-0 d'-4 g, bes, g' d' g,
+  a,32 f'-1 d'-2 f, a, f' d' f,
+  g,32-4 e'-1 d'-2 e, g, e' d' e, |
   s2. |
-  bes4 a g |
+  d4 s2 |
+  bes8 [ bes] a [ a] g [ g] |
 
   % 96
-  d2 cis4 |
-  f4 e g |
+  a,32 f'-1 d'-2 f, a,32 f' d' f,
+  \override TextSpanner.bound-details.left.text = "II"
+  a,32 \startTextSpan e' d'-2 e, a,32 e' d' e,
+  a,32 g'-4 cis g a,32 g' cis g \stopTextSpan |
   s2. |
-  a2. |
+  s2. |
+  a8 [ a] a [ a] a [ a] |
 
   % 97
-  d4 a4 bes4 |
-  f2. |
+  d,32 ^\markup{"III"} f' d' f, d f d' f,
+  d32 f-2 a-1 f d f a f
+  d32 ^\markup{"III"} f bes f d f bes f |
   s2. |
-  d2. |
+  s2. |
+  d,8 [ d'-4] d-4 [ d] d-3 [ d] |
 
   % 98
-  c4 bes4 a4 |
-  fis2. |
+  d32-3 fis-2 c'-4 fis, d fis c' fis,
+  d32 fis bes-1 fis d fis bes fis
+  d32-3 fis-2 a-1 fis d fis a fis |
   s2. |
-  d2. |
+  s2. |
+  d8 [ d] d [ d] d [ d] |
 
   % 99
   bes4 bes'4 a4 |
