@@ -637,142 +637,189 @@ fingeringVoiceC = {
   d8 [ d] d [ d] d [ d] |
 
   % 99
-  bes4 bes'4 a4 |
-  g4 cis d |
+  d32-3 g-4 bes-1 g d g bes g
+  e32-2 ^\markup{"VI"} cis' bes' cis, e, cis' bes' cis,
+  f,32\5-2 d'\3-1 a'\2-4 d, f,32 d' a' d, |
   s2. |
-  d4 e f |
+  s2. |
+  d8 [ d] e [ e] f [ f] |
 
   % 100
-  g8 [ f8 ] e2 |
-  d4 d cis |
+  \override TextSpanner.bound-details.left.text = "V"
+  g,32 \startTextSpan d'-3 g-4 d g, d' e-2 d
+  a32-4 d-3 e d a d e d
+  a,32 cis'-2 e cis a, cis' e cis \stopTextSpan |
   s2. |
-  g4 a2 |
+  s2. |
+  g8 [ g] a [ a] a, [ a] |
 
   % 101
-  f2.  |
-  d4 a bes |
+  d,32 d'\3-4 f\2-3 d d, d' f d
+  d,32 a'-2 f'-1 a, d, a' f' a,
+  d,32 bes'-4 f'-1 bes, d, bes' f' bes,  |
   s2. |
-  d,2. |
+  s2. |
+  d8 [ d] d [ d] d [ d] |
 
   % 102
-  fis2. |
-  c4 bes a |
+  d,,32 c''\3-4 fis-1 c d, c' fis c
+  d,32 bes'-2 fis'-1 bes, d,32 bes' fis' bes,
+  d,32 a'-3 fis'-4 a, d,32 a' fis' a, |
   s2. |
-  d2. |
+  s2. |
+  d,8 [ d'] d [ d] d [ d] |
 
   % 103
-  g4 f e |
-  bes4 a a |
-  s2 g4 |
-  d2 cis4 |
+  d,,32 bes''-3 g'-4 bes, d, bes' g' bes,
+  d,32 a'-2 f'-1 a, d, a' f' a,
+  cis,32-3 g'-4 <a-1 e'-0> g cis, g' <a e'> g |
+  s2. |
+  s2. |
+  d,8 [ d'] d [ d] cis [ cis] |
 
   % 104
-  f4 cis2 |
-  a4 e2 |
-  f4 s2 |
-  d4 a2 |
+  d,32 f'-2 f'-1 f, d f f' f,
+  \override TextSpanner.bound-details.left.text = "II"
+  a,32 \startTextSpan e' cis' e, a, e' cis' e,
+  a,32 e' cis' e, a, e' cis' e, \stopTextSpan |
+  s2. |
+  s2. |
+  d,8 [ d'] a [ a] a [ a] |
 
   % 105
-  d4 f f |
-  f4 a c |
-  s4 d a' |
-  d4 d d |
+  d,32 ^\markup{"III"} f' d' f, d-4 f d' f,
+  d32\5-1 a'-3 f'\2-2 a, d, a' f' a,
+  d,,32 c''\3-3 f\2-4 c d,, c'' f c |
+  s2. |
+  s2. |
+  d,8 [ d'] d [ d] d, [ d]|
 
   % 106
-  f4 e es |
-  bes2 s4 |
-  g2 f4 |
-  g,2 a4 |
+  g,32-2 g'-3 <bes-1 f'-4> g g, g' <bes f'> g
+  g,32 g' <bes-1 e-4> g g, g' <bes e> g 
+  a,32 f'-3 ees'-4 f, a, f' ees' f, |
+  s2. |
+  s2. |
+  g8 [ g] g [ g] a [ a] |
 
   % 107
-  es4 bes' e, |
-  s4 d4 d |
-  f2 g4 |
-  bes2 bes4 |
+  bes,32-1 f'-3 ees'-4 f, bes, f' ees' f,
+  bes,32 ^\markup{"I"} f'-3 <d'-4 f> f, bes,32 f' <d' f> f,
+  bes,32 g'-0 <d'-4 e> g, bes,32 g' <d' e> g, |
+  s2. |
+  s2. |
+  bes8 [ bes] bes [ bes] bes  [bes] |
 
   % 108
-  e4 a g |
-  d4 cis2 |
-  a4 e2 |
-  a4 a2 |
+  a,32 a'-2 <d-4 e-0> a a, a' <d e> a
+  \override TextSpanner.bound-details.left.text = "II"
+  a,32 \startTextSpan e' <cis' a'-4> e, a,32 e' <cis' a'> e,
+  a,32 e' <cis' g'-2> e, a,32 e' <cis' g'> e, \stopTextSpan |
+  s2. |
+  s2. |
+  a8 [ a] a [ a] a [ a] |
 
   % 109
-  f4 fis2 |
-  a4 d c  |
-  d4 a'4 s4 |
-  d4 d2 |
+  d,32 a''-2 <d-4 f-1>  a d, a' <d f> a
+  d,32-0 d'-3 fis-2 d d, d' fis d
+  d,32 c'-1 fis-2 c d, c' fis c |
+  s2.  |
+  s2. |
+  d,8 [ d'] d [ d] d [ d] |
 
   % 110
-  g4 gis2 |
-  bes4 b d |
+  d,32 bes'-3 g'-4 bes, d,32 bes' g' bes, 
+  d,32 b'-3 gis'-4 b, d,32 b' gis' b, 
+  e,32-1 d'-2 gis-4 d e, d' gis d |
   s2. |
-  d4 d e |
+  s2. |
+  d8 [ d] d [ d] e [ e] |
 
   % 111
-  a4 c b |
-  c4 es d |
+  f,32-1 c'-3 a'-4 c, f, c' a' c,
+  fis,32-1 ^\markup{"IV"} ees' c'-4 ees, fis,32 ees' c' ees,
+  g,32-1 d'-3 b'-4 d, g, d' b' d, |
   s2. |
-  f4 fis g |
+  s2. |
+  f8 [ f] fis [ fis] g [ g] |
 
   % 112
-  d4 d cis |
-  f4 e2 |
+  gis,32-1 f' d'-4 f, gis,32-1 f' d'-4 f,
+  a,32-1 e'-3 d'-4 e, a,32 e' d' e,
+  a,, e''-3 cis'-4 e, a,, e'' cis' e, |
   s2. |
-  gis4 a2  |
+  s2. |
+  gis8 [ gis] a [ a] a, [ a] |
 
   % 113
-  d2. |
-  f2. |
+  d,32 f'-3 d'-4 f, d,32 f' d' f,
+  bes,32-1 f' d' f, bes,32 f' d' f,
+  a,32-1 f' d' f, a,32 f' d' f, |
   s2. |
-  d,4 bes' a |
+  s2. |
+  d8 [ d] bes' [ bes] a [ a] |
 
   % 114
-  d4 cis2 |
-  e2. |
+  gis,32-1 e'-3 d'-4 e, gis,32 e' d' e,
+  a,32-1 e'-3 cis'-4 e, a,32 e' cis' e,
+  g,32-1 e' cis' e, g,32 e' cis' e, |
   s2. |
-  gis4 a g |
+  s2. |
+  gis8 [ gis] a [ a] g [ g] |
 
   % 115
-  c4 b2 |
-  d2. |
+  fis,32-1 d'-3 c'-4 d, fis,32 d' c' d,
+  g,-1 d'-3 b'-4 d, g, d' b' d,
+  f,32-1 d'-3 b'-4 d, f,32 d' b' d, |
   s2. |
-  fis4 g f |
+  s2. |
+  fis8 [ fis] g [ g] f [ f] |
 
   % 116
-  bes4 a g |
-  cis4 d cis |
+  e,32-1 cis'-3 bes'-4 cis, e, cis' bes' cis,
+  f,32 ^\markup{"III"} d' a'-4 d, f, d' a' d,
+  e,32-1 cis'-2 g'-4 cis, e, cis' g' cis, |
   s2. |
-  e4 f e |
+  s2. |
+  e8 [ e] f [ f ] e [ e] |
 
   % 117
-  fis4 f f |
-  d4 c d  |
-  s4 a4 g |
-  d a b |
+  d,32-0 d'-4 f-3 d d, d' f d
+  a,32 a'-3 <c f>^\markup{"I"} a a, a' <c f> a
+  b,32-2 g'-0 <d'-4 f-1> g, b, g' <d' f> g, |
+  s2. |
+  s2. |
+  d8 [ d] a [ a] b [ b] |
 
   % 118
-  e4 es es |
-  c4 s2 |
-  g4 g f |
-  c4 g a |
+  c,32-3 g'-0 <c-1 e-0> g c, g' <c e> g
+  g,32-2 g'-0 ees'-1 g, g, g' ees' g,
+  a,32 f'-3 ees'-4 f, a, f' ees' f, |
+  s2. |
+  s2. |
+  c8 [ c] g [ g] a [ a] |
 
   % 119
-  d4 d d |
-  f,4 g f |
+  bes,32-1 f'-3 d'-4 f, bes, f' d' f,
+  bes,32-1 g'-0 d'-4 g, bes, g' d' g,
+  a,32 f'-3 d'-4 f, a, f' d' f, |
   s2. |
-  bes4 bes a |
+  s2. |
+  bes8 [ bes] bes [ bes] a [ a] |
 
   % 120
-  d4 d cis  |
-  e4 e2 |
+  gis,32-1 e'-3 d'-4 e, gis, e' d' e,
+  a,32-1 e'-3 d'-4 e, a, e' d' e,
+  a,32-1 e'-3 cis'-1 e, a, e' cis' e, |
   s2. |
-  gis4 a2 |
+  s2. |
+  gis8 [ gis] a [ a] a [ a] |
 
   % 121
-  d,8 [ f'32 ( e d e ] d [ c d c bes c bes a ] bes [ c d e f16 ) d, ] |
+  d8 [ f'32\3-4 _( e-3) d-1 e ] _( d) [ c\4-4 d-1 c bes-2 _( c-4) bes a-1 ] bes _( [ c) d e f16-4 d,\5-3 ] |
   s2. |
-  s2. |
-  s2. |
+  a'8 s8 s2 |
+  d,8 r8 r2 |
 
   % 122
   c8 [ e'32 ( d c d ] c [ bes c bes a bes a g ] a [ bes c d es16 ) c, ] |
@@ -1631,5 +1678,5 @@ merges = {
     >>
   }
   \layout { }
-  \midi { }
+  %\midi { }
 }
