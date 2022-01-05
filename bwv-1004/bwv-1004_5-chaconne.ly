@@ -573,16 +573,22 @@ fingeringVoiceC = {
   e8-3  [ e]|
 
   % 91
-  f2 f4 |
-  d,2 a'4 |
+  d,32 d-0 f'-2 d, d d f' d, 
+  d32 d f' d, d d f' d,
+  d32 d f' d, d d f' d, | 
   s2. |
-  d2 d4 |
+  s2. |
+  d8-1 [ d] d [ d] d [ d] |
 
   % 92
-  e8  [ f8 ] e8 [ d8 ] d8 [ cis8 ] |
-  bes8 [ a g f  e d ] |
+  \override TextSpanner.bound-details.left.text = "V"
+  g,32 \startTextSpan bes'-4 e bes g,32 a'-3 f'-2 a,
+  g,32 g' e' g, \stopTextSpan  g, ^\markup{"III"} f' d' f,
+  \override TextSpanner.bound-details.left.text = "II"
+  a,32 \startTextSpan f' e'-2 f, a,32 f' cis' f, \stopTextSpan |
   s2. |
-  g,2 a4 |
+  s2. |
+  g,8 [ g] g [ g-3] a [ a] |
 
   % 93
   d2. |
