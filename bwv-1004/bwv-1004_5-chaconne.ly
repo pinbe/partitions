@@ -9,13 +9,13 @@ fingeringMiddelVoices = {
 
 fingeringVoiceB = {
   \fingeringMiddelVoices
-  \override Fingering.color = red
+  %\override Fingering.color = red
   \override Fingering.extra-offset = #'(1.25 . -1.5)
 }
 
 fingeringVoiceC = {
   \fingeringMiddelVoices
-  \override Fingering.color = green
+  %\override Fingering.color = green
   \override Fingering.extra-offset = #'(-1.25 . 1.5)
 }
 
@@ -824,70 +824,70 @@ fingeringVoiceC = {
   d,8 r8 r2 |
 
   % 122
-  c8 [ e'32 ( d c d ] c [ bes c bes a bes a g ] a [ bes c d es16 ) c, ] |
+  c8-1 [ e'32\3-4 _( d-2) c-1 d-3 _( ] c-1) [ bes\4-4 c bes a-3 _( bes-4) a g ] a _( [ bes) c d es16 c,\5-3 ] |
   s2. |
   s2. |
   s2. |
 
   % 123
-  bes8 [ d'32 (c bes c ] bes [ a bes a g a g f ] g [ a bes c d16 ) bes, ] |
+  bes8-1 [ d'32\3-4 _( c-2) bes-1 c _( ] bes) [ a\4-4 bes-1 a g-2 _( a-4) g f-1 ] g _( [ a) bes c d16-4 bes,\5-1 ] |
   s2. |
   s2. |
   s2. |
 
   % 124
-  a32 [ ( a' b cis d16 ) a, ] g32 [( a' b cis d16 ) g,, ] a32 [ ( d' cis b cis16 ) g ] |
+  a32-0^\markup{"II"} [ a' _( b-3) cis d16-2 a, ] g32-3 [ a'-1 _( b-2) cis-1 d16-1 g,, ] a32 [ d'-2 _( cis-1) b-3 cis16 g-0 ] |
   s2. |
   s2. |
-  s2. |
+  a'8. [ a16 ] g8. [ g16 ] a4 |
 
   % 125
-  f16 [ ( e d cis) ] d [( f g a ) ] bes [ a bes g ] |
+  f16-2 _( [ e-1) d cis-4 ] d\4 [ f-1 _( g-3) a-3 ] bes-4 [ a _( bes) g-0 ] |
   s2. |
   s2. |
-  s2. |
+  d,2 r4 |
 
   % 126
-  e'4 e4. e8 |
-  bes'4 a2 |
-  g4 g2 |
-  d4 cis2  |
+  e'4-0   e4.-4 e8 |
+  bes'4-1 a2-3 |
+  g'4-4   g2-2 |
+  d'4-3  cis2-1  |
 
   % 127
-  f4 d4. d8 |
-  a4 f2 |
-  f4 s2 |
-  d4 bes2 |
+  f4-1 d4.-4 d8\3-4 |
+  a4-4 f2-3 |
+  f4-2 s2-2 |
+  d4   bes2-1 |
 
   % 128
-  bes'4 a g |
-  d'4 d cis |
-  g4 f e |
-  g4 a a |
+  bes'4-2 a-4^\markup{"III"} g-4 |
+  d'4-4   d cis-2 |
+  g4-3    f e-1 |
+  g4      a a |
 
   % 129
-  g4 fis4 s4 |
-  d4 d s4 |
-  a4 a s4 |
-  d4 d c8 [ f' ]  |
+  g4-4 fis4-2 s4 |
+  d4-3 d s4 |
+  a4-1 a s4 |
+  d2     c8-3 [ f'-1 ]  |
 
   % 130
-  f4 e s4|
-  d4 c s4 |
-  g4 g s4 |
-  b,,4 c bes8 [ es' ] |
+  f4-1   e-0 s4|
+  d4-4   c-1 s4 |
+  g4-0   g-0 s4 |
+  b,,4-2 c-3 bes8-1 [ ees'-4 ] |
 
   % 131
-  es4 d s4  |
-  f,4 f s4 |
-  s2. |
-  a,,4 bes a8 [ d' ] |
+  ees4-2 d-4  s4  |
+  c4-3  bes-3 s4 |
+  f4-1  f-2   s4 |
+  a,,4  bes-1 a8-0 [ d'-1 ] |
 
   % 132
-  s4 cis4. d8 |
-  s4  e2 |
+  s4 cis4. \trill d8 |
+  s4  e,2-1 |
   s2. |
-  gis,,8 [ d'' ] a,2 |
+  gis,,8-4 [ d'' ] a,2 |
 
   % 133
   d4 fis,4. g8 |
