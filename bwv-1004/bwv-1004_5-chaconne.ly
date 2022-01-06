@@ -536,7 +536,7 @@ fingeringVoiceC = {
   s2. |
 
   % 86
-  c32\3-3 e-0 fis\2-4 gis-1 a-2 _( gis-1) fis-4 e-0 c'-2 _( b-1) a\2-4 gis-3 a b c-2 d-1 e-3 _( d-1) c-4 b-3 f'-4 _( e-3) d-1 cis-4 |
+  c32\3-3 e-0 fis\2-4 gis-1 a-2 _( gis-1) fis-4 e-0 c'-2 _( b-1) a\2-4 gis-3 a-4 b-1 c-2 d-1 e-3 _( d-1) c-4 b-3 f'-4 _( e-3) d-1 cis-4 |
   s2. |
   s2. |
   s2. |
@@ -655,7 +655,7 @@ fingeringVoiceC = {
 
   % 101
   d,32 d'\3-4 f\2-3 d d, d' f d
-  d,32 a'-2 f'-1 a, d, a' f' a,
+  d,32 a'\3-2 f'\1-1 a, d, a' f' a,
   d,32 bes'-4 f'-1 bes, d, bes' f' bes,  |
   s2. |
   s2. |
@@ -704,7 +704,8 @@ fingeringVoiceC = {
 
   % 107
   bes,32-1 f'-3 ees'-4 f, bes, f' ees' f,
-  bes,32 ^\markup{"I"} f'-3 <d'-4 f> f, bes,32 f' <d' f> f,
+  \override TextSpanner.bound-details.left.text = "I"
+  bes,32 \startTextSpan f'-3 <d'-4 f> f, bes,32 f' <d' f> f, \stopTextSpan
   bes,32 g'-0 <d'-4 e> g, bes,32 g' <d' e> g, |
   s2. |
   s2. |
@@ -744,7 +745,8 @@ fingeringVoiceC = {
   f8 [ f] fis [ fis] g [ g] |
 
   % 112
-  gis,32-1 f' d'-4 f, gis,32-1 f' d'-4 f,
+  \override TextSpanner.bound-details.left.text = "VI"
+  gis,32 \startTextSpan f' d'-4 f, gis,32-1 f' d'-4 f, \stopTextSpan
   a,32-1 e'-3 d'-4 e, a,32 e' d' e,
   a,, e''-3 cis'-4 e, a,, e'' cis' e, |
   s2. |
@@ -1678,5 +1680,7 @@ merges = {
     >>
   }
   \layout { }
-  %\midi { }
+  \midi {
+    \tempo 4 = 45 
+  }
 }
