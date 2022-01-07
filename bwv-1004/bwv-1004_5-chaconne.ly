@@ -9,13 +9,13 @@ fingeringMiddelVoices = {
 
 fingeringVoiceB = {
   \fingeringMiddelVoices
-  %\override Fingering.color = red
+  \override Fingering.color = red
   \override Fingering.extra-offset = #'(1.25 . -1.5)
 }
 
 fingeringVoiceC = {
   \fingeringMiddelVoices
-  %\override Fingering.color = green
+  \override Fingering.color = green
   \override Fingering.extra-offset = #'(-1.25 . 1.5)
 }
 
@@ -26,7 +26,7 @@ fingeringVoiceC = {
   \fingeringVoiceC f2_2 |
   d2-4 |
 
-  %
+  % 2
   e'4-0 e4. e8 |
   bes4-1 a2-1 |
   g4-4 g2-4 |
@@ -446,7 +446,7 @@ fingeringVoiceC = {
   s2. |
 
   % 71
-  d,16-1 [ bes,32-1 _( c-3) d16-0 f-3 ] d [ bes d f\5-4 ] g32\4-1 [ _( a-3) bes-1 _( c-3) d-2 _( e-4) f-1 _( g-3) ] |
+  d,16-1 [ bes,32-1 _( c-3) d16-0 f-3 ] d [ bes d f\5-4 ] g32\4-1 [ _( a-3) bes-4 c\3-1 d-3 e\2-1 _( f-2) g-4 ] |
   s2. |
   s2. |
   s2. |
@@ -455,22 +455,22 @@ fingeringVoiceC = {
   cis,32\3-2 [ bes'-3 _( a-1) g-4 f-2 _( e-1) d\3-3 _( c-1) ] bes\3-2 [ _( a-1) g-4 _( f-2) e-1 _( d-0) cis-3 _( b-1) ] a-0 [ _( b-1) cis-3 _( d-4) e-1 _( f-2) g-4 _( e-1) ] |
   s2. |
   s2. |
-  d4 s2 |
+  a'4 s2 |
 
   % 73
   f32-2 _( d-0) e-1 _( f-2) g-0 _( a-1) b-0 cis-1 d-1 b-\3-2 _( cis-4) d-1 e-3 _( f-4) g-1 _( a-3)  bes16-4 d,,-3 c-1 \trill bes-1 |
   s2. |
   s2. |
-  d4 s2 |
+  d,4 s2 |
 
   % 74
-  c32-2 _( d-4) e-1 _( fis-3) g-0 _( a-1) bes-2 _( c-4) d-2 a-1 _( bes-2) c-4 d-2 _( e-4) fis-1 g-2 a16-4 c,,-3 bes-1 \trill a-0 |
+  c32-2 _( d-4) e-1 _( fis-3) g-0 _( a-1) bes-2 _( c-4) d-2 a-1 _( bes-2) c-4 d-2 _( e-4) fis-1 _( g-2)  a16-4 c,,-3 bes-1 \trill a-0 |
   s2. |
   s2. |
   s2. |
 
   % 75
-  bes32-1 _( d-4) e-1 _( fis-3) g-0 _( a-2) bes-3 c-1 d-3 g,-0 _( a-2) bes-3 c-1 _( d-3) e-0 fis-1 g-1 _( a-3) bes-4 _( a-3) g-1 f-4 _( e-3) d-1 |
+  bes32-1 _( d-4) e-1 _( fis-3) g-0 _( a-2) bes-3 c-1 d-3 g,-0 _( a-2) bes-3 c-1 _( d-3) e-0 fis-1 g-1 _( a-3) bes-4 _( a-3) g-1 f-4 e-3 _( d-1) |
   s2. |
   s2. |
   s2. |
@@ -548,7 +548,7 @@ fingeringVoiceC = {
   s2. |
 
   % 88
-  g32\2-1 a-3 bes-4 a g bes a g bes a g bes a g bes-4 a-3 g-1 f\3-3 e-2 d-1 cis\4-4 b-2 a-1 g-4 |
+  g32\2-1 a-3 bes-4 a g bes a g bes a g bes a g bes-4 a-3 g-1 f\3-3 e-2 d-1 cis\4-4 b-3 a-1 g-4 |
   s2. |
   s2. |
   s2. |
@@ -570,12 +570,12 @@ fingeringVoiceC = {
   e8-2 [ e] e-3  [ e] e-3 [ e]|
 
   % 91
-  d,32 d-0 f'-2 d, d d f' d, 
+  d,32-1 d-0 f'-2 d, d d f' d, 
   d32 d f' d, d d f' d,
-  d32 d f' d, d d f' d, | 
+  d32-1 a'-3 f'-2 a, d a f' a, | 
   s2. |
   s2. |
-  d8-1 [ d] d [ d] d [ d] |
+  d8 [ d] d [ d] d [ d] |
 
   % 92
   \override TextSpanner.bound-details.left.text = "V"
@@ -848,22 +848,22 @@ fingeringVoiceC = {
   d,2 r4 |
 
   % 126
-  e'4-0   e4.-4 e8 |
-  bes'4-1 a2-3 |
-  g'4-4   g2-2 |
-  d'4-3  cis2-1  |
+  e'4-0   e4. e8 |
+  bes'4-1 a2-1 |
+  g'4-4   g2-4 |
+  d'4-3  cis2-3  |
 
   % 127
   f4-1 d4.-4 d8\3-4 |
-  a4-4 f2-3 |
-  f4-2 s2-2 |
+  d4-4 bes2-3 |
+  a4-2 f2-2 |
   d4   bes2-1 |
 
   % 128
   bes'4-2 a-4^\markup{"III"} g-4 |
-  d'4-4   d cis-2 |
-  g4-3    f e-1 |
-  g4      a a |
+  d4-4   d cis-2 |
+  e4-3    f e-1 |
+  g4-1    a a |
 
   % 129
   g4-4 fis4-2 s4 |
