@@ -100,14 +100,14 @@ fingeringVoiceC = {
   d,8. s16 s2 |
 
   % 14
-  e8 r8 e8 r8 s4 |
-  bes8 s8 a8 s8 s4 |
+  e4 e2 |
+  bes4 a2 |
   \shiftOn g8. f16 g8. bes16 a8. [ g16 ] |
   d'4 cis2 |
 
   % 15
-  e8 r8  d8. [ f16 ] e8. [ cis16-4 ] |
-  a8 s8 s2 |
+  e4  d8. [ f16 ] e8. [ cis16-4 ] |
+  a4 s2 |
   f8. [ e16 ] f8. [ a16 ] g8. [ e16-3 ] |
   d4 bes4.. bes16-1 |
 
@@ -119,7 +119,7 @@ fingeringVoiceC = {
 
   % 17
   d8.-4 [ e16\2-3 ] f8.-4 [ g32-1 a-3 ] bes8.-4 [ f16-2 ] |
-  d4 s4.. d'16\tweak extra-offset #'(0 . -3)-3 |
+  d4 s4 s8. \once \stemDown d'16-3 |
   s2. |
   d,4 s2 |
 
@@ -548,7 +548,7 @@ fingeringVoiceC = {
   s2. |
 
   % 88
-  g32\2-1 a-3 bes-4 a g bes a g bes a g bes a g bes-4 a-3 g-1 f\3-3 e-2 d-1 cis\4-4 b-3 a-1 g-4 |
+  g32\2-1 a-3 bes-4 a g bes a g bes a g bes a g bes-4 a-3 g-1 f\3-3 e-2 d-1 cis\4-4 b-2 a-1 g-4 |
   s2. |
   s2. |
   s2. |
@@ -890,352 +890,359 @@ fingeringVoiceC = {
   gis,,8-4 [ d'' ] a,2 |
 
   % 133
-  d4 fis,4. g8 |
+  \key d \major
+  d4-4 fis,4.-2 g8-4 |
   s2.|
-  s2. |
-  \key d \major d4 d2 |
+  d4 d2-3 |
+  d,4 s2 |
 
   % 134
-  e4 fis4. ( g16 [ a ] ) |
+  e4-1 fis4.-1 g16-2 a-4 |
   s4 cis4 s4 |
   s2. |
-  cis4 a2 |
+  cis'4-3 a2 |
 
   % 135
-  d,4 e4. ( fis16 [ g ] ) |
+  d,4-0 e4.^\markup{"II"} fis16-2 g-4 |
   s2. |
-  s2. |
-  b4 g2|
+  s4 b2 |
+  b4-1 g2-3|
 
   % 136
-  fis8 [ e ] e4. a8 |
+  fis8-2 e-1 e4. a8-1 |
   s2. |
   s2. |
-  a4 cis 2 |
+  a4 cis-3 a |
 
   % 137
-  fis4 b8 [ a g fis ] |
-  s4 fis4 s4 |
+  fis4-3 b8-0 [ a-1] g-0 [ fis-3] |
+  s4 fis4. s8 |
   s2. |
-  d4 d4. d8 |
+  d,4 d'4. d8 |
 
   % 138
-  e4 fis16 ( [ g a g ] fis 8 ) [ e ] |
+  e4^\markup{"II"} fis16-3 g-0 a-1 g fis8 e-1 |
   s2. |
   s2. |
-  cis8 [ b ] a4. a8 |
+  cis8-3 b a4. a8 |
 
   % 139
-  d4 e8 [ g16 fis ] e8 [ d ] |
+  d4-0 e8^\markup{"II"} g16-4 fis-2 e8 d |
   s2. |
-  s2. |
-  b8 [ a ] g4. g8 |
+  s4 b4.-2 s8 |
+  b8-2 a g4.-3 g8 |
 
   % 140
-  cis'8 [ d ] e,4. a8 |
-  g8 [ fis ] s2|
+  cis'8-1 d-2 e,4.-1 a8-1 |
   s2. |
-  a4 a2 |
+  g'8-0 fis-3 s2|
+  a4 a a |
 
   % 141
-  fis8 [ e d e fis gis ] |
+  fis8-3 [ e-1] d-0 [ e-1] fis-3 [ gis-1] |
   s2. |
   s2. |
-  d4 d4. d8|
+  d,4 \once \mergeDifferentlyDottedOff d'4.-4 d8-4|
 
   % 142
-  a8 [ b cis d b cis ] |
+  a8^\markup{"II"} [ b-0 ] cis^\markup{"II"} [ d-2] b-4 [ cis-2] |
   e4 e4. g8 |
   s2. |
   cis4 a4. a8 |
 
   % 143
-  d8 [ fis e d cis b ] |
-  fis4 b4. g8 |
-  s4 g4. s8 |
-  b4 g4. g8 |
+  d8-2 [   fis^\markup{"II"} ] e-0 [ d-2] cis-1 [ b-0] |
+  b4-4   b4.-0 s8 |
+  fis4-3 g4.-0 g8 |
+  b4-1   g4.-4 g8 |
 
   % 144
-  a8 [ b cis d e cis8 ] |
-  fis8 [ d ] e [ fis ] g [ e ] |
+  a8-1 [ b-0] cis^\markup{"II"} [ d-2] e-0 [ cis8^\markup{"II"} ] |
+  fis8-1 [ d-0] e [ fis-3] g-0 [ e ] |
   s2. |
   a4 a4. a8 |
 
   % 145
-  d4 fis4. fis8 |
-  fis8 [ d ] d'4. d8 |
-  s2. |
-  d8 s8 d8 [ e fis g ] |
+  d4-2 fis4.-1^\markup{"II"} fis8 |
+  s4 d'4. d8 |
+  fis8-3 [ e-1] d-0 [ fis] e-3 [ g] |
+  d,4 s2 |
 
   % 146
-  e4 a4. g8 |
-  cis8 s8 s2 |
+  e4-0 a4.-4^\markup{"II"} g8-2 |
+  cis8-2 s8 s2 |
   s2. |
-  a8 [ b cis a b cis ] |
+  a''8-1 [ b-0] cis [ a] b-3 [ cis ] |
 
   % 147
-  fis8 [ e ] g [ fis ] b [ a ]  |
-  s2 d8 [ b ] |
-  s2. |
-  d8 [ cis ] b [a ] g [ fis ] |
+  fis8-1 [ e-0] g^\markup{"III"} [ fis^\markup{"II"} ] b-4 [ a-4]  |
+  s4 d8 d-2  d-3 [ d-1] |
+  s2 b8-0 b-3 |
+  d8-3 [ cis-2] b [ a-1] g-1 [ fis-2] |
 
   % 148
-  g8 [ fis ] e2 |
-  cis8 [ d ] d4 cis |
-  s2. |
-  e8 [ d ] a'2 |
+  g8-4 [ fis-2] e2-0 |
+  cis8-2 [ d-3] d4-3 cis-2 |
+  a8-1 a-1 a4 s4 |
+  e8 [ d ] s4 a4 |
 
   % 149
-  d16 [ cis b a ] gis ( [ b d fis ] ) e8 [ e ] |
+  d16-4 _( cis-2) b-0 a-2 gis-1 b-0 d-4 fis-2 e8-0 e |
   s2 s8 b8 |
-  s2 s8 gis8  |
-  d,8 r8 r4 r8 d8 |
+  s2 s8 gis8-1  |
+  d,8 r8 r4 r8 d'8 |
 
   % 150
-  e8 r8 r4 fis,8 [ e' ] |
-  cis8 s2 cis8 |
-  a8 s2 fis8 |
-  cis16 [ d cis b ] a [ ( cis e g ) ] r8 ais,8 |
+  e8 r8 r4 fis,8-4 e'-0 |
+  s2 s8 cis8-2 |
+  a8-1 s2 fis8-4 |
+  cis16-3 ^( d-4) cis ^( b-1) a-0 ^( cis-3) e-1 g-0 r8 ais,8-1 |
 
   % 151
-  d8 r8 r4 e,8 [ d' ]  |
-  fis,8 s2 e8 |
+  d8-2 r8 r4 e,8-1 d'\3-4  |
+  fis,8-4 s2 e8 |
   s2. |
-  b16 [ cis d b ] g [ ( b d fis ) ] r8 gis,8  |
+  b16-1 ^( cis-3) d-0 b g-4 b-1 d-0 fis-3 r8 gis,8-1  |
 
   % 152
-  cis16 [ b a b ] cis [ ( e g b )] a [ g fis e ] |
-  e16 s16 s8 s2 |
+  cis16\2-2 _( b-0) a-2 b cis-3 e-0 g\2-4 b-3 a-1 g-4 _( fis-3) e-1 |
+  e4-1 s2 |
   s2. |
-  a16 s16 s8 s2 ] |
+  a4 a2 ] |
 
   % 153
-  fis16 [ a fis d ] a [ ( d a fis )] d [ fis e d ] |
+  fis16-3 a-1 fis d-2  a\3-1 d-2 a fis-3 d-0 fis-3 _( e-1) d |
   s2. |
   s2. |
-  s2. |
+  d4 r2 |
 
   % 154
-  cis16 [ a'' e cis ] a [ cis a e] cis [ e d cis ] |
+  cis16-1 a''-3 e-2 cis-4  a\3^\markup{"II"} cis a e cis-3 e-1 _( d-0) cis |
   s2. |
   s2. |
-  s2. |
+  cis4 r2 |
 
   % 155
-  b16 [ gis'' d b ] gis [ b gis e ] b [ d cis b ] |
+  b16-1 gis''-4 d-2 b-1 gis-1 b-0 gis e-2 b-1 d-4 _( cis-3) b |
   s2. |
   s2. |
-  s2. |
+  b4 r2 |
 
   % 156
-  a16 [ b cis d ] e [ cis a cis ] e [ g fis e ] |
+  a16-0 _( b-1) cis-3 _( d-4) e-1 cis a _( cis) e-1 g-4 _( fis-3) e |
   s2. |
   s2. |
   s2. |
 
   % 157
-  d' [ a fis' d ] |
+  \override TextSpanner.bound-details.left.text = "II"
+  fis16-3 d-0 a-0 d fis-3 d-4 a' \startTextSpan fis d'-2 a f d \stopTextSpan |
   s2. |
   s2. |
-  s2. |
+  d,4 r2 |
 
   % 158
-  a'16 [ e cis e ] a [ e cis' a ] e' [ cis fis cis ] |
+  a''16-4 e-0 cis-2 e a\2-2 e-0 cis'-1 a-2 e'-1 cis-2 fis-4 cis |
   s2. |
   s2. |
-  s2. |
+  a'4 r2 |
 
   % 159
-  d16 [ fis d b ] fis [ b d, fis ] b, [ d cis b ] |
+  d16-1 fis-4 _( d) b\2-3 fis^\markup{"VII"} b d, fis b,-0 d\2-3 cis-1 b |
   s2. |
   s2. |
-  s2. |
+  a4 r2 |
 
   % 160
-  e [ a cis, e ] a, [ cis e g ] |
+  cis16-2 e-0 cis a^\markup{"II"} e a cis,-4 e a, cis-1 _( e\5-4) g-0  |
   s2. |
   s2. |
-  s2. |
+  a4 r2 |
 
   % 161
-  fis16 [ d a'' a ] a [ fis d a ] fis [ d a d ] |
+  fis16\4-2 d-3 a''-4 a a fis^\markup{"II"} d-2 a fis-3 d-4 a d |
   s2. |
   s2. |
-  s2. |
+  d,4 r2 |
 
   % 162
-  e16 [ cis a'' a ] a [ e cis a ] e [ cis a cis ] |
+  e16-1 cis-3 a''-4 a a e-0 cis-2 a^\markup{"II"} e cis-4 a-0 cis |
   s2. |
   s2. |
   s2. |
 
   % 163
-  d16 [ b a'' a ] a [ fis d b ] d [ gis b gis ] |
+  d16-0 b-1 a''-4 a a fis-1 d-2 b-3 d^\markup{"VII"} gis-3 b gis ] |
   s2. |
   s2. |
   s2. |
 
   % 164
-  a16 [ e a a ] a [ cis, e e ] e [ a, cis g ] |
+  a16\2-4 e-0 a-4 a a cis,-1 e-0 e e a,-1 cis-2 g-0 |
   s2. |
   s2. |
-  s2. |
+  a'4 r2 |
 
   % 165
-  fis16 [ d a' a ] a [ fis d fis ] a [ d fis b,, ] |
+  fis16-3 d-4 a'-1 a a fis d fis a^\markup{"II"} d-2 fis b,, |
   s2. |
   s2. |
-  s8 a'16 [ a ] a s16 s8 s4 |
+  d,4 r2 |
 
   % 166
-  cis16 [ d a' a ] a [ e cis e ] a [ cis e a,, ] |
+  \override TextSpanner.bound-details.left.text = "II"
+  cis16-4 e \startTextSpan a' a a e cis e a \stopTextSpan cis-2 e-0 a,, |
   s2. |
   s2. |
-  s8 a16 [ a ] a s16 s8 s4  |
+  s2.  |
 
   % 167
-  b16 [ d a' a ] a [ d, b d ] gis [ b d e, ] |
+  b16-2 d-0 a'-3 a a d, b d gis-1 b-0 d-4 e,-2 |
   s2. |
   s2. |
-  s8 a16 [ a ] a s16 s8 s4  |
+  s2.  |
 
   % 168
-  a,16 [ e' a a ] a [ e a cis ] e [ cis a g ] |
+  a,,16  e'-2 a-3 a a e a cis-4 e-0 cis a g-0 |
   s2. |
   s2. |
-  s8 a16 [ a ] a s16 s8 s4 |
+  s2. |
 
   % 169
-  fis16 [ a, a a ] a16 a''16 [ a fis ] fis [ d d fis ]  |
+  s4 r16 a'-4 a fis-2 fis d d fis  |
+  \once \stemUp fis4-3 s8. d'16-3 d d d d |
   s2. |
-  s2. |
-  s4 s16 r16 r16 d16 d [ a a d ] |
+  r16 a' a a a2 |
 
   % 170
-  e16 a,,16 [ a a ] a a''16 [a e ] e [ cis cis e ]  |
+  e4-0 r16 a-4 a e-0 e cis cis e |
+  cis4-2 s8. cis16-2 cis a a cis |
   s2. |
-  s2. |
-  cis16  s4 r16 r16 cis16 cis [ a a cis ]  |
+  r16 a a a a2 |
 
   % 171
-  d16 a,16 [ a a ] a b''16 [ b gis ] gis [ e e gis ] |
-  s2. |
-  s2. |
-  gis16 s4 r16 r16 b16 b [ d d d ]|
+  d4-4 r16 b'-4 b gis-4 gis e-0 e gis-4  |
+  gis4-1 s8. d'16-2 d d d d |
+  s4 s8. b16-3 b gis-1 gis b |
+  r16 a a a a2 |
 
   % 172
-  a16 a,, [ a a ] a  a''16 [ a a ] a [ g g g ] |
-  s2. |
-  s2. |
-  cis16 s4 a16 [ a a ] b [ b cis cis ]  |
+  \override TextSpanner.bound-details.left.text = "II"
+  a4 \startTextSpan r16 a a a \stopTextSpan a-4 ^\markup{"III"} g g g |
+  cis4 s16 cis cis cis d d e-3 e |
+  a4 r16 a a a b-2 b cis-4 cis |
+  r16 a a a a2 |
 
   % 173
-  fis16 r16 r8 s2 |
-  d'16  d, [ d d ] d [ a' a a ] b  [ b cis cis ]  |
-  s2. |
-  r16  d, [ d d ] d [ a' a a ] a  [ g g g ] |
+  \override TextSpanner.bound-details.left.text = "II"
+  fis4 r16 a,-1 a a b-0 b cis \startTextSpan cis |
+  d4 s16 a a a a a a a|
+  s2 s16 g-4 g g |
+  r16 d d d <d d,>2 |
 
   % 174
-  d16 r16 r8 r16 d'16 [ d d ] d [ c c c ] |
-  fis,16 d [ d d ] d s16 s8 s4 |
-  s2. |
-  r16  d16 [ d d ] d  d' [ d d ] e [ e fis fis ] |
+  d4-2 r16 \stopTextSpan d'16-4 ^\markup{"VII"} d d d-4 ^\markup{"VIII"} c c c |
+  a4 s16 fis' fis fis g g a a|
+  fis4-3 s16 d' d d e e fis fis |
+  r16 <d d,> <d d,> <d d,> <d d,>2 |
 
   % 175
-  b16 r16 r8 r16 b16 [ b b ] cis16 [ d d d ]  |
-  g'16 d,16 [ d d ] d s16 s8 s4 |
-  s2. |
-  s16 d,16 [ d d ] d g'  [ g g ] g [ fis fis fis ] |
+  b4-1 r16 b16 b b cis16-4 ^\markup{"VIII"} d-4 ^\markup{"VII"} d d |
+  g4-2 s16 g g g g fis fis fis |
+  s4 s8 fis16-4 fis e-3 d d d |
+  r16 <d d,> <d d,> <d d,> <d d,>2 |
 
   % 176
-  g,16 [ g g g ]   fis16 [ fis fis fis ] e [ e e e ] |
-  s4 e'16 [ d d d ] d [ cis cis cis ] |
-  s2. |
-  fis [ e e e ] s16 fis,16 [ fis fis ] g [ a a a ] |
+  g,16\2-1 g g g fis16\3-2 fis ^\markup{"II"} fis fis e-0 e e e |
+  fis16-4 e-0 e e e d-2 d d d cis-1 cis cis|
+  b16-2 cis-3 cis cis d-3 a a a a-2 g-4 g g |
+  s4 s16 fis-3 fis fis g-4 a, a a |
 
   % 177
-  fis4 fis4. fis8 |
-  d4 d4. d8 |
-  s2. |
+  fis4 ^\markup{"II"} fis4.-2 fis8 |
+  d4-2 d4._\2\tweak extra-offset #'(1.25 . -2)-3 d8 |
+  \set fingeringOrientations = #'(right) <fis \tweak extra-offset #(0.5 . 0)-3 a>4 s2 |
   d,4 s2 |
 
   % 178
-  fis8 ( [ e8 ])  e4. e8 |
+  fis8 e8-0  e4. e8 |
   s2. |
   s2. |
-  d'4 d8 [ ( cis b ) ais ] |
+  d''4 d8-3 cis-2 b-4 ais-3 |
 
   % 179
-  e8 ([ d8 ]) c4. c8 |
+  e8-0 d8-3 c4.-1 c8 |
   s2. |
   s2. |
-  b4 b8 [ a g fis ] |
+  b4-4 b8 a-2 g fis-4 |
 
   % 180
-  c8 [ ( b8 )] r8 b'8 [ a g ] |
-  s4 cis8 [ a b cis ] |
+  \override TextSpanner.bound-details.left.text = "II"
+  c8 b8-0 r8 b'8-4 a-4 [ g-4] \startTextSpan |
+  s4 \stemUp cis8-1 ^\markup{"II"} [ a-1] \stemNeutral b-0 [ cis] |
   s2. |
-  g4 r8 g8 fis e |
+  g4 r8 \once \autoBeamOff g8-2 fis-2 [ e] |
 
   % 181
-  fis4 fis4. fis8 |
-  d4 d4. d8 |
+  fis4 fis4. fis8 \stopTextSpan |
+  d4-2 d4. d8 |
   s2. |
-  d8 [ fis ] b [ a g fis ] |
+  d8-0 [ fis-3] b-4 [ a] g-3 [ fis-4] |
 
   % 182
-  e4 e4. e8 |
-  d4 cis4. cis8 |
+  e4-0 e4. e8 |
+  d4-2 cis4. cis8 |
   s2. |
-  g8 [ e ] a [ g fis e ] |
+  g8-4 [ e-1] a-1 [ g-0] fis-4 [ e] |
 
   % 183
-  a8 [fis ] b [ a g fis ] |
-  c8 [ d ] d [ c b a ] |
-  s4 g8 s8 s4 |
+  a8-4 [ fis-1] b-4 ^\markup{"V"} [ a] g-2 [ fis] ^\markup{"II"} |
+  c8-3 [ d] d-3 [ c-3] b-3 [ \stemDown a ] \stemNeutral |
+  s4 g4-0 s4 |
   fis8 d g,4 r4 |
 
   % 184
-  e8 [ d ] cis4. d8 |
-  g8 [ fis ] e2 |
+  e8-0 [ d-2] cis4. \trill d8-2 |
+  g8-0 [ fis-3] e2-1 |
   s2. |
-  r4 a2 |
+  d4 a'2 |
 
   % 185
-  d4 a4. a8 |
-  fis4 fis4. fis8 |
-  s2. |
-  a4 d4.d8 |
+  d4-2 a4.-1 a8 |
+  a4-1 fis4. \tweak Fingering.extra-offset #'(2 . -1.5)-3 fis8 |
+  fis4-3 d4.-4 d8 |
+  d,4 s2 |
 
   % 186
-  a4 a4. a8 |
-  fis4 fis4. fis8 |
+  a4-1 a4. a8 |
+  fis4-3 fis4. fis8 |
   s2. |
-  c4 c2 |
+  c'4-2 c4. c8 |
 
   % 187
-  b4 b4. b8 |
-  g4 g4. g8 |
+  b4-0 b4.-0 b8 |
+  g4-0 g4.-0 g8 |
   s2. |
-  b4 e2 |
+  b4-1 e2_\5-4 |
 
   % 188
-  cis8 [ d  ] d4. cis8 |
-  g8 [ fis ] e [ d ] e4  |
+  cis8-1 d-2 d4. cis8 ^\markup{"II"} |
+  g8-0 [ fis-3 ] e-1 [ d-0 ] e4  |
   s2. |
-  a,4 s2 |
+  a,4-0 s2 |
 
   % 189
-  d4  fis4. fis8 |
-  s4 d'4. d8 |
-  s4 a4. a8  |
-  d4 d4. d8 |
+  \override TextSpanner.bound-details.left.text = "II"
+  d4-2  fis4. \startTextSpan fis8 |
+  s4 d'4. \tweak Fingering.extra-offset #'(2 . -1.5)-3 d8 |
+  d4 a'4. a8  |
+  d,4 d'4. d8 |
 
   % 190
-  fis4 fis4. fis8 |
+  fis4 fis4. fis8 \stopTextSpan |
+  d4-3 d4. d8  |
   a4 a4. a8 |
-  d,4 d4. d8  |
-  c4 c4. c8 |
+  c4-2 c4. c8 |
 
   % 191
   fis4 e4. e8 |
