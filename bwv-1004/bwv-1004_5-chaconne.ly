@@ -244,17 +244,16 @@ fingeringVoiceC = {
   d,4 d'2 |
 
   % 38
-  \override TextSpanner.bound-details.left.text = "II"
-  cis,16 e'-3 a-4 g-1 fis \startTextSpan a-4 fis d-3 a fis-4 \stopTextSpan d-0 c-3 |
+  cis,16 e'-3 a-4 g-1 fis-1 a-4 fis-1 d-3 a-1 fis-3 d-4 c-2 |
   s2. |
   s2. |
   cis4-2 c2-2 |
 
   % 39
-  b16-2 d-0 g-0 fis-4 g-0 ees'-4 _( d-3) cis-2 bes'-4 _( a-3) gis-2 _( a) |
+  b16-2 d-0 g-0 fis-4 g-0 ees'-4 _( d-3) cis-2 bes'-3 _( a-2) gis-1 _( a) |
   s2. |
   s2. |
-  b4 bes2-1 |
+  b4 bes4-1 r4 |
 
   % 40
   f16-1 _( e-0) d-4 _( c-1) bes-4 _( a-2) gis-1 _( a-2) cis,-3 g'-4 _( f-2) e-1 |
@@ -470,7 +469,7 @@ fingeringVoiceC = {
   s2. |
 
   % 75
-  bes32-1 _( d-4) e-1 _( fis-3) g-0 _( a-2) bes-3 c-1 d-3 g,-0 _( a-2) bes-3 c-1 _( d-3) e-0 fis-1 g-1 _( a-3) bes-4 _( a-3) g-1 f-4 e-3 _( d-1) |
+  bes32-1 d-0 e-2 _( fis-4) g-0 _( a-2) bes-3 c-1 d-3 g,-0 _( a-2) bes-3 c-1 _( d-3) e-0 fis-1 g-1 _( a-3) bes-4 _( a-3) g-1 f-4 e-3 _( d-1) |
   s2. |
   s2. |
   s2. |
@@ -482,7 +481,7 @@ fingeringVoiceC = {
   s2. |
 
   % 77
-  d16-0  a'-2 d-4 e-0 f-1 d bes-3 a-2 gis-1 b d-4 f^\markup{"I"} |
+  d16-0  a'-2 d-4 e-0 f-1 d bes-3 a-2 gis-1 b d-4 f-1 |
   s2. |
   s2. |
   d4 r d'-0 |
@@ -646,7 +645,7 @@ fingeringVoiceC = {
 
   % 100
   \override TextSpanner.bound-details.left.text = "V"
-  g,32 \startTextSpan d'-3 g-4 d g, d' e-2 d
+  g,32 \startTextSpan d'-3 g-4 d g, d' f-2 d
   a32-4 d-3 e d a d e d
   a,32 cis'-2 e cis a, cis' e cis \stopTextSpan |
   s2. |
@@ -678,7 +677,7 @@ fingeringVoiceC = {
   d,8 [ d'] d [ d] cis [ cis] |
 
   % 104
-  d,32 f'-2 f'-1 f, d f f' f,
+  d,32 f'-2 f'-1 f, d-4 f f' f,
   \override TextSpanner.bound-details.left.text = "II"
   a,32 \startTextSpan e' cis' e, a, e' cis' e,
   a,32 e' cis' e, a, e' cis' e, \stopTextSpan |
@@ -762,23 +761,25 @@ fingeringVoiceC = {
   d8 [ d] bes' [ bes] a [ a] |
 
   % 114
-  gis,32-1 e'-3 d'-4 e, gis,32 e' d' e,
+  gis,32\5-3 e'-1 d'-2 e, gis,32 e' d' e,
   a,32-1 e'-3 cis'-4 e, a,32 e' cis' e,
-  g,32-1 e' cis' e, g,32 e' cis' e, |
+  g,32\5-3 e'-1 cis'-2 e, g,32 e' cis' e, |
   s2. |
   s2. |
   gis8 [ gis] a [ a] g [ g] |
 
   % 115
-  fis,32-1 d'-3 c'-4 d, fis,32 d' c' d,
-  g,-1 d'-3 b'-4 d, g, d' b' d,
-  f,32-1 d'-3 b'-4 d, f,32 d' b' d, |
+  fis,32\5-3 d'-1 c'-2 d, fis,32 d' c' d,
+  \override TextSpanner.bound-details.left.text = "VII"
+  g,-4 \startTextSpan d' b' d, g, d' b' d,
+  f,32-2 d' b' d, f,32 d' b' d, \stopTextSpan |
   s2. |
   s2. |
   fis8 [ fis] g [ g] f [ f] |
 
   % 116
-  e,32-1 cis'-3 bes'-4 cis, e, cis' bes' cis,
+  \override TextSpanner.bound-details.left.text = "VI"
+  e,32-2 \startTextSpan cis' bes' cis, e, cis' bes' cis, \stopTextSpan
   f,32 ^\markup{"III"} d' a'-4 d, f, d' a' d,
   e,32-1 cis'-2 g'-4 cis, e, cis' g' cis, |
   s2. |
@@ -786,7 +787,7 @@ fingeringVoiceC = {
   e8 [ e] f [ f ] e [ e] |
 
   % 117
-  d,32-0 d'-4 f-3 d d, d' f d
+  d,32-0 d'-4 fis-3 d d, d' fis d
   a,32 a'-3 <c f>^\markup{"I"} a a, a' <c f> a
   b,32-2 g'-0 <d'-4 f-1> g, b, g' <d' f> g, |
   s2. |
@@ -812,37 +813,37 @@ fingeringVoiceC = {
   % 120
   gis,32-1 e'-3 d'-4 e, gis, e' d' e,
   a,32-1 e'-3 d'-4 e, a, e' d' e,
-  a,32-1 e'-3 cis'-1 e, a, e' cis' e, |
+  a,32-2 e'-3 cis'-1 e, a, e' cis' e, |
   s2. |
   s2. |
   gis8 [ gis] a [ a] a [ a] |
 
   % 121
-  d8 [ f'32\3-4 _( e-3) d-1 e ] _( d) [ c\4-4 d-1 c bes-2 _( c-4) bes a-1 ] bes _( [ c) d e f16-4 d,\5-3 ] |
+  d8 [ f'32\3-2 _( e-1) d-1 e-3 ] _( d-1) \glissando [ c-1 d-3 _( c-1) \glissando bes-1 c-3 _( bes-1) a-1 ] bes-1 _( [ c-3) d-1 e-3 f16-4 d,\5-3 ] |
   s2. |
   a'8 s8 s2 |
   d,8 r8 r2 |
 
   % 122
-  c8-1 [ e'32\3-4 _( d-2) c-1 d-3 _( ] c-1) [ bes\4-4 c bes a-3 _( bes-4) a g ] a _( [ bes) c d es16 c,\5-3 ] |
+  c8-1 [ e'32\3-3 _( d-1) c-1 d-3 _( ] c-1) [ bes-1 c-3 _( bes-1) a-1 bes-2 _( a-1) g-0 ] a-2 _( [ bes-3) c-1 _( d-3) es16-4 c,\5-3 ] |
   s2. |
   s2. |
   s2. |
 
   % 123
-  bes8-1 [ d'32\3-4 _( c-2) bes-1 c _( ] bes) [ a\4-4 bes-1 a g-2 _( a-4) g f-1 ] g _( [ a) bes c d16-4 bes,\5-1 ] |
+  bes8-1 [ d'32\3-3 _( c-1) bes-1 c-3 _( ] bes-1) [ a-1 bes-2 _( a-1) g-0 a-2 _( g-0) f-3 ] g _( [ a-2) bes-3 c-1 d16-3 bes,-1 ] |
   s2. |
   s2. |
   s2. |
 
   % 124
-  a32-0^\markup{"II"} [ a' _( b-3) cis d16-2 a, ] g32-3 [ a'-1 _( b-2) cis-1 d16-1 g,, ] a32 [ d'-2 _( cis-1) b-3 cis16 g-0 ] |
+  a32-0 [ a'-1 _( b-3) cis-1 d16-2 a, ] g32-4 [ a'-1 _( b-3) cis-1 d16-2 g,, ] a32 [ d'-2 _( cis-1) b-3 cis16 g-0 ] |
   s2. |
   s2. |
   a'8. [ a16 ] g8. [ g16 ] a4 |
 
   % 125
-  f16-2 _( [ e-1) d cis-4 ] d\4 [ f-1 _( g-3) a-3 ] bes-4 [ a _( bes) g-0 ] |
+  f16-2 _( [ e-1) d cis-3 ] d\4 [ f-1 _( g-3) a-3 ] bes-4 [ a _( bes) g-0 ] |
   s2. |
   s2. |
   d,2 r4 |
@@ -1245,46 +1246,46 @@ fingeringVoiceC = {
   c4-2 c4. c8 |
 
   % 191
-  fis4 e4. e8 |
-  d4 a4. a8 |
-  g4 g4. g8  |
-  b4 cis4. cis8 |
+  fis4-2 e4.-0 e8 |
+  d4-3 a4.-1 a8 |
+  g4-0 g4.-4 g8  |
+  b4-1 cis4.-3 cis8 |
 
   % 192
-  e8 [ d ]  d4. cis8 |
-  a4 s2 |
-  fis4 e8 [ fis ] g4  |
-  d4 a s4  |
+  e8-0 [ d-2 ]  d4. cis8-1 |
+  a4-1 s2 |
+  fis4-3 \stemUp e8-1 [ fis-3 ] \stemNeutral g4-4  |
+  d4-4 a2  |
 
   % 193
-  d4 fis4. fis8 |
-  s4 d4. d8 |
-  s2. |
-  fis'8 e d4. d8 |
+  d4-2       fis4.-2 fis8 |
+  s4         d4.-3   d8 |
+  fis8-3 e-1 a4.-1   a8 |
+  d,4        d'4.    d8 |
 
   % 194
-  g4 a4. a8 |
-  d4 d4. d8 |
-  s2. |
-  e4 fis4. fis8  |
+  g4-4 a4.-4   a8   |
+  d4-3 d4.-1   d8   |
+  g4-0 s2           |
+  e4-1 fis4.-2 fis8 |
 
   % 195
-  b4 b4. b8 |
-  d4 e4. e8 |
-  s2. |
-  g4 gis4. gis8 |
+  b4-4 b4.-4   b8   |
+  d4-3 e4.-2   e8   |
+  b4-0 b4.-1   b8   |
+  g4-1 gis4.-3 gis8 |
 
   % 196
-  cis8 [ d ] d4 cis |
-  e8  [ fis ] e2 |
-  s2. |
-  a4 a2 |
+  cis8-4 ^\markup{"VII"} [ d-4 ] d4 cis-4 |
+  g8-2 fis g4 g |
+  e8-3  [ d ] e4 e |
+  a4-1 a4 a, |
 
   % 197
-  d4 d4. d8 |
+  d4-4 ^\markup{"VII"} d4. d8 |
   fis4 fis4. fis8 |
-  s2. |
-  d,4 d4. d8 |
+  d4 d4. d8 |
+  d4 d4. d8 |
 
   % 198
   cis4 c4. c8 |
