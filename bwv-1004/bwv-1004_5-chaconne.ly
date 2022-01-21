@@ -387,7 +387,7 @@ fingeringVoiceC = {
 
   % 61
   f8 s8 d8 s8 s4 |
-  \stemUp \shiftOn d16-4 cis-2 _( d) a-2 \shiftOn f-3 e-2 _( f) d-0 bes\6-3 g'-0 d'\3-2 bes'-1 \stemNeutral |
+  \stemUp \shiftOn d16-4 cis-2 _( d) a-2 \shiftOn f-3 e-2 _( f) d-0 bes_\6-3 g'-0 d'\3-2 bes'-1 \stemNeutral |
   d8 r8 s2 |
   d,8 r8 s2 |
 
