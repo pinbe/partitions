@@ -899,7 +899,7 @@ fingeringVoiceC = {
 
   % 134
   e4-1 fis4.-1 g16-2 a-4 |
-  s4 cis4 s4 |
+  s2. |
   s2. |
   cis'4-3 a2 |
 
@@ -1288,46 +1288,48 @@ fingeringVoiceC = {
   d4 d4. d8 |
 
   % 198
-  cis4 c4. c8 |
-  e4 fis4. fis8 |
-  s2. |
-  a'4 d,4. d8 |
+  cis4-4 c4.-2 ^\markup{"VII"} c8 |
+  g4-2 fis4. fis8 |
+  e4-3 d4. d8 |
+  a'4-1 d,4. d8 |
 
   % 199
-  b4 e,4. e8 |
-  g8 [ d ] d4. d8 |
-  s2. |
-  g4 gis4. gis8 |
+  b4-3 e,4.-0 e8 |
+  g4-4 d4.-3 d8 |
+  d4-2 b4.-0 b8 |
+  g4-1 gis4.-1 gis8 |
 
   % 200
-  e8 [ fis ] g8 [ b a g ] |
-  d4 cis4. cis8 |
-  s4 e4. e8 |
-  a4 a,4. a8 |
+  e8-0 [ fis ] g-2 [ b-4 ] a-4 [ g-2 ^\markup{"II"} ] |
+  d4-2 cis4. cis8 |
+  b4-3 a4. e8 |
+  a,4 a4. a8 |
 
   % 201
-  fis4^\markup { arpeggio } fis fis |
-  s4 a4 a |
-  r4 d4 d |
-  d4 d cis |
+  \override TextSpanner.bound-details.left.text = "II"
+  fis4 d,16 fis' \startTextSpan fis d, d fis' fis d, \stopTextSpan |
+  d4-2 s16 a a s s a a s |
+  a4 s2 |
+  d4 d8.-0 d16 cis8.-3 cis16 |
 
   % 202
-  fis4 fis fis  |
-  b4 b b |
-  d4 d d |
-  b4 b a |
+  d16-0 fis'-2 fis d, d fis' fis d, d fis' fis d,  |
+  s16 b-0 b s s b b s s b b s |
+  s2. |
+  b8.-1 b16 b8. b16 a8.-0 a16 |
 
   % 203
-  e4 a s4 |
-  b4 cis cis |
-  d4 e e |
-  g4 g g |
+  \override TextSpanner.bound-details.left.text = "V"
+  d16 \startTextSpan e' e d, e-3 a' a e, e e'-0 e e, \stopTextSpan |
+  s16 b-0 b s s cis-2 cis s s cis-2 cis s |
+  s2. |
+  g8. g16 g8. g16 g8. g16 |
 
   % 204
-  b4 e,8 [ fis ] g4 |
-  d4 d cis |
-  e4 e e |
-  gis4 a a |
+  e16-2 b''-4 b e,, e-1 e'-0 fis-2 e, e gis'-4 gis e, |
+  s16 d-3 d s s d d s s cis-2 cis s |
+  s2. |
+  gis8.-1 gis16 a8. a16 a8. a16 |
 
   % 205
   g4 fis fis |
