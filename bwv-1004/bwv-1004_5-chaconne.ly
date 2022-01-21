@@ -21,6 +21,8 @@ fingeringVoiceC = {
 
 \parallelMusic voiceA, voiceB, voiceC, voiceD {
   % 1
+  \override Fingering.add-stem-support = #only-if-beamed
+  \set fingeringOrientations = #'(left)
   a4.-1 a8 |
   \fingeringVoiceB s2 |
   \fingeringVoiceC f2_2 |
@@ -81,39 +83,39 @@ fingeringVoiceC = {
   d'4-3 cis2-3 |
 
   % 11
-  e4 d8.-4 f16-1  e8.-0 d16-2 |
+  e4 <d-4 f,-3>8. <f-1 a,-2>16  <e-0 g,-0>8. <d-2 f,-1>16 |
   a4\tweak extra-offset #'(-1 . -1.5)-1 s2 |
-  \stemNeutral f8.\tweak extra-offset #'(0.9 . 0.8)-2 e16-2 \shiftOff f8.-3 a16-2 g8.-0 f16-1 |
+  f8.\tweak extra-offset #'(0.9 . 0.8)-2 e16-2 s2 %{ f8.-3 a16-2 g8.-0 f16-1 %} |
   d4-4 bes4..-1 g16-4 |
 
   % 12
   \override TextSpanner.bound-details.left.text = "II"
-  d4-2 cis4.. \startTextSpan a'16-4 \stopTextSpan |
-  e8.\tweak extra-offset #'(2 . -1.5)-1 ^[ d16-0 ] e8. ^[ g16-4 ] f8.\tweak extra-offset #'(2 . -1.5)-2 e16 |
-  s2 s8 s16 cis'16 |
+  d4-2 cis4.. \startTextSpan s16 \stopTextSpan |
+  e8.\tweak extra-offset #'(2 . -1.5)-1 ^[ d16-0 ] \shiftOn e8. ^[ g16-4 ] f8.\tweak extra-offset #'(2 . -1.5)-2 <e cis' a'-4>16 |
+  s2.|
   a4 a4.. a16 |
 
   % 13
-  f8-1 s8  s2 |
-  d'8\tweak extra-offset #'(2 . -1.5)-4 s8 s2 |
-  d,8.-0 [ e16 ] f8. [g32 a ]( bes8.) [ a16 ] |
+  <f-1 d-4>8 s8  s2 |
+  s2. |
+  \shiftOn d8.-0 [ e16 ] f8. [g32 a ]( bes8.) [ a16 ] |
   d,8. s16 s2 |
 
   % 14
   e4 e2 |
-  bes4 a2 |
-  \shiftOn g8. f16 g8. bes16 a8. [ g16 ] |
+  \shiftOff bes'4 a2 |
+  \shiftOn g8. f16 g8. bes16 a8. g16 |
   d'4 cis2 |
 
   % 15
-  e4  d8. [ f16 ] e8. [ cis16-4 ] |
+  e4  <d f,>8. <f a,>16 <e g,>8. <cis-4 e,-3>16 ] |
   a4 s2 |
-  f8. [ e16 ] f8. [ a16 ] g8. [ e16-3 ] |
+  f8. [ e16 ] s2 | % f8. [ a16 ] g8. [ e16-3 ] |
   d4 bes4.. bes16-1 |
 
   % 16
-  d8.-4 [ e16-4 ] d4-4 ( cis8.)\trill  [ d16 ] |
-  f8.\tweak extra-offset #'(2 . -1.5)-3 [ g16-3 ] e2-1 |
+  <d-4 f,-3>8. <e-4 g,-3>16 d4-4 ( cis8.)\trill  d16 |
+  s4 e2-1 |
   s2. |
   a8. [ g16-2 ] a2 |
 
@@ -154,9 +156,9 @@ fingeringVoiceC = {
   cis'4 c r8. c16 |
 
   % 23
-  g8. [ f16 ] e8. [ d32_( cis) ] d8. [ e16-0 ] |
-  s2 s8 s16 d16\tweak extra-offset #'(0 . 0)-4 |
-  b'4 bes r8. gis16\tweak extra-offset #'(-1.25 . 0.8)-2  |
+  g8. f16 e8. d32 _( cis) d8. <e-0 d-4 gis,-2>16 |
+  s2. |
+  b'4 bes s4  |
   s2 s8. bes,16-1 |
 
   % 24
@@ -385,7 +387,7 @@ fingeringVoiceC = {
 
   % 61
   f8 s8 d8 s8 s4 |
-  \stemUp d16-4 cis-2 _( d) a-2 f-3 e-2 _( f) d-0 bes\6-3 g'-0 d'\3-2 bes'-1 |
+  \stemUp \shiftOn d16-4 cis-2 _( d) a-2 \shiftOn f-3 e-2 _( f) d-0 bes\6-3 g'-0 d'\3-2 bes'-1 \stemNeutral |
   d8 r8 s2 |
   d,8 r8 s2 |
 
@@ -1330,6 +1332,8 @@ fingeringVoiceC = {
   s16 d-3 d s s d d s s cis-2 cis s |
   s2. |
   gis8.-1 gis16 a8. a16 a8. a16 |
+  
+  %{
 
   % 205
   g4 fis fis |
@@ -1648,6 +1652,7 @@ fingeringVoiceC = {
   s2. |
   s2. |
   d2. |
+  %}
 }
 
 merges = {
