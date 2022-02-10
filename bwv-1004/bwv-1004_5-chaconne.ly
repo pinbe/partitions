@@ -1,5 +1,28 @@
 \version "2.22.1"
 
+\header {
+        title = "Partita II BWV 1004"
+        subtitle = "Sechs Sonaten für Violine"
+        piece = "5. Chaconne"
+        mutopiatitle = "BWV 1004 Chaconne"
+        composer = "Johann Sebastian Bach (1685-1750)"
+        mutopiacomposer = "BachJS"
+        opus = "BWV 1004"
+        date = "1720"
+        mutopiainstrument = "Guitar"
+        style = "Baroque"
+        %source = "Bach-Gesellschaft Edition 1879 Band 27.1"
+        %maintainer = "Hajo Dezelski"
+        %maintainerEmail = "dl1sdz (at) gmail.com"
+
+        license = "Creative Commons Attribution-ShareAlike 3.0"
+        %footer = "Mutopia-2019/05/30-1426"
+        %copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2019 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+        tagline = ##f
+}
+
+
+
 fingeringMiddelVoices = {
   \override Fingering.staff-padding = #'() 
   \override Fingering.add-stem-support = ##f
@@ -1197,7 +1220,7 @@ fingeringVoiceC = {
   e8-0 d8-3 c4.-1 c8 |
   s2. |
   s2. |
-  b4-4 b8 a-2 g fis-4 |
+  b4-4 b8-4 a-2 g fis-4 |
 
   % 180
   \override TextSpanner.bound-details.left.text = "II"
@@ -1213,10 +1236,10 @@ fingeringVoiceC = {
   d8-0 [ fis-3] b-4 [ a] g-4 [ fis-3] |
 
   % 182
-  <e-0 d-2>4 <e cis>4. <e cis>8 |
+  <e-0 d-2>4 <e cis-2>4. <e cis>8 |
   s2. |
   s2. |
-  g8-4 [ e-1] a-1 [ g-0] fis-4 [ e] |
+  g8-0 [ e-1] a-1 [ g-0] fis-4 [ e-1] |
 
   % 183
   <a-4 c,-3>8- [ fis-1] <b-4 d,-3> ^\markup{"V"} [ <a c,-3> ] <g-2 b,-3> [ <fis a,> ] ^\markup{"II"} |
@@ -1383,55 +1406,56 @@ fingeringVoiceC = {
   s2. |
   <b-1 fis-3>8 <g-1 e'-2> <a e'-1>2 |
   
-  %{
-
   % 209
-  \key d \minor d,4 bes4. bes8 |
-  \key d \minor s4 f,2 |
+  \key d \minor d4 bes4. bes8-3 |
   \key d \minor s2. |
-  d4 d2|
+  \key d \minor s2. |
+  \key d \minor <d d,>4 <d f-3>2|
 
   % 210
-  bes8. [ e16 ] bes [ ( g a e ) ] c8 [ a' ] |
-  e8. s16 s4 s8 e8 |
+  \override Fingering.add-stem-support = #only-if-beamed
+  bes8. e16-4 bes-2 g-4 a ^\markup{"II"} e c8 a' |
   s2. |
-  c4 s4 s8 c8 |
+  s2. |
+  <c-2 e-1>8. r16 r4 s8 <c e>8 |
 
   % 211
-  a8. [ d16 ] a [ ( fis g d ) ] bes8 [ g'8 ] |
-  d8. s16 s4 s8 bes8 |
+  a8.-2 d16-4 a-2 fis-4 g-0 d-0 bes8-1 g'8 |
   s2. |
-  bes8. s16 s4 s8 s8 |
+  s2. |
+  <bes-1 d-0>8. r16 r4 s8 <bes d>8 |
 
   % 212
-  g8. [ e'16 ] cis [ ( a bes g ) ] cis,8 [ a'8 ] |
-  s4 s4 s8 e8 |
+  g8.-0 e'16-4 cis ^\markup{"II"} a bes-2 g-4 cis,8-3 a'8 |
   s2. |
-  a4 s4 s8 cis8 |
+  s2. |
+  <a e'-1>8. r16 r4 s8 <cis e>8 |
 
   % 213
-  f8. [ d16 ] f [ a d cis ] d [ ( e f ) a, ] |
+  f8.-2 d16-4 f a-1 d-3 cis-1 d-1 e-3 f-4 a,-1 |
   s2. |
   s2. |
-  d8. s16 s2 |
+  d,8. r16 r4 r |
 
   % 214
-  f'8. [ d,16 ] g [ bes es d ] es [ ( c f, a,) ] |
-  bes'8. s16 s2 |
-  d8. s16 s2 |
-  g,8. s16 s2 |
+  f'8.-4 d,16-3 g-4 bes ^\markup{"III"} ees-2 d ees c-4 f,-1 a,-0 |
+  s2. |
+  s2. |
+  <g-2 d'-0 bes'-1>8. r16 r4 r |
 
   % 215
-  es''8. [ cis16 ] d [ a bes fis ] g [ ( d es g ) ] |
-  f8. s16 s2 |
+  ees''8.-4 cis16-2 d-4 a-1 bes-2 fis-3 g-4 d-0 ees-1 g |
   s2. |
-  bes8. s16 s2 |
+  s2. |
+  <bes f'-3>8. r16 r4 r |
 
   % 216
-  cis8 [ d8 ] d8. [ b16 ] cis [( e g ) a, ] |
-  g8 [ f ] e8. s16 s4|
+  cis8-2 d8 ^\markup{"II"} d8.-4 b16-0 cis-2 e-0 g-4 a, |
   s2. |
-  a8 [ g ] a8. s16 s4 |
+  s2. |
+  <a g'-0>8 <g-3 f'> <a~ e'-1>4 a8. a'16 |
+  
+  %{
 
   % 217
   d,16 [ ( a' cis g' ) ] f [ d ( cis d ) ] d, [ d' ( cis d ) ] |
