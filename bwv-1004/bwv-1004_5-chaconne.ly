@@ -628,7 +628,8 @@ fingeringVoiceC = {
   % 92
   \override TextSpanner.bound-details.left.text = "V"
   g,32 \startTextSpan bes'-4 e bes g,32 a'-3 f'-2 a,
-  g,32 g' e' g, \stopTextSpan  g, ^\markup{"III"} f' d' f,
+  \override TextSpanner.bound-details.left.text = "III"
+  g,32 g' e' g, \stopTextSpan  g, \startTextSpan f' d' f, \stopTextSpan
   \override TextSpanner.bound-details.left.text = "II"
   a,32 \startTextSpan e' d'-2 e, a,32 e' cis' e, \stopTextSpan |
   s2. |
@@ -636,7 +637,8 @@ fingeringVoiceC = {
   g,8 [ g] g [ g-3] a [ a] |
 
   % 93
-  d,32 ^\markup{"III"} f' d' f, d f d' f,
+  \override TextSpanner.bound-details.left.text = "III"
+  d,32 \startTextSpan f' d' f, d f d' f, \stopTextSpan
   a, f'-3 d'-4 f, a, f' d' f,
   bes, f'-3 d'-4 f, bes, f' d' f, |
   s2. |
@@ -669,9 +671,11 @@ fingeringVoiceC = {
   a8 [ a] a [ a] a [ a] |
 
   % 97
-  d,32 ^\markup{"III"} f' d' f, d f d' f,
+  \override TextSpanner.bound-details.left.text = "III"
+  d,32 \startTextSpan f' d' f, d f d' f, \stopTextSpan
   d32 f-2 a-1 f d f a f
-  d32 ^\markup{"III"} f bes f d f bes f |
+  \override TextSpanner.bound-details.left.text = "III"
+  d32 \startTextSpan f bes f d f bes f \stopTextSpan |
   s2. |
   s2. |
   d,8 [ d'-4] d-4 [ d] d-3 [ d] |
@@ -686,7 +690,8 @@ fingeringVoiceC = {
 
   % 99
   d32-3 g-4 bes-1 g d g bes g
-  e32-2 ^\markup{"VI"} cis' bes' cis, e, cis' bes' cis,
+  \override TextSpanner.bound-details.left.text = "VI"
+  e32-2 \startTextSpan cis' bes' cis, e, cis' bes' cis, \stopTextSpan
   f,32\5-2 d'\3-1 a'\2-4 d, f,32 d' a' d, |
   s2. |
   s2. |
@@ -736,7 +741,8 @@ fingeringVoiceC = {
   d,8 [ d'] a [ a] a [ a] |
 
   % 105
-  d,32 ^\markup{"III"} f' d' f, d-4 f d' f,
+  \override TextSpanner.bound-details.left.text = "III"
+  d,32 \startTextSpan f' d' f, d-4 f d' f, \stopTextSpan
   d32\5-1 a'-3 f'\2-2 a, d, a' f' a,
   d,,32 c''\3-3 f\2-4 c d,, c'' f c |
   s2. |
@@ -787,8 +793,10 @@ fingeringVoiceC = {
 
   % 111
   f,32-1 c'-3 a'-4 c, f, c' a' c,
-  fis,32-1 ^\markup{"IV"} ees' c'-4 ees, fis,32 ees' c' ees,
-  g,32-1 d'-3 b'-4 d, g, d' b' d, |
+  \override TextSpanner.bound-details.left.text = "IV"
+  fis,32-1 \startTextSpan ees' c'-4 ees, fis,32 ees' c' ees, \stopTextSpan
+  \override TextSpanner.bound-details.left.text = "V"
+  g,32-1 \startTextSpan d'-3 b'-4 d, g, d' b' d, \stopTextSpan |
   s2. |
   s2. |
   f8 [ f] fis [ fis] g [ g] |
@@ -796,7 +804,8 @@ fingeringVoiceC = {
   % 112
   \override TextSpanner.bound-details.left.text = "VI"
   gis,32 \startTextSpan f' d'-4 f, gis,32-1 f' d'-4 f, \stopTextSpan
-  a,32-1 e'-3 d'-4 e, a,32 e' d' e,
+  \override TextSpanner.bound-details.left.text = "VII"
+  a,32-1 \startTextSpan e'-3 d'-4 e, a,32 e' d' e, \stopTextSpan
   a,, e''-3 cis'-4 e, a,, e'' cis' e, |
   s2. |
   s2. |
@@ -937,7 +946,7 @@ fingeringVoiceC = {
   a,,4  bes-1 a8-0 ^[ d'-1 ] |
 
   % 132
-  s4 cis'4. \trill d8 \bar "||" |
+  s4 cis'4. ^\markup{"II"} \trill d8-4 \bar "||" |
   s2. |
   s2. |
   gis,,8-4 ^[ d'' ] <a, e'-1>2 |
@@ -974,10 +983,11 @@ fingeringVoiceC = {
   d,4 <d'-4 fis-3>4. d8 |
 
   % 138
-  e4^\markup{"II"} fis16-3 g-0 a-1 g fis8 e-1 |
+  e4 fis16-3 g-0 a-1 g fis8 e-1 |
   s2. |
   s2. |
-  cis8-3 b a4. a8 |
+  \override TextSpanner.bound-details.left.text = "II"
+  cis8-3 \startTextSpan b \stopTextSpan a4. a8 |
 
   % 139
   d4-0 e8^\markup{"II"} g16-4 fis-2 e8 d |
@@ -1023,7 +1033,8 @@ fingeringVoiceC = {
   \shiftOff d,4 s2 |
 
   % 146
-  <e-0 cis-2>4 a4.-4 ^\markup{"II"} g8-2 |
+  \override TextSpanner.bound-details.left.text = "II"
+  <e-0 cis-2>4 a4.-4 \startTextSpan g8-2 \stopTextSpan |
   s2. |
   s2. |
   a''8-1 [ b-0] cis [ a] b-3 [ cis ] |
@@ -1036,6 +1047,7 @@ fingeringVoiceC = {
 
   % 148
   <g-4 cis,>8 ^\markup{"II"} [ <fis d-3> ] ^\markup{"II"} e2-0 |
+  \override Fingering.direction = 1
   s2 cis'4-2 |
   s2. |
   <e a>8 [ <d a'> ] \once \set fingeringOrientations = #'(right) <a' d-3>4 a, |
@@ -1168,8 +1180,9 @@ fingeringVoiceC = {
 
   % 169
   s4 r16 a'-4 a fis-2 fis d d fis  |
-  \once \override Fingering.direction = 1
-  \once \stemUp fis,4-3 s8. d'16-3 d a-1 a d |
+  \once \stemUp fis,4-3 s8.
+  \override Fingering.direction = -1
+  d'16-3 d a-1 a d |
   s2. |
   r16 a' a a a2 |
 
