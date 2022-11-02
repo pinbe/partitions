@@ -7,17 +7,23 @@
   tagline = ##f
 }
 
+#(define RH rightHandFinger)
+
 \parallelMusic voiceA, voiceB {
-  d'8-3 \rightHandFinger #2 e-0 \rightHandFinger #3 |
+  d'8-3 e-0 |
   s4|
   
   %1
   fis8-2 _( e-0) fis-2 g-4 _( fis-2 ) g-4 |
-  <d a'-1 d-3>4. <g b>4. |
+  \once \override Arpeggio.positions = #'(-2.5 . 2.0)
+  <d\RH #1 a'-1 d-3>4. \arpeggio
+  \once \override Arpeggio.positions = #'(-1 . 2.5)
+  <g\RH #1 b>4. \arpeggio |
   
   %2
   fis4.-2 e8-4 d-2 cis-1 |
-  <d a' d>4 d ~ d |
+  \once \override Arpeggio.positions = #'(-2.5 . 2.0)
+  <d\RH #1 a' d>4 \arpeggio d ~ d |
   
   %3
   b8-0 _( cis-1 ) d-2
@@ -32,7 +38,7 @@
   
   %5
   fis8-2 _( e ) fis g _( fis ) g |
-  <d' a'-1 d-3>4. <g b> |
+  <d' a'-1 d-3>4.<g b> |
   
   %6
   fis4.-2 e8-4 d-2 cis-1 |
@@ -274,16 +280,36 @@
   g4. a |
   
   %64
-  <d, fis d'-4>4. ^\markup{"VII"} r |
-  d,4-0 d8 a d a |
+  \once \override Arpeggio.positions = #'(-2.5 . 4.5)
+  \arpeggioArrowUp
+  <d, fis d'-4>4.^\markup{"VII"} \arpeggio r |
+  d,4-0\RH #1 d8\RH #2 a\RH #1 d\RH #2 a\RH #1 |
   
   %65
-  <d fis d'-4>8 <d fis d'> <d fis d'> <g-2 d'-4> <g d'> <g d'> |
-  d8\f d d g-0 g g |
+  \override Arpeggio.positions = #'(-2.5 . 4.5)
+  \arpeggioArrowUp
+  <d fis d'-4>8 \arpeggio
+  \arpeggioArrowDown
+  <d fis d'> \arpeggio
+  \arpeggioArrowUp
+  <d fis d'> \arpeggio
+  
+  \override Arpeggio.positions = #'(-1 . 4.5)
+  \arpeggioArrowUp
+  <g-2 d'-4> \arpeggio
+  \arpeggioArrowDown
+  <g d'> \arpeggio
+  \arpeggioArrowUp
+  <g d'> \arpeggio |
+  
+  
+  d8 \RH #2 \f d \RH #1 d \RH #2 g-0
+  \offset 
+  \RH #2 g \RH #1 g \RH #2 |
   
   %66
   <d fis d'-4>4. r |
-  d4 d8 a d a |
+  d4 d8 \RH #2 a \RH #1 d \RH #2 a \RH #1 |
   
   %67
   <d fis d'-4>8 <d fis d'> <d fis d'> <a-1 e'-2 a-4 cis-3> <a e' a cis> <a e' a cis> |
@@ -752,6 +778,11 @@ fingeringTweaks = {
   \override Fingering.avoid-slur = ##t
   \override Fingering.font-size = #-5
   \set fingeringOrientations = #'(left)
+  \set strokeFingerOrientations = #'(down)
+
+  
+  \override StrokeFinger.add-stem-support = ##f
+  \override StrokeFinger.font-shape = #'upright
 }
 
 barringTweaks = {
