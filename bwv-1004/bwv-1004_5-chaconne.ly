@@ -32,13 +32,13 @@ fingeringMiddleVoices = {
 
 fingeringVoiceB = {
   \fingeringMiddleVoices
-  \override Fingering.color = red
+  %\override Fingering.color = red
   \override Fingering.extra-offset = #'(1.25 . -1.5)
 }
 
 fingeringVoiceC = {
   \fingeringMiddleVoices
-  \override Fingering.color = green
+  %\override Fingering.color = green
   \override Fingering.extra-offset = #'(-1.5 . 1.5)
 }
 
@@ -398,7 +398,7 @@ fingeringVoiceC = {
   \override Fingering.extra-offset = #'()
   d8-4 [ a8-2]
   \override Fingering.add-stem-support = ##t
-  d,8-0 [ d'8] bes16-3 a ^( bes) g-0 |
+  d,8-0 [ d'8] bes16-3 a-2 ^( bes) g-0 |
   s2. |
   d,4 \shiftOn s2 |
 
@@ -415,26 +415,27 @@ fingeringVoiceC = {
   s2. |
 
   % 60
-  r4. a8-4 a16^\markup{"II"} g-2 _( a-4) e-0 |
-  \stemUp a8^\markup{"II"}
+  \override TextSpanner.bound-details.left.text = "II"
+  r4. a8-4 a16-4 _( \startTextSpan g-2 ) a-4 \stopTextSpan e-0 |
+  \stemUp a8
   \override Fingering.direction = 1
   d-3 \stemNeutral
   \override Fingering.direction = -1
   \override Fingering.add-stem-support = ##f
-  d16-2^\markup{"II"} ^( cis) d-2 ^( b) cis4 |
-  \stemDown f16-2 ^( e) f-2 ^( d-0) e4 e |
+  \override TextSpanner.bound-details.left.text = "II"
+  d16-2 \startTextSpan ^( cis) \stopTextSpan d-2 ^( b) cis4 |
+  \override TextSpanner.bound-details.left.text = "II"
+  \stemDown f16-2 \startTextSpan ^( e) \stopTextSpan f-2 ^( d-0) e4 e |
   a'4  a a |
 
   % 61
   f8 s8 d8 s8 s4 |
   \stemUp \shiftOn
-  %\override Fingering.extra-offset = #'(-1 . -3)
-  \override Fingering.direction = 1
+  \override Fingering.direction = -1
   \override Fingering.add-stem-support = ##t
   d16-4 cis-2 _( d) a-2
-  \override Fingering.direction = -1
   \shiftOn f-3 e-2 _( f) d-0 bes_\6-3 g'-0 d'\3-2 bes'-1 \stemNeutral |
-  d8 r8 s2 |
+  d8 s8 s2 |
   d,8 r8 s2 |
 
   % 62
@@ -553,7 +554,7 @@ fingeringVoiceC = {
   a4 r a |
 
   % 81
-  d,,16 bes'''-1 bes gis\2-4 gis f-1 f d\3-2 d b-0 gis\3-1 e-2 |
+  d,,16 bes'''-1 bes gis\2-4 gis f-1 f d\3-2 d b\4-4 gis\4-1 e\5-2 |
   s2. |
   s2. |
   d,2 r4 |
@@ -1167,19 +1168,22 @@ fingeringVoiceC = {
 
   % 169
   s4 r16 a'-4 a fis-2 fis d d fis  |
+  \once \override Fingering.direction = 1
   \once \stemUp fis,4-3 s8. d'16-3 d a-1 a d |
   s2. |
   r16 a' a a a2 |
 
   % 170
   e4-0 r16 a-4 a e-0 e cis cis e |
+  \once \override Fingering.add-stem-support = ##f
   cis4-2 s8. cis16-2 cis a-1 a cis |
   s2. |
   r16 a a a a2 |
 
   % 171
   d4-4 r16 b'-4 b gis-4 gis e-0 e gis-4  |
-  gis4-1 s8. \override Fingering.extra-offset = #'() \set fingeringOrientations = #'(right) <d'-2 b-3>16 <d b> <d-2 gis,-1> <d gis,> <d gis,> |
+  \once \override Fingering.add-stem-support = ##f
+  gis4-1 s8. \set fingeringOrientations = #'(right) <d'-2 b-3>16 <d b> <d-2 gis,-1> <d gis,> <d gis,> |
   s2. |
   r16 a a a a2 |
 
@@ -1193,7 +1197,8 @@ fingeringVoiceC = {
   % 173
   \override TextSpanner.bound-details.left.text = "II"
   fis4-1 r16 a,-1 a a b-0 b cis \startTextSpan cis |
-  \override Fingering.extra-offset = #'(1.25 . -1.5) d4-2 s16 a a a \override Fingering.extra-offset = #'() a-1 \set fingeringOrientations = #'(right) <a-1 g-4> <a g> <a g> |
+  \once \override Fingering.add-stem-support = ##f
+  d4-2 s16 a a a a-1 \set fingeringOrientations = #'(right) <a-1 g-4> <a g> <a g> |
   s2. |
   r16 d d d <d d,>2 |
 
@@ -1209,8 +1214,8 @@ fingeringVoiceC = {
   % 175
   \override TextSpanner.bound-details.left.text = "VII"
   b4-1 r16 b16 b b cis16-4 d-4 \startTextSpan d d \stopTextSpan |
-  \override Fingering.extra-offset = #'(1.25 . -1.5)
-  g'4-2 s16 g \override Fingering.extra-offset = #'() \set fingeringOrientations = #'(left) <g fis-4> <g fis> <g-2 e-3> <fis d> <fis d> <fis d> |
+  \once \override Fingering.add-stem-support = ##f
+  g'4-2 s16 g \set fingeringOrientations = #'(left) <g fis-4> <g fis> <g-2 e-3> <fis d> <fis d> <fis d> |
   s2. |
   r16 <d d,> <d d,> <d d,> <d d,>2 |
 
@@ -1228,7 +1233,7 @@ fingeringVoiceC = {
 
   % 177
   \override Fingering.add-stem-support = #only-if-beamed fis4 ^\markup{"VII"} fis4.-2 fis8 |
-  s4 d4._\2\tweak extra-offset #'(1.25 . -2)-3 d8 |
+  s4 d4._\2-3 d8 |
   <fis'-3 a d>4 s2 |
   d,4 s2 |
 
@@ -1247,7 +1252,9 @@ fingeringVoiceC = {
   % 180
   \override TextSpanner.bound-details.left.text = "II"
   c8-1 b8-0 s8 b'8-4 a-4 [ g-4] \startTextSpan |
-  s4 \stemUp cis8\3-2 [ a_\4-3] \stemNeutral b-0 ^[ cis] |
+  \override Fingering.direction = 1
+  \override Fingering.add-stem-support = ##f
+  s4 \stemUp cis8\3-2 [ a_\4\tweak Fingering.extra-offset $'(-1 . -0.5)-3] \stemNeutral b-0 ^[ cis] |
   s2. |
   g4 r8 \once \autoBeamOff g8-0 fis-2 [ e] |
 
