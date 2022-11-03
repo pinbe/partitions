@@ -303,9 +303,10 @@
   <g d'> \arpeggio |
   
   
-  d8 \RH #2 \f d \RH #1 d \RH #2 g-0
-  \offset 
-  \RH #2 g \RH #1 g \RH #2 |
+  d8 \RH #2 \f d \RH #1 d \RH #2
+  \override Stem.details.beamed-lengths = #'(5.5)
+  g-0 \RH #2 g \RH #1 g \RH #2 
+  \override Stem.details.beamed-lengths = #'(4.5) |
   
   %66
   <d fis d'-4>4. r |
@@ -365,7 +366,7 @@
   r8 d4-0 r8 a4-0 |
   
   %80
-  <a-1 d-3 fis-2>4. r |
+  <a d-2 fis>4. ^\markup{"II"} r |
   d4 d8 a d a |
   
   %81
@@ -430,7 +431,7 @@
   r8 d4-0 r8 a4-0 |
   
   %96
-  <a-1 d-3 fis-2>4. r |
+  <a d-2 fis>4. ^\markup{"II"} r |
   d4 d8 a d a |
   
   %97
@@ -763,7 +764,7 @@
   r8 d4-0 r8 a4-0 |
   
   %176
-  <a-1 d-3 fis-2>4. r |
+  <a d-2 fis>4. ^\markup{"II"} r |
   d4 d8 a d a |
   
   r4. <d fis d'-4>8 r r | 
