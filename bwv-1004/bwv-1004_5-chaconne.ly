@@ -32,13 +32,13 @@ fingeringMiddleVoices = {
 
 fingeringVoiceB = {
   \fingeringMiddleVoices
-  %\override Fingering.color = red
+  \override Fingering.color = red
   \override Fingering.extra-offset = #'(1.25 . -1.5)
 }
 
 fingeringVoiceC = {
   \fingeringMiddleVoices
-  %\override Fingering.color = green
+  \override Fingering.color = green
   \override Fingering.extra-offset = #'(-1.5 . 1.5)
 }
 
@@ -928,7 +928,7 @@ fingeringVoiceC = {
   <g-1 e'-3 d'-4>4 <a f' d'> <a e'-1 cis'-2> |
 
   % 129
-  <a,-1 d-3 g-4>4 <a d fis-2> s4|
+  <a,-1 d-3 g-4>4 <a d-2 fis>^\markup{"II"} s4|
   s2. |
   s2. |
   d2 c8-3 ^[ f'-1 ] |
@@ -949,7 +949,7 @@ fingeringVoiceC = {
   s4 cis'4. ^\markup{"II"} \trill d8-4 \bar "||" |
   s2. |
   s2. |
-  gis,,8-4 ^[ d'' ] <a, e'-1>2 |
+  gis,,8-4 ^[ d'' ] <a, e'>2 |
 
   % 133
   \key d \major
@@ -990,7 +990,8 @@ fingeringVoiceC = {
   cis8-3 \startTextSpan b \stopTextSpan a4. a8 |
 
   % 139
-  d4-0 e8^\markup{"II"} g16-4 fis-2 e8 d |
+  \override TextSpanner.bound-details.left.text = "II"
+  d4-0 e8 \startTextSpan g16-4 fis-2 e8 \stopTextSpan d |
   s2. |
   s4 b4. s8 |
   b8-2 a g4.-3 g8 |
@@ -1050,7 +1051,7 @@ fingeringVoiceC = {
   \override Fingering.direction = 1
   s2 cis'4-2 |
   s2. |
-  <e a>8 [ <d a'> ] \once \set fingeringOrientations = #'(right) <a' d-3>4 a, |
+  <e a>8 [ <d a'> ] \once \set fingeringOrientations = #'(right) <a'-1 d-3>4 a, |
 
   % 149
   d16-4 _( cis-2) b-0 a-2 gis-1 b-0 d-4 fis-2 e8-0 <e b-0 gis-1> |
@@ -1083,7 +1084,8 @@ fingeringVoiceC = {
   d4 r2 |
 
   % 154
-  cis16-1 a''-3 e-2 cis-4  a\3^\markup{"II"} cis a e cis-3 e-1 _( d-0) cis |
+  \override TextSpanner.bound-details.left.text = "II"
+  cis16-1 a''-3 e-2 cis-4  a \startTextSpan cis a e \stopTextSpan cis-3 e-1 _( d-0) cis |
   s2. |
   s2. |
   cis4 r2 |
@@ -1122,7 +1124,7 @@ fingeringVoiceC = {
 
   % 160
   \override TextSpanner.bound-details.left.text = "II"
-  cis16-2 e-0 cis a \startTextSpan e a cis,-4 e \stopTextSpan a, cis-1 _( e\5-4) g-0  |
+  cis16-2 e-0 cis \startTextSpan a e a cis,-3 e \stopTextSpan a, cis-1 _( e\5-4) g-0  |
   s2. |
   s2. |
   a4 r2 |
@@ -1135,7 +1137,8 @@ fingeringVoiceC = {
   d,4 r2 |
 
   % 162
-  e16-1 cis-3 a''-4 a a e-0 cis-2 a^\markup{"II"} e cis-4 a-0 cis |
+  \override TextSpanner.bound-details.left.text = "II"
+  e16-1 cis-3 a''-4 a a e-0 cis \startTextSpan a e cis-3 \stopTextSpan a-0 cis |
   s2. |
   s2. |
   s2. |
@@ -1148,20 +1151,20 @@ fingeringVoiceC = {
   s2. |
 
   % 164
-  a16\2-4 e-0 a-4 a a cis,-1 e-0 e e a,-1 cis-2 g-0 |
+  a16\2-4 e-0 a\1-4 a a cis,-1 e-0 e e a,-1 cis-2 g-0 |
   s2. |
   s2. |
   a'4 r2 |
 
   % 165
-  fis16-3 d-4 a'-1 a a fis d fis a^\markup{"II"} d-2 fis b,, |
+  \override TextSpanner.bound-details.left.text = "II"
+  fis16-3 d-4 a'-1 a a fis d fis a \startTextSpan d-2 fis b,, |
   s2. |
   s2. |
   d,4 r2 |
 
   % 166
-  \override TextSpanner.bound-details.left.text = "II"
-  cis16-3 e \startTextSpan a a a e cis e a \stopTextSpan cis-2 e-0 a,, |
+  cis16-3 e a a a e cis e a cis \stopTextSpan e-0 a,, |
   s2. |
   s2. |
   s2.  |
@@ -1315,7 +1318,7 @@ fingeringVoiceC = {
 
   % 188
   <cis-1 g-0>8 <d-2 fis,-3> d4. cis8 ^\markup{"II"} |
-  s4 e8-1 d-0 e4  |
+  s4 e8-1 d-0 e4 |
   s2. |
   a,4-0 s2 |
 
@@ -1416,7 +1419,7 @@ fingeringVoiceC = {
 
   % 203
   \override TextSpanner.bound-details.left.text = "V"
-  d16-2 <e'-0 b-0> <e b> d, e-3 \startTextSpan <a' cis,-2> <a cis,> e, e <e'-0 cis-2> <e cis> e, \stopTextSpan |
+  d16-2 <e'-0 b-0> <e b> d, e-3 \startTextSpan <a' cis,-2> <a cis,> e, e <e' cis-2> <e cis> e, \stopTextSpan |
   s2. |
   s2. |
   g8.-1 g16 g8. g16 g8. g16 |
@@ -1456,14 +1459,15 @@ fingeringVoiceC = {
   <b-1 fis'-3>8 <g-1 e'-2> <a e'-1>2 |
   
   % 209
-  \key d \minor d4 bes4. bes8-3 |
+  \key d \minor d4 bes4. ^\markup{"III"} bes8-3 |
   \key d \minor s2. |
   \key d \minor s2. |
-  \key d \minor <d d,>4 <d f-3>2|
+  \key d \minor <d d,>4 <d-3 f>2|
 
   % 210
   \override Fingering.add-stem-support = #only-if-beamed
-  bes8. e16-4 bes-2 g-4 a ^\markup{"II"} e c8 a' |
+  \override TextSpanner.bound-details.left.text = "II"
+  bes8. e16-4 bes-2 g-4 a \startTextSpan  e c8-2 a' \stopTextSpan |
   s2. |
   s2. |
   <c-2 e-1>8. r16 r4 s8 <c e>8 |
@@ -1475,7 +1479,8 @@ fingeringVoiceC = {
   <bes-1 d-0>8. r16 r4 s8 <bes d>8 |
 
   % 212
-  g8.-0 e'16-4 cis ^\markup{"II"} a bes-2 g-4 cis,8-3 a'8 |
+  \override TextSpanner.bound-details.left.text = "II"
+  g8.-0 e'16-4 cis \startTextSpan a bes-2 g-4 cis,8-3 a'8 \stopTextSpan |
   s2. |
   s2. |
   <a e'-1>8. r16 r4 s8 <cis e>8 |
@@ -1499,7 +1504,7 @@ fingeringVoiceC = {
   <bes f'-3>8. r16 r4 r |
 
   % 216
-  cis8-2 d8 ^\markup{"II"} d8.-4 b16-0 cis-2 e-0 g-4 a, |
+  cis8-2 d8 ^\markup{"III"} d8.-4 b16-0 cis-2 e-0 g-4 a, |
   s2. |
   s2. |
   <a g'-0>8 <g-3 f'> <a~ e'-1>4 a8. a'16 |
@@ -1563,13 +1568,13 @@ fingeringVoiceC = {
   s2. |
   
   % 226
-  c,16-1 g'-2 _( a-4 ) bes c-2 e\2-3 _( f-4 ) g-1 a-3 [ f,32 ( e d e f16 ) ] |
+  c,16-1 g'-2 _( a-4 ) bes c-2 e\2-3 _( f-4 ) g-1 a-3 [ f,32-3\4 _( e-1 ) d-0 _( e ) f16 ] |
   s2. |
   s2. |
   s2. |
 
   % 227
-  bes,16-1 d''32-4 _( c-2 ) bes-1 _( c ) d16 g,\1-1 bes32-4 _( a-3 ) g-1 _( a ) bes16 e,16-0 g32-3 _( f-1 ) e _( f ) g16 |
+  bes,16-1 d''32-4 _( c-2 ) bes-1 _( c ) d16 g,\2-1 bes32-4 _( a-3 ) g-1 _( a ) bes16 e,16-0 g32-3 _( f-1 ) e _( f ) g16 |
   s2. |
   s2. |
   bes'4 s2 |
@@ -1581,16 +1586,16 @@ fingeringVoiceC = {
   s2. |
  
   % 229
-  s16 [ a s a s a s a s a s a ] |
+  \override TextSpanner.bound-details.left.text = "II"
+  s16 [ a \startTextSpan s a s a s a s a s a ] |
   s2. |
   \stemDown
   \override Fingering.extra-offset = #'()
-  f16-2 [ s a s bes-3\3 s a s g-4 s f-3 s ] |
+  f16-2 [ s a s bes-3_\3 s a s g-4 s f-3 s ] |
   \shiftOnn <d, a'>4 s2 |
 
    % 230
-  \override TextSpanner.bound-details.left.text = "II"
-  s16 \startTextSpan [ a s a s a s a s a \stopTextSpan s a-3 ] |
+  s16 [ a s a s a s a s a \stopTextSpan s a-3 ] |
   s2. |
   e16 [ s bes'-3 s a s g-4 s f-2 s e-2 s ] |
   c'4-2 s2 |
@@ -1643,7 +1648,7 @@ fingeringVoiceC = {
   % 238
   s16 [ a s a s a s a s a s a ] |
   s2. |
-  <e-1 bes'-2>16 [ s <c bes'> ^\markup{"III"} s <f a-2> ^\markup{"II"} s <e a> s <d-0 a'-1> s <c-2 a'-1> s ] |
+  <e-1 bes'-2>16 [ s <c bes'> ^\markup{"III"} s <f-2 a> ^\markup{"II"} s <e a> s <d-0 a'-1> s <c-2 a'-1> s ] |
   s2. |
 
   % 239
@@ -1658,109 +1663,176 @@ fingeringVoiceC = {
   <cis g'>16 [ s <cis-3 e-1> s <cis-3 a'-1> s <a-0 g'-0> s <b-1 f'-2> s <cis-3 e-1> s ] |
   s2. |
   
-  %{
   % 241
-  \tuplet 3/2 { g,16 [ ( d' bes' ) ] } |
+  \override Fingering.add-stem-support = ##f
+  f,16-2 [ a' ]
+  %\override Fingering.direction = -1
+  \override TupletBracket.bracket-slur = ##t
+  \override TupletBracket.bracket-visibility = ##t
+  \tuplet 3/2 8 {
+    \override Stem.details.beamed-lengths = #'(5.0)
+    d,,-4 [ f-2 a-1 ]
+    f-3 [  a-2 d-4 ]
+    a [ d f-1 ]
+    \override TextSpanner.bound-details.left.text = "III"
+    bes, \startTextSpan [ d g ]
+    \override Stem.details.beamed-lengths = #'(6.0)
+    g,-3 [ d' bes'-4 ] \stopTextSpan } |
   s2. |
   s2. |
-  d16 s16 s8 s2 |
+  d8 s s2 |
 
   % 242
-  \tuplet 3/2 { f,16 [ ( c' a' ) ] }  |
+  \tuplet 3/2 8 {
+    \override Stem.details.beamed-lengths = #'(6.5)
+    e,,16-1 [ c'-3 bes'-4 ]
+    \override Stem.details.beamed-lengths = #'(5.0)
+    c,,-3 [ e-2  g-0 ]
+    e [ g c-1 ]
+    g [ c e-0 ]
+    a,-2 [ c f ]
+    \override Stem.details.beamed-lengths = #'(6.5)
+    f,-1 [ c'-3 a'-4 ] } |
   s2. |
   s2. |
   s2. |
 
   % 243
-  \tuplet 3/2 { es,16 [ ( bes' g' ) ] } |
+  \tuplet 3/2 8 {
+    d,,16-0 [ bes'-1 a'-4 ]
+    \override Stem.details.beamed-lengths = #'(5.0)
+    bes,,-1 [ d-0 f-4 ]
+    d-3 [ f bes ]
+    f [ bes d ]
+    g,-3 [ bes ees-2 ]
+    ees,-4_\5 [ bes' g' ]
+  }
+  |
   s2. |
   s2. |
   s2. |
 
   % 244
-  \tuplet 3/2 { a,16 [ ( cis e ) ] } |
+  \tuplet 3/2 8 {
+    e,16-2 ^\markup{"VI"} [ cis' bes' ]
+    f, ^\markup{"III"} [ d' a'-4 ]
+    g,-0 [ e'-3 g-1 ]
+    gis, ^\markup{"I"} [ d'-3 f ]
+    a,-1 [ d-3 e-0 ]
+    a,,-0 [ cis'-2 e ]
+  }
+  |
   s2. |
   s2. |
   s2. |
-
+  
   % 245
-  \tuplet 3/2 { d16 [ e f ) ] }|
+  \tuplet 3/2 8 {
+    \override Stem.details.beamed-lengths = #'(4.5)
+    d,,16 [ a'''-3_\1 _( g-1 ) ]
+    f-4_\2 [ f _( e-3 ) ]
+    d-1 [ d-3 _( c-1 ) ]
+    bes-3 [ bes-2 _( a-1 ) ]
+    g-4_\4 [ bes-1 _( c-3 ) ]
+    d-1 _( [ e-3 ) f-4 ] }
+  |
   s2. |
   s2. |
   s2. |
 
   % 246
-  \tuplet 3/2 { c16 [  d es ) ] } |
+  \tuplet 3/2 8 {
+    c,16-2 [ g''-3_\1 _( f-1 ) ]
+    e-4_\2 [ e _( d-2 ) ]
+    c-4 [ c _( bes-2 ) ]
+    a-1 [ a _( g-0 ) ]
+    f-3 [ a-2 _( bes-3 ) ]
+    c-1 _( [ d-3 ) ees-4 ] }
+  |
   s2. |
   s2. |
   s2. |
 
   % 247
-  \tuplet 3/2 { cis16 ) [  cis ( b  ] } |
+  \tuplet 3/2 8 {
+    bes,16-1 [ f''-4_\2 _( ees-2 ) ]
+    d-1 [ d-3 _( c-1 ) ]
+    bes-3 [ bes-2 _( a-1 ) ]
+    g-4_\4 [ g _( f-2 ) ]
+    e-1 [ e _( d-0 ) ]
+    cis-3 [ cis _( b-1 ) ]
+    \revert Stem.details.beamed-lengths
+  }
+  |
   s2. |
   s2. |
   s2. |
 
   % 248
-  a16 ) [ ( b32 cis d e f g ] a [ b cis d e f g f ] e [ d cis b a g f e ]  |
+  \override Fingering.add-stem-support = ##t
+  \override Fingering.direction = 1
+  a16-0 b32-1 _( cis-2 ) d-2\5 _( e-4 ) f-1 _( g-2 ) a-4  b-1\3 cis-3 d-4 e-1\2 f-2 g-4 f-2 e-1 d-4\3 cis-3 b-1 a-1\3 g-0 f-2 e-1 |
   s2. |
   s2. |
   s2. |
 
   % 249
-  d8 ) r8 a'4. a8 |
-  s4 f2 |
+  \override Fingering.add-stem-support = ##f
+  d8-0 s a'4.-1 a8 |
+  \override Fingering.extra-offset = #'(1.25 . -1.5)
+  s4 f,2-2 |
   s2. |
-  s4 d2 |
+  d8 r d'2-4 |
 
   % 250
-  e'4 e4. e8 |
-  bes4 a2 |
-  g4 g2 |
-  d4 cis2 |
-
+  e'4-0 e4. e8 |
+  \override Fingering.extra-offset = #'()
+  <g-4 bes-1>4 <g-4 a-1>2 |
+  s2. |
+  d4-3 cis2-3 |
+  
   % 251
-  f4 d4. c8 |
-  a4 f2 |
-  f4 s2 |
-  d4 bes2 |
+  f4-1 d4.-4 c8-4 |
+  \stemUp<a-2 d-4>4 <f-3 bes-3>2 \stemNeutral |
+  s2. |
+  d4 bes2-1 |
 
   % 252
-  bes4 a g16 [ ( f e f ) ] |
-  g4 f s4 |
+  \override Fingering.add-stem-support = #only-if-beamed
+  <g-3 bes-1>4 <f-2 a-1> g16-0 f-2 _( e-1 ) f |
   s2. |
-  g4 a cis |
-
+  s2. |
+  g4-2 a cis-3 |
+  
   % 253
-  g16 [ ( e ) f ( d ) ] bes'4 a |
-  s4 f4 fis |
+  g16-4 _( e-1 ) f-2 _( d-0 ) <f bes>4 ^\markup{"III"} <fis-4 a-1> |
   s2. |
-  d4 d c |
+  s2. |
+  <d, a'>4 d'8-3 [ d, ] c'-2 [ d, ] |
 
   % 254
-  d4 c bes |
-  g4 fis g |
+  <e-2 g-0 d'-4>4 <fis-4 c'-1> <d-3 g-4 bes-1> |
   s2. |
-  bes4 a g |
+  s2. |
+  bes'8 d, a'4 g |
 
   % 255
-  cis,16 [ ( e g bes ] a [ g e' g, ])  f4 |
+  cis16-3 e-1 g-0 bes-2 a-1 g-0 e'-4 g,-0 f4-1~ |
   s2. |
   s2. |
-  s2 d'4 |
+  s2 <d d'>4 |
 
   % 256
-  s8 e8 e4. d8 |
+  f8 e8-1 e4. d8-0 |
   s2. |
   s2. |
-  g,4 a2 |
+  g4 a2 |
 
   % 257
-  d2.\fermata \bar "|."
+  \once \override NoteColumn.force-hshift = #1 d2.-0 |
   s2. |
   s2. |
-  d2. |
-  %}
+  <d, d'-4_\5>2. \bar "|."|
 }
 
 merges = {
