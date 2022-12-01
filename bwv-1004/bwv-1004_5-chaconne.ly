@@ -23,14 +23,13 @@
 
 
 fingeringGlobal = {
-  \override StringNumber.add-stem-support = ##f
-}
-
-fingeringMiddleVoices = {
-  \override Fingering.staff-padding = #'() 
-  \override Fingering.add-stem-support = ##f
+  \override Fingering.staff-padding = #'()
   \override Fingering.avoid-slur = ##t
   \override Fingering.font-size = #-5
+
+  \override StringNumber.add-stem-support = ##f
+  \override StringNumber.staff-padding = #'()
+  \override StringNumber.script-priority = 110 %
 }
 
 fingeringVoiceA = {
@@ -41,16 +40,14 @@ fingeringVoiceA = {
 
 fingeringVoiceB = {
   \fingeringGlobal
-  \fingeringMiddleVoices
-  \override Fingering.color = red
-  \override Fingering.extra-offset = #'(1.25 . -1.5)
+  %\override Fingering.color = red
+  \override Fingering.extra-offset = #'(-1.5 . -1.5)
+  \override Fingering.add-stem-support = ##f
 }
 
 fingeringVoiceC = {
   \fingeringGlobal
-  \fingeringMiddleVoices
-  \override Fingering.color = green
-  \override Fingering.extra-offset = #'(-1.5 . 1.5)
+  %\override Fingering.color = green
 }
 
 fingeringVoiceD = {
@@ -115,13 +112,14 @@ fingeringVoiceD = {
   % 9
   <d-4 f-1>8. s16 s2 |
   s2. |
-  d8.-0 ^[ e16\tweak extra-offset #'(0 . 0)-2 ] f8.\tweak extra-offset #'(0 . 0)-3 ^[ g32-0 _( a\tweak extra-offset #'(0 . 0)-2) ] bes8.\tweak extra-offset #'(0 . 0)-3 ^[ a16 ] |
+  \set fingeringOrientations = #'(left)
+  <d-0>8. ^[ e16-2 ] f8.-3 ^[ g32-0 _( a-2) ] bes8.-3 ^[ a16 ] |
   d,8. s16 s2|
 
   % 10
   <b-0 e-0>4 <a-1 e'-0>2 |
   s2. |
-  \stemUp \shiftOn g8.\tweak extra-offset #'(-2.75 . 1.5)-4 f16-2
+  \stemUp \shiftOn <g-4>8. f16-2
   \override Fingering.extra-offset = #'()
   g8.\tweak extra-offset #'(0.5 . 0)-4 bes16-2 a8.-1 g16-0
   \override Fingering.extra-offset = #'(-1.25 . 1.5) |
@@ -136,7 +134,14 @@ fingeringVoiceD = {
   % 12
   \override TextSpanner.bound-details.left.text = "II"
   d4-2 cis4.. \startTextSpan s16 \stopTextSpan |
-  e8.\tweak extra-offset #'(2 . -1.5)-1 ^[ d16-0 ] \shiftOn e8. ^[ g16-4 ] f8.\tweak extra-offset #'(2 . -1.5)-2 <e cis' a'\tweak extra-offset #'(1.5 . -1.5)-4>16 |
+  e8.-1 ^[ d16-0 ]
+  %\override Fingering.side-axis = #X
+  %\override Fingering.direction = #LEFT
+  %\override Fingering.extra-offset = #'()
+  %\override Fingering.self-alignment-X = -1
+  %\override Fingering.self-alignment-Y = 0
+  \shiftOn
+  e8. ^[ g16-4 ] f8.-2 <e cis' a'-4>16 |
   s2.|
   a4 a4.. a16 |
 
@@ -408,11 +413,10 @@ fingeringVoiceD = {
 
   % 57
   f4-1 r8 f8 g4-4 |
-  \override Fingering.add-stem-support = ##f
   \override Fingering.direction = -1
   \override Fingering.extra-offset = #'()
   d8-4 [ a8-2]
-  \override Fingering.add-stem-support = ##t
+  \override Stem.details.beamed-lengths = #'(4.5)
   d,8-0 [ d'8] bes16-3 a-2 ^( bes) g-0 |
   s2. |
   d,4 \shiftOn s2 |
@@ -425,7 +429,9 @@ fingeringVoiceD = {
 
   % 59
   d4-4 r8 d8 e4-0 |
-  bes8-3 [ f8-2] bes,8-1 [ bes'8 ] g16-4 f-2 ^( g-4) e-1  |
+  bes8-3 [ f8-2] bes,8-1 [ bes'8 ] g16-4 f-2 ^( g-4) e-1
+  \revert Stem.details.beamed-legths
+  |
   s2. |
   s2. |
 
@@ -440,29 +446,34 @@ fingeringVoiceD = {
   \override TextSpanner.bound-details.left.text = "II"
   d16-2 \startTextSpan ^( cis) \stopTextSpan d-2 ^( b) cis4 |
   \override TextSpanner.bound-details.left.text = "II"
-  \stemDown f16-2 \startTextSpan ^( e) \stopTextSpan f-2 ^( d-0) e4 e |
+  \override Fingering.extra-offset = #'()
+  \override Fingering.add-stem-support = ##f
+  \stemDown \set fingeringOrientations = #'(left) <f-2>16 \startTextSpan ^( e) \stopTextSpan f-2 ^( d-0) e4 e |
   a'4  a a |
 
   % 61
   f8 s8 d8 s8 s4 |
   \stemUp \shiftOn
   \override Fingering.direction = -1
-  \override Fingering.add-stem-support = ##t
   d16-4 cis-2 _( d) a-2
-  \shiftOn f-3 e-2 _( f) d-0 bes_\6-3 g'-0 d'\3-2 bes'-1 \stemNeutral |
+  \shiftOn f-3 e-2 _( f) d-0 bes_\6-3 g'-0 d'_\3-2 bes'-1 \stemNeutral |
   d8 s8 s2 |
   d,8 r8 s2 |
 
   % 62
   e8 s8 c8-1 s8 s4 |
-  \stemDown c,16-1 b-0 ^( c) g-0 e-2 d-0 ^( e) c-3 a-0 f'-1 c'-3 a'-4 |
+  \stemDown c,16-1 b-0 ^( c) g-0 e-2 d-0 ^( e) c-3
+  \override Stem.details.beamed-lengths = #'(6.0) a-0 f'-1 c'-3 a'-4 |
   s2. |
   s2. |
 
   % 63
   d8-4 s8 bes8 s8 g,16-4 e'-1 b'-0 g'-2 |
   \override TextSpanner.bound-details.left.text = "III"
-  f,16-3 ees-1 ^( f-3) d-0 d-4 \startTextSpan c ^( d-4) \stopTextSpan bes-1 s4 |
+  \override Stem.details.beamed-lengths = #'(4.5)
+  f,16-3 ees-1 ^( f-3) d-0 d-4 \startTextSpan c ^( d-4) \stopTextSpan bes-1
+  \revert Stem.details.beamed-lengths
+  s4 |
   s2. |
   s2. |
 
@@ -551,16 +562,16 @@ fingeringVoiceD = {
   d4 r d'-0 |
 
   % 78
-  c,16-4 e-2 a-3 c-1 e-0 c a g-0 fis-3 a-1 c-4 ees-3 |
+  c,16 e-2 a-3 c-1 e-0 c a g-0 fis-3 a-1 c-4 ees-3 |
   s2. |
   s2. |
-  c4 r c-2 |
+  c4-4 r c-2 |
 
   % 79
-  bes,16-1 d-0 g-0 bes-3 d-4 bes g-0 f-4 e-2 g-0 bes-4 cis-3 |
+  bes,16 d-0 g-0 bes-3 d-4 bes g-0 f-4 e-2 g-0 bes-4 cis-3 |
   s2. |
   s2. |
-  bes4 r bes |
+  bes4-1 r bes |
 
   % 80
   a,16 d-0 f-3 a-2 d-4 a f d a e'-1 g-0 cis-2 |
@@ -575,16 +586,16 @@ fingeringVoiceD = {
   d,2 r4 |
 
   % 82
-  cis16-1 a''-2 a fis\2-4 fis ees-1 ees c\3-2 c a-4 fis-1 d-2 |
+  cis16 a''-2 a fis\2-4 fis ees-1 ees c\3-2 c a-4 fis-1 d-2 |
   s2. |
   s2. |
-  cis'2 r4 |
+  cis'2-1 r4 |
 
   % 83
-  b16-1 g''-2 g ees\2-3 ees cis-1 cis bes\3-2 bes g-4 e-1 cis-3 |
+  b16 g''-2 g ees\2-3 ees cis-1 cis bes\3-2 bes g-4 e-1 cis-3 |
   s2. |
   s2. |
-  b2 r4 |
+  b2-1 r4 |
 
   % 84
   a16-0 _(cis) cis e-1 e g32-4 _( f-2) g16 bes32 _( a-1) bes16 cis32 _( d) e16-0  g, |
@@ -630,15 +641,17 @@ fingeringVoiceD = {
   e32 cis'-2 g'-4 cis, e,32 cis' g' cis, |
   s2. |
   s2. |
+  \override Fingering.add-stem-support = ##f
+  \override Stem.details.beamed-lengths = #'(4.2)
   e8-2 [ e] e-3  [ e] e-3 [ e]|
 
   % 91
-  d,32-1 d-0 f'-2 d, d d f' d, 
+  d,32 d-0 f'-2 d, d d f' d, 
   d32 d f' d, d d f' d,
-  d32-1 a'-3 f'-2 a, d a f' a, | 
+  d32 a'-3 f'-2 a, d a f' a, | 
   s2. |
   s2. |
-  d8 [ d] d [ d] d [ d] |
+  d8-1 [ d] d [ d] d-1 [ d] |
 
   % 92
   \override TextSpanner.bound-details.left.text = "V"
@@ -696,30 +709,30 @@ fingeringVoiceD = {
   d,8 [ d'-4] d-4 [ d] d-3 [ d] |
 
   % 98
-  d32-3 fis-2 c'-4 fis, d fis c' fis,
+  d32 fis-2 c'-4 fis, d fis c' fis,
   d32 fis bes-1 fis d fis bes fis
-  d32-3 fis-2 a-1 fis d fis a fis |
+  d32 fis-2 a-1 fis d fis a fis |
   s2. |
   s2. |
-  d8 [ d] d [ d] d [ d] |
+  d8-3 [ d] d [ d] d-3 [ d] |
 
   % 99
-  d32-3 g-4 bes-1 g d g bes g
+  d32 g-4 bes-1 g d g bes g
   \override TextSpanner.bound-details.left.text = "VI"
-  e32-2 \startTextSpan cis' bes' cis, e, cis' bes' cis, \stopTextSpan
-  f,32\5-2 d'\3-1 a'\2-4 d, f,32 d' a' d, |
+  e32 \startTextSpan cis' bes' cis, e, cis' bes' cis, \stopTextSpan
+  f,32 d'\3-1 a'\2-4 d, f,32 d' a' d, |
   s2. |
   s2. |
-  d8 [ d] e [ e] f [ f] |
+  d8-3 [ d] e-2 [ e] f_\5-2 [ f] |
 
   % 100
   \override TextSpanner.bound-details.left.text = "V"
   g,32 \startTextSpan d'-3 g-4 d g, d' f-2 d
-  a32-4 d-3 e d a d e d
+  a32 d-3 e d a d e d
   a,32 cis'-2 e cis a, cis' e cis \stopTextSpan |
   s2. |
   s2. |
-  g8 [ g] a [ a] a, [ a] |
+  g8 [ g] a-4 [ a] a, [ a] |
 
   % 101
   d,32 d'\3-4 f\2-3 d d, d' f d
@@ -740,10 +753,10 @@ fingeringVoiceD = {
   % 103
   d,,32 bes''-3 g'-4 bes, d, bes' g' bes,
   d,32 a'-2 f'-1 a, d, a' f' a,
-  cis,32-3 g'-4 <a-1 e'-0> g cis, g' <a e'> g |
+  cis,32 g'-4 <a-1 e'-0> g cis, g' <a e'> g |
   s2. |
   s2. |
-  d,8 [ d'] d [ d] cis [ cis] |
+  d,8 [ d'] d [ d] cis-3 [ cis] |
 
   % 104
   \override TextSpanner.bound-details.left.text = "III"
@@ -757,29 +770,29 @@ fingeringVoiceD = {
 
   % 105
   \override TextSpanner.bound-details.left.text = "III"
-  d,32 \startTextSpan f' d' f, d-4 f d' f, \stopTextSpan
+  d,32 \startTextSpan f' d' f, d f d' f, \stopTextSpan
   d32\5-1 a'-3 f'\2-2 a, d, a' f' a,
   d,,32 c''\3-3 f\2-4 c d,, c'' f c |
   s2. |
   s2. |
-  d,8 [ d'] d [ d] d, [ d]|
+  d,8 [ d'-4] d [ d] d, [ d]|
 
   % 106
-  g,32-2 g'-3 <bes-1 f'-4> g g, g' <bes f'> g
+  g,32 g'-3 <bes-1 f'-4> g g, g' <bes f'> g
   g,32 g' <bes-1 e-4> g g, g' <bes e> g 
   a,32 f'-3 ees'-4 f, a, f' ees' f, |
   s2. |
   s2. |
-  g8 [ g] g [ g] a [ a] |
+  g8-2 [ g] g [ g] a [ a] |
 
   % 107
-  bes,32-1 f'-3 ees'-4 f, bes, f' ees' f,
+  bes,32 f'-3 ees'-4 f, bes, f' ees' f,
   \override TextSpanner.bound-details.left.text = "I"
   bes,32 \startTextSpan f'-3 <d'-4 f> f, bes,32 f' <d' f> f, \stopTextSpan
   bes,32 g'-0 <d'-4 e> g, bes,32 g' <d' e> g, |
   s2. |
   s2. |
-  bes8 [ bes] bes [ bes] bes  [bes] |
+  bes8-1 [ bes] bes [ bes] bes  [bes] |
 
   % 108
   a,32 a'-2 <d-4 e-0> a a, a' <d e> a
@@ -801,26 +814,26 @@ fingeringVoiceD = {
   % 110
   d,32 bes'-3 g'-4 bes, d,32 bes' g' bes, 
   d,32 b'-3 gis'-4 b, d,32 b' gis' b, 
-  e,32-1 d'-2 gis-4 d e, d' gis d |
+  e,32 d'-2 gis-4 d e, d' gis d |
   s2. |
   s2. |
-  d8 [ d] d [ d] e [ e] |
+  d8 [ d] d [ d] e-1 [ e] |
 
   % 111
-  f,32-1 c'-3 a'-4 c, f, c' a' c,
+  f,32 c'-3 a'-4 c, f, c' a' c,
   \override TextSpanner.bound-details.left.text = "IV"
-  fis,32-1 \startTextSpan ees' c'-4 ees, fis,32 ees' c' ees, \stopTextSpan
+  fis,32 \startTextSpan ees' c'-4 ees, fis,32 ees' c' ees, \stopTextSpan
   \override TextSpanner.bound-details.left.text = "V"
-  g,32-1 \startTextSpan d'-3 b'-4 d, g, d' b' d, \stopTextSpan |
+  g,32 \startTextSpan d'-3 b'-4 d, g, d' b' d, \stopTextSpan |
   s2. |
   s2. |
-  f8 [ f] fis [ fis] g [ g] |
+  f8-1 [ f] fis-1 [ fis] g-1 [ g] |
 
   % 112
   \override TextSpanner.bound-details.left.text = "VI"
-  gis,32 \startTextSpan f' d'-4 f, gis,32-1 f' d'-4 f, \stopTextSpan
+  gis,32 \startTextSpan f' d'-4 f, gis,32 f' d'-4 f, \stopTextSpan
   \override TextSpanner.bound-details.left.text = "VII"
-  a,32-1 \startTextSpan e'-3 d'-4 e, a,32 e' d' e, \stopTextSpan
+  a,32 \startTextSpan e'-3 d'-4 e, a,32 e' d' e, \stopTextSpan
   a,, e''-3 cis'-4 e, a,, e'' cis' e, |
   s2. |
   s2. |
@@ -828,71 +841,71 @@ fingeringVoiceD = {
 
   % 113
   d,32 f'-3 d'-4 f, d,32 f' d' f,
-  bes,32-1 f' d' f, bes,32 f' d' f,
-  a,32-1 f' d' f, a,32 f' d' f, |
+  bes,32 f' d' f, bes,32 f' d' f,
+  a,32 f' d' f, a,32 f' d' f, |
   s2. |
   s2. |
-  d8 [ d] bes' [ bes] a [ a] |
+  d8 [ d] bes'-1 [ bes] a-1 [ a] |
 
   % 114
-  gis,32\5-3 e'-1 d'-2 e, gis,32 e' d' e,
+  gis,32 e'-1 d'-2 e, gis,32 e' d' e,
   a,32-1 e'-3 cis'-4 e, a,32 e' cis' e,
-  g,32\5-3 e'-1 cis'-2 e, g,32 e' cis' e, |
+  g,32 e'-1 cis'-2 e, g,32 e' cis' e, |
   s2. |
   s2. |
-  gis8 [ gis] a [ a] g [ g] |
+  gis8_\5-3 [ gis] a [ a] g_\5-3 [ g] |
 
   % 115
-  fis,32\5-3 d'-1 c'-2 d, fis,32 d' c' d,
+  fis,32 d'-1 c'-2 d, fis,32 d' c' d,
   \override TextSpanner.bound-details.left.text = "VII"
-  g,-4 \startTextSpan d' b' d, g, d' b' d,
-  f,32-2 d' b' d, f,32 d' b' d, \stopTextSpan |
+  g, \startTextSpan d' b' d, g, d' b' d,
+  f,32 d' b' d, f,32 d' b' d, \stopTextSpan |
   s2. |
   s2. |
-  fis8 [ fis] g [ g] f [ f] |
+  fis8_\5-3 [ fis] g-4 [ g] f-2 [ f] |
 
   % 116
   \override TextSpanner.bound-details.left.text = "VI"
-  e,32-2 \startTextSpan cis' bes' cis, e, cis' bes' cis, \stopTextSpan
+  e,32 \startTextSpan cis' bes' cis, e, cis' bes' cis, \stopTextSpan
   \override TextSpanner.bound-details.left.text = "III"
   f,32 \startTextSpan d' a'-4 d, f, d' a' d, \stopTextSpan
-  e,32-1 cis'-2 g'-4 cis, e, cis' g' cis, |
+  e,32 cis'-2 g'-4 cis, e, cis' g' cis, |
   s2. |
   s2. |
-  e8 [ e] f [ f ] e [ e] |
+  e8-2 [ e] f [ f ] e-1 [ e] |
 
   % 117
-  d,32-0 d'-4 fis-3 d d, d' fis d
+  d,32 d'-4 fis-3 d d, d' fis d
   \override TextSpanner.bound-details.left.text = "I"
   a,32 a'-3 <c f> \startTextSpan a a, a' <c f> a \stopTextSpan
-  b,32-2 g'-0 <d'-4 f-1> g, b, g' <d' f> g, |
+  b,32 g'-0 <d'-4 f-1> g, b, g' <d' f> g, |
   s2. |
   s2. |
-  d8 [ d] a [ a] b [ b] |
+  d8-0 [ d] a [ a] b-2 [ b] |
 
   % 118
-  c,32-3 g'-0 <c-1 e-0> g c, g' <c e> g
-  g,32-2 g'-0 ees'-1 g, g, g' ees' g,
+  c,32 g'-0 <c-1 e-0> g c, g' <c e> g
+  g,32 g'-0 ees'-1 g, g, g' ees' g,
   a,32 f'-3 ees'-4 f, a, f' ees' f, |
   s2. |
   s2. |
-  c8 [ c] g [ g] a [ a] |
+  c8-3 [ c] g-2 [ g] a [ a] |
 
   % 119
-  bes,32-1 f'-3 d'-4 f, bes, f' d' f,
-  bes,32-1 g'-0 d'-4 g, bes, g' d' g,
+  bes,32 f'-3 d'-4 f, bes, f' d' f,
+  bes,32 g'-0 d'-4 g, bes, g' d' g,
   a,32 f'-3 d'-4 f, a, f' d' f, |
   s2. |
   s2. |
-  bes8 [ bes] bes [ bes] a [ a] |
+  bes8-1 [ bes] bes-1 [ bes] a [ a] |
 
   % 120
-  gis,32-1 e'-3 d'-4 e, gis, e' d' e,
-  a,32-2 e'-3 d'-4 e, a, e' d' e,
-  a,32-2 e'-3 cis'-1 e, a, e' cis' e, |
+  gis,32 e'-3 d'-4 e, gis, e' d' e,
+  a,32 e'-3 d'-4 e, a, e' d' e,
+  a,32 e'-3 cis'-1 e, a, e' cis' e, |
   s2. |
   s2. |
-  gis8 [ gis] a [ a] a [ a] |
+  gis8-1 [ gis] a-2 [ a] a-2 [ a] \revert Stem.details.beamed-lengths |
 
   % 121
   d8 [ f'32\3-2 _( e-1) d-1 e-3 ] _( d-1) \glissando [ c-1 d-3 _( c-1) \glissando bes-1 c-3 _( bes-1) a-1 ] bes-1 _( [ c-3) d-1 e-3 f16-4 d,\5-3 ] |
@@ -1027,7 +1040,7 @@ fingeringVoiceD = {
   a8 ^\markup{"II"} [ b-0 ] cis ^\markup{"II"} [ d-2] b-4 [ cis-2] |
   s2. |
   s2. |
-  <cis e>4 <a e'>4. <a g'>8 |
+  <cis-3 e>4 <a e'>4. <a g'>8 |
 
   % 143
   \override TextSpanner.bound-details.left.text = "II"
@@ -1045,7 +1058,7 @@ fingeringVoiceD = {
   % 145
   \shiftOff d4-2 <d-3 fis-2>4. <d fis>8 |
   s2. |
-  \shiftOff fis8-3 [ e-1] d-0 [ e-1] fis-4 [ g] |
+  \shiftOff <fis-3>8 [ e-1] \override Stem.details.beamed-lengths = #'(4.2) d-0 [ e-1] fis-4 [ g] |
   \shiftOff d,4 s2 |
 
   % 146
@@ -1053,6 +1066,7 @@ fingeringVoiceD = {
   <e-0 cis-2>4 a4.-4 \startTextSpan g8-2 \stopTextSpan |
   s2. |
   s2. |
+  \override Stem.details.beamed-lengths = #'(4.2)
   a''8-1 [ b-0] cis [ a] b-3 [ cis ] |
 
   % 147
@@ -1078,16 +1092,21 @@ fingeringVoiceD = {
   <e a,-1>8 r8 r4 fis,8-4 <e'-0 cis-2 fis,-4> |
   s2. |
   s2. |
-  cis16-3 ^( d-4) cis ^( b-1) a-0 ^( cis-3) e-1 g-0 r8 ais,8-1 |
+  cis16-3 ^( d-4) cis ^( b-1)
+  \override Stem.details.beamed-lengths = #'(5.0)
+  a-0 ^( cis-3) e-1 g-0 r8 ais,8-1 |
 
   % 151
   <d-2 fis,-4>8 r8 r4 e,8-1 d'\3-4  |
   s2. |
   s2. |
-  b16-1 ^( cis-3) d-0 b g-4 b-1 d-0 fis-3 r8 <gis,-1 e'-3>8  |
+  \override Stem.details.beamed-lengths = #'(4.5)
+  b16-1 ^( cis-3) d-0 b
+  \override Stem.details.beamed-lengths = #'(5.0)
+  g-4 b-1 d-0 fis-3 r8 <gis,-1 e'-3>8  |
 
   % 152
-  cis16\2-2 _( b-0) a-2 b cis-3 e-0 g\2-4 b-3 a-1 g-4 _( fis-3) e-1 |
+  cis16\2-2 _( b-0) a-2 b cis-1 e-0 g\2-4 b-3 a-1 g-4 _( fis-3) e-1 |
   s2. |
   s2. |
   <a e'-1>4 a2 ] |
@@ -1200,14 +1219,18 @@ fingeringVoiceD = {
   s4 r16 a'-4 a fis-2 fis d d fis  |
   \once \stemUp fis,4-3 s8.
   \override Fingering.direction = -1
+  \override Stem.details.beamed-lengths = #'(4.0)
   d'16-3 d a-1 a d |
   s2. |
+  \revert Stem.details.beamed-lengths
   r16 a' a a a2 |
 
   % 170
   e4-0 r16 a-4 a e-0 e cis cis e |
   \once \override Fingering.add-stem-support = ##f
-  cis4-2 s8. cis16-2 cis a-1 a cis |
+  cis4-2 s8. cis16-2 cis a-1 a cis
+  \revert Stem.details.beamed-lengths
+  |
   s2. |
   r16 a a a a2 |
 
@@ -1245,7 +1268,7 @@ fingeringVoiceD = {
   % 175
   \override TextSpanner.bound-details.left.text = "VII"
   b4-1 r16 b16 b b cis16-4 d-4 \startTextSpan d d \stopTextSpan |
-  \once \override Fingering.add-stem-support = ##f
+  \override Fingering.add-stem-support = ##f
   g'4-2 s16 g \set fingeringOrientations = #'(left) <g fis-4> <g fis> <g-2 e-3> <fis d> <fis d> <fis d> |
   s2. |
   r16 <d d,> <d d,> <d d,> <d d,>2 |
@@ -1259,12 +1282,14 @@ fingeringVoiceD = {
   s2. |
   \set fingeringOrientations = #'(up left) <b,-2 fis'-4>16 \set fingeringOrientations = #'(left) <cis-4 e-2> <cis e> <cis e>
   <d-1 e-0> <fis,-3 a d-2> <fis a d> <fis a d>
-  \once \set fingeringOrientations = #'(up left) <g-4 a-1 d-2> <a, g'-1 cis\3-2> <a g' cis> <a g' cis> |
+  \once \set fingeringOrientations = #'(up left) <g-4 a-1 d-2> <a, g'-1 cis-2> ^\markup{"VI"} <a g' cis> <a g' cis> |
   s2. |
 
   % 177
-  \override Fingering.add-stem-support = #only-if-beamed fis4 ^\markup{"VII"} fis4.-2 fis8 |
-  s4 d4._\2-3 d8 |
+  \override Fingering.add-stem-support = #only-if-beamed
+  fis4 ^\markup{"VII"} fis4.-2 fis8 |
+  \set stringNumberOrientations = #'(down)
+  s4 d4.\2-3 d8 |
   <fis'-3 a d>4 s2 |
   d,4 s2 |
 
@@ -1285,7 +1310,7 @@ fingeringVoiceD = {
   c8-1 b8-0 s8 b'8-4 a-4 [ g-4] \startTextSpan |
   \override Fingering.direction = 1
   \override Fingering.add-stem-support = ##f
-  s4 \stemUp cis8\3-2 [ a_\4\tweak Fingering.extra-offset $'(-1 . -0.5)-3] \stemNeutral b-0 ^[ cis] |
+  s4 \stemUp cis8^\3-2 [ a\4\tweak Fingering.extra-offset $'(-1 . -0.5)-3] \stemNeutral b-0 ^[ cis] |
   s2. |
   g4 r8 \once \autoBeamOff g8-0 fis-2 [ e] |
 
@@ -1293,6 +1318,7 @@ fingeringVoiceD = {
   <fis d-2>4 <fis d>4. <fis d>8 \stopTextSpan |
   s2. |
   s2. |
+  \once \override Stem.details.beamed-lengths = #'(4.2)
   d8-0 [ fis-3] b-4 [ a] g-4 [ fis-3] |
 
   % 182
@@ -1329,7 +1355,8 @@ fingeringVoiceD = {
   <b-0 g-0>4 <b g>4. <b g>8 |
   s2. |
   s2. |
-  b4-1 e2_\5-4 |
+  \set stringNumberOrientations = #'(down)
+  b4-1 e2\5-4 |
 
   % 188
   <cis-1 g-0>8 <d-2 fis,-3> d4. cis8 ^\markup{"II"} |
@@ -1507,7 +1534,8 @@ fingeringVoiceD = {
   d,8. r16 r4 r |
 
   % 214
-  f'8.-4 d,16-3 g-4 bes ^\markup{"III"} ees-2 d ees c-4 f,-1 a,-0 |
+  \override TextSpanner.bound-details.left.text = "III"
+  f'8.-4 d,16-3 g-4 bes \startTextSpan ees-2 d \stopTextSpan ees-2 c-4 f,-1 a,-0 |
   s2. |
   s2. |
   <g-2 d'-0 bes'-1>8. r16 r4 r |
@@ -1516,7 +1544,7 @@ fingeringVoiceD = {
   ees''8.-4 cis16-2 d-4 a-1 bes-2 fis-3 g-4 d-0 ees-1 g |
   s2. |
   s2. |
-  <bes f'-3>8. r16 r4 r |
+  <bes-1 f'-3>8. r16 r4 r |
 
   % 216
   cis8-2 d8 ^\markup{"III"} d8.-4 b16-0 cis-2 e-0 g-4 a, |
@@ -1544,13 +1572,14 @@ fingeringVoiceD = {
   f4 r f8 r |
   
   % 220
-  g,16-3 bes ^\markup{"III"} d bes'-4 e,-0 d-4 cis-2 d a d cis e-0 |
+  \override TextSpanner.bound-details.left.text = "III"
+  g,16-3 bes \startTextSpan d \stopTextSpan bes'-4 e,-0 d-4 cis-2 d a-1 d-4 cis-2 e-0 |
   s2.|
   s2. |
   g4 r a,8 r |
 
   % 221
-  f16-1 d-4 a-2 g-0 f-2 a-1 d,_\5-4 c-2 b-2 g'-0 d'-4 f-1 |
+  f16-1 d-4 a-2 g-0 f-2 a-1 d,\5-4 c-2 b-2 g'-0 d'-4 f-1 |
   s2.|
   s2. |
   d,4 r2 |
@@ -1564,14 +1593,13 @@ fingeringVoiceD = {
   % 223
   \override TextSpanner.bound-details.left.text = "III"
   d16 \startTextSpan bes f es-4 d-3 f \stopTextSpan bes,-1 a-0
-  \override TextSpanner.bound-details.left.text = "II"
-  g-4 cis-3 \startTextSpan e-1 bes'-2 |
+  g-4 cis-3 e-1 bes'-2 |
   s2. |
   s2. |
   s2. |
 
   % 224
-  a16-1 f-2 d-4 \stopTextSpan bes'-2 g-0 e-1 cis-3 e a, g'-4 _( f-2 ) e-1 |
+  a16-1 f-2 d-4 bes'-2 g-0 e-1 cis-3 e a, g'-4 _( f-2 ) e-1 |
   s2. |
   s2. |
   s2. |
@@ -1583,16 +1611,16 @@ fingeringVoiceD = {
   s2. |
   
   % 226
-  c,16-1 g'-2 _( a-4 ) bes-1 c-2 e\2-3 _( f-4 ) g-1 a-3 [ f,32-3\4 _( e-1 ) d-0 _( e ) f16 ] |
+  c,16-1 g'-2 _( a-4 ) bes-1 c-2 e\2-3 _( f-4 ) g-1 a-3 [ f,32-3\4 _( e-2 ) d-0 _( e ) f16 ] |
   s2. |
   s2. |
   s2. |
 
   % 227
-  bes,16-1 d''32-4 _( c-2 ) bes-1 _( c ) d16 g,\2-1 bes32-4 _( a-3 ) g-1 _( a ) bes16 e,16-0 g32-3 _( f-1 ) e _( f ) g16 |
+  bes,16 d''32-4 _( c-2 ) bes-1 _( c ) d16 g,\2-1 bes32-4 _( a-3 ) g-1 _( a ) bes16 e,16-0 g32-3 _( f-1 ) e _( f ) g16 |
   s2. |
   s2. |
-  bes'4 s2 |
+  bes'4-1 s2 |
 
   % 228
   cis,16-1 e32-4 _( d-2 ) cis-1 _( d ) e _( cis ) g16-0 bes32-2 _( a-1 ) g-0 _( a ) bes _( g ) e-1 _( d-0 ) cis-3 _( d-4 ) e-1 _( f ) g-4 _( e ) |
@@ -1605,7 +1633,7 @@ fingeringVoiceD = {
   s2. |
   \stemDown
   \override Fingering.extra-offset = #'()
-  f16-2 [ s a s bes-3_\3 s a s g-4 s f-3 s ] |
+  f16-2 [ s a s bes-3 s a s g-4 s f-3 s ] |
   \shiftOnn <d, a'>4 s2 |
 
    % 230
@@ -1616,7 +1644,7 @@ fingeringVoiceD = {
   c'4-2 s2 |
   
   % 231
-  s16 [ a s a \startTextSpan s a s a s a s a ] |
+  s16 [ a-2 s a \startTextSpan s a s a s a s a ] |
   s2. |
   d16-0 [ s a' s g-4 s f-2 s e s d-4 s ] |
   <d, bes'-1>4 s2  |
@@ -1683,17 +1711,20 @@ fingeringVoiceD = {
   % 241
   \override Fingering.add-stem-support = ##f
   f,16-2 [ a' ]
-  \override TupletBracket.bracket-slur = ##t
-  \override TupletBracket.bracket-visibility = ##t
+  %\override TupletBracket.bracket-slur = ##t
+  %\override TupletBracket.bracket-visibility = ##t
   \tuplet 3/2 8 {
     \override Stem.details.beamed-lengths = #'(5.0)
     d,,-4 [ f-2 a-1 ]
+    %\override TupletBracket.bracket-slur = ##f
+    %\override TupletBracket.bracket-visibility = ##f
     f-3 [  a-2 d-4 ]
-    a [ d f-1 ]
+    a-2 [ d-4 f-1 ]
     \override TextSpanner.bound-details.left.text = "III"
-    bes, \startTextSpan [ d g ]
+    bes, \startTextSpan [ d g \stopTextSpan ]
+    \override TextSpanner.bound-details.left.text = "V"
     \override Stem.details.beamed-lengths = #'(6.0)
-    g,-3 [ d' bes'-4 ] \stopTextSpan } |
+    g, \startTextSpan [ d'-3 bes'-2 ] } |
   s2. |
   s2. |
   d8 s s2 |
@@ -1701,12 +1732,12 @@ fingeringVoiceD = {
   % 242
   \tuplet 3/2 8 {
     \override Stem.details.beamed-lengths = #'(6.5)
-    e,,16-1 [ c'-3 bes'-4 ]
+    e,,16-3 [ c' bes'-2 \stopTextSpan ]
     \override Stem.details.beamed-lengths = #'(5.0)
     c,,-3 [ e-2  g-0 ]
-    e [ g c-1 ]
-    g [ c e-0 ]
-    \override TextSpanner.bound-details.left.text = "II"
+    e-2 [ g-0 c-1 ]
+    g-0 [ c-1 e-0 ]
+    \override TextSpanner.bound-details.left.text = "I"
     a,-2 [ c \startTextSpan f \stopTextSpan ]
     \override Stem.details.beamed-lengths = #'(6.5)
     f,-1 [ c'-3 a'-4 ] } |
@@ -1723,7 +1754,8 @@ fingeringVoiceD = {
     d-3 [ f \startTextSpan bes ]
     f [ bes d ]
     g,-3 [ bes ees-2 ]
-    ees,-4_\5 [ bes' g' \stopTextSpan ]
+    \set stringNumberOrientations = #'(down)
+    ees,-4\5 [ bes' g' \stopTextSpan ]
   }
   |
   s2. |
@@ -1732,10 +1764,13 @@ fingeringVoiceD = {
 
   % 244
   \tuplet 3/2 8 {
-    e,16-2 ^\markup{"VI"} [ cis' bes' ]
-    f, ^\markup{"III"} [ d' a'-4 ]
+    \override TextSpanner.bound-details.left.text = "VI"
+    e,16-2 \startTextSpan [ cis' bes' \stopTextSpan ]
+    \override TextSpanner.bound-details.left.text = "III"
+    f, \startTextSpan [ d' a'-4 \stopTextSpan ]
     g,-0 [ e'-3 g-1 ]
-    gis, ^\markup{"I"} [ d'-3 f ]
+    \override TextSpanner.bound-details.left.text = "I"
+    gis, \startTextSpan [ d'-3 f \stopTextSpan ]
     a,-1 [ d-3 e-0 ]
     a,,-0 [ cis'-2 e ]
   }
@@ -1747,12 +1782,11 @@ fingeringVoiceD = {
   % 245
   \tuplet 3/2 8 {
     \override Stem.details.beamed-lengths = #'(4.5)
-    \set stringNumberOrientations = #'(down)
     d,,16 [ a'''-3\1 _( g-1 ) ]
-    f-4_\2 [ f _( e-3 ) ]
+    f-4\2 [ f _( e-3 ) ]
     d-1 [ d-3 _( c-1 ) ]
     bes-3 [ bes-2 _( a-1 ) ]
-    g-4_\4 [ bes-1 _( c-3 ) ]
+    g-4\4 [ bes-1 _( c-3 ) ]
     d-1 _( [ e-3 ) f-4 ] }
   |
   s2. |
@@ -1761,8 +1795,8 @@ fingeringVoiceD = {
 
   % 246
   \tuplet 3/2 8 {
-    c,16-2 [ g''-3_\1 _( f-1 ) ]
-    e-4_\2 [ e _( d-2 ) ]
+    c,16-2 [ g''-3\1 _( f-1 ) ]
+    e-4\2 [ e _( d-2 ) ]
     c-4 [ c _( bes-2 ) ]
     a-1 [ a _( g-0 ) ]
     f-3 [ a-2 _( bes-3 ) ]
@@ -1774,10 +1808,10 @@ fingeringVoiceD = {
 
   % 247
   \tuplet 3/2 8 {
-    bes,16-1 [ f''-4_\2 _( ees-2 ) ]
+    bes,16-1 [ f''-4\2 _( ees-2 ) ]
     d-1 [ d-3 _( c-1 ) ]
     bes-3 [ bes-2 _( a-1 ) ]
-    g-4_\4 [ g _( f-2 ) ]
+    g-4\4 [ g _( f-2 ) ]
     e-1 [ e _( d-0 ) ]
     cis-3 [ cis _( b-1 ) ]
     \revert Stem.details.beamed-lengths
@@ -1790,7 +1824,7 @@ fingeringVoiceD = {
   % 248
   \override Fingering.add-stem-support = ##t
   \override Fingering.direction = 1
-  a16-0 b32-1 _( cis-2 ) d-2\5 _( e-4 ) f-1 _( g-2 ) a-4  b-1\3 cis-3 d-4 e-1\2 f-2 g-4 f-2 e-1 d-4\3 cis-3 b-1 a-1\3 g-0 f-2 e-1 |
+  a16-0 b32-1 _( cis-3 ) d-0 _( e-1 ) f-2 _( g-4 ) a-1  b-3 cis-1 d-3 e-0 f-1 g-3 f-1 e-0 d-3 cis-2 b-0 a-2 g-0 f-3 e-2 |
   s2. |
   s2. |
   s2. |
@@ -1811,20 +1845,20 @@ fingeringVoiceD = {
   d4-3 cis2-3 |
   
   % 251
-  f4-1 d4.-4 c8-4 |
-  \stemUp<a-2 d-4>4 <f-3 bes-3>2 \stemNeutral |
+  f4-1 d4.-4 c8\3-4 |
+  \stemUp<a-2 d-4>4 <f-2 bes-3>2 \stemNeutral |
   s2. |
   d4 bes2-1 |
 
   % 252
   \override Fingering.add-stem-support = #only-if-beamed
-  <g-3 bes-1>4 <f-2 a-1> g16-0 f-2 _( e-1 ) f |
+  <g-4 bes-1>4 <f-2 a-1> g16-0 f-2 _( e-1 ) f |
   s2. |
   s2. |
-  g4-2 a cis-3 |
+  g4-3 a cis-3 |
   
   % 253
-  g16-4 _( e-1 ) f-2 _( d-0 ) <f bes>4 ^\markup{"III"} <fis-4 a-1> |
+  g16-4 _( e-1 ) f-2 _( d-0 ) <f bes>4 ^\markup{"III"} <fis-3 a-1> |
   s2. |
   s2. |
   <d, a'>4 d'8-3 [ d, ] c'-2 [ d, ] |
@@ -1833,7 +1867,7 @@ fingeringVoiceD = {
   <e-2 g-0 d'-4>4 <fis-4 c'-1> <d-3 g-4 bes-1> |
   s2. |
   s2. |
-  bes'8 d, a'4 g |
+  bes'8-1 d, a'4 g-2 |
 
   % 255
   cis16-3 e-1 g-0 bes-2 a-1 g-0 e'-4 g,-0 f4-1~ |
@@ -1845,13 +1879,13 @@ fingeringVoiceD = {
   f8 e8-1 e4. d8-0 |
   s2. |
   s2. |
-  g4 a2 |
+  g4-3 a2 |
 
   % 257
   \once \override NoteColumn.force-hshift = #1 d2.-0 |
   s2. |
   s2. |
-  <d, d'-4_\5>2. \bar "|."|
+  <d, d'-4^\5>2. \bar "|."|
 }
 
 merges = {
