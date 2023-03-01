@@ -1037,7 +1037,8 @@ fingeringVoiceD = {
   d,4 \once \mergeDifferentlyDottedOff d'4.-4 d8-4|
 
   % 142
-  a8 ^\markup{"II"} [ b-0 ] cis ^\markup{"II"} [ d-2] b-4 [ cis-2] |
+  \override TextSpanner.bound-details.left.text = "II"
+  a8 \startTextSpan [ b-4 ] cis [ d-2 ] \stopTextSpan b-4 [ cis-2 ] |
   s2. |
   s2. |
   <cis-3 e>4 <a e'>4. <a g'>8 |
@@ -1585,14 +1586,14 @@ fingeringVoiceD = {
   d,4 r2 |
 
   % 222
-  e16-0 c-1 g-0 f-3 e-2 g c,-3 bes-1 a-0 f'-1 c'-3 es-2 |
+  \override TextSpanner.bound-details.left.text = "III"
+  e16-0 c-1 g-0 f-3 e-2 g c,-3 bes-1 a-0 f' \startTextSpan c'-3 es-2 |
   s2. |
   s2. |
   s2. |
   
   % 223
-  \override TextSpanner.bound-details.left.text = "III"
-  d16 \startTextSpan bes f es-4 d-3 f \stopTextSpan bes,-1 a-0
+  d16 bes f es-4 d-3 f \stopTextSpan bes,-1 a-0
   g-4 cis-3 e-1 bes'-2 |
   s2. |
   s2. |
@@ -1663,7 +1664,7 @@ fingeringVoiceD = {
   <d, a'>4 s2|
 
   % 234
-  s16 \startTextSpan [ a s a s a s a \stopTextSpan s a-3 s a^\markup{"I"} ] |
+  s16 \startTextSpan [ a s a s a s a \stopTextSpan s a-3 s a ] |
   s2. |
   e16 [ s g-4 s fis-4 s f-3 s e-2 s ees-1 s ] |
   c'4-2 s2 |
