@@ -3,7 +3,6 @@
 \header {
   title = "Vals Venezolano no 2"
   composer = "Antonio Lauro"
-  % Supprimer le pied de page par défaut
   tagline = ##f
 }
 
@@ -42,10 +41,10 @@ classicalGuitar = \relative c' {
   \numericTimeSignature
   \time 3/4
 
-\parallelMusic voiceA, voiceB, voiceC {
+  \parallelMusic voiceA, voiceB, voiceC {
     % anacrouse
     \fingeringVoiceA
-    r8 b8 cis-1 dis-3 e-0 fis-1 \bar ".|:" |
+    r8 b8 cis-1 dis-3 e-0 fis-1 |
     \fingeringVoiceB
     s2. |
     \fingeringVoiceC
@@ -135,7 +134,7 @@ classicalGuitar = \relative c' {
       %16
       \alternative {
         {
-          e8 b cis-1 dis-3 e-0 fis-1 \bar ":|." |
+          e8 b cis-1 dis-3 e-0 fis-1 |
           <g b>4 s2 |
           e2. |
         }
@@ -143,6 +142,105 @@ classicalGuitar = \relative c' {
           e8 e'\harmonic b\harmonic g\harmonic e b |
           <g b>4 s2 |
           e2. |
+        }
+      }
+    }
+    
+    % deuxième partie
+    
+    \repeat volta 2 {
+      %17
+      d4.-2 \rightHandFinger #4 e \rightHandFinger #4 |
+      s4 c4.-4 \rightHandFinger #3 c8 \rightHandFinger #2 _~ |
+      fis4-1 d'\rightHandFinger #2 a |
+
+      %18
+      d4. \rightHandFinger #4 e |
+      c8 c8 c4. c8 |
+      fis4-1 d' a |
+      
+      %19
+      d4. e |
+      s4 b4. b8 |
+      g4 d' d |
+      
+      %20
+      d4. e |
+      s4 b4. b8 |
+      g,4 d' d |
+      
+      %21
+      d8\harmonic b'\harmonic g\harmonic e b g |
+      s2. |
+      s2. |
+      
+      %22
+      a4.-3 c |
+      \override TextSpanner.bound-details.left.text = "I"
+      s4 \stemUp dis,4. \startTextSpan dis8 \stopTextSpan |
+      b4-2 dis b |
+      
+      %23
+      b4.-0 a-2 |
+      s8 dis2-1 dis8 \stemDown |
+      b'4 b, b |
+      
+      %23
+      g2. |
+      s2. |
+      g'8 g,-3 \rightHandFinger #1 b-1 \rightHandFinger #1 e-2 \rightHandFinger #1 g \rightHandFinger #2 b \rightHandFinger #3 |
+      
+      %24
+      e'8 \rightHandFinger #4 b-0 cis-1 dis-3 e-0 fis-1 |
+      s2. |
+      s2. |
+      
+      %1
+      a4.-4 g8-2 _( fis-1 ) g |
+      s4 <g b>2 |
+      e,,2. |
+      
+      %2
+      fis8-1 _( e ) dis-4 e b-0 e-0 |
+      s4 e2-1 |
+      gis2.-3 |
+      
+      %27
+      d4.-4 c8-1 _( b ) a-3 |
+      s4 e2-2 |
+      a2. |
+      
+      %28
+      gis8-1 _( a-2 ) c-1 _( b-0 ) d-4 _( c-1 ) |
+      s2. |
+      a2. |
+      
+      %29
+      b8-0 ais-3 b cis-2 dis-4 e-0 |
+      s2. |
+      b2-1 s4 |
+      
+      %30
+      \override TextSpanner.bound-details.left.text = "VII"
+      fis8 \startTextSpan g-3 a-4 b cis-3 dis-4 \stopTextSpan |
+      <a dis-2>2 s4 |
+      b2 b4 |
+      
+      %31
+      e8 ais,8-1 _( b-2 ) c-3 _( b-2 ) g-3\2 |
+      s2. |
+      e,2. ~ |
+
+      \alternative {
+        {
+          e8 e'\harmonic b\harmonic g\harmonic e b |
+          <g b>4 s2 |
+          e2. |
+        }
+        {
+          e2 s4 \bar "|." |
+          <g b>2 r4|
+          e2 s4|
         }
       }
     }
@@ -154,6 +252,17 @@ barrés = {
   \override TextSpanner.dash-fraction = #1
   \override TextSpanner.bound-details.right.text =
       \markup { \draw-line #'(0 . -1) }
+}
+
+merges = {
+  \mergeDifferentlyHeadedOn
+  \mergeDifferentlyDottedOn
+  \shiftOff
+}
+
+guitarTweaks = {
+  \merges
+  \barrés
 }
 
 \score {
@@ -168,23 +277,19 @@ barrés = {
     \set Timing.baseMoment = #(ly:make-moment 1/4)
     \set Timing.beatStructure = 1,1,1
     <<
-      %\partCombine
-      %\autoBeamOff
-      %\partCombineChords
-      
       \relative {
         \voiceOne
-        \barrés
+        \guitarTweaks
         \voiceA
       } \\
       \relative {
         \voiceThree \stemDown
-        \barrés
+        \guitarTweaks
         \voiceB
       } \\
       \relative {
         \voiceFour
-        \barrés
+        \guitarTweaks
         \voiceC
       }
     >>
