@@ -26,7 +26,8 @@ fingeringVoiceA = {
 fingeringVoiceB = {
   \fingeringGlobal
   %\override Fingering.color = red
-  \override Fingering.extra-offset = #'(-1.5 . -1.5)
+  \override Fingering.direction = -1
+  %\override Fingering.extra-offset = #'(-1.5 . -1.5)
   \override Fingering.add-stem-support = ##f
 }
 
@@ -123,7 +124,7 @@ classicalGuitar = \relative c' {
       %14
       \override TextSpanner.bound-details.left.text = "VII"
       fis8 \startTextSpan g-3 a-4 b cis-3 dis-4 \stopTextSpan |
-      <a dis-2>2 s4 |
+      \set fingeringOrientations = #'(left) <a dis-2>2 s4 |
       b2 b4 |
       
       %15
@@ -139,7 +140,7 @@ classicalGuitar = \relative c' {
           e2. |
         }
         {
-          e8 e'\harmonic b\harmonic g\harmonic e b |
+          e8 \override NoteHead.style = #'harmonic-mixed e' b g \revert NoteHead.style e b |
           <g b>4 s2 |
           e2. |
         }
@@ -150,39 +151,39 @@ classicalGuitar = \relative c' {
     
     \repeat volta 2 {
       %17
-      d4.-2 \rightHandFinger #4 e \rightHandFinger #4 |
-      s4 c4.-4 \rightHandFinger #3 c8 \rightHandFinger #2 _~ |
-      fis4-1 d'\rightHandFinger #2 a |
+      d4.-2 \rightHandFinger #3 e \rightHandFinger #4 |
+      \override Fingering.direction = 1
+      s4 c4.-4 \rightHandFinger #2 c8 \rightHandFinger #2 _~ |
+      fis4-1 \rightHandFinger #1 d'\rightHandFinger #1 a \rightHandFinger #1 |
 
       %18
-      d4. \rightHandFinger #4 e |
+      d4. e |
       c8 c8 c4. c8 |
       fis4-1 d' a |
       
       %19
-      d4. e |
-      s4 b4. b8 |
-      g4 d' d |
-      
-      %20
-      d4. e |
-      s4 b4. b8 |
-      g,4 d' d |
-      
+      d4. e-0 |
+      s4 b4.-2 \override Fingering.direction = -1 b8-0 |
+      \override TextSpanner.bound-details.left.text = "III"
+      g4 \startTextSpan d'-3 \stopTextSpan d-0 |
+            
       %21
-      d8\harmonic b'\harmonic g\harmonic e b g |
+      \override NoteHead.style = #'harmonic-mixed
+      d8 b' g \revert NoteHead.style e b g |
       s2. |
       s2. |
       
       %22
       a4.-3 c |
       \override TextSpanner.bound-details.left.text = "I"
-      s4 \stemUp dis,4. \startTextSpan dis8 \stopTextSpan |
-      b4-2 dis b |
+      \override Arpeggio.positions = #'(-2.5 . 1)
+      \arpeggioBracket
+      s4 \stemUp dis,4.\arpeggio^\markup{"I"}  dis8-1  |
+      b4-2 dis b-2 |
       
       %23
-      b4.-0 a-2 |
-      s8 dis2-1 dis8 \stemDown |
+      b4.-0 a-3 |
+      s8 dis2\tweak extra-offset #'(0 . 0)-1 dis8 \stemDown | 
       b'4 b, b |
       
       %23
@@ -233,7 +234,7 @@ classicalGuitar = \relative c' {
 
       \alternative {
         {
-          e8 e'\harmonic b\harmonic g\harmonic e b |
+          e8 \override NoteHead.style = #'harmonic-mixed e' b g \revert NoteHead.style e b |
           <g b>4 s2 |
           e2. |
         }
@@ -268,7 +269,7 @@ guitarTweaks = {
 \score {
   \new Staff \with {
     midiInstrument = "acoustic guitar (nylon)"
-    instrumentName = "Guitare Classique"
+    %instrumentName = "Guitare Classique"
   } {
     \clef "treble_8"
     \key g \major \time 3/4
@@ -296,6 +297,6 @@ guitarTweaks = {
   }
   \layout { }
   \midi {
-    \tempo 2.=120
+    \tempo 4=120
   }
 }
