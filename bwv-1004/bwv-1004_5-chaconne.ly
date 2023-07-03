@@ -1686,7 +1686,7 @@ fingeringVoiceD = {
   s16 [ a s a s a s a s a s a ]|
   s2. |
   \override TextSpanner.bound-details.left.text = "III"
-  <f \rightHandFinger #2 d' \rightHandFinger #3>16 ^\markup{"III"} [ s <d-0 c'-3> s <g-3 bes> \startTextSpan s <f bes> \stopTextSpan s <e-1 bes'-2>16 s <d-0 bes'-2> s ] |
+  <f \rightHandFinger #2 d' \rightHandFinger #3 >16 ^\markup{"III"} [ s <d-0 c'-3> s <g-3 bes> \startTextSpan s <f bes> \stopTextSpan s <e-1 bes'-2>16 s <d-0 bes'-2> s ] |
   d4 \rightHandFinger #1 s2 |
 
 
