@@ -1308,12 +1308,12 @@ fingeringVoiceD = {
 
   % 180
   \override TextSpanner.bound-details.left.text = "II"
-  c8-1 b8-0 s8 b'8-4 a-4 [ g-4] \startTextSpan |
+  c8-1 b8-0 s8 b'8-4 \rightHandFinger #4 a-4 \rightHandFinger #3 [ g-4] \startTextSpan |
   \override Fingering.direction = 1
   \override Fingering.add-stem-support = ##f
-  s4 \stemUp cis8^\3-2 [ a\4\tweak Fingering.extra-offset $'(-1 . -0.5)-3] \stemNeutral b-0 ^[ cis] |
+  s4 \stemUp cis8^\3-2 [ a\4\tweak Fingering.extra-offset $'(-1 . -0.5)-3 \rightHandFinger #1 ] \stemNeutral b-0 \rightHandFinger #2 ^[ cis] |
   s2. |
-  g4 r8 \once \autoBeamOff g8-0 fis-2 [ e] |
+  g4 r8 \once \autoBeamOff g8-0 \rightHandFinger #2 fis-2 \rightHandFinger #1 [ e] |
 
   % 181
   <fis d-2>4 <fis d>4. <fis d>8 \stopTextSpan |
@@ -1447,7 +1447,7 @@ fingeringVoiceD = {
   \override Fingering.add-stem-support = ##f
   \override Fingering.staff-padding = #'()
   \override Arpeggio.positions = #'(-3.5 . -1.5)
-  fis4 \startTextSpan d,16-0 \arpeggio <fis' a,> <fis a,> d,-0 \arpeggio d <fis' a,> <fis a,> d, \stopTextSpan |
+  fis4 \startTextSpan d,16-0 \arpeggio <fis' \rightHandFinger #4 a, \rightHandFinger #2 > <fis a,> d,-0 \arpeggio d <fis' a,> <fis a,> d, \stopTextSpan |
   s2. |
   s2. |
   <d a' d-2>4 \once \mergeDifferentlyDottedOff d8.-4 \once \override NoteColumn.force-hshift = #1 d16-4 cis8.-3 cis16 |
@@ -1455,20 +1455,20 @@ fingeringVoiceD = {
   % 202
   % \override Fingering.add-stem-support = ##f
   % \override Fingering.staff-padding = #'()
-  d16-0 <fis'-2 b,-0> <fis b,> d, d <fis' b,> <fis b,> d, d <fis' b,> <fis b,> d,  |
+  d16-0 <fis'-2 \rightHandFinger #3 b,-0 \rightHandFinger #2 > <fis b,> d, d <fis' b,> <fis b,> d, d <fis' b,> <fis b,> d,  |
   s2. |
   s2. |
   b8.-1 b16 b8. b16 a8.-0 a16 |
 
   % 203
   \override TextSpanner.bound-details.left.text = "V"
-  d16-2 <e'-0 b-0> <e b> d, e-3 \startTextSpan <a' cis,-2> <a cis,> e, e <e' cis-2> <e cis> e, \stopTextSpan |
+  d16-2 <e'-0 b-0> <e b> d, e-3 \startTextSpan <a' \rightHandFinger #4 cis,-2 \rightHandFinger #2 > <a cis,> e, e <e' \rightHandFinger #3 cis-2  \rightHandFinger #2 > <e cis> e, \stopTextSpan |
   s2. |
   s2. |
   g8.-1 g16 g8. g16 g8. g16 |
 
   % 204
-  e16-2 <b''-4 d,-3> <b d,> e,, e-1 <e'-0 d-3> <fis-2 d> e, e <g'-4 cis,-2> <g cis,> e, |
+  e16-2 <b''-4 \rightHandFinger #4 d,-3 \rightHandFinger #2 > <b d,> e,, e-1 <e'-0 d-3> <fis-2 d> e, e <g'-4 cis,-2> <g cis,> e, |
   s2. |
   s2. |	
   gis8.-1 gis16 a8. a16 a8. a16 |
@@ -1484,7 +1484,7 @@ fingeringVoiceD = {
 
   % 206
   \override TextSpanner.bound-details.left.text = "V"
-  d,16 \startTextSpan <fis'-4 d-3> <fis d> d, \stopTextSpan e-3 <e'-0 b-0> e, <e' cis-2> e,-3 <e' d-4> <e d> e, |
+  d,16 \startTextSpan <fis'-4 d-3> <fis d> d, \stopTextSpan e-3 <e'-0 \rightHandFinger #3 b-0 \rightHandFinger #2 > e, <e' \rightHandFinger #4 cis-2 \rightHandFinger #2 > e,-3 <e' \rightHandFinger #4 d-4 \rightHandFinger #2 > <e d> e, |
   s2. |
   s2. |
   g,8. g16 g8-1 g gis8.-1 gis16  |
@@ -1634,7 +1634,7 @@ fingeringVoiceD = {
   s2. |
   \stemDown
   \override Fingering.extra-offset = #'()
-  f16-2 [ s a s bes-3 s a s g-4 s f-3 s ] |
+  f16-2 [ s a s bes-2 s a s g-4 s f-3 s ] |
   \shiftOnn <d, a'>4 s2 |
 
    % 230
@@ -1666,7 +1666,7 @@ fingeringVoiceD = {
   % 234
   s16 \startTextSpan [ a s a s a s a \stopTextSpan s a-3 s a ] |
   s2. |
-  e16 [ s g-4 s fis-4 s f-3 s e-2 s ees-1 s ] |
+  e16 [ s g-4 s fis-3 s f-2 s e-2 s ees-1 s ] |
   c'4-2 s2 |
 
   % 235
@@ -1686,8 +1686,8 @@ fingeringVoiceD = {
   s16 [ a s a s a s a s a s a ]|
   s2. |
   \override TextSpanner.bound-details.left.text = "III"
-  <f d'>16 ^\markup{"III"} [ s <d-0 c'-3> s <g-3 bes> \startTextSpan s <f bes> \stopTextSpan s <e-1 bes'-2>16 s <d-0 bes'-2> s ] |
-  d4 s2 |
+  <f \rightHandFinger #2 d' \rightHandFinger #3>16 ^\markup{"III"} [ s <d-0 c'-3> s <g-3 bes> \startTextSpan s <f bes> \stopTextSpan s <e-1 bes'-2>16 s <d-0 bes'-2> s ] |
+  d4 \rightHandFinger #1 s2 |
 
 
   % 238
