@@ -632,7 +632,10 @@ fingeringVoiceD = {
   f32 d a'' d,, f32 d a'' d,,
   f32 d a'' d,, f32 d a'' d,, |
   s2. |
-  d,4 \rightHandFinger #1 s2 |
+  \once \override Arpeggio.positions = #'(-6 . -1.5)
+  \arpeggioParenthesis
+  \set strokeFingerOrientations = #'(left)
+  d,4 \arpeggio \rightHandFinger #1 s2 |
   f'8 [ f] f [ f] f [ f] |
 
   % 90
@@ -678,7 +681,9 @@ fingeringVoiceD = {
   bes,32 fis' ees' fis, bes,32 fis' ees' fis,
   a,32 fis' ees' fis, a,32 fis' ees' fis, |
   s2. |
-  d4 s2 |
+  \once \override Arpeggio.positions = #'(-6 . -3)
+  \arpeggioParenthesis
+  d4 \arpeggio \rightHandFinger #1 s2 |
   c8 [ c] bes-1 [ bes] a [ a] |
 
   % 95
@@ -686,7 +691,9 @@ fingeringVoiceD = {
   a,32 f'-1 d'-2 f, a, f' d' f,
   g,32-4 e'-1 d'-2 e, g, e' d' e, |
   s2. |
-  d4 s2 |
+  \once \override Arpeggio.positions = #'(-6 . -3.5)
+  \arpeggioParenthesis
+  d4 \arpeggio \rightHandFinger #1 s2 |
   bes8 [ bes] a [ a] g [ g] |
 
   % 96
@@ -1025,10 +1032,13 @@ fingeringVoiceD = {
   b8-2 a g4.-3 g8 |
 
   % 140
-  cis'8-1 d-2 e,4.-1 a8-1 |
+  \set strokeFingerOrientations = #'(up)
+  cis'8-1 \rightHandFinger #3 d-2 \rightHandFinger #4 \set strokeFingerOrientations = #'(right) e,4.-1 \rightHandFinger #2 a8-1 |
   s2. |
-  g'8-0 [ fis-3 ] s2 |
-  \shiftOnn a4 \shiftOff a a |
+  \set strokeFingerOrientations = #'(down)
+  g'8-0 \rightHandFinger #2 [ fis-3 \rightHandFinger #2 ] s2 |
+  \set strokeFingerOrientations = #'(down)
+  \shiftOnn a4 \rightHandFinger #1 \shiftOff a \rightHandFinger #1 a \rightHandFinger #1 |
 
   % 141
   fis8-3 [ e-1] d-0 [ e-1] fis-3 [ gis-1] |
@@ -1152,7 +1162,7 @@ fingeringVoiceD = {
 
   % 159
   \override TextSpanner.bound-details.left.text = "VII"
-  d16-1 fis-4 _( d) b\2-3 fis \startTextSpan b d, fis \stopTextSpan b,-0 d\2-3 cis-1 b |
+  d16-1 fis-4 _( d) b\2-3 fis \startTextSpan b d, fis \stopTextSpan b,-0 d\2-2 cis-1 b |
   s2. |
   s2. |
   a4 r2 |
@@ -1193,7 +1203,7 @@ fingeringVoiceD = {
 
   % 165
   \override TextSpanner.bound-details.left.text = "II"
-  fis16-3 d-4 a'-1 a a fis d fis a \startTextSpan d-2 fis b,, |
+  fis16-3 d-4 a' \startTextSpan a a fis d fis a d-2 fis b,, |
   s2. |
   s2. |
   d,4 r2 |
@@ -1308,12 +1318,12 @@ fingeringVoiceD = {
 
   % 180
   \override TextSpanner.bound-details.left.text = "II"
-  c8-1 b8-0 s8 b'8-4 \rightHandFinger #4 a-4 \rightHandFinger #3 [ g-4] \startTextSpan |
+  c8-1 b8-0 s8 b'8-4 \rightHandFinger #4 \once \set strokeFingerOrientations = #'(up) <a-4 \rightHandFinger #3 > [ g-4] \startTextSpan |
   \override Fingering.direction = 1
   \override Fingering.add-stem-support = ##f
   s4 \stemUp cis8^\3-2 [ a\4\tweak Fingering.extra-offset $'(-1 . -0.5)-3 \rightHandFinger #1 ] \stemNeutral b-0 \rightHandFinger #2 ^[ cis] |
   s2. |
-  g4 r8 \once \autoBeamOff g8-0 \rightHandFinger #2 fis-2 \rightHandFinger #1 [ e] |
+  g4 r8 \once \autoBeamOff \set strokeFingerOrientations = #'(down) <g-0\rightHandFinger #2 >8 fis-2 \rightHandFinger #1 [ e] |
 
   % 181
   <fis d-2>4 <fis d>4. <fis d>8 \stopTextSpan |
@@ -1385,15 +1395,15 @@ fingeringVoiceD = {
   b4-1 cis4.-3 cis8 |
 
   % 192
-  e8-0 [ d-2 ]  d4. cis8-1 |
+  e8-0 [ \set strokeFingerOrientations = #'(up) d-2 \rightHandFinger #3 ]  d4. cis8-1 \rightHandFinger #3 |
   <a-1 fis-3>4 s2 |
-  s4 \override Fingering.extra-offset = #'(-1.25 . 1.5) \stemUp e8-1 [ fis-3 ] \stemNeutral g4-4  |
+  s4 \override Fingering.extra-offset = #'(-1.25 . 1.5) \stemUp e8-1 [ \set strokeFingerOrientations = #'(down) fis-3 \rightHandFinger #3 ] \stemNeutral g4-4 \rightHandFinger #2 |
   d4-4 a2  |
 
   % 193
   d4-2 <fis-2 d-3 a-1>4. <fis d a>8 |
   s2. |
-  \shiftOn fis8-3 e-1 s2 |
+  \shiftOn fis8-3 e-1 \rightHandFinger #2 s2 |
   d,4 d'4. d8 |
 
   % 194
@@ -1447,28 +1457,36 @@ fingeringVoiceD = {
   \override Fingering.add-stem-support = ##f
   \override Fingering.staff-padding = #'()
   \override Arpeggio.positions = #'(-3.5 . -1.5)
-  fis4 \startTextSpan d,16-0 \arpeggio <fis' \rightHandFinger #4 a, \rightHandFinger #2 > <fis a,> d,-0 \arpeggio d <fis' a,> <fis a,> d, \stopTextSpan |
+  % \arpeggioParenthesis
+  fis4 \startTextSpan d,16-0 \arpeggio <fis' \rightHandFinger #4 a, \rightHandFinger #2 > <fis a,> d,-0 d \arpeggio <fis' a,> <fis a,> d, \stopTextSpan |
   s2. |
   s2. |
   <d a' d-2>4 \once \mergeDifferentlyDottedOff d8.-4 \once \override NoteColumn.force-hshift = #1 d16-4 cis8.-3 cis16 |
 
   % 202
-  % \override Fingering.add-stem-support = ##f
-  % \override Fingering.staff-padding = #'()
-  d16-0 <fis'-2 \rightHandFinger #3 b,-0 \rightHandFinger #2 > <fis b,> d, d <fis' b,> <fis b,> d, d <fis' b,> <fis b,> d,  |
+  \override Arpeggio.positions = #'(-3.5 . -2)
+  d16-0 \arpeggio <fis'-2 \rightHandFinger #3 b,-0 \rightHandFinger #2 > <fis b,> d, d <fis' b,> <fis b,> d,
+  \override Arpeggio.positions = #'(-4 . -2)
+  d \arpeggio <fis' b,> <fis b,> d,  |
   s2. |
   s2. |
   b8.-1 b16 b8. b16 a8.-0 a16 |
 
   % 203
   \override TextSpanner.bound-details.left.text = "V"
-  d16-2 <e'-0 b-0> <e b> d, e-3 \startTextSpan <a' \rightHandFinger #4 cis,-2 \rightHandFinger #2 > <a cis,> e, e <e' \rightHandFinger #3 cis-2  \rightHandFinger #2 > <e cis> e, \stopTextSpan |
+  \override Arpeggio.positions = #'(-4.5 . -2)
+  d16-2 \arpeggio <e'-0 b-0> <e b> d,
+  \override Arpeggio.positions = #'(-4.5 . -2)
+  e-3 \arpeggio \startTextSpan <a' \rightHandFinger #4 cis,-2 \rightHandFinger #2 > <a cis,> e, e <e' \rightHandFinger #3 cis-2  \rightHandFinger #2 > <e cis> e, \stopTextSpan |
   s2. |
   s2. |
   g8.-1 g16 g8. g16 g8. g16 |
 
   % 204
-  e16-2 <b''-4 \rightHandFinger #4 d,-3 \rightHandFinger #2 > <b d,> e,, e-1 <e'-0 d-3> <fis-2 d> e, e <g'-4 cis,-2> <g cis,> e, |
+  \override Arpeggio.positions = #'(-4.5 . -2)
+  e16-2 \arpeggio <b''-4 \rightHandFinger #4 d,-3 \rightHandFinger #2 > <b d,> e,, 
+  \override Arpeggio.positions = #'(-4 . -2)
+  e-1 \arpeggio <e'-0 d-3> <fis-2 d> e, e <g'-4 cis,-2> <g cis,> e, |
   s2. |
   s2. |	
   gis8.-1 gis16 a8. a16 a8. a16 |
@@ -1477,20 +1495,29 @@ fingeringVoiceD = {
 
   % 205
   \override TextSpanner.bound-details.left.text = "II"
-  a16-1 <g'-3 d-2> <g d> a, a \startTextSpan <fis' d-2> b,-3 <fis' d> c-4 <fis d> <fis d> c \stopTextSpan |
+  \override Arpeggio.positions = #'(-2.5 . -0.5)
+  a16-1 \arpeggio <g'-3 d-2> <g d> a, a \startTextSpan <fis' d-2> b,-3 <fis' d>
+  \override Arpeggio.positions = #'(-2.5 . 0.5)
+  c-4 \arpeggio <fis d> <fis d> c \stopTextSpan |
   s2. |
   s2. |
   d8. d16 d8 d d8. d16 |
 
   % 206
   \override TextSpanner.bound-details.left.text = "V"
-  d,16 \startTextSpan <fis'-4 d-3> <fis d> d, \stopTextSpan e-3 <e'-0 \rightHandFinger #3 b-0 \rightHandFinger #2 > e, <e' \rightHandFinger #4 cis-2 \rightHandFinger #2 > e,-3 <e' \rightHandFinger #4 d-4 \rightHandFinger #2 > <e d> e, |
+  \override Arpeggio.positions = #'(-4.5 . -2.5)
+  d,16 \arpeggio \startTextSpan <fis'-4 d-3> <fis d> d, \stopTextSpan
+  \override Arpeggio.positions = #'(-4.5 . -2)
+  e-3 \arpeggio <e'-0 \rightHandFinger #3 b-0 \rightHandFinger #2 > e, <e' \rightHandFinger #4 cis-2 \rightHandFinger #2 > e,-3 \arpeggio <e' \rightHandFinger #4 d-4 \rightHandFinger #2 > <e d> e, |
   s2. |
   s2. |
   g,8. g16 g8-1 g gis8.-1 gis16  |
 
   % 207
-  e16-1 <e'-0 d-3> <e d> e, e <e'-0 cis-2> fis,-4 <e' cis> g,-0 <e' cis> <e cis> g, |
+  \override Arpeggio.positions = #'(-4 . -2)
+  e16-1 \arpeggio <e'-0 d-3> <e d> e, e <e'-0 cis-2>
+  \override Arpeggio.positions = #'(-4 . -1.5)
+  fis,-4 \arpeggio <e' cis> g,-0 <e' cis> <e cis> g, |
   s2. |
   s2. |
   a8.-0 a16 a8 a ais8.-1 ais16 |
@@ -1551,7 +1578,7 @@ fingeringVoiceD = {
   cis8-2 d8 ^\markup{"III"} d8.-4 b16-0 cis-2 e-0 g-4 a, |
   s2. |
   s2. |
-  <a g'-0>8 <g-3 f'> <a~ e'-1>4 a8. a'16 |
+  <a g'-0>8 <g-3 f'> <a~ e'-1>4 a8. a'16-2 |
   
   % 217
   d,16 a'-2 cis-3 g'-4 f-1 d-4 cis-2 d d, d' cis d |
@@ -1612,7 +1639,8 @@ fingeringVoiceD = {
   s2. |
   
   % 226
-  c,16-1 g'-2 _( a-4 ) bes-1 c-2 e\2-3 _( f-4 ) g-1 a-3 [ f,32-3\4 _( e-2 ) d-0 _( e ) f16 ] |
+  % c,16-1 g'-2 _( a-4 ) bes-1 c-2 e\2-3 _( f-4 ) g-1 a-3 [ f,32-3\4 _( e-2 ) d-0 _( e ) f16 ] |
+  c,16-1 g'-2\4 _( a-4 ) bes-1\3 c\glide-2 e-2 _( f-3 ) g-1\2 a-3 [ f,32-4\5 _( e-3 ) d-1 _( e ) f16 ] |
   s2. |
   s2. |
   s2. |
