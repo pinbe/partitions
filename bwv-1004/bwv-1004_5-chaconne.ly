@@ -242,7 +242,7 @@ fingeringVoiceD = {
   s8 g8-3 a2 |
 
   % 29
-  f16-3 a-2 d-4 f-1 f _( e-0) g-4 _( f) e-0 d-2 cis-1 \glissando d-1 |
+  f16-3 a-2 d-4 f-1 f _( e-0) g-4 _( f) e-0 d-2 cis\glide-1  d-1 |
   s2. |
   s2. |
   d,4 d'2 |
@@ -266,16 +266,16 @@ fingeringVoiceD = {
   b4-2 bes-1 a |
 
   % 33
-  d8-3 \glissando f-\2-3 bes-4 a-2 gis-1 d, |
+  d8\glide-3  f-\2-3 bes-4 a-2 gis-1 d, |
   s2. |
   s2. |
-  d,4 r r8 d'-2 |
+  d,4 r r8 d'\glide-2 |
 
   % 34
-  cis8 e'\2-3 a-4 g-1 fis-1 c, |
+  cis8 e'\2-3 a-4 g\glide-1 fis-1 c, |
   s2. |
   s2. |
-  cis4-2 r r8 c-2 |
+  cis4-2 r r8 c\glide-2 |
 
   % 35
   b8 d'-3 g-4 f-1 e-0 bes, |
@@ -290,16 +290,16 @@ fingeringVoiceD = {
   a4 a2 |
 
   % 37
-  f16-2 d-0 _( f) a-1 d\3-3 f\2-2 bes-1 a-1 gis\2-3 b-1 gis e-0 |
+  f16-2 d-0 _( f) a-1 d\3-3 f\2-2 bes\glide-1 a-1 gis\2-3 b-1 gis e-0 |
   s2. |
   s2. |
   d,4 d'2 |
 
   % 38
-  cis,16 e'-3 a-4 g-1 fis-1 a-4 fis-1 d-3 a-1 fis-3 d-4 c-2 |
+  cis,16 e'-3 a-4 g\glide-1 fis-1 a-4 fis-1 d-3 a-1 fis-3 d-4 c\glide-2 |
   s2. |
   s2. |
-  cis4-2 c2-2 |
+  cis4\glide-2 c2-2 |
 
   % 39
   b16-2 d-0 g-0 fis-4 g-0 ees'-4 _( d-3) cis-2 bes'-3 _( a-2) gis-1 _( a) |
@@ -321,13 +321,13 @@ fingeringVoiceD = {
 
   % 42
   \override TextSpanner.bound-details.left.text = "II"
-  a16 e' \startTextSpan d'-2 cis \stopTextSpan d,-3 fis-2 a-1 c-4 c bes-1 _( c-4) a-1 |
+  a16 e' \startTextSpan d'-2 cis \stopTextSpan d,-3 fis-2 a-1 c-4 c bes-1 _( c-4) a\glide-1 |
   s2. |
   s2. |
   a'4 d2 |
 
   % 43
-  bes16-1 g-4 _( f-1)  ees\5-4 d-3 _( c-1) bes-1 a-0 g-3 g'-0 ees'-2 d-1 |
+  bes16-1 g-4 _( f-1)  ees\5-4 d-3 _( c\glide-1) bes-1 a-0 g-3 g'-0 ees'-2 d\glide-1 |
   s2. |
   s2. |
   g,2-3 g4 |
@@ -394,19 +394,19 @@ fingeringVoiceD = {
   d,2 r4 |
 
   % 54
-  e,16-0 c,-3 e-2 g-0 c-1 g c e a,-2 f'-1 _( g-3) a-4 |
+  e,16-0 c,-3 e-2 g-0 c-1 g c e a,-2 f'-1 _( g-3) a\glide-4 |
   s2. |
   s2. |
   s2. |
 
   % 55
-  d,16-2 bes,-1 d-0 f-2 bes-3 f bes d-4 g,-0 e'-0 _( f-1) g-4 |
+  d,16-4 bes,-1 d-0 f-2 bes-3 f bes d-4 g,-0 e'-0 _( f-1) g-4 |
   s2. |
   s2. |
   s2. |
 
   % 56
-  cis,16-2 a-1 cis e-0 a\2-2 e\3-1 a cis-1 e-4 g,\3-3 f-1 e-0 |
+  cis,16\glide-2 a-1 cis e-0 a\2-2 e\3-1 a cis-1 e-4 g,\3-3 f-1 e-0 |
   s2. |
   s2. |
   a'2 a4 |
@@ -484,7 +484,7 @@ fingeringVoiceD = {
   s2. |
 
   % 65
-  d16-3 a32-1 _( g-0) f16-3 e-1 d-0 c-3 _( bes-1) a-0 bes-1 d'32\3-4 _( c-2) bes-2 _( a -1) g\4-4 _( f-2) ] |
+  d16-4 a32-2 _( g-0) f16-3 e-2 d-0 c-3 _( bes-1) a-0 bes-1 d'32\3-4 _( c\glide-2) bes-2 _( a -1) g\4-4 _( f-2) ] |
   s2. |
   s2. |
   d4 s2 |
@@ -508,13 +508,13 @@ fingeringVoiceD = {
   s2. |
 
   % 69
-  f16-2 [ d32-0 _( e-1) f16 a-1 ] f-2 [ d-4 f a ] bes32-1 [ _(c-3) d-1 _( e-3) f-2 _( g-4) a-1 _( bes-2) ] |
+  f16-2 [ d32-0 _( e-1) f16 a\glide-1 ] f-2 [ d-4 f a ] bes32-1 [ _(c-3) d-1 _( e-3) f-2 _( g-4) a-1 _( bes-2) ] |
   s2. |
   s2. |
   d4 s2 |
 
   % 70
-  e,16-0 [ c,32-2 _( d-4) e16-1 g-0 ] e [ c e g ] a32-2 [ _( bes-3) c-1 _( d-3) e-3 _( f-4) g-1 _( a-3) ] |
+  e,16-0 [ c,32-2 _( d-4) e16-1 g-0 ] e [ c e g ] a32-2 [ _( bes-3) c-1 _( d\glide-3) e-3 _( f-4) g-1 _( a-3) ] |
   s2. |
   s2. |
   s2. |
@@ -532,7 +532,7 @@ fingeringVoiceD = {
   a'4 s2 |
 
   % 73
-  f32-2 _( d-0) e-1 _( f-2) g-0 _( a-1) b-0 cis-1 d-1 b-\3-2 _( cis-4) d-1 e-3 _( f-4) g-1 _( a-3)  bes16-4 d,,-3 c-1 \trill bes-1 |
+  f32-2 _( d-0) e-1 _( f-2) g-0 _( a-1) b-0 cis\glide-1 d-1 b-\3-2 _( cis-4) d-1 e-3 _( f-4) g-1 _( a-3)  bes16-4 d,,-3 c\glide-1 \trill bes-1 |
   s2. |
   s2. |
   d,4 s2 |
@@ -544,13 +544,13 @@ fingeringVoiceD = {
   s2. |
 
   % 75
-  bes32-1 d-0 e-2 _( fis-4) g-0 _( a-2) bes-3 c-1 d-3 g,-0 _( a-2) bes-3 c-1 _( d-3) e-0 fis-1 g-1 _( a-3) bes-4 _( a-3) g-1 f-4 e-3 _( d-1) |
+  bes32-1 d-0 e-2 _( fis-4) g-0 _( a-2) bes-3 c-1 d-3 g,-0 _( a-2) bes-3 c-1 _( d-3) e-0 fis\glide-1 g-1 _( a-3) bes-4 _( a-3) g-1 f-4 e-3 _( d-1) |
   s2. |
   s2. |
   s2. |
 
   % 76
-  cis32\3-4 a'-3 _( g-1) f-4 e-3 _( d-1) cis-1 _( b-0) a-1 _( b-3) cis-1 \glissando d-1 e-3 _( f-4) g-1 a-3 bes-4 _( g-1) e-0 cis-2 a-1 _( g-0) f-3 _( e-1) |
+  cis32\3-4 a'-3 _( g-1) f-4 e-3 _( d\glide-1) cis-1 _( b-0) a-1 _( b-3) cis-1 \glissando d-1 e-3 _( f-4) g-1 a-3 bes-4 _( g-1) e-0 cis-2 a-1 _( g-0) f-3 _( e-1) |
   s2. |
   s2. |
   s2. |
@@ -562,7 +562,7 @@ fingeringVoiceD = {
   d4 r d'-0 |
 
   % 78
-  c,16 e-2 a-3 c-1 e-0 c a g-0 fis-3 a-1 c-4 ees-3 |
+  c,16 e-2 a-3 c-1 e-0 c a g-0 fis-3 a-1 c\glide-4\3 ees-4\2 |
   s2. |
   s2. |
   c4-4 r c-2 |
@@ -604,25 +604,25 @@ fingeringVoiceD = {
   s2. |
 
   % 85
-  f32-3 a-2 b-0 cis-2 d-4 _( cis) b a f'-1 _( e) d-3 cis-1 d e f-1 g-3 a-3 _( g-1) f\2-4 e-0 bes'-4 _( a-3) g-1 f-4 |
+  f32-3 a-2 b-0 cis-2 d-4 _( cis) b a f'-1 _( e) d-3 cis-2 d e f-1 g\glide-3 a-3 _( g-1) f\2-4 e-0 bes'-4 _( a-3) g-1 f-4 |
   s2. |
   s2. |
   s2. |
 
   % 86
-  c32\3-3 e-0 fis\2-4 gis-1 a-2 _( gis-1) fis-4 e-0 c'-2 _( b-1) a\2-4 gis-3 a-4 b-1 c-2 d-1 e-3 _( d-1) c-4 b-3 f'-4 _( e-3) d-1 cis-4 |
+  c32\3-3 e-0 fis\2-4 gis-1 a-2 _( gis-1) fis-4 e-0 c'-2 _( b-1) a\2-4 gis-3 a-4 b\glide-1 c-2 d-1 e-3 _( d-1) c-4 b-3 f'-4 _( e-3) d-1 cis-4 |
   s2. |
   s2. |
   s2. |
 
   % 87
-  d32-1 _( e-3) f-4 e d f e d f e d f e d f e d-1 g-4 f-2 e-1 d-1 c-4 bes-2 a-1 |
+  d32-1 _( e-3) f-4 e d f e d f e d f e d f e d-1 g-4 f-2 e\glide-1 d-1 c-4\2 bes-2 a\glide-1 |
   s2. |
   s2. |
   s2. |
 
   % 88
-  g32\2-1 a-3 bes-4 a g bes a g bes a g bes a g bes-4 a-3 g-1 f\3-3 e-2 d-1 cis\4-4 b-2 a-1 g-4 |
+  g32-1 a-3 bes-4 a g bes a g bes a g bes a g bes-4 a-3 g-1 f\3-3 e-2 d-1 cis\4-4 b-2 a-1 g-4 |
   s2. |
   s2. |
   s2. |
@@ -669,7 +669,7 @@ fingeringVoiceD = {
 
   % 93
   \override TextSpanner.bound-details.left.text = "III"
-  d,32 \startTextSpan f' d' f, d f d' f, \stopTextSpan
+  d,32 \startTextSpan f' d' f, d f d' f, \stopTextSpan \breathe
   a, f'-3 d'-4 f, a, f' d' f,
   bes, f'-3 d'-4 f, bes, f' d' f, |
   s2. |
@@ -707,7 +707,7 @@ fingeringVoiceD = {
 
   % 97
   \override TextSpanner.bound-details.left.text = "III"
-  d,32 \startTextSpan f' d' f, d f d' f, \stopTextSpan
+  d,32 \startTextSpan f' d' f, d f d' f, \stopTextSpan \breathe
   d32 f-2 a-1 f d f a f
   \override TextSpanner.bound-details.left.text = "III"
   d32 \startTextSpan f bes f d f bes f \stopTextSpan |
@@ -742,7 +742,7 @@ fingeringVoiceD = {
   g8 [ g] a-4 [ a] a, [ a] |
 
   % 101
-  d,32 d'\3-4 f\2-3 d d, d' f d
+  d,32 d'\3-4 f\2-3 d d, d' f d \breathe
   d,32 a'\3-2 f'\1-1 a, d, a' f' a,
   d,32 bes'-4 f'-1 bes, d, bes' f' bes,  |
   s2. |
@@ -777,7 +777,7 @@ fingeringVoiceD = {
 
   % 105
   \override TextSpanner.bound-details.left.text = "III"
-  d,32 \startTextSpan f' d' f, d f d' f, \stopTextSpan
+  d,32 \startTextSpan f' d' f, d f d' f, \stopTextSpan \breathe
   d32\5-1 a'-3 f'\2-2 a, d, a' f' a,
   d,,32 c''\3-3 f\2-4 c d,, c'' f c |
   s2. |
@@ -811,7 +811,7 @@ fingeringVoiceD = {
   a8 [ a] a [ a] a [ a] |
 
   % 109
-  d,32 a''-2 <d-4 f-1>  a d, a' <d f> a
+  d,32 a''-2 <d-4 f-1>  a d, a' <d f> a \breathe
   d,32-0 d'-3 fis-2 d d, d' fis d
   d,32 c'-1 fis-2 c d, c' fis c |
   s2.  |
@@ -847,7 +847,7 @@ fingeringVoiceD = {
   gis8 [ gis] a [ a] a, [ a] |
 
   % 113
-  d,32 f'-3 d'-4 f, d,32 f' d' f,
+  d,32 f'-3 d'-4 f, d,32 f' d' f, \breathe
   bes,32 f' d' f, bes,32 f' d' f,
   a,32 f' d' f, a,32 f' d' f, |
   s2. |
@@ -882,7 +882,7 @@ fingeringVoiceD = {
   e8-2 [ e] f [ f ] e-1 [ e] |
 
   % 117
-  d,32 d'-4 fis-3 d d, d' fis d
+  d,32 d'-4 fis-3 d d, d' fis d \breathe
   \override TextSpanner.bound-details.left.text = "I"
   a,32 a'-3 <c f> \startTextSpan a a, a' <c f> a \stopTextSpan
   b,32 g'-0 <d'-4 f-1> g, b, g' <d' f> g, |
