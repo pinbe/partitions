@@ -785,8 +785,86 @@
   %122
   <fis-2 b-3 dis-4>2. |
   b2. |
-  s2. \bar "||"
-
+  s2. \section |
+  
+  %123
+  <b dis b'>2. |
+  r4 r b' |
+  s2. |
+  
+  %124
+  <e, g c e>2 a4 |
+  c,2. |
+  s2. |
+  
+  %125
+  <d, g b>2. |
+  g2. |
+  s2. |
+  
+  %126
+  <e a c>2 fis4 |
+  a2. |
+  s2. |
+  
+  %127
+  <g, e' g>2. \fermata |
+  e2. |
+  s2. |
+  
+  %128
+  <c' f>2. ^\markup{"I"} |
+  a'2 <bes-3 des-2>4 |
+  s2. |
+  
+  %129
+  f2 ^\markup{"I"} e4 |
+  <a c>2. |
+  s2. |
+  
+  %130
+  <a,-3 c-1 e-0>2. |
+  b,2.-2 |
+  s2. |
+  
+  %131
+  \stemNeutral
+  <c-4 dis-3>4 <g-0 c-0> <fis-3 a-1> \fermata |
+  s2. |
+  s2. |
+  
+  %132
+  \stemUp
+  \repeat percent 2 {
+    e16 b' b b
+    c b a b
+    b b g b |
+    e8-2_\5 b'-3_\4 c-4 a-1 b-3 g-4 |
+    s2. |
+  }
+  
+  %134
+  e,16 <b' e> c, <g' b e>
+  ais, <g' b e> c, <g' b e>
+  ais, <g' b e> c, <g' b e> |
+  e8-2 c-3_\6 ais-1 c-3 ais-1 c-3 |
+  s2. |
+  
+  %135
+  ais,16 <g' b e> c, <g' b e>
+  ais, <g' b e> c, <g' b e>
+  ais, <g' b e> c, <g' b e> |
+  ais8-1 c-3 ais-1 c-3 ais-1 c-3 |
+  s2. |
+  
+  %136
+  <g-2 b-1 g-0 b-0 e'-4>2. |
+  e,2. |
+  s2. |
+  
+  %137
+  e2.-1\5 |
+  e2.-0_\6 \fine |
 
 }
 
