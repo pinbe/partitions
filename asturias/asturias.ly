@@ -98,6 +98,42 @@ startBaBarre =
 
 #(define startHalfBarre startBaBarre)
 
+#(define-markup-command (barreMrkp layout props fretnum partial) (integer? integer?)
+   (interpret-markup layout props 
+                     (if (= partial 6)
+                         #{
+                           \markup { 
+                             \small
+                             \bold
+                             \concat {
+                               #(format #f "~@r" fretnum)
+                               \hspace #0.2
+                             }
+                           }
+                         #}
+                         #{
+                           \markup {
+                             \small
+                             \bold
+                             \concat {
+                               #(format #f "~@r" fretnum)
+                               \hspace #0.2
+                               \lower #0.3
+                               \fontsize #-2
+                               #(number->string partial)
+                               \hspace #0.5
+                             }
+                           }
+                         #})))
+
+barre = 
+#(define-event-function (fretnum partial)
+   (number? number?)
+   #{
+     ^\markup \barreMrkp #fretnum #partial
+   #}
+   )
+
 startBarre = 
 #(define-event-function (fretnum partial) 
    (number? number?)
@@ -268,7 +304,7 @@ stopBarre = \stopTextSpan
   
     %25
     \repeat volta 2 {
-      <fis,-3 b-4 dis-2 fis b>8 ^\markup{"VII"}
+      <fis,-3 b-4 dis-2 fis b>8 \barre #7 #6  %^\markup{"VII"}
       \tuplet 3/2 8 {
         b16 b-0 b-0
         c b b
