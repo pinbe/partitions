@@ -18,8 +18,132 @@ stringNumberSpanner =
      \override TextSpanner.bound-details.left.text =
      \markup { \circle \number $StringNumber }
      \override TextSpanner.bound-details.right.text = #'()
-     \override TextSpanner.dash-fraction = #'()
+     \override TextSpanner.dash-fraction = #0.3
+     \override TextSpanner.dash-period = #1 
    #})
+
+Prefix = \markup {
+  %% uncomment/comment these lines for C, C slashed, B or B slashed prefix :
+  \roman C
+  %\combine \roman C \translate #'(0.65 . -0.25) \override #'(thickness . 1.2) \draw-line #'(0 . 1.8)
+  %\roman B
+  %\combine \roman B \translate #'(0.65 . -0.25) \override #'(thickness . 1.2) \draw-line #'(0 . 1.8)
+  %%%%%%%%%%%%
+  \hspace #0.2
+}
+
+#(define-markup-command (prefix layout props string-qty) (integer?)
+   (interpret-markup layout props 
+                     (if (member string-qty (iota 4 2 1))
+                         #{
+                           \markup { 
+                             \override #'(font-family . typewriter)
+                             \concat {
+                               \fontsize #-4 {
+                                 \raise #.5 #(number->string string-qty)
+                                 \hspace #-.2
+                                 \raise #.2 "/"
+                                 \hspace #-.2
+                                 "6" 
+                               }
+                               \Prefix
+                             }
+                           }
+                         #}
+                         #{ \markup\Prefix #})))
+
+startBaBarre = 
+#(define-event-function (arg-string-qty str) 
+   ((integer?) markup?)
+   (let* ((pre-fix 
+           (if arg-string-qty #{ \markup \prefix #arg-string-qty #} Prefix))
+          (mrkp (markup #:upright #:concat (pre-fix str #:hspace 0.3))))
+  
+     (define (width grob text-string)
+       (let* ((layout (ly:grob-layout grob))
+              (props (ly:grob-alist-chain 
+                      grob 
+                      (ly:output-def-lookup layout 'text-font-defaults))))
+         (interval-length 
+          (ly:stencil-extent 
+           (interpret-markup layout props (markup text-string)) 
+           X))))
+     #{  
+       \tweak after-line-breaking 
+       #(lambda (grob)
+          (let* ((mrkp-width (width grob mrkp))
+                 (line-thickness (ly:staff-symbol-line-thickness grob)))
+            (ly:grob-set-nested-property! 
+             grob 
+             '(bound-details left padding) 
+             (+ (/ mrkp-width -4) (* line-thickness 2)))))     
+       \tweak font-size -2
+       \tweak style #'line
+       \tweak bound-details.left.text #mrkp
+       \tweak bound-details.left.attach-dir -1
+       \tweak bound-details.left-broken.text ##f
+       \tweak bound-details.left-broken.attach-dir -1
+       %% adjust the numeric values to fit your needs:
+       \tweak bound-details.left-broken.padding 1.5
+       \tweak bound-details.right-broken.padding 0
+       \tweak bound-details.right.padding 0.25
+       \tweak bound-details.right.attach-dir 2
+       \tweak bound-details.right-broken.text ##f
+       \tweak bound-details.right.text
+       \markup
+       \with-dimensions #'(0 . 0) #'(-.3 . 0) 
+       \draw-line #'(0 . -1)
+       \startTextSpan  
+     #}))
+
+#(define startHalfBarre startBaBarre)
+
+startBarre = 
+#(define-event-function (fretnum partial) 
+   (number? number?)
+
+   (let* ((mrkp (if (= partial 6)
+                    (markup #:small
+                            #:bold
+                            #:concat ((format #f "~@r" fretnum)
+                                      #:hspace 0.2))
+                    (markup #:small
+                            #:bold
+                            #:concat ((format #f "~@r" fretnum)
+                                      #:hspace 0.2
+                                      #:lower 0.3
+                                      #:fontsize -2
+                                      (number->string partial)
+                                      #:hspace 0.5
+                                      )
+                            )
+                    )))
+     #{
+       \tweak bound-details.left.text #mrkp
+       \tweak font-size -1
+       \tweak font-shape #'upright
+       \tweak style #'dashed-line
+       \tweak dash-fraction #0.3
+       \tweak dash-period #1 
+       \tweak bound-details.left.stencil-align-dir-y #0.35
+       \tweak bound-details.left.padding 0.25
+       \tweak bound-details.left.attach-dir -1
+       \tweak bound-details.left-broken.text ##f
+       \tweak bound-details.left-broken.attach-dir -1
+       %% adjust the numeric values to fit your needs:
+       \tweak bound-details.left-broken.padding 1.5
+       \tweak bound-details.right-broken.padding 0
+       \tweak bound-details.right.padding 0.25
+       \tweak bound-details.right.attach-dir 2
+       \tweak bound-details.right-broken.text ##f
+       \tweak bound-details.right.text
+       \markup
+       \with-dimensions #'(0 . 0) #'(-.3 . 0) 
+       \draw-line #'(0 . -1)
+       \startTextSpan 
+     #}))
+
+stopBarre = \stopTextSpan
 
 
 
@@ -250,8 +374,8 @@ stringNumberSpanner =
   
     %37
     \repeat volta 3 {
-      \override TextSpanner.bound-details.left.text = "VIII"
-      <g-3 ais e'-2 e'-4>8 \startTextSpan
+      %\override TextSpanner.bound-details.left.text = "VIII"
+      <g-3 ais e'-2 e'-4>8 \startBarre #8 #6
       \tuplet 3/2 8 {
         c16 e-2 c'_1
         d, e c'
@@ -259,7 +383,7 @@ stringNumberSpanner =
         c, e c'
         g, e' c'
         ^\markup { \bold "3 ×"}
-        \stopTextSpan
+        \stopBarre
       }|
       c,8-1 c'8-3 d-4 b-3 c-4 g-3 |
       s2. |
@@ -267,9 +391,8 @@ stringNumberSpanner =
   
     %40
     \set Score.currentBarNumber = #40
-    \override TextSpanner.bound-details.left.text = "VII"
     \tuplet 3/2 8 {
-      a,16 \startTextSpan fis'-1 c'_2
+      a,16 \startBarre #7 #6 fis'-1 c'_2
       fis,, fis' c'
       g, fis' c'
       a, fis' c'
@@ -281,30 +404,28 @@ stringNumberSpanner =
   
     \repeat volta 2 {
       %41
-      \override TextSpanner.bound-details.left.text = "VII"
       \set fingeringOrientations = #'(left)
-      <fis,,-3 b-4 dis-2 fis b>8 \startTextSpan 
+      <fis,,-3 b-4 dis-2 fis b>8 \startBarre #7 #6
       \tuplet 3/2 8 {
         b16 dis-2 b'_1
         c, dis b'
         ais, dis b'
         b, dis b'
         fis, dis' b'
-        \stopTextSpan
+        \stopBarre
       }|
       b,8 b'\glide-4 c-4 ais-3 b-4 fis-3 |
       s2. |
 
       %42
-      \override TextSpanner.bound-details.left.text = "VIII"
-      <g,-3 ais e'-2 g c>8 \startTextSpan
+      <g,-3 ais e'-2 g c>8 \startBarre #8 #6
       \tuplet 3/2 8 {
         c16 e-2 c'_1
         d, e c'
         b, e c'
         c, e c'
         g, e' c'
-        \stopTextSpan
+        \stopBarre
       }|
       c8-1 c'8-3 d-4 b-3 c-4 g-3 |
       s2. |
@@ -383,17 +504,16 @@ stringNumberSpanner =
   
     \repeat volta 2 {
       %53
-      \override TextSpanner.bound-details.left.text = "VII"
       \tuplet 3/2 8{
         \set Voice.baseMoment = #(ly:make-moment 1/8)
         \set Voice.beatStructure = 1,1,1,1,1,1
-        b,16 \startTextSpan dis'-2 b'_1
+        b,16 \startBarre #7 #6 dis'-2 b'_1
         fis, dis' b'
         b, dis b'
         c, dis b'
         ais, dis b'
         b, dis b'
-        \stopTextSpan
+        \stopBarre
       } |
       s8 \! \mf fis-3 b\glide-4 c-4 ais-3 b-4 |
       b2. |
@@ -412,15 +532,14 @@ stringNumberSpanner =
 
     %57
     \set Score.currentBarNumber = #57
-    \override TextSpanner.bound-details.left.text = "VII"
     \tuplet 3/2 8{
-      b,16 \startTextSpan dis'-2 b'_1
+      b,16 \startBarre #7 #6 dis'-2 b'_1
       fis, dis' b'
       b, dis b'
       c, dis b'
       ais, dis b'
       c, dis b'
-      \stopTextSpan
+      \stopBarre
     } |
     s8 fis,-3 b\glide-4 c-4 ais-3 c-4 |
     b2. |
@@ -475,14 +594,13 @@ stringNumberSpanner =
         s2. |
   
         %65
-        \override TextSpanner.bound-details.left.text = "II"
-        b2 <fis,-2 b-3 dis-4>4 \startTextSpan |
+        b2 <fis,-2 b-3 dis-4>4 \startBarre #2 #6 |
         b2 b,4 |
         s2. |
   
         %66
         \override Arpeggio.positions = #'(-4 . 2.5)
-        <fis b dis fis>2. \arpeggio \stopTextSpan \fermata |
+        <fis b dis fis>2. \arpeggio \stopBarre \fermata |
         b2. |
         s2. |
   
@@ -497,14 +615,13 @@ stringNumberSpanner =
         s2. |
   
         %69
-        \override TextSpanner.bound-details.left.text = "III"
-        b2 <d,,-3 g-4 b-2>4 \startTextSpan |
+        b2 <d,,-3 g-4 b-2>4 \startBarre #3 #6 |
         b2 g,4-1 |
         s2. |
   
         %70
         \override Arpeggio.positions = #'(-5 . 1.5)
-        <d g b d>2. \arpeggio \stopTextSpan \fermata |
+        <d g b d>2. \arpeggio \stopBarre \fermata |
         g2. |
         s2. |
   
@@ -523,14 +640,13 @@ stringNumberSpanner =
         s2 . |
   
         %73
-        \override TextSpanner.bound-details.left.text = "II"
-        fis2-1 <fis,-2 b-3 dis-4>4 \startTextSpan |
+        fis2-1 <fis,-2 b-3 dis-4>4 \startBarre #2 #6 |
         fis2-3 b,4 |
         s2. |
   
         %74 
         \override Arpeggio.positions = #'(-4 . 2.5)
-        <fis b dis fis>2. \arpeggio \stopTextSpan \fermata |
+        <fis b dis fis>2. \arpeggio \stopBarre \fermata |
         b2. |
         s2. |
   
@@ -545,8 +661,8 @@ stringNumberSpanner =
         s2. |
   
         %77
-        fis2 <fis,-2 ais-1 e'-4>4 ^\markup{"III"} |
-        fis2 c4-1 |
+        fis2 <fis,-2 ais e'-4>4 ^\markup{"III"} |
+        fis2 c4 |
         s2. |
   
         %78
@@ -560,8 +676,7 @@ stringNumberSpanner =
         s2. |
   
         %80
-        \override TextSpanner.bound-details.left.text = "IV"
-        r4 \startTextSpan
+        r4 \startBarre #4 #4
         \override Fingering.add-stem-support = ##t
         \grace{ees16-1 _( f-3 )}
         \override Fingering.add-stem-support = ##f
@@ -722,9 +837,8 @@ stringNumberSpanner =
         %112
         \set Voice.baseMoment = #(ly:make-moment 1/8)
         \set Voice.beatStructure = 1,1,1,1,1,1
-        \override TextSpanner.bound-details.left.text = "VII"
         \tuplet 3/2 8 {
-          g16 \startTextSpan g'-2 b-1
+          g16 \startBarre #7 #6 g'-2 b-1
           ais, g' b
           b, g' b
           d, g b
@@ -743,7 +857,7 @@ stringNumberSpanner =
           eis, d' fis
           fis, d' fis
         }
-        \stopTextSpan |
+        \stopBarre |
         d,8-4 eis-2 fis-3 a-1 eis-2 fis-3 |
         s2. |
   
@@ -772,14 +886,13 @@ stringNumberSpanner =
         s2. |
   
         %117
-        \override TextSpanner.bound-details.left.text = "II"
-        b2 <fis,-2 b-3 dis-4>4 \startTextSpan |
+        b2 <fis,-2 b-3 dis-4>4 \startBarre #2 #6 |
         b2 b,4 |
         s2. |
   
         %118
         \override Arpeggio.positions = #'(-4 . 2.5)
-        <fis b dis fis>2. \arpeggio \stopTextSpan \fermata |
+        <fis b dis fis>2. \arpeggio \stopBarre \fermata |
         b2. |
         s2. |
   
@@ -799,7 +912,7 @@ stringNumberSpanner =
         s2. |
   
         %122
-        <fis-2 b-3 dis-4>2. |
+        <fis-2 b-3 dis-4>2. ^\markup{"II"} |
         b2. |
         s2. |
   
@@ -836,12 +949,12 @@ stringNumberSpanner =
   s2. |
   
   %128
-  f'2. ^\markup{"I"} |
-  <a' c>2 <bes-3 des-2>4 |
+  f'2. \startBarre #1 #3 |
+  <a'-2 c>2 <bes-3 des-2>4 |
   s2. |
   
   %129
-  f2 ^\markup{"I"} e4 |
+  f2 \stopBarre e4 |
   <a c>2. |
   s2. |
   
