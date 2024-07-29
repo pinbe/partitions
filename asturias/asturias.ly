@@ -138,24 +138,9 @@ startBarre =
 #(define-event-function (fretnum partial) 
    (number? number?)
 
-   (let* ((mrkp (if (= partial 6)
-                    (markup #:small
-                            #:bold
-                            #:concat ((format #f "~@r" fretnum)
-                                      #:hspace 0.2))
-                    (markup #:small
-                            #:bold
-                            #:concat ((format #f "~@r" fretnum)
-                                      #:hspace 0.2
-                                      #:lower 0.3
-                                      #:fontsize -2
-                                      (number->string partial)
-                                      #:hspace 0.5
-                                      )
-                            )
-                    )))
      #{
-       \tweak bound-details.left.text #mrkp
+       \tweak bound-details.left.text
+         \markup \barreMrkp #fretnum #partial
        \tweak font-size -1
        \tweak font-shape #'upright
        \tweak style #'dashed-line
@@ -177,7 +162,7 @@ startBarre =
        \with-dimensions #'(0 . 0) #'(-.3 . 0) 
        \draw-line #'(0 . -1)
        \startTextSpan 
-     #}))
+     #})
 
 stopBarre = \stopTextSpan
 
@@ -318,7 +303,7 @@ stopBarre = \stopTextSpan
   
     %27
     \set Score.currentBarNumber = #27
-    <fis-3 b-4 dis-2 fis b>8 ^\markup{"VII"}
+    <fis-3 b-4 dis-2 fis b>8 \barre #7 #6
     \tuplet 3/2 8 {
       fis16 b b
       a b b
@@ -343,7 +328,7 @@ stopBarre = \stopTextSpan
   
     %29
     \repeat volta 2 {
-      <fis-3 b-4 dis-2 fis b>8 ^\markup{"VII"}
+      <fis-3 b-4 dis-2 fis b>8 \barre #7 #6
       \tuplet 3/2 8 {
         b16 b b
         c b b
@@ -357,7 +342,7 @@ stopBarre = \stopTextSpan
   
     %31
     \set Score.currentBarNumber = #31
-    <fis-3 b-4 dis-2 fis b>8 ^\markup{"VII"}
+    <fis-3 b-4 dis-2 fis b>8 \barre #7 #6
     \tuplet 3/2 8 {
       fis16 b b
       a b b
@@ -469,7 +454,7 @@ stopBarre = \stopTextSpan
 
     %45
     \set Score.currentBarNumber = #45
-    <fis,,-3 b-4 dis-2 fis b>8 ^\markup{"VII"}
+    <fis,,-3 b-4 dis-2 fis b>8 \barre #7 #6 
     \tuplet 3/2 8 {
       b16 b-0 b'_1
       c, b b'
@@ -697,12 +682,12 @@ stopBarre = \stopTextSpan
         s2. |
   
         %77
-        fis2 <fis,-2 ais e'-4>4 ^\markup{"III"} |
+        fis2 <fis,-2 ais e'-4>4 \barre #3 #6 |
         fis2 c4 |
         s2. |
   
         %78
-        <fis b dis>2. ^\markup{"II"} \fermata |
+        <fis b dis>2. \barre #2 #6 \fermata |
         b2. |
         s2. |
   
@@ -943,12 +928,12 @@ stopBarre = \stopTextSpan
         s2. |
   
         %121
-        b2 <fis,-2 ais-1 e'-4>4 ^\markup{"III"} |
+        b2 <fis,-2 ais-1 e'-4>4 \barre #3 #6 |
         b2 c,4-1 |
         s2. |
   
         %122
-        <fis-2 b-3 dis-4>2. ^\markup{"II"} |
+        <fis-2 b-3 dis-4>2. \barre #2 #6 |
         b2. |
         s2. |
   
@@ -970,12 +955,12 @@ stopBarre = \stopTextSpan
   s2. |
   
   %125
-  <d,\glide-3 g-4 b-2>2. ^\markup{"III"} |
+  <d,\glide-3 g-4 b-2>2. \barre #3 #6 |
   g2. |
   s2. |
   
   %126
-  <e-3 a-4 c>2 ^\markup{"V"} fis4\glide-4 |
+  <e-3 a-4 c>2 \barre #5 #6 fis4\glide-4 |
   a2. |
   s2. |
   
