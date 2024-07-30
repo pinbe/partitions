@@ -13,94 +13,22 @@ stringNumberSpanner =
 #(define-music-function (StringNumber) (string?)
    #{
      %\override TextSpanner.style = #'solid
-     \override TextSpanner.font-size = #-5
-     \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
-     \override TextSpanner.bound-details.left.text =
-     \markup { \circle \number $StringNumber }
-     \override TextSpanner.bound-details.right.text = #'()
-     \override TextSpanner.dash-fraction = #0.3
-     \override TextSpanner.dash-period = #1 
+     \once \override TextSpanner.font-size = #-5
+     \once \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+     \once \override TextSpanner.bound-details.left.text =
+     \markup {
+       \circle
+       \number $StringNumber
+     }
+     \once \override TextSpanner.bound-details.right.text = #'()
+     \once \override TextSpanner.dash-fraction = #0.3
+     \once \override TextSpanner.dash-period = #1 
    #})
 
-Prefix = \markup {
-  %% uncomment/comment these lines for C, C slashed, B or B slashed prefix :
-  \roman C
-  %\combine \roman C \translate #'(0.65 . -0.25) \override #'(thickness . 1.2) \draw-line #'(0 . 1.8)
-  %\roman B
-  %\combine \roman B \translate #'(0.65 . -0.25) \override #'(thickness . 1.2) \draw-line #'(0 . 1.8)
-  %%%%%%%%%%%%
-  \hspace #0.2
-}
 
-#(define-markup-command (prefix layout props string-qty) (integer?)
+#(define-markup-command (barreMrkp layout props fretnum numOfStr) (integer? integer?)
    (interpret-markup layout props 
-                     (if (member string-qty (iota 4 2 1))
-                         #{
-                           \markup { 
-                             \override #'(font-family . typewriter)
-                             \concat {
-                               \fontsize #-4 {
-                                 \raise #.5 #(number->string string-qty)
-                                 \hspace #-.2
-                                 \raise #.2 "/"
-                                 \hspace #-.2
-                                 "6" 
-                               }
-                               \Prefix
-                             }
-                           }
-                         #}
-                         #{ \markup\Prefix #})))
-
-startBaBarre = 
-#(define-event-function (arg-string-qty str) 
-   ((integer?) markup?)
-   (let* ((pre-fix 
-           (if arg-string-qty #{ \markup \prefix #arg-string-qty #} Prefix))
-          (mrkp (markup #:upright #:concat (pre-fix str #:hspace 0.3))))
-  
-     (define (width grob text-string)
-       (let* ((layout (ly:grob-layout grob))
-              (props (ly:grob-alist-chain 
-                      grob 
-                      (ly:output-def-lookup layout 'text-font-defaults))))
-         (interval-length 
-          (ly:stencil-extent 
-           (interpret-markup layout props (markup text-string)) 
-           X))))
-     #{  
-       \tweak after-line-breaking 
-       #(lambda (grob)
-          (let* ((mrkp-width (width grob mrkp))
-                 (line-thickness (ly:staff-symbol-line-thickness grob)))
-            (ly:grob-set-nested-property! 
-             grob 
-             '(bound-details left padding) 
-             (+ (/ mrkp-width -4) (* line-thickness 2)))))     
-       \tweak font-size -2
-       \tweak style #'line
-       \tweak bound-details.left.text #mrkp
-       \tweak bound-details.left.attach-dir -1
-       \tweak bound-details.left-broken.text ##f
-       \tweak bound-details.left-broken.attach-dir -1
-       %% adjust the numeric values to fit your needs:
-       \tweak bound-details.left-broken.padding 1.5
-       \tweak bound-details.right-broken.padding 0
-       \tweak bound-details.right.padding 0.25
-       \tweak bound-details.right.attach-dir 2
-       \tweak bound-details.right-broken.text ##f
-       \tweak bound-details.right.text
-       \markup
-       \with-dimensions #'(0 . 0) #'(-.3 . 0) 
-       \draw-line #'(0 . -1)
-       \startTextSpan  
-     #}))
-
-#(define startHalfBarre startBaBarre)
-
-#(define-markup-command (barreMrkp layout props fretnum partial) (integer? integer?)
-   (interpret-markup layout props 
-                     (if (= partial 6)
+                     (if (= numOfStr 6)
                          #{
                            \markup { 
                              \small
@@ -120,27 +48,28 @@ startBaBarre =
                                \hspace #0.2
                                \lower #0.3
                                \fontsize #-2
-                               #(number->string partial)
+                               #(number->string numOfStr)
                                \hspace #0.5
                              }
                            }
                          #})))
 
 barre = 
-#(define-event-function (fretnum partial)
+#(define-event-function (fretnum numOfStr)
    (number? number?)
    #{
-     ^\markup \barreMrkp #fretnum #partial
+     ^\markup \barreMrkp #fretnum #numOfStr
    #}
    )
 
 startBarre = 
-#(define-event-function (fretnum partial) 
+#(define-event-function (fretnum numOfStr) 
    (number? number?)
-
      #{
        \tweak bound-details.left.text
-         \markup \barreMrkp #fretnum #partial
+         \markup{
+           \barreMrkp #fretnum #numOfStr
+         }
        \tweak font-size -1
        \tweak font-shape #'upright
        \tweak style #'dashed-line
@@ -158,9 +87,11 @@ startBarre =
        \tweak bound-details.right.attach-dir 2
        \tweak bound-details.right-broken.text ##f
        \tweak bound-details.right.text
-       \markup
-       \with-dimensions #'(0 . 0) #'(-.3 . 0) 
-       \draw-line #'(0 . -1)
+         \markup {
+           \with-dimensions #'(0 . 0) #'(-.3 . 0) 
+           \draw-line #'(0 . -1)
+         }
+       \tweak direction #1 % UP
        \startTextSpan 
      #})
 
@@ -226,7 +157,8 @@ stopBarre = \stopTextSpan
     %15
     \set Score.currentBarNumber = #15
     b,16 b' a b b b c b d b b b |
-    \stringNumberSpanner "4" \textSpannerDown
+    \textSpannerDown
+    \stringNumberSpanner "4"
     s8 a-2 \startTextSpan b-4 c-2 d-4 b-1 |
     b2.-1_\6 |
 
@@ -240,7 +172,7 @@ stopBarre = \stopTextSpan
       \tuplet 3/2 8 {
         \set Voice.baseMoment = #(ly:make-moment 1/8)
         \set Voice.beatStructure = 1,1,1,1,1,1
-        e,16 b'-0 b'_1
+        e,16 b'-0 \RH #2 b'_1 \RH #3
         b, b b'
         c,16 b b'
         a, b b'
@@ -291,13 +223,13 @@ stopBarre = \stopTextSpan
     \repeat volta 2 {
       <fis,-3 b-4 dis-2 fis b>8 \barre #7 #6  %^\markup{"VII"}
       \tuplet 3/2 8 {
-        b16 b-0 b-0
+        b16 b-0 \RH #3 b-0 \RH #2
         c b b
         a b b
         b b b
         fis b b
       } |
-      b8 \! \mf b'\glide-4_\4 c-4 a-1 b-4 fis-3_\5 |
+      b8 \! \mf b'\glide-4_\4 \RH #1 c-4 a-1 b-4 fis-3_\5 |
       s2. |
     }
   
@@ -581,17 +513,17 @@ stopBarre = \stopTextSpan
     \set Voice.baseMoment = #(ly:make-moment 1/4)
     \set Voice.beatStructure = 1,1,1
     \stemNeutral
-    b,,8-1\6 dis16-4 dis fis-2\5 fis b-3\4 b dis-1\3 dis fis-4 fis |
+    b,,8-1\6 \RH #1 dis16-4 \RH #3 dis \RH #2 fis-2\5 \RH #3 fis \RH #2 b-3\4 \RH #3 b \RH #2 dis-1\3 \RH #3 dis \RH #2 fis-4 \RH #3 fis \RH #2 |
     s2. |
     s2. |
   
     %60
-    b16-2\2 b dis,-3\4 dis fis-1\3 fis b-2\2 b dis-1\1 dis fis fis |
+    b16-2\2 \RH #3 b \RH #2 dis,-3\4 \RH #3 dis \RH #2 fis-1\3 \RH #3 fis \RH #2 b-2\2 \RH #3 b \RH #2 dis-1\1 \RH #3 dis \RH #2 fis \RH #3 fis \RH #2 |
     s2. |
     s2. |
   
     %61
-    <b, dis b'>2.~ |
+    <b, dis b'>2.~ \barre #16 3 |
     s2. |
     s2. |
   
@@ -604,10 +536,11 @@ stopBarre = \stopTextSpan
         s2. |
   
         %63
+        \tempo "Andante tranquillo"
         \stemUp
         b2-1 a8 b |
         b2-3 a8 b |
-        s2. |
+        s2. \mf _\markup \italic expressivo |
   
         %64
         d2 \grace {b16-1 _( c-2 } b8 ) a |
@@ -628,7 +561,7 @@ stopBarre = \stopTextSpan
         %67
         b'2 a8 b |
         b'2 a8 b |
-        s2. |
+        s2. \p |
   
         %68
         d2 \grace {b16-1  _( c-2 } b8 ) a |
@@ -649,7 +582,7 @@ stopBarre = \stopTextSpan
         %71
         b''2 ais4~ |
         b'2 ais4~ |
-        s2. |
+        s2. \f |
   
         %72
         ais4
@@ -674,7 +607,7 @@ stopBarre = \stopTextSpan
         %75
         b'2 c8 b |
         b'2 c8 b |
-        s2. |
+        s2. \p |
   
         %76
         ais8 fis \grace{g16-1 _( a-4} g8 ) fis e g |
@@ -694,7 +627,7 @@ stopBarre = \stopTextSpan
         %79
         r4 <b-2 d-1>2 |
         g'2.-3_\4 |
-        s2. |
+        s2. \mf |
   
         %80
         r4 \startBarre #4 #4
@@ -707,7 +640,7 @@ stopBarre = \stopTextSpan
   
         %81
         r4 <d,-3 b'-4>2 |
-        g2.-1_\4 |
+        g2.-1 |
         s2. |
   
         %82
@@ -719,7 +652,7 @@ stopBarre = \stopTextSpan
         %83
         r4 g-1 b-0 |
         e2.-3 |
-        s2. |
+        s2. _\markup \italic "accel." |
   
         %84
         r4 fis-1 b-0 |
@@ -732,20 +665,23 @@ stopBarre = \stopTextSpan
         s2. |
   
         %86
-        r4 <ais-2 e'-4>2 \fermata |
+        \override TextSpanner.bound-details.left.text = \markup \italic "rit."
+        \textSpannerDown
+        r4 \startTextSpan <ais-2 e'-4>2 \fermata |
         fis,2.-1 |
         s2. |
   
         \repeat volta 2 {
           %87
-          r4 fis-2 <b-3 dis-4> |
+          r4 fis-2 <b-3 dis-4> \stopTextSpan |
           b2.-1 |
           s2. |
     
           %88
+          \tempo "Moderato"
           r4 e-0 e |
           a8-0 b-1 c-2 d16-4 ^( c-2 ) b8-1 a |
-          s2. |
+          s2. \mf |
         }
 
         %91
@@ -757,40 +693,49 @@ stopBarre = \stopTextSpan
         %92
         a8-4\5 b-1\4 c-2 d16-4 _( c-2 ) b8\glide-1 a-1 |
         s2. |
-        s2. |
+        s2. \mf |
   
         %93
-        b8-3\4 ais-1 fis-2 a-3\4 gis-1 e-2 |
+        b8-3\4 _\markup \italic "accel." ais-1 fis-2 a-3\4 gis-1 e-2 |
         s2. |
         s2. |
   
         %94
-        g8-2 fis-1 dis-3 f-2 e-1 c-2 |
+        g8-2 fis-1 dis-3 f-2 e-1 _\markup \italic rit. c-2 |
         s2. |
         s2. |
   
         %95
         r4 fis-2 <b-3 dis-4> |
-        b2.-1 |
+        b2.-1 _\markup \italic "a tempo" |
         s2. |
   
-        \repeat volta 2 {
-          %96
-          r4 a'-4 a-4 |
-          b8-1 c-2 d-0 e16 ^( d ) c8 b |
-          s2. |
-    
-          %97
-          r4 e,-1 <b'-2 e-4 gis-3> |
-          e,2. |
-          s2. |
-        }
+        %96
+        r4 a'-4 a-4 |
+        b8-1 c-2 d-0 e16 ^( d ) c8 b |
+        s2. \f |
   
+        %97
+        r4 e,-1 <b'-2 e-4 gis-3> |
+        e,2. |
+        s2. |
+
+        %98
+        \override TextSpanner.bound-details.left.text = \markup \italic "poco rit."
+        r4 \startTextSpan  a'-4 a-4 |
+        b'8-1 c-2 d-0 e16 ^( d ) c8 b |
+        s2. \p |
+  
+        %99
+        r4 e,-1 <b'-2 e-4 gis-3> \stopTextSpan |
+        e,2. |
+        s2. |
+
         %100
-        \set Score.currentBarNumber = #100
+        \tempo "Andante"
         c8-1 dis-4 e-0 b16-0 _( c-1 ) a8-3 b-0 |
         <a e'-2>4 <g-3 e'-2> fis-2 |
-        s2. |
+        s2. \mf |
   
         %101
         g8-0 b-0 fis-1 b-0 g-1 b-0 |
@@ -803,7 +748,7 @@ stopBarre = \stopTextSpan
         s2. |
   
         %103
-        b8-3 d-2 ais-3 d-4 b-0 d-2 |
+        b8-3 d-2 ais-3 d-4 b-0 d\glide-2 |
         <g-1 d'>4 <fis-1 d'> <g-1 d'> |
         s2. |
   
@@ -814,11 +759,12 @@ stopBarre = \stopTextSpan
         \grace{bes16-2 _( c-4}
         \stemNeutral bes8-2 ) a-1 |
         s2. |
-        s2. |
+        s2. _\markup \italic "dolce poco rubato" |
   
         %105
         c8-2
-        \stringNumberSpanner "2" \textSpannerUp
+        \stringNumberSpanner "2"
+        \textSpannerUp
         a-4 \startTextSpan
         \stemUp
         \override Fingering.add-stem-support = ##t
@@ -826,13 +772,16 @@ stopBarre = \stopTextSpan
         \override Fingering.add-stem-support = ##f
         \stemNeutral
         g8-2 ) fis-1
-        a-4 \stopTextSpan c-2 |
+        \override TextSpanner.bound-details.left.text = \markup \italic "rit."
+        \textSpannerDown
+        a-4 \startTextSpan \stopTextSpan
+        c-2 |
         s2. |
         s2. |
   
         %106
         \stemUp
-        <fis,,-2 c'-3>8 d'-1 e-4 fis16-1 ( e-0 ) d8-4 c-2 |
+        <fis,,-2 c'-3>8 d'-1 e-4 fis16-1 ( e-0 ) d8-4 c-2 \stopTextSpan |
         a2 <ais-1 e'-3 g-0>4 |
         s2. |
   
@@ -840,7 +789,7 @@ stopBarre = \stopTextSpan
           %107
           r4 fis,-2 <b-3 dis-4> |
           b2.-1 |
-          s2. |
+          s2. _\markup \italic "a tempo" |
     
           %108
           c,8-2 d-0 e-1 fis16-3 _( e-1 ) d8 c |
@@ -850,9 +799,9 @@ stopBarre = \stopTextSpan
   
         %111
         \set Score.currentBarNumber = #111
-        r4 fis \fermata <b dis>\fermata |
-        b2.-1 \fermata |
-        s2. |
+        r4 fis <b dis>\fermata |
+        b2.-1 |
+        s2. _\markup \italic "rit." |
 
   
         %112
@@ -867,7 +816,7 @@ stopBarre = \stopTextSpan
           b, g' b
         } |
         g'8-4_\5 ais-3_\4 b-4 d-1 ais\glide-3 b-3 |
-        s2. |
+        s2. _\markup \italic "a tempo" |
   
         %113
         \tuplet 3/2 8 {
@@ -886,10 +835,10 @@ stopBarre = \stopTextSpan
         \tuplet 3/2 8 {
           c,16 ais'-2 e'-0
           fis, ais e'
-          g, ais e'
+          g, \< ais e'
           e, ais e'
           d, ais' e'
-          c, ais' e'
+          c, ais' e' \!
         } |
         c8-1_\6 fis-3 g-4 e-1 d-4 c-1 |
         s2. |
@@ -899,7 +848,7 @@ stopBarre = \stopTextSpan
         \set Voice.beatStructure = 1,1,1
         b'2-1 a8 b |
         b'2-3 a8 b |
-        s2. |
+        s2. \f |
   
         %116
         d2 \grace {b16-1 _( c-2} b8 ) a |
@@ -920,7 +869,7 @@ stopBarre = \stopTextSpan
         %119
         b'2 a8 b |
         b'2 a8 b |
-        s2. |
+        s2. \p |
   
         %120
         d2 \grace {b16-1 _( c-2} b8 ) a |
@@ -946,7 +895,7 @@ stopBarre = \stopTextSpan
   }
   %123
   <b dis b'>2. \repeatTie |
-  r4 r b' |
+  r4 r b' \f |
   s2. |
   
   %124
@@ -970,9 +919,9 @@ stopBarre = \stopTextSpan
   s2. |
   
   %128
-  f'2. \startBarre #1 #3 |
-  <a'-2 c>2 <bes-3 des-2>4 |
-  s2. |
+  f'2. \RH #4 \startBarre #1 #3 |
+  <a'-2 \RH #2 c \RH 3>2 <bes-3 \RH #2 des-2 \RH 3>4 |
+  s2. \p |
   
   %129
   f2 \stopBarre e4 |
@@ -991,9 +940,10 @@ stopBarre = \stopTextSpan
   s2. |
   
   %132
+  \tempo "Quasi andante"
   \stemUp
   \repeat volta 2 {
-    e16 b' b b
+    e16 b'-0 b b-0
     c b a b
     b b g b |
     e8-1_\5 b'-3_\4 c-4 a-1 b-3 g-4 |
@@ -1005,20 +955,20 @@ stopBarre = \stopTextSpan
   e,16 <b' \RH #2 e \RH 3> c, <g' b e>
   ais, <g' b e> c, <g' b e>
   ais, <g' b e> c, <g' b e> |
-  e8-1 c-3_\6 ais-1 c-3 ais-1 c-3 |
+  e8-1 c-3_\6 ais-1 c-3 _\markup \italic "accel." ais-1 c-3 |
   s2. |
   
   %135
-  ais,16 <g' b e> c, <g' b e>
-  ais, <g' b e> c, <g' b e>
-  ais, <g' b e> c, <g' b e> |
+  ais,16 \< <g' b e> c, <g' b e>
+  ais, \! <g' b e> c, \> <g' b e>
+  ais, <g' b e> c, <g' b e> \! |
   ais8-1 c-3 ais-1 c-3 ais-1 c-3 |
   s2. |
   
   %136
   <g-2 b-1 g-0 b-0 e'-4>2. |
   e,2. |
-  s2. |
+  s2. \pp |
   
   %137
   e2.-1\5 |
@@ -1043,17 +993,8 @@ fingeringTweaks = {
   \override StringNumber.script-priority = 110 %
 }
 
-barringTweaks = {
-  \override TextSpanner.font-shape = #'upright
-  \override TextSpanner.dash-fraction = #1
-  \override TextSpanner.bound-details.right.text =
-  \markup { \draw-line #'(0 . -1) }
-}
-
-
 tweaks = {
   \fingeringTweaks
-  \barringTweaks
   \override Stem.details.beamed-lengths = #'(4.5)
 }
 
