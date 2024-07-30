@@ -9,23 +9,6 @@
 
 #(define RH rightHandFinger)
 
-stringNumberSpanner =
-#(define-music-function (StringNumber) (string?)
-   #{
-     %\override TextSpanner.style = #'solid
-     \once \override TextSpanner.font-size = #-5
-     \once \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
-     \once \override TextSpanner.bound-details.left.text =
-     \markup {
-       \circle
-       \number $StringNumber
-     }
-     \once \override TextSpanner.bound-details.right.text = #'()
-     \once \override TextSpanner.dash-fraction = #0.3
-     \once \override TextSpanner.dash-period = #1 
-   #})
-
-
 #(define-markup-command (barreMrkp layout props fretnum numOfStr) (integer? integer?)
    (interpret-markup layout props 
                      (if (= numOfStr 6)
@@ -97,6 +80,26 @@ startBarre =
 
 stopBarre = \stopTextSpan
 
+startStringSpan = 
+#(define-event-function (stringNum) 
+   (number?)
+   #{
+     \tweak font-size #-5
+     \tweak bound-details.left.stencil-align-dir-y #CENTER
+     \tweak bound-details.left.text
+       \markup {
+         \circle
+         \number #(number->string stringNum)
+       }
+     \tweak bound-details.right.text #'()
+     %\tweak style #'solid
+     \tweak style #'dashed-line
+     \tweak dash-fraction #0.3
+     \tweak dash-period #1 
+     \startTextSpan
+   #})
+
+stopStringSpan = \stopTextSpan
 
 
 \parallelMusic voiceA, voiceB, voiceC {
@@ -158,13 +161,12 @@ stopBarre = \stopTextSpan
     \set Score.currentBarNumber = #15
     b,16 b' a b b b c b d b b b |
     \textSpannerDown
-    \stringNumberSpanner "4"
-    s8 a-2 \startTextSpan b-4 c-2 d-4 b-1 |
+    s8 a-2 \startStringSpan #4 b-4 c-2 d-4 b-1 |
     b2.-1_\6 |
 
     %16
     c16 b a b b b g b a b fis b |
-    c8-2 \stopTextSpan a-4_\5 b-1 g-2 a-4 fis\glide-2 |
+    c8-2 \stopStringSpan a-4_\5 b-1 g-2 a-4 fis\glide-2 |
     s2. |
 
     %17
@@ -523,7 +525,7 @@ stopBarre = \stopTextSpan
     s2. |
   
     %61
-    <b, dis b'>2.~ \barre #16 3 |
+    <b, dis b'-3>2.~ \barre #16 3 |
     s2. |
     s2. |
   
@@ -645,8 +647,8 @@ stopBarre = \stopTextSpan
   
         %82
         r4 <ais-2 b-0>4 <a-2 b-0> |
-        \stringNumberSpanner "5" \textSpannerDown
-        fis2-3 \startTextSpan dis4-1 |
+        \textSpannerDown
+        fis2-3 \startStringSpan #5  dis4-1 |
         s2. |
   
         %83
@@ -661,7 +663,7 @@ stopBarre = \stopTextSpan
   
         %85
         r4 fis-3 b-0 |
-        c2.-2 \stopTextSpan |
+        c2.-2 \stopStringSpan |
         s2. |
   
         %86
@@ -763,9 +765,8 @@ stopBarre = \stopTextSpan
   
         %105
         c8-2
-        \stringNumberSpanner "2"
         \textSpannerUp
-        a-4 \startTextSpan
+        a-4 \startStringSpan #2
         \stemUp
         \override Fingering.add-stem-support = ##t
         \grace{g16-2 _( a-4}
@@ -774,7 +775,7 @@ stopBarre = \stopTextSpan
         g8-2 ) fis-1
         \override TextSpanner.bound-details.left.text = \markup \italic "rit."
         \textSpannerDown
-        a-4 \startTextSpan \stopTextSpan
+        a-4 \startTextSpan \stopStringSpan
         c-2 |
         s2. |
         s2. |
