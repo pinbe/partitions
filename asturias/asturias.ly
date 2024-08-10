@@ -396,7 +396,7 @@ stopStringSpan = \stopTextSpan
       b, b b'
       g, b b'
     }|
-    b,8 b'-3_\4 c-4 a-2 b-4 g-0 |
+    b,8 b'\glide-4_\4 c-4 a-2 b-4 g-0 |
     s2. |
   
     %46
