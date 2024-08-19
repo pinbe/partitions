@@ -735,23 +735,23 @@ stopStringSpan = \stopTextSpan
 
         %100
         \tempo "Andante"
-        c8-1 dis-4 e-0 b16-0 _( c-1 ) a8-3 b-0 |
-        <a e'-2>4 <g-3 e'-2> fis-2 |
+        c8-1 \RH #4 dis-4 \RH #3 e-0 \RH #4 b16-0 \RH #3 _( c-1 ) a8-3 \RH #2 b-0 \RH #3 |
+        <a e'-2 \RH #2 >4 <g-3 e'-2 \RH #2 > fis-2 |
         s2. \mf |
   
         %101
-        g8-0 b-0 fis-1 b-0 g-1 b-0 |
+        g8-0 \RH #2 b-0 \RH #3 fis-1 \RH #2 b-0 \RH #4 g-1 \RH #2 b-0 \RH #4 |
         e4-0 dis'\glide-3_\5 e-3 |
         s2. |
   
         %102
-        e8-0 fis-2 g-4 d16-3 e-0 c8-3 d-1 |
-        <c-3 g'>4 <b-1 d-0 g-0> <a-0 fis'-2> |
+        e8-0 \RH #4 fis-2 \RH #3 g-4 \RH #4 d16-3 \RH #2 e-0 \RH #3 c8-3 \RH #3 d-1 \RH #4 |
+        <c-3 g' \RH #2 >4 <b-1 d-0 \RH #2 g-0 \RH #3 > <a-0 fis'-2 \RH #2 > |
         s2. |
   
         %103
-        b8-3 d-2 ais-3 d-4 b-0 d\glide-2 |
-        <g-1 d'>4 <fis-1 d'> <g-1 d'> |
+        b8-3 \RH #3 d-2 \RH #4 ais-3 \RH #3 d-4 \RH #4 b-0 \RH #4 d\glide-2 \RH #3 |
+        <g-1 d' \RH #2 >4 <fis-1 d' \RH #2 > <g-1 d' \RH #2 > |
         s2. |
   
         %104
