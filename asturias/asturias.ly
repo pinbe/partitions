@@ -3,7 +3,6 @@
 \header {
   title = "Asturias (Leyenda)"
   composer = "Isaac Albéniz"
-  % Supprimer le pied de page par défaut
   tagline = ##f
 }
 
