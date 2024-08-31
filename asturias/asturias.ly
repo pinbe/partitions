@@ -4,6 +4,12 @@
   title = "Asturias (Leyenda)"
   composer = "Isaac Albéniz"
   tagline = ##f
+  %{
+  sources:
+  https://www.thisisclassicalguitar.com/asturias-leyenda-by-albeniz-free-pdf/ ©BradfordWerner
+  https://www.youtube.com/watch?v=CCVBDCavI_c
+  Eythor Thorlaksson https://www.free-scores.com/partitions_telecharger.php?partition=767
+  %}
 }
 
 #(define RH rightHandFinger)
