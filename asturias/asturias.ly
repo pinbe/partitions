@@ -335,7 +335,7 @@ stopStringSpan = \stopTextSpan
     %37
     \repeat volta 3 {
       %\override TextSpanner.bound-details.left.text = "VIII"
-      <g-3 ais e'-2 e'-4>8 \startBarre #8 #6
+      <g-3 ais e'-2 g e'-4>8 \startBarre #8 #6
       \tuplet 3/2 8 {
         c16 e-2 c'_1
         d, e c'
