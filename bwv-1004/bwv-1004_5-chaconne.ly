@@ -1029,7 +1029,7 @@ fingeringVoiceD = {
   d4-0 e8 \startTextSpan g16-4 fis-2 e8 \stopTextSpan d |
   s2. |
   s4 b4. s8 |
-  b8-2 a g4.-3 g8 |
+  b8-1 a g4.-3 g8 |
 
   % 140
   \set strokeFingerOrientations = #'(up)
@@ -1556,7 +1556,7 @@ fingeringVoiceD = {
   <a e'-1>8. r16 r4 s8 <cis e>8 |
 
   % 213
-  f8.-2 d16-4 f a-1 d-3 cis-1 d-1 e-3 f-4 a,-1 |
+  f8.-2 d16-4 f a-1 d-3 cis\glide-1 d-1 e-3 f-4 a,-1 |
   s2. |
   s2. |
   d,8. r16 r4 r |
