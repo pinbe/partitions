@@ -166,7 +166,7 @@ stopStringSpan = \stopTextSpan
     \set Score.currentBarNumber = #15
     b,16 b' a b b b c b d b b b |
     \textSpannerDown
-    s8 a-2 \startStringSpan #4 b-4 c-2 d-4 b-1 |
+    s8 a\glide-2 \startStringSpan #4 b-4 c-2 d-4 b-1 |
     b2.-1_\6 |
 
     %16
@@ -199,7 +199,7 @@ stopStringSpan = \stopTextSpan
       g,16 b b' a, b b'
       fis,16 b b' g, b b'
     } |
-    a8-2 fis\glide-4_\5 g-4 a-2 fis\glide-4 g-4 |
+    a8-2 fis-4_\5 g-0 a-2 fis-4 g-0 |
     s2. |
   
     %21
@@ -223,7 +223,7 @@ stopStringSpan = \stopTextSpan
       g,16 b b' e,, b' b'
       d,,16 b' b' c,, b' b'
     } |
-    a8-2 fis\glide-4 \> g-4 e-2 d-0 c-3_\6 |
+    a8-2 fis-4 \> g-0 e-2 d-0 c-2_\6 |
     s2. |
   
     %25
@@ -367,7 +367,7 @@ stopStringSpan = \stopTextSpan
       \set fingeringOrientations = #'(left)
       <fis,,-3 b-4 dis-2 fis b>8 \startBarre #7 #6
       \tuplet 3/2 8 {
-        b16 dis-2 b'_1
+        b16 dis-2 b'
         c, dis b'
         ais, dis b'
         b, dis b'
@@ -380,7 +380,7 @@ stopStringSpan = \stopTextSpan
       %42
       <g,-3 ais e'-2 g c>8 \startBarre #8 #6
       \tuplet 3/2 8 {
-        c16 e-2 c'_1
+        c16 e-2 c'
         d, e c'
         b, e c'
         c, e c'
@@ -467,7 +467,7 @@ stopStringSpan = \stopTextSpan
       \tuplet 3/2 8{
         \set Voice.baseMoment = #(ly:make-moment 1/8)
         \set Voice.beatStructure = 1,1,1,1,1,1
-        b,16 \startBarre #7 #6 dis'-2 b'_1
+        b,16 \startBarre #7 #6 dis'-2 b'
         fis, dis' b'
         b, dis b'
         c, dis b'
@@ -493,7 +493,7 @@ stopStringSpan = \stopTextSpan
     %57
     \set Score.currentBarNumber = #57
     \tuplet 3/2 8{
-      b,16 \startBarre #7 #6 dis'-2 b'_1
+      b,16 \startBarre #7 #6 dis'-2 b'
       fis, dis' b'
       b, dis b'
       c, dis b'
@@ -525,7 +525,7 @@ stopStringSpan = \stopTextSpan
     s2. |
   
     %60
-    b16-2\2 \RH #3 b \RH #2 dis,-3\4 \RH #3 dis \RH #2 fis-1\3 \RH #3 fis \RH #2 b-2\2 \RH #3 b \RH #2 dis-1\1 \RH #3 dis \RH #2 fis \RH #3 fis \RH #2 |
+    b16-2\2 \RH #3 b \RH #2 dis,-3\4 \RH #3 dis \RH #2 fis-1\3 \RH #3 fis \RH #2 b-2\2 \RH #3 b \RH #2 dis-1\1 \RH #3 dis \RH #2 fis-3 \RH #3 fis \RH #2 |
     s2. |
     s2. |
   
@@ -545,18 +545,18 @@ stopStringSpan = \stopTextSpan
         %63
         \tempo "Andante tranquillo"
         \stemUp
-        b2-1 a8 b |
-        b2-3 a8 b |
+        b2-4 a8-1 b\glide-4 |
+        b2-0 a8-3_\4 b-0 |
         s2. \mf _\markup \italic expressivo |
   
         %64
-        d2 \grace {b16-1 _( c-2 } b8 ) a |
-        d2 b8 a |
+        d2-4 \barre #7 #3 \grace {b16-1 _( c-2 } b8-1 ) a-1 |
+        d2 b8-0 a-3 |
         s2. |
   
         %65
-        b2 <fis,-2 b-3 dis-4>4 \startBarre #2 #6 |
-        b2 b,4 |
+        b2-4 <fis,-2 b-3 dis-4>4 \startBarre #2 #6 |
+        b2-0 b,4 |
         s2. |
   
         %66
@@ -566,18 +566,18 @@ stopStringSpan = \stopTextSpan
         s2. |
   
         %67
-        b'2 a8 b |
-        b'2 a8 b |
+        b'2-4 a8-1 b\glide-4 |
+        b'2-0 a8-3_\4 b-0 |
         s2. \p |
   
         %68
-        d2 \grace {b16-1  _( c-2 } b8 ) a |
-        d2 b8 a |
+        d2-4 \barre #7 #3 \grace {b16-1  _( c-2 } b8-1 ) a-1 |
+        d2 b8-0 a-3 |
         s2. |
   
         %69
-        b2 <d,,-3 g-4 b-2>4 \startBarre #3 #6 |
-        b2 g,4-1 |
+        b2-4 <d,,-3 g-4 b-2>4 \startBarre #3 #6 |
+        b2-0 g,4-1 |
         s2. |
   
         %70
@@ -587,17 +587,17 @@ stopStringSpan = \stopTextSpan
         s2. |
   
         %71
-        b''2 ais4~ |
-        b'2 ais4~ |
+        b''2-2 ais4~-1 |
+        b'2-4 \startStringSpan #4 ais4~-3 |
         s2. \f |
   
         %72
         ais4
         \override Fingering.add-stem-support = ##t
-        \grace {g16-1 _( a-4}
+        \grace {g16-1 _( a-3}
         \override Fingering.add-stem-support = ##f
-        g8-1 ) fis-1 e-0 g-1 |
-        ais4 g8-3 fis-3 e-2 g-3 |
+        g8-1 ) fis-1 e-0 g-2 |
+        ais4 \stopStringSpan g8-0 fis-3 e-1 g-4 |
         s2 . |
   
         %73
@@ -612,18 +612,18 @@ stopStringSpan = \stopTextSpan
         s2. |
   
         %75
-        b'2 c8 b |
-        b'2 c8 b |
+        b'2-1 c8-2 b\glide-1 |
+        b'2-3 \startStringSpan #4 c8-4 b-3 |
         s2. \p |
   
         %76
-        ais8 fis \grace{g16-1 _( a-4} g8 ) fis e g |
-        ais8 fis g fis e g |
+        ais8\glide-1 fis-1 \grace{g16-1 _( a-3} g8 ) fis-1 e-0 g-2 |
+        ais8-3 fis-3 \stopStringSpan g-0 fis-3 e-1 g-4 |
         s2. |
   
         %77
-        fis2 <fis,-2 ais e'-4>4 \barre #3 #6 |
-        fis2 c4 |
+        fis2-1 <fis,-2 ais e'-4>4 \barre #3 #6 |
+        fis2-3 c4 |
         s2. |
   
         %78
@@ -852,18 +852,18 @@ stopStringSpan = \stopTextSpan
         %115
         \set Voice.baseMoment = #(ly:make-moment 1/4)
         \set Voice.beatStructure = 1,1,1
-        b'2-1 a8 b |
-        b'2-3 a8 b |
+        b'2-4 a8-1 b\glide-4 |
+        b'2-0 a8-3 b-0 |
         s2. \f |
   
         %116
-        d2 \grace {b16-1 _( c-2} b8 ) a |
-        d2 b8 a |
+        d2-4 \barre #7 #3 \grace {b16-1 _( c-2} b8\glide-1 ) a-1 |
+        d2 b8-0 a-3 |
         s2. |
   
         %117
-        b2 <fis,-2 b-3 dis-4>4 \startBarre #2 #6 |
-        b2 b,4 |
+        b2-4 <fis,-2 b-3 dis-4>4 \startBarre #2 #6 |
+        b2-0 b,4 |
         s2. |
   
         %118
@@ -873,18 +873,18 @@ stopStringSpan = \stopTextSpan
         s2. |
   
         %119
-        b'2 a8 b |
-        b'2 a8 b |
+        b'2-4 a8-1 b-4 |
+        b'2-0 a8-3 b-0 |
         s2. \p |
   
         %120
-        d2 \grace {b16-1 _( c-2} b8 ) a |
-        d2 b8 a |
+        d2-4 \barre #7 #3 \grace {b16-1 _( c-2} b8\glide-1 ) a-1 |
+        d2 b8-0 a-3 |
         s2. |
   
         %121
-        b2 <fis,-2 ais-1 e'-4>4 \barre #3 #6 |
-        b2 c,4-1 |
+        b2-4 <fis,-2 ais-1 e'-4>4 \barre #3 #6 |
+        b2-0 c,4-1 |
         s2. |
   
         %122
