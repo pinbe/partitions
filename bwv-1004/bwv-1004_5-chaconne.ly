@@ -18,7 +18,7 @@
         license = "Creative Commons Attribution-ShareAlike 3.0"
         %footer = "Mutopia-2019/05/30-1426"
         %copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2019 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
-        tagline = ##f
+        tagline = "21/09/2024"
 }
 
 
@@ -164,7 +164,7 @@ fingeringVoiceD = {
   d4 bes4.. bes16-1 |
 
   % 16
-  <d-4 f,-3>8. <e-4 g,-3>16 d4-4 ( cis8.)\trill  d16 |
+  <d-4 f,-3>8. <e-4 g,-3>16 d4-4 ( cis8.-2)\trill  d16 |
   s4 e2-1 |
   s2. |
   a8. [ g16-2 ] a2 |
@@ -230,13 +230,13 @@ fingeringVoiceD = {
   d'4 cis2 |
 
   % 27
-  f8-2 [ g16-0 _( a ) ] bes,8-1 [ d g d'16-4 _( cis-2 ) ] |
+  f8-2 [ g16-0 _( a-1 ) ] bes,8 [ d g d'16-4 _( cis-1 ) ] |
   s2. |
   s2. |
   d4-4 bes2-1 |
 
   % 28
-  d8 [ f,8-1 ] e16-1 _( [ f-2) g-0 bes-3 _( ] a-1) [ g f e ] |
+  d8-4 [ f,8-1 ] e16-1 _( [ f-2) g-0 bes-3 _( ] a-1) [ g f e ] |
   s2. |
   s2. |
   s8 g8-3 a2 |
@@ -254,19 +254,19 @@ fingeringVoiceD = {
   d4-3 cis2 |
 
   % 31
-  f16-2 cis-3 d-0 a-0 bes-1 d-0 g-0 a-2 bes-3 ees-4 cis-2 _( d-4) |
+  f16-2 cis-3 d-0 a-0 bes-1 d-0 g-0 a-2 bes-3 ees-4 cis-2 d-4 |
   s2. |
   s2. |
   r4 bes2 |
 
   % 32
-  gis,16-1 b-0 d-4 f-1 e g-4 cis,-2 d-4 a, e'-1 d'-3 _( cis-2) |
+  gis,16-1 b-0 d-4 f-1 e g-4 cis,-2 d-4 a, e'-1 d'-3 cis-2 |
   s2. |
   s2. |
   b4-2 bes-1 a |
 
   % 33
-  d8\glide-3  f-\2-3 bes-4 a-2 gis-1 d, |
+  d8\glide-3  f-3 bes-4 a-2 gis-1 d, |
   s2. |
   s2. |
   d,4 r r8 d'\glide-2 |
@@ -394,7 +394,7 @@ fingeringVoiceD = {
   d,2 r4 |
 
   % 54
-  e,16-0 c,-3 e-2 g-0 c-1 g c e a,-2 f'-1 _( g-3) a\glide-4 |
+  e,16-0 c,-3 e-2 g-0 c-1 g c e a,-2 f'-1 _( g-3) a-4 |
   s2. |
   s2. |
   s2. |
@@ -484,7 +484,7 @@ fingeringVoiceD = {
   s2. |
 
   % 65
-  d16-4 a32-2 _( g-0) f16-3 e-2 d-0 c-3 _( bes-1) a-0 bes-1 d'32\3-4 _( c\glide-2) bes-2 _( a -1) g\4-4 _( f-2) ] |
+  d16-4 a32-1 _( g-0) f16-2 e-1 d-0 c-3 _( bes-1) a-0 bes-1 d'32\3-4 _( c\glide-2) bes-2 _( a -1) g\4-4 _( f-2) ] |
   s2. |
   s2. |
   d4 s2 |
@@ -1747,7 +1747,7 @@ fingeringVoiceD = {
     d,,-4 [ f-2 a-1 ]
     %\override TupletBracket.bracket-slur = ##f
     %\override TupletBracket.bracket-visibility = ##f
-    f-3 [  a-2 d-4 ]
+    f-2 [  a-1 d-3 ]
     a-2 [ d-4 f-1 ]
     \override TextSpanner.bound-details.left.text = "III"
     bes, \startTextSpan [ d g \stopTextSpan ]
@@ -1800,7 +1800,7 @@ fingeringVoiceD = {
     g,-0 [ e'-3 g-1 ]
     \override TextSpanner.bound-details.left.text = "I"
     gis, \startTextSpan [ d'-3 f \stopTextSpan ]
-    a,-1 [ d-3 e-0 ]
+    a,-2 [ d-3 e-0 ]
     a,,-0 [ cis'-2 e ]
   }
   |
@@ -1814,7 +1814,7 @@ fingeringVoiceD = {
     d,,16 [ a'''-3\1 _( g-1 ) ]
     f-4\2 [ f _( e-3 ) ]
     d-1 [ d-3 _( c-1 ) ]
-    bes-3 [ bes-2 _( a-1 ) ]
+    bes-2 [ bes-2 _( a-1 ) ]
     g-4\4 [ bes-1 _( c-3 ) ]
     d-1 _( [ e-3 ) f-4 ] }
   |
