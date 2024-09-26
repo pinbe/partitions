@@ -54,6 +54,7 @@
   % 7
   \tupletNeutral
   \tuplet 6/4 4 {
+    \override TupletBracket.bracket-visibility = ##t
     cis16-1 d-2 e-4 d-2 cis-1 bes-2
     \override Fingering.direction = #DOWN
     a-1 c-4 bes-2 a-1 g-4 f-2
@@ -141,7 +142,7 @@
     
     \alternative {
       \volta 1 {
-      % 20
+        % 20
         s1 |
         r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4> |
         d,4-0 bes'-1 ees,-1 a-0 |
@@ -235,9 +236,9 @@
   d,,4 fis'-3 e-1 a,-0 |
   
   %34
-  a4-4 d,-1 r8 \startBarre #2 #6 b16-3 cis-1 \grace{d-2 _( e-4 } d8-2 ) cis16-1 b-3 \stopBarre |
+  a4-4 d, r8 \startBarre #2 #6 b16-3 cis-1 \grace{d-2 _( e-4 } d8-2 ) cis16-1 b-3 \stopBarre |
   \override Rest.staff-position = #-1
-  r8 \startBarre #7 #4 a-1 \tweak extra-offset #'(1.3 . 0) r a \stopBarre s2 |
+  r8 \startBarre #7 #4 a \tweak extra-offset #'(1.3 . 0) r a \stopBarre s2 |
   d,4-0 fis'-3 e,-1 e'-1|
   
   %35
@@ -261,7 +262,7 @@
   cis4-4 cis r16 fis-3 _( e-1 ) d-1 b-3\2 gis-1 e-0 d-2\2 |
   \override Rest.staff-position = #3
   r8 \startBarre #7 #5 e'-3 r e \stopBarre s2 |
-  e4 a \tweak NoteHead.style #'harmonic-mixed e'2_\5 _\markup {\italic \fontsize #-2 "harm. 7"} |
+  e4 a-1 \tweak NoteHead.style #'harmonic-mixed e'2_\5 _\markup {\italic \fontsize #-2 "harm. 7"} |
   
   %39
   \override Fingering.direction = #DOWN
@@ -284,8 +285,8 @@
   %41
   \grace{b16-1 _( cis-3} b8-1 ) a4.-4 r8 e16-3 fis-1 \stopBarre \grace{g-2 _( a-4} g8-2 ) fis16-1 e-3 |
   \override Rest.staff-position = #1
-  r8 d-1 r <a d> s2 |
-  d,,4 fis'-3 e-1 a,-0 |
+  r8 d r <a d> s2 |
+  d,,4-0 fis'-3 e a,-0 |
   
   %42
   a4-4 d,-1 r8 \startBarre #2 #6 b16-3 cis-1 \grace{d-2 _( e-4 } d8-2 ) cis16-1 b-3 \stopBarre |
@@ -306,7 +307,7 @@
   d,4-0 fis'-3 e-1 a-1 |
 
   %45
-  \grace{b16-1 _( cis-3 } b8-1 ) a4.-4 d,,16-0 _( fis-3 ) a-1 d-2 fis-1 a-4 e'16.-4  d32-2 |
+  \grace{b16-1 _( cis-3 } b8-1 ) a4.-4 d,,16-0 _( fis-3 ) a-1 d-2 fis-1 a-4 e'16.-4 \fermata  d32-2 |
   r8 d-1 r <a d> \stopBarre s2 |
   d,,4-0 fis'-3 s2 |
   
@@ -338,12 +339,75 @@
   r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4>  |
   d,4-0 bes'-1 ees,-1 a-0 |
   
-  %50
+  % 50
+  \override Fingering.add-stem-support = #only-if-beamed
+  \stemUp
+  \override Fingering.direction = #UP
+  \slashedGrace{f8\glide-1} a4-1 a ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
+  \override Rest.staff-position = #2
+  \stemDown
+  \grace{s8} r8 <a-3 f'-2> r <a-3 f'-2> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
+  \grace{s8} d,4 \mf f'-4_\5 e-3 a,-0 |
+  
+  % 51
+  \slashedGrace{f,8\glide-1} a4-1 a ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
+  r8 <a-3 f'-2> r <a-3 f'-2> s2 |
+  d,4 f'-4_\5 e-3 a,-0 |
+  
+  % 52
+  \slashedGrace{c8-4 _( } a4-1 ) a r8 gis16-3^\2 a-4 b-1 cis-3 d-1 e-3 |
+  r8 <a-3 f'-2> r <a-3 f'-2> s2 |
+  d,4 f'-4_\5 e-1 a,-0 |
+  
+  % 53
+  f8-4 f16 \startBarre #10 #3 _( e-3 ) d4-1 r16 \stopBarre cis-2 e-4 cis bes-4^\2 g-1 e-2^\3 cis-4^\4 |
+  r8 <f' a> r <f a> s2 |
+  d,4-0 a'-0 e'-1_\5 a,-0 |
+  
+  % 54
+  \textSpannerUp
+  a'-4\2 a r8  g16-4 \startStringSpan #2 f-2 e-1 _( f ) g e |
+  r8 <a, d> \startBarre #7 $4 r <a d> \stopBarre s2 |
+  d,4-0 f'-2 e-3 a,-0 |
+  
+  %55
+  f4-2 fis-4 \stopStringSpan r16 \startBarre #5 #6 a,-3 c fis-4 a \stopBarre c\glide-4 ees16.-4 \fermata d32-3 |
+  \override Rest.staff-position = #0
+  r8 <a-3\4 d-4\3> r <a-3 c-1> s2 |
+  d,2-0 d'4 r |
+  
+  % 56
+  \grace{c16-1 _( d-3} c8 )
+  \override Fingering.add-stem-support = ##f
+  <g-3 bes-1> a-4 \startBarre #3 #6 <e-3 g>\stopBarre
+  \override Fingering.add-stem-support = #only-if-beamed
+  bes'16-2 _( a-1 ) d-2 _( cis-1 ) e-3 _( d-1 ) f-2 _( e-1) |
+  s1 |
+  g4-0 bes a,2 |
+  
+  % 57
+  g16-3 _( e-1 ) d-2 _( cis-1 ) e-4 _( d-2 ) bes-2 _( a-1 )
+  c-4 _( bes-2 ) g-2 _( e-0 ) d-3  bes-2 cis-3 a-2 |
+  s1 |
+  a2..-0 a8 |
+  
+  % 58
+  s1 |
+  r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4>  |
+  d,4-0 bes'-1 ees,-1 a-0 |
+  
+  % 59
+  s1 |
+  r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4> |
+  d,4-0 bes'-1 ees,-1 a-0 |
+  
+  
+  %60
   \once \override NoteHead.style = #'harmonic-mixed
   <a d>2 ^\markup {\italic \fontsize #-2 "har. 12"} <f' a d> \barre #10 #3 |
   s1 |
   \once \override NoteHead.style = #'harmonic-mixed
-  d2 d-0
+  d2 d-0 \bar "|." |
   
 }
 
