@@ -15,7 +15,7 @@
   % 1
   \repeat volta 2 {
     \once \override NoteHead.style = #'harmonic-mixed
-    <e' a>2. ^\markup {\italic \fontsize #-2 "harm. 7"} |
+    <e' a>2. ^\markup {\italic \fontsize #-2 "har. 7"} |
     s2.|
     \once \override NoteHead.style = #'harmonic-mixed
     a2. \mp |
@@ -195,7 +195,7 @@
   %28
   \grace{bes16-2 _( c-4 bes-2} a4-1 )
   \once \override NoteHead.style = #'harmonic-mixed
-  a-3\4 ^\markup {\italic \fontsize #-2 "harm. 7"}
+  a-3\4 ^\markup {\italic \fontsize #-2 "har. 7"}
   r16 d-4 _( bes-1 ) g-3\2 e-0 d-3 bes-2 g-0 |
   \override Rest.staff-position = #0
   \grace{s16 \startBarre #5 #3 s s}  r8 <cis-2 e-1> r <cis e> \stopBarre s2 |
@@ -337,6 +337,13 @@
   \override Rest.staff-position = #-1
   r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4>  |
   d,4-0 bes'-1 ees,-1 a-0 |
+  
+  %50
+  \once \override NoteHead.style = #'harmonic-mixed
+  <a d>2 ^\markup {\italic \fontsize #-2 "har. 12"} <f' a d> \barre #10 #3 |
+  s1 |
+  \once \override NoteHead.style = #'harmonic-mixed
+  d2 d-0
   
 }
 
