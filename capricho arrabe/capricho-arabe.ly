@@ -313,14 +313,14 @@
   
   %46
   \grace{d16-2 _( e-4 } d8-2 ) s4.
-  r16 \startBarre #2 #6 b-3 cis-1 d-2 \stopBarre <cis-3\4 a-2\2>8. <b-3\4 g-2\2>16 |
+  r16 \startBarre #2 #6 b,-3 cis d-2 \stopBarre <cis-3 a'-2\2>8. <b-3 g'-2\2>16 |
   r8 <b-0 e-0>4 <b-0 e-0>8 s2 |
-  g4-0 g,-4 e-1 r |
+  g4-0 g,-4 e r |
 
   %47
   \tuplet 3/2{
     \override Fingering.add-stem-support = ##f
-    <b,-3 g'-2>8 a'-4 g-2
+    <b-3 g'-2>8 a'-4 g-2
     
   } <a,-1\4 fis'-2\2>4 r <g-1 cis-3 e-2> |
   s1 |
