@@ -3,7 +3,7 @@
 \header {
   title = "Capricho Árabe"
   composer = "Francisco Tárrega"
-  tagline = "24/09/2024"
+  tagline = "26/09/2024"
   %{
   sources:
   %}
@@ -108,12 +108,13 @@
     d,4-0 a'-0 e'-1_\5 a,-0 |
     
     % 15
-    a'-4\2 a r8  g16-4\2 f-2 e-1 _( f ) g e |
+    \textSpannerUp
+    a'-4\2 a r8  g16-4 \startStringSpan #2 f-2 e-1 _( f ) g e |
     r8 <a, d> \startBarre #7 $4 r <a d> \stopBarre s2 |
     d,4-0 f'-2 e-3 a,-0 |
     
     %16
-    f4-2 fis-4 r16 \startBarre #5 #6 a,-3 c f-4 a \stopBarre c\glide-4 ees16.-4 \fermata d32-3 |
+    f4-2 fis-4 \stopStringSpan r16 \startBarre #5 #6 a,-3 c fis-4 a \stopBarre c\glide-4 ees16.-4 \fermata d32-3 |
     \override Rest.staff-position = #0
     r8 <a-3\4 d-4\3> r <a-3 c-1> s2 |
     d,2-0 d'4 r |
@@ -215,7 +216,7 @@
   %31
   e16-2 f-3 fis-4 g-0 gis-1 a-2 ais-3 b-0 c-1 cis-2 d-3 dis-4
   \tuplet 5/4 {
-    e-0 f-1 fis-2 g-3 gis-4
+    e-0 f-1 \startStringSpan #2 fis-2 g-3 gis-4 \stopStringSpan
   } |
   s1 |
   s1 |
@@ -253,8 +254,63 @@
   
   %37
   \grace{b16-1 _( cis-3 } b8-1 ) a4.-4 dis,,16-1\5 _( fis-4 ) a-1\4 _( bis-4 ) dis-2\3 fis-1\2 a-4 bis-2 |
-  r8 d-1 r <a d> \stopBarre |
+  r8 d-1 r <a d> \stopBarre s2 |
   d,,4-0 fis'-3 s2 |
+  
+  %38
+  cis4-4 cis r16 fis-3 _( e-1 ) d-1 b-3\2 gis-1 e-0 d-2\2 |
+  \override Rest.staff-position = #3
+  r8 \startBarre #7 #5 e'-3 r e \stopBarre s2 |
+  e4 a \tweak NoteHead.style #'harmonic-mixed e'2_\5 _\markup {\italic \fontsize #-2 "harm. 7"} |
+  
+  %39
+  \override Fingering.direction = #DOWN
+  \tuplet 6/4 4 {
+    d16-2 _( cis-1 ) cis b'-4_\2 b _( a-2 )
+    a _( g-2 ) g fis-1 fis e-3_\3
+    e _( d-1 ) d _( cis-1 ) cis b-4_\4
+    b _( bes-3 ) bes _( a-2 ) a a'-4_\2
+  } |
+  s1 |
+  s1 |
+  
+  %40
+  \override Fingering.direction = #UP
+  a4-4 \startBarre #7 #5 a ~ a16 b-1 cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b-1 cis-3 |
+  \override Rest.staff-position = #0
+  r8 <a, d> r <a d> s2 |
+  d,,4-0 fis'-3 e a |
+  
+  %41
+  \grace{b16-1 _( cis-3} b8-1 ) a4.-4 r8 e16-3 fis-1 \stopBarre \grace{g-2 _( a-4} g8-2 ) fis16-1 e-3 |
+  \override Rest.staff-position = #1
+  r8 d-1 r <a d> s2 |
+  d,,4 fis'-3 e-1 a,-0 |
+  
+  %42
+  a4-4 d,-1 r8 \startBarre #2 #6 b16-3 cis-1 \grace{d-2 _( e-4 } d8-2 ) cis16-1 b-3 \stopBarre |
+  \override Rest.staff-position = #-1
+  r8 \startBarre #7 #4 a-1 \tweak extra-offset #'(1.3 . 0) r a \stopBarre s2 |
+  d,4-0 fis'-3 e,-1 e'-1|
+  
+  %43
+  e4-4 a,-1 r8 gis'16\glide-1 _( a-1 ) cis-4 b-2 g-3\2 e-0 |
+  \override Rest.staff-position = #-3
+  r8 \startBarre #2 #4 e-1 \tweak extra-offset #'(1.4 . -0.5) r e \stopBarre s2 |
+  a,4-0 cis-3 a2-0 |
+  
+  %44
+  a4-4 a-4 ~ a16 b-1 cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b-1 cis-3 |
+  \override Rest.staff-position = #1
+  r8 \startBarre #7 #5 <a d> r <a d> s2 |
+  d,4-0 fis'-3 e-1 a-1 |
+
+  %45
+  \grace{b16-1 _( cis-3 } b8-1 ) a4.-4 dis,,16-1\5 _( fis-4 ) a-1\4 _( bis-4 ) dis-2\3 fis-1\2 a-4 bis-2 |
+  r8 d-1 r <a d> \stopBarre s2 |
+  d,,4-0 fis'-3 s2 |
+
+  
 }
 
 zique = {
@@ -304,6 +360,6 @@ zique = {
   }
   
   \midi {
-    \tempo 4.=60
+    \tempo 4.= #60
   }
 }
