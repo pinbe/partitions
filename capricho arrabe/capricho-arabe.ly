@@ -306,10 +306,37 @@
   d,4-0 fis'-3 e-1 a-1 |
 
   %45
-  \grace{b16-1 _( cis-3 } b8-1 ) a4.-4 dis,,16-1\5 _( fis-4 ) a-1\4 _( bis-4 ) dis-2\3 fis-1\2 a-4 bis-2 |
+  \grace{b16-1 _( cis-3 } b8-1 ) a4.-4 d,,16-0 _( fis-3 ) a-1 d-2 fis-1 a-4 e'16.-4  d32-2 |
   r8 d-1 r <a d> \stopBarre s2 |
   d,,4-0 fis'-3 s2 |
+  
+  %46
+  \grace{d16-2 _( e-4 } d8-2 ) s4.
+  r16 \startBarre #2 #6 b-3 cis-1 d-2 \stopBarre <cis-3\4 a-2\2>8. <b-3\4 g-2\2>16 |
+  r8 <b-0 e-0>4 <b-0 e-0>8 s2 |
+  g4-0 g,-4 e-1 r |
 
+  %47
+  \tuplet 3/2{
+    \override Fingering.add-stem-support = ##f
+    <b,-3 g'-2>8 a'-4 g-2
+    
+  } <a,-1\4 fis'-2\2>4 r <g-1 cis-3 e-2> |
+  s1 |
+  a2-0 a |
+  
+  %48
+  \key d \minor
+  d'4-2 s2 .|
+  \override Rest.staff-position = #-2
+  r8 <fis-3 a-1> r <fis-3 d'-2> r <g-0 b-0 e-0> r <g-0 cis-1> |
+  d,4-0 b'-1 g-4 a-0 |
+  
+  %49
+  s1 |
+  \override Rest.staff-position = #-1
+  r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4>  |
+  d,4-0 bes'-1 ees,-1 a-0 |
   
 }
 
