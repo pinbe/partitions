@@ -3,7 +3,7 @@
 \header {
   title = "Capricho Árabe"
   composer = "Francisco Tárrega"
-  tagline = "26/09/2024"
+  tagline = "01/10/2024"
   %{
   sources:
   %}
@@ -24,13 +24,13 @@
     \stemNeutral
     g'16-3 ( e-1 ) d-2 ( cis-1 ) e-4 ( d-2 ) bes-2 ( a-1 )  c-4 ( bes-2 ) g-4\2 ( e-1 ) |
     s2. |
-    r2. |
+    s2. |
     
     % 3
     \stemUp
-    e2-0 d8. \startBarre #3 #4 e16-4 \stopBarre |
+    e2-0-> d8. \startBarre #3 #4 e16-4 \stopBarre |
     s2. |
-    r2 <g-3 bes>4 |
+    s2 <g-3 bes>4 |
     
     %4
     <e, a cis>2 \barre #2 #4 r4 |
@@ -47,7 +47,7 @@
   s2. |
   
   % 6
-  bes8-4 a-3 \override Fingering.direction = #UP e'4.-4 d8-2 |
+  bes8-4 a-3 \override Fingering.direction = #UP e'4.-4 d8-2 \RH #3 |
   s2. |
   s2. |
   
@@ -55,7 +55,7 @@
   \tupletNeutral
   \tuplet 6/4 4 {
     \override TupletBracket.bracket-visibility = ##t
-    cis16-1 d-2 e-4 d-2 cis-1 bes-2
+    cis16-1 \RH #2 d-2 e-4 d-2 cis-1 bes-2
     \override Fingering.direction = #DOWN
     a-1 c-4 bes-2 a-1 g-4 f-2
   }
@@ -64,7 +64,7 @@
   s2. |
   
   % 8
-  bes'2-2 a4-1 |
+  bes'2-2\fermata a4-1 |
   s2. |
   s2.  \bar "||" |
   
@@ -87,14 +87,14 @@
     \override Fingering.add-stem-support = #only-if-beamed
     \stemUp
     \override Fingering.direction = #UP
-    \slashedGrace{f''8\glide-1} a4-1 a ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
+    \slashedGrace{f''8\glide-1} a4-1 a-> ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
     \override Rest.staff-position = #2
     \stemDown
     \grace{s8} r8 <a-3 f'-2> r <a-3 f'-2> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
     \grace{s8} d,4 \mf f'-4_\5 e-3 a,-0 |
     
     % 12
-    \slashedGrace{f,8\glide-1} a4-1 a ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
+    a4-1 a-> ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
     r8 <a-3 f'-2> r <a-3 f'-2> s2 |
     d,4 f'-4_\5 e-3 a,-0 |
     
@@ -110,7 +110,7 @@
     
     % 15
     \textSpannerUp
-    a'-4\2 a r8  g16-4 \startStringSpan #2 f-2 e-1 _( f ) g e |
+    a'-4\2 a-> r8  g16-4 \startStringSpan #2 f-2 e-1 _( f ) g e |
     r8 <a, d> \startBarre #7 $4 r <a d> \stopBarre s2 |
     d,4-0 f'-2 e-3 a,-0 |
     
@@ -118,39 +118,43 @@
     f4-2 fis-4 \stopStringSpan r16 \startBarre #5 #6 a,-3 c fis-4 a \stopBarre c\glide-4 ees16.-4 \fermata d32-3 |
     \override Rest.staff-position = #0
     r8 <a-3\4 d-4\3> r <a-3 c-1> s2 |
-    d,2-0 d'4 r |
+    d,2-0 d'4 _\markup{\italic "poco cresc."} r |
     
     % 17
     \grace{c16-1 _( d-3} c8 )
     \override Fingering.add-stem-support = ##f
     <g-3 bes-1> a-4 \startBarre #3 #6 <e-3 g>\stopBarre
     \override Fingering.add-stem-support = #only-if-beamed
-    bes'16-2 _( a-1 ) d-2 _( cis-1 ) e-3 _( d-1 ) f-2 _( e-1) |
+    \override TextSpanner.bound-details.left.text = "accel."
+    \textSpannerDown
+    bes'16-2 \startTextSpan _( a-1 ) d-2 _( cis-1 ) e-3 _( d-1 ) f-2 _( e-1) |
     s1 |
     g4-0 bes a,2 |
     
     % 18
-    g16-3 _( e-1 ) d-2 _( cis-1 ) e-4 _( d-2 ) bes-2 _( a-1 )
+    g16-4 _( e-1 ) d-2 _( cis-1 ) e-4 \stopTextSpan _( d-2 ) bes-2 _( a-1 )
     c-4 _( bes-2 ) g-2 _( e-0 ) d-3  bes-2 cis-3 a-2 |
     s1 |
     a2..-0 a8 |
     
     % 19
-    s1 |
+    s1 ^\markup{\italic "a tempo"} |
     r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4>  |
     d,4-0 bes'-1 ees,-1 a-0 |
     
     \alternative {
       \volta 1 {
         % 20
-        s1 |
+        s1 \p |
         r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4> |
         d,4-0 bes'-1 ees,-1 a-0 |
       }
       
       \volta 2 {
         % 21
-        s1 |
+        \override TextSpanner.bound-details.left.text = "rit."
+        \textSpannerDown
+        s2 s4 \startTextSpan s8 s8 \stopTextSpan |
         r8 <f-3 d'-4> r <f-3 d'-4> r \startBarre #3 #6 <bes d> r <g-3 bes e-4> \stopBarre |
         d,4-0 bes'-1 g-3 c |
       }
@@ -158,18 +162,18 @@
   }
   
   %22
-  s2 r16 d e-3 f-4 \grace{e-3 _( f-4} e-3 ) c-2 d e-3 |
+  s2 r16 d e-3 f-4 \grace{e-3 _( f-4} e-3-> ) c-2 d e-3 |
   \override Rest.staff-position = #4
-  r8 \startBarre #3 #6 <f'-4 a-3> r <f-4 a-3> s2 |
-  <f, c''-2>4 <c' c'-2> g'-2_\4 c, |
+  r8 ^\markup{\italic "a tempo"} \startBarre #3 #6 <f'-4 a-3> r <f-4 a-3> s2 |
+  <f, c''-2>4 \mp <c' c'-2> g'-2_\4 c, |
   
   %23
-  \grace{d16 _( e-3} d8 ) s8 s4 r8 g16-4 a \grace{bes-2 _( c-4} bes8-2 ) a16 g-4 |
+  \grace{d16 _( e-3} d8 ) s8 s4 r8 g16-4 a \grace{bes-2 _( c-4} bes8-2-> ) a16 g-4 |
   s8 <a,-4 c-2>4 <a-4 c-2> \stopBarre \startBarre #5 #4 s8 s4 |
   f,4 c' g' c |
   
   %24
-  \slashedGrace{a8 _(} c4-4 ) f,-2 ~ f8 d16-3 e \grace{f16-2 _( g-4} f8-2 ) e16 d-3 |
+  \slashedGrace{a8 _(} c4-4 ) f,-2-> ~ f8 d16-3 e \grace{f16-2 _( g-4} f8-2-> ) e16 d-3 |
   \override Rest.staff-position = #-1
   r8 <a-3 c> r <a c> \stopBarre s4 \startBarre #5 #6 s8. s16 \stopBarre |
   a,2-0 d4 g, |
@@ -179,11 +183,11 @@
   \revert Rest.staff-position
   \override Fingering.direction = #DOWN
   \override Fingering.add-stem-support = #only-if-beamed
-  c,8-1 \startBarre #3 #6 c'-3 \stopBarre r <e,-2 bes'-3> c2-2 |
+  c,8-1 \startBarre #3 #6 c'-3 \stopBarre r <e,-2 bes'-3> c4..-2 _\markup{\italic "rit."} c16 |
   s1 |
   
   %26
-  s2 r16 d' e-3 f-4 \grace{e-3 _( f-4} e-3 ) c-2 d e-3 |
+  s2 ^\markup{\italic "a tempo"} r16 d' e-3 f-4 \grace{e-3 _( f-4} e-3-> ) c-2 d e-3 |
   \override Rest.staff-position = #4
   r8 \startBarre #3 #6 <f'-4 a-3> r <f-4 a-3> s2 |
   <f c''-2>4 <c' c'-2> g'-2_\4 c, |
@@ -210,14 +214,14 @@
   %30
   \stemNeutral
   a,16-0 e'-1 a-1 cis-2 e-0 a-2\2 a a
-  a a,, ais-1 b-2 c-3 cis-4 d-0 dis-1 |
+  a a,, \< _\markup{\italic "accel."} ais-1 b-2 c-3 cis-4 d-0 dis-1 |
   s1 |
   s1 |
   
   %31
   e16-2 f-3 fis-4 g-0 gis-1 a-2 ais-3 b-0 c-1 cis-2 d-3 dis-4
   \tuplet 5/4 {
-    e-0 f-1 \startStringSpan #2 fis-2 g-3 gis-4 \stopStringSpan
+    e-0 f-1 \startStringSpan #2 fis-2 g-3 gis-4 \stopStringSpan \!
   } |
   s1 |
   s1 |
@@ -225,9 +229,9 @@
   %32
   \key d \major
   \stemUp
-  a4-4 \startBarre #7 #5 a ~ a16 b-1 cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b-1 cis-3 |
+  a4-4 ^\markup{\italic "a tempo"} \startBarre #7 #5 a ~ a16 b-1 cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b-1 cis-3 |
   r8 <a d> r <a d> s2 |
-  d,4-0 fis'-3 e a |
+  d,4-0 \mf fis'-3 e a |
   
   %33
   \grace{b16-1 _( cis-3} b8-1 ) a4.-4 r8 e16-3 fis-1 \stopBarre \grace{g-2 _( a-4} g8-2 ) fis16-1 e-3 |
@@ -259,7 +263,7 @@
   d,,4-0 fis'-3 s2 |
   
   %38
-  cis4-4 cis r16 fis-3 _( e-1 ) d-1 b-3\2 gis-1 e-0 d-2\2 |
+  cis4-4 cis r16 fis-4 _( e-2 ) d-2 b-4\2 gis-1 e-0 d-2\2 |
   \override Rest.staff-position = #3
   r8 \startBarre #7 #5 e'-3 r e \stopBarre s2 |
   e4 a-1 \tweak NoteHead.style #'harmonic-mixed e'2_\5 _\markup {\italic \fontsize #-2 "harm. 7"} |
@@ -270,17 +274,18 @@
     d16-2 _( cis-1 ) cis b'-4_\2 b _( a-2 )
     a _( g-2 ) g fis-1 fis e-3_\3
     e _( d-1 ) d _( cis-1 ) cis b-4_\4
-    b _( bes-3 ) bes _( a-2 ) a a'-4_\2
+    \override TextSpanner.bound-details.left.text = "rit."
+    b _( bes-3 ) bes \startTextSpan _( a-2 ) a a'-4_\2 \stopTextSpan
   } |
   s1 |
-  s1 |
+  a,,1-0 |
   
   %40
   \override Fingering.direction = #UP
-  a4-4 \startBarre #7 #5 a ~ a16 b-1 cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b-1 cis-3 |
+  a4-4 ^\markup{\italic "a tempo"} \startBarre #7 #5 a ~ a16 b-1 cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b-1 cis-3 |
   \override Rest.staff-position = #0
   r8 <a, d> r <a d> s2 |
-  d,,4-0 fis'-3 e a |
+  d,4-0 fis'-3 e a |
   
   %41
   \grace{b16-1 _( cis-3} b8-1 ) a4.-4 r8 e16-3 fis-1 \stopBarre \grace{g-2 _( a-4} g8-2 ) fis16-1 e-3 |
@@ -324,14 +329,14 @@
     
   } <a,-1\4 fis'-2\2>4 r <g-1 cis-3 e-2> |
   s1 |
-  a2-0 a |
+  a2-0 _\markup{\italic "molto rit."} a |
   
   %48
   \key d \minor
-  d'4-2 s2 .|
+  d'4-2 ^\markup{\italic "a tempo"} s2 .|
   \override Rest.staff-position = #-2
   r8 <fis-3 a-1> r <fis-3 d'-2> r <g-0 b-0 e-0> r <g-0 cis-1> |
-  d,4-0 b'-1 g-4 a-0 |
+  d,4-0 \p b'-1 g-4 a-0 |
   
   %49
   s1 |
@@ -339,34 +344,34 @@
   r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4>  |
   d,4-0 bes'-1 ees,-1 a-0 |
   
-  % 50
+  %50
   \override Fingering.add-stem-support = #only-if-beamed
   \stemUp
   \override Fingering.direction = #UP
-  \slashedGrace{f8\glide-1} a4-1 a ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
+  \slashedGrace{f8\glide-1} a4-1 a-> ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
   \override Rest.staff-position = #2
   \stemDown
   \grace{s8} r8 <a-3 f'-2> r <a-3 f'-2> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
   \grace{s8} d,4 \mf f'-4_\5 e-3 a,-0 |
   
-  % 51
-  \slashedGrace{f,8\glide-1} a4-1 a ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
+  %51
+  a4-1 a-> ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
   r8 <a-3 f'-2> r <a-3 f'-2> s2 |
   d,4 f'-4_\5 e-3 a,-0 |
   
-  % 52
+  %52
   \slashedGrace{c8-4 _( } a4-1 ) a r8 gis16-3^\2 a-4 b-1 cis-3 d-1 e-3 |
   r8 <a-3 f'-2> r <a-3 f'-2> s2 |
   d,4 f'-4_\5 e-1 a,-0 |
   
-  % 53
+  %53
   f8-4 f16 \startBarre #10 #3 _( e-3 ) d4-1 r16 \stopBarre cis-2 e-4 cis bes-4^\2 g-1 e-2^\3 cis-4^\4 |
   r8 <f' a> r <f a> s2 |
   d,4-0 a'-0 e'-1_\5 a,-0 |
   
   % 54
   \textSpannerUp
-  a'-4\2 a r8  g16-4 \startStringSpan #2 f-2 e-1 _( f ) g e |
+  a'-4\2 a-> r8  g16-4 \startStringSpan #2 f-2 e-1 _( f ) g e |
   r8 <a, d> \startBarre #7 $4 r <a d> \stopBarre s2 |
   d,4-0 f'-2 e-3 a,-0 |
   
@@ -374,28 +379,30 @@
   f4-2 fis-4 \stopStringSpan r16 \startBarre #5 #6 a,-3 c fis-4 a \stopBarre c\glide-4 ees16.-4 \fermata d32-3 |
   \override Rest.staff-position = #0
   r8 <a-3\4 d-4\3> r <a-3 c-1> s2 |
-  d,2-0 d'4 r |
+  d,2-0 d'4 _\markup{\italic "poco cresc."} r |
   
-  % 56
+  %56
   \grace{c16-1 _( d-3} c8 )
   \override Fingering.add-stem-support = ##f
   <g-3 bes-1> a-4 \startBarre #3 #6 <e-3 g>\stopBarre
   \override Fingering.add-stem-support = #only-if-beamed
-  bes'16-2 _( a-1 ) d-2 _( cis-1 ) e-3 _( d-1 ) f-2 _( e-1) |
+  \override TextSpanner.bound-details.left.text = "accel."
+  \textSpannerDown
+  bes'16-2 \startTextSpan _( a-1 ) d-2 _( cis-1 ) e-3 _( d-1 ) f-2 _( e-1) |
   s1 |
   g4-0 bes a,2 |
   
-  % 57
-  g16-3 _( e-1 ) d-2 _( cis-1 ) e-4 _( d-2 ) bes-2 _( a-1 )
+  %57
+  g16-4 _( e-1 ) d-2 _( cis-1 ) e-4 \stopTextSpan _( d-2 ) bes-2 _( a-1 )
   c-4 _( bes-2 ) g-2 _( e-0 ) d-3  bes-2 cis-3 a-2 |
   s1 |
   a2..-0 a8 |
   
-  % 58
-  s1 |
+  %58
+  s1 ^\markup{\italic "a tempo"} |
   r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4>  |
   d,4-0 bes'-1 ees,-1 a-0 |
-  
+
   % 59
   s1 |
   r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4> |
@@ -416,6 +423,7 @@ zique = {
   \key d \minor
   \accidentalStyle modern
   \time 3/4
+  \tempo "Andantino"
   \set Timing.beamExceptions = #'()
   
   <<
@@ -458,6 +466,6 @@ zique = {
   }
   
   \midi {
-    \tempo 4.= #60
+    \tempo 4.= #66
   }
 }
