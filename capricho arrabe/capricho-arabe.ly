@@ -3,7 +3,7 @@
 \header {
   title = "Capricho Árabe"
   composer = "Francisco Tárrega"
-  tagline = "01/10/2024"
+  tagline = "02/10/2024"
   %{
   sources:
   %}
@@ -12,8 +12,8 @@
 
 \parallelMusic voiceA, voiceB, voiceC {
   
-  % 1
   \repeat volta 2 {
+    % 1
     \once \override NoteHead.style = #'harmonic-mixed
     <e' a>2. ^\markup {\italic \fontsize #-2 "har. 7"} |
     s2.|
@@ -133,7 +133,7 @@
     
     % 18
     g16-4 _( e-1 ) d-2 _( cis-1 ) e-4 \stopTextSpan _( d-2 ) bes-2 _( a-1 )
-    c-4 _( bes-2 ) g-2 _( e-0 ) d-3  bes-2 cis-3 a-2 |
+    c-4 _( bes-2 ) g-2 _( e-0 ) d-2  bes-1 cis-2 a-1 |
     s1 |
     a2..-0 a8 |
     
@@ -201,13 +201,13 @@
   \grace{bes16-2 _( c-4 bes-2} a4-1 )
   \once \override NoteHead.style = #'harmonic-mixed
   a-3\4 ^\markup {\italic \fontsize #-2 "har. 7"}
-  r16 d-4 _( bes-1 ) g-3\2 e-0 d-3 bes-2 g-0 |
+  r16 d-4 _( bes-1 ) g-3\2 e-0 d-2 bes-1 g-0 |
   \override Rest.staff-position = #0
   \grace{s16 \startBarre #5 #3 s s}  r8 <cis-2 e-1> r <cis e> \stopBarre s2 |
   a,2-0 a |
   
   %29
-  r16 e-1 a-1 cis-2 e-0 a-2\2 cis-1 e-4 r bes-4 _( g-1 ) e-0 d-3 bes-2 g-0 e-1 |
+  r16 e-1 a-1 cis-2 e-0 a-2\2 cis-1 e-4 r bes-4 _( g-1 ) e-0 d-2 bes-1 g-0 e-1 |
   s1 |
   a2 a |
 
@@ -394,7 +394,7 @@
   
   %57
   g16-4 _( e-1 ) d-2 _( cis-1 ) e-4 \stopTextSpan _( d-2 ) bes-2 _( a-1 )
-  c-4 _( bes-2 ) g-2 _( e-0 ) d-3  bes-2 cis-3 a-2 |
+  c-4 _( bes-2 ) g-2 _( e-0 ) d-2  bes-1 cis-2 a-1 |
   s1 |
   a2..-0 a8 |
   
