@@ -93,3 +93,32 @@ startStringSpan =
    #})
 
 stopStringSpan = \stopTextSpan
+
+% Tweaks
+
+fingeringTweaks = {
+  % left hand
+  \override Fingering.staff-padding = #'()
+  \override Fingering.add-stem-support = ##f
+  \override Fingering.avoid-slur = #'around
+  \override Fingering.font-size = #-5
+  \set fingeringOrientations = #'(left)
+
+  % right hand
+  %\set strokeFingerOrientations = #'(down)
+  \override StrokeFinger.add-stem-support = ##t
+  %\override StrokeFinger.font-shape = #'upright
+
+  \override StringNumber.script-priority = 110 %
+}
+
+tweaks = {
+  \fingeringTweaks
+  \override Stem.details.beamed-lengths = #'(4.5)
+}
+
+merges = {
+  \mergeDifferentlyHeadedOn
+  \mergeDifferentlyDottedOn
+  \shiftOff
+}
