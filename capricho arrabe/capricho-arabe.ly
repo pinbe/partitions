@@ -87,14 +87,14 @@
     \override Fingering.add-stem-support = #only-if-beamed
     \stemUp
     \override Fingering.direction = #UP
-    \slashedGrace{f''8\glide-1} a4-1 a-> ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
+    \slashedGrace{f''8\glide-1} a4-1 a4.-> g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
     \override Rest.staff-position = #2
     \stemDown
     \grace{s8} r8 <a-3 f'-2> r <a-3 f'-2> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
     \grace{s8} d,4 \mf f'-4_\5 e-3 a,-0 |
     
     % 12
-    a4-1 a-> ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
+    a4-1 a4.-> g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
     r8 <a-3 f'-2> r <a-3 f'-2> s2 |
     d,4 f'-4_\5 e-3 a,-0 |
     
@@ -104,7 +104,7 @@
     d,4 f'-4_\5 e-1 a,-0 |
     
     % 14
-    f8-4 f16 \startBarre #10 #3 _( e-3 ) d4-1 r16 \stopBarre cis-2 e-4 cis bes-4^\2 g-1 e-2^\3 cis-4^\4 |
+    f8-4 f16 \startBarre #10 #3 _( e-3 ) d4 r16 \stopBarre cis-2 e-4 cis bes-4^\2 g-1 e-2^\3 cis-4^\4 |
     r8 <f' a> r <f a> s2 |
     d,4-0 a'-0 e'-1_\5 a,-0 |
     
@@ -173,7 +173,7 @@
   f,4 c' g' c |
   
   %24
-  \slashedGrace{a8 _(} c4-4 ) f,-2-> ~ f8 d16-3 e \grace{f16-2 _( g-4} f8-2-> ) e16 d-3 |
+  \slashedGrace{a8 _(} c4-4 ) f,4.-2-> d16-3 e \grace{f16-2 _( g-4} f8-2-> ) e16 d-3 |
   \override Rest.staff-position = #-1
   r8 <a-3 c> r <a c> \stopBarre s4 \startBarre #5 #6 s8. s16 \stopBarre |
   a,2-0 d4 g, |
@@ -348,14 +348,14 @@
   \override Fingering.add-stem-support = #only-if-beamed
   \stemUp
   \override Fingering.direction = #UP
-  \slashedGrace{f8\glide-1} a4-1 a-> ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
+  \slashedGrace{f8\glide-1} a4-1 a4.-> g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
   \override Rest.staff-position = #2
   \stemDown
   \grace{s8} r8 <a-3 f'-2> r <a-3 f'-2> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
   \grace{s8} d,4 \mf f'-4_\5 e-3 a,-0 |
   
   %51
-  a4-1 a-> ~ a8 g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
+  a4-1 a4.-> g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
   r8 <a-3 f'-2> r <a-3 f'-2> s2 |
   d,4 f'-4_\5 e-3 a,-0 |
   
@@ -365,7 +365,7 @@
   d,4 f'-4_\5 e-1 a,-0 |
   
   %53
-  f8-4 f16 \startBarre #10 #3 _( e-3 ) d4-1 r16 \stopBarre cis-2 e-4 cis bes-4^\2 g-1 e-2^\3 cis-4^\4 |
+  f8-4 f16 \startBarre #10 #3 _( e-3 ) d4 r16 \stopBarre cis-2 e-4 cis bes-4^\2 g-1 e-2^\3 cis-4^\4 |
   r8 <f' a> r <f a> s2 |
   d,4-0 a'-0 e'-1_\5 a,-0 |
   
