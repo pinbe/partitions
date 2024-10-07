@@ -3,9 +3,12 @@
 \header {
   title = "Capricho Árabe"
   composer = "Francisco Tárrega"
-  tagline = "02/10/2024"
+  tagline = "04/10/2024"
   %{
-  sources:
+  sources :
+  https://youtu.be/muhg8aCLQzU?feature=shared
+  https://www.classical-guitar-school.com/en/Download/1026
+  http://classical-guitar.net/v6_Tarrega_6/capricho_arabe.pdf
   %}
 }
 \include "../commons/guitar-helpers.ly"
@@ -168,22 +171,22 @@
   <f, c''-2>4 \mp <c' c'-2> g'-2_\4 c, |
   
   %23
-  \grace{d16 _( e-3} d8 ) s8 s4 r8 g16-4 a \grace{bes-2 _( c-4} bes8-2-> ) a16 g-4 |
+  \grace{d16 _( e-3} d8 ) s8 s4 r8 g16-4 \RH #2 a \RH #3 \grace{bes-2 \RH #2 _( c-4} bes8-2-> ) a16 \RH #3 g-4 \RH #2 |
   s8 <a,-4 c-2>4 <a-4 c-2> \stopBarre \startBarre #5 #4 s8 s4 |
   f,4 c' g' c |
   
   %24
-  \slashedGrace{a8 _(} c4-4 ) f,4.-2-> d16-3 e \grace{f16-2 _( g-4} f8-2-> ) e16 d-3 |
+  \slashedGrace{a8 \RH #4 _(} c4-4 ) f,4.-2-> \RH #4 d16-3 \RH #2 e \RH #3 \grace{f16-2 \RH #2 _( g-4} f8-2-> ) e16 \RH #3 d-3 \RH #2 |
   \override Rest.staff-position = #-1
   r8 <a-3 c> r <a c> \stopBarre s4 \startBarre #5 #6 s8. s16 \stopBarre |
   a,2-0 d4 g, |
   
   %25
-  \grace{g16-1 _( a-3} g4-1 ) c,4-1\2 r16 bes-3 d-4 e-0 d-4 c-1 bes-3 c,-2 |
+  \grace{g16-1 \RH #4 _( a-3} g4-1 ) c,4-1\2 \RH #4 r16 bes-3 d-4 e-0 d-4 c-1 bes-3 c,-2 |
   \revert Rest.staff-position
   \override Fingering.direction = #DOWN
   \override Fingering.add-stem-support = #only-if-beamed
-  c,8-1 \startBarre #3 #6 c'-3 \stopBarre r <e,-2 bes'-3> c4..-2 _\markup{\italic "rit."} c16 |
+  c,8-1 \startBarre #3 #6 c'-3 \RH #2 \stopBarre r <e,-2 bes'-3> c4..-2 _\markup{\italic "rit."} c16 |
   s1 |
   
   %26
@@ -193,12 +196,12 @@
   <f c''-2>4 <c' c'-2> g'-2_\4 c, |
   
   % 27
-  \grace{d16 _( e-3} d8 ) s8 s4 r16 \startBarre #5 #6 bes-4 c d-3 e f-2 g-4 bes-2 \stopBarre |
+  \grace{d16 _( e-3} d8 ) s8 s4 r16 \startBarre #5 #6 bes-4 \RH #2 c d-3 e f-2 g-4 bes-2 \stopBarre |
   s8 <a,-4 c-2>4 <a-4 c-2> \stopBarre s8 s4 |
   f,4 c' g g' |
   
   %28
-  \grace{bes16-2 _( c-4 bes-2} a4-1 )
+  \grace{bes16-2 \RH #4 _( c-4 bes-2} a4-1 )
   \once \override NoteHead.style = #'harmonic-mixed
   a-3\4 ^\markup {\italic \fontsize #-2 "har. 7"}
   r16 d-4 _( bes-1 ) g-3\2 e-0 d-2 bes-1 g-0 |
