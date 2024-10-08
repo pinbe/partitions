@@ -110,22 +110,25 @@
     \grace{s8} r8 <a-3 \RH #2 f'-2 \RH #3 > r <a-3 f'-2> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
     \grace{s8} d,4 \mf f'-4_\5 e-3 a,-0 |
     
-    %{12
+    %12
+    s1 |
     a4-1 a4.-> g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
     r8 <a-3 f'-2> r <a-3 f'-2> s2 |
     d,4 f'-4_\5 e-3 a,-0 |
     
     %13
+    s1 |
     \slashedGrace{c8-4 _( } a4-1 ) a r8 gis16-3^\2 a-4 b-1 cis-3 d-1 e-3 |
     r8 <a-3 f'-2> r <a-3 f'-2> s2 |
     d,4 f'-4_\5 e-1 a,-0 |
     
     %14
+    s1 |
     f8-4 f16 \startBarre #10 #3 _( e-3 ) d4 r16 \stopBarre cis-2 \RH #2 e-4 \RH #3 cis \RH #2 bes-4^\2 \RH #3 g-1 \RH #4 e-2^\3 \RH #3 cis-4^\4 \RH#2 |
     r8 <f' a> r <f a> s2 |
     d,4-0 a'-0 e'-1_\5 a,-0 |
     
-    %15
+    %{15
     \textSpannerUp
     a'-4\2 a-> r8  g16-4 \startStringSpan #2 f-2 e-1 _( f ) g e |
     r8 <a, d> \startBarre #7 $4 r <a d> \stopBarre s2 |
