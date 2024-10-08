@@ -128,19 +128,22 @@
     r8 <f' a> r <f a> s2 |
     d,4-0 a'-0 e'-1_\5 a,-0 |
     
-    %{15
+    %15
+    s1 |
     \textSpannerUp
-    a'-4\2 a-> r8  g16-4 \startStringSpan #2 f-2 e-1 _( f ) g e |
+    a'4-4\2 a-> r8  g16-4 \startStringSpan #2 f-2 e-1 _( f ) g e |
     r8 <a, d> \startBarre #7 $4 r <a d> \stopBarre s2 |
     d,4-0 f'-2 e-3 a,-0 |
     
     %16
+    s1 |
     f4-2 fis-4 \stopStringSpan r16 \startBarre #5 #6 a,-3 c fis-4 a \stopBarre c\glide-4 ees16.-4 \fermata d32-3 |
     \override Rest.staff-position = #0
     r8 <a-3\4 d-4\3> r <a-3 c-1> s2 |
     d,2-0 d'4 _\markup{\italic "poco cresc."} r |
     
     %17
+    s1 |
     \grace{c16-1 _( d-3} c8 )
     \override Fingering.add-stem-support = ##f
     <g-3 bes-1> a-4 \startBarre #3 #6 <e-3 g>\stopBarre
@@ -152,12 +155,13 @@
     g4-0 bes a,2 |
     
     %18
+    s1 |
     g16-4 _( e-1 ) d-2 _( cis-1 ) e-4 \stopTextSpan _( d-2 ) bes-2 _( a-1 )
     c-4 _( bes-2 ) g-2 _( e-0 ) d-2 \RH #3  bes-1 \RH #2 cis-2 a-1 |
     s1 |
     a2..-0 a8 |
     
-    %19
+    %{19
     s1 ^\markup{\italic "a tempo"} |
     r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4>  |
     d,4-0 bes'-1 ees,-1 a-0 |
