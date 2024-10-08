@@ -283,7 +283,7 @@
   
   %34
   s8 s8 \startBarre #7 #4 s8 s8 \stopBarre s2 |
-  a4-4 d, r8 \startBarre #2 #6 b16-3 cis \grace{d-2 _( e-4 } d8-2 ) cis16 b-3 \stopBarre |
+  a4-4^\2 d, r8 \startBarre #2 #6 b16-3 cis \grace{d-2 _( e-4 } d8-2 ) cis16 b-3 \stopBarre |
   \override Rest.staff-position = #-1
   r8 a \tweak extra-offset #'(1.3 . 0) r a s2 |
   d,4-0 fis'-3 e, e' |
@@ -297,7 +297,7 @@
   
   %36
   s8 s8 \startBarre #7 #5 s2. |
-  a4-4 a-4 ~ a16 b cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b cis-3 |
+  a4-4^\2 a-4 ~ a16 b cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b cis-3 |
   \override Rest.staff-position = #1
   r8 <a d> r <a d> s2 |
   d,4-0 fis'-3 e a |
@@ -323,6 +323,7 @@
     d16-2 \RH #3 _( cis-1 ) cis b'-4_\2 b _( a-2 )
     a\glide-2 g-2 g _( fis-1 ) fis e-3_\3
     e _( d-1 ) d\glide-1 cis-1 cis b-4_\4
+    \textSpannerDown
     \override TextSpanner.bound-details.left.text = "rit."
     b _( bes-3 ) bes \startTextSpan _( a-2 ) a a'-4_\2 \RH #2 \stopTextSpan
   } |
