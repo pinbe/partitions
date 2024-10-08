@@ -82,8 +82,9 @@
   s2. |
   s2.  \bar "||" |
   
-  %{9
+  %9
   \time 4/4
+  s1 |
   s1 |
   \stemUp
   \override Fingering.direction = #UP
@@ -91,7 +92,7 @@
   r8 <f-3 a-2 d-4> r <a-2 d-4> r <a-2 cis-3> r <g-4 a cis> \barre #2 #4 |
   d,4 \p f'-3 e-1 a,-0 |
   
-  %10
+  %{10
   s1 |
   r8 <f-3 a-2 d-4> r <a-2 d-4> r <a-2 cis-3> r a-2 |
   d,4 f'-3 e-1 a,-0 |
