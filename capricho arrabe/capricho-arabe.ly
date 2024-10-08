@@ -161,14 +161,16 @@
     s1 |
     a2..-0 a8 |
     
-    %{19
+    %19
+    s1 |
     s1 ^\markup{\italic "a tempo"} |
     r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4>  |
     d,4-0 bes'-1 ees,-1 a-0 |
-    
+
     \alternative {
       \volta 1 {
         %20
+        s1 |
         s1 \p |
         r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4> |
         d,4-0 bes'-1 ees,-1 a-0 |
@@ -176,13 +178,14 @@
       
       \volta 2 {
         %21
+        s1 |
         \override TextSpanner.bound-details.left.text = "rit."
         \textSpannerDown
         s2 s4 \startTextSpan s8 s8 \stopTextSpan |
         r8 <f-3 d'-4> r <f-3 d'-4> r \startBarre #3 #6 <bes d> r <g-3 bes e-4> \stopBarre |
         d,4-0 bes'-1 g-3 c |
       }
-    %}
+    }
   }
   
   %{22
