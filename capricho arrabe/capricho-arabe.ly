@@ -290,22 +290,22 @@
   
   %35
   s8 s8 \startBarre #2 #4 s8 s8 \stopBarre s2 |
-  e4-4^\2 a,-1 r8 gis'16\glide-1 _( a-1 ) cis-4 b-2 g-3\2 e-0 |
+  e4-4^\2 a, r8 gis'16\glide-1 _( a-1 ) cis-4 b-2 g-3\2 e-0 |
   \override Rest.staff-position = #-3
-  r8 e-1 \tweak extra-offset #'(1.4 . -0.5) r e s2 |
+  r8 e \tweak extra-offset #'(1.4 . -0.5) r e s2 |
   a,4-0 cis-3 a2-0 |
   
   %36
-  s1 |
-  a4-4 a-4 ~ a16 b-1 cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b-1 cis-3 |
+  s8 s8 \startBarre #7 #5 s2. |
+  a4-4 a-4 ~ a16 b cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b cis-3 |
   \override Rest.staff-position = #1
-  r8 \startBarre #7 #5 <a d> r <a d> s2 |
-  d,4-0 fis'-3 e-1 a-1 |
+  r8 <a d> r <a d> s2 |
+  d,4-0 fis'-3 e a |
   
   %37
-  s1 |
-  \grace{b16-1 _( cis-3 } b8-1 ) a4.-4 dis,,16-1\5 _( fis-4 ) a-1\4 _( bis-4 ) dis-2\3 fis-1\2 a-4 bis-2 |
-  r8 d-1 r <a d> \stopBarre s2 |
+  s4. s8 \stopBarre s2 |
+  \grace{b16 _( cis-3 } b8 ) a4.-4 dis,,16-1\5 _( fis-4 ) a-1\4 _( bis-4 ) dis-2\3 fis-1\2 a-4 bis-2 |
+  r8 d r <a d> s2 |
   d,,4-0 fis'-3 s2 |
   
   %38
@@ -330,17 +330,17 @@
   a,,1-0 |
   
   %40
-  s1 |
+  s8 s8 \startBarre #7 #5 s2. |
   \override Fingering.direction = #UP
   \set strokeFingerOrientations = #'(up down)
-  a4-4 \RH #4 ^\markup{\italic "a tempo"} \startBarre #7 #5 a ~ a16 b-1 cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b-1 cis-3 |
+  a4-4 \RH #4 ^\markup{\italic "a tempo"} a ~ a16 b cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b cis-3 |
   \override Rest.staff-position = #0
   r8 <a, d> r <a d> s2 |
   d,4-0 fis'-3 e a |
   
   %41
-  s1 |
-  \grace{b16-1 _( cis-3} b8-1 ) a4.-4 r8 e16-3 fis-1 \stopBarre \grace{g-2 _( a-4} g8-2 ) fis16-1 e-3 |
+  s2 s8. s16 \stopBarre s4 |
+  \grace{b16 _( cis-3} b8 ) a4.-4 r8 e16-3 fis \grace{g-2 _( a-4} g8-2 ) fis16-1 e-3 |
   \override Rest.staff-position = #1
   r8 d r <a d> s2 |
   d,,4-0 fis'-3 e a,-0 |
