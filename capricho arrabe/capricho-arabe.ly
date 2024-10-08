@@ -98,9 +98,9 @@
   r8 <f-3 a-2 d-4> r <a-2 d-4> r <a-2 cis-3> r a-2 |
   d,4 f'-3 e-1 a,-0 |
   
-  %{
   \repeat volta 2 {
     %11
+    \grace{s8}s1 |
     \override Fingering.add-stem-support = #only-if-beamed
     \stemUp
     \override Fingering.direction = #UP
@@ -110,7 +110,7 @@
     \grace{s8} r8 <a-3 \RH #2 f'-2 \RH #3 > r <a-3 f'-2> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
     \grace{s8} d,4 \mf f'-4_\5 e-3 a,-0 |
     
-    %12
+    %{12
     a4-1 a4.-> g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
     r8 <a-3 f'-2> r <a-3 f'-2> s2 |
     d,4 f'-4_\5 e-3 a,-0 |
@@ -175,10 +175,10 @@
         r8 <f-3 d'-4> r <f-3 d'-4> r \startBarre #3 #6 <bes d> r <g-3 bes e-4> \stopBarre |
         d,4-0 bes'-1 g-3 c |
       }
-    }
+    %}
   }
   
-  %22
+  %{22
   s2 r16 d e-3 f-4 \grace{e-3 _( f-4} e-3-> ) c-2 d e-3 |
   \override Rest.staff-position = #4
   r8 ^\markup{\italic "a tempo"} \startBarre #3 #6 <f'-4 a-3> r <f-4 a-3> s2 |
