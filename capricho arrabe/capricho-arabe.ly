@@ -17,6 +17,7 @@
   
   \repeat volta 2 {
     %1
+    \time 3/4
     s2. |
     \once \override NoteHead.style = #'harmonic-mixed
     \once \override TextScript.self-alignment-X = #CENTER
@@ -47,7 +48,8 @@
     a,2 s4 |
   }
   
-  %{5
+  %5
+  s2. |
   \stemNeutral
   \override Fingering.direction = #DOWN
   \textSpannerDown
@@ -56,11 +58,13 @@
   s2. |
   
   %6
+  s2. |
   bes8-4 a-3 \override Fingering.direction = #UP e'4.-4 d8-2 \RH #3 |
   s2. |
   s2. |
   
   %7
+  s2. |
   \tupletNeutral
   \tuplet 6/4 4 {
     \override TupletBracket.bracket-visibility = ##t
@@ -73,11 +77,12 @@
   s2. |
   
   %8
+  s2. |
   bes'2-2\fermata a4-1 |
   s2. |
   s2.  \bar "||" |
   
-  %9
+  %{9
   \time 4/4
   s1 |
   \stemUp
@@ -437,8 +442,8 @@
 zique = {
   \clef "treble_8"
   \key d \minor
-  % \accidentalStyle modern
-  \time 3/4
+  %\accidentalStyle modern
+  %\time 3/4
   \tempo "Andantino"
   \set Timing.beamExceptions = #'()
   
