@@ -13,10 +13,11 @@
 }
 \include "../commons/guitar-helpers.ly"
 
-\parallelMusic voiceA, voiceB, voiceC {
+\parallelMusic voiceT, voiceA, voiceB, voiceC {
   
-  \repeat volta 2 {
+%  \repeat volta 2 {
     %1
+    s2. |
     \once \override NoteHead.style = #'harmonic-mixed
     \once \override TextScript.self-alignment-X = #CENTER
     <e' a>2. ^\markup {\italic \fontsize #-2 "har. 7"} |
@@ -24,7 +25,7 @@
     \once \override NoteHead.style = #'harmonic-mixed
     a2. \mp |
     
-    %2
+    %{2
     \stemNeutral
     \set strokeFingerOrientations = #'(up down)
     g'16-3 \RH #3 ( e-1 ) d-2 ( cis-1 ) e-4 ( d-2 ) bes-2 ( a-1 )  c-4 ( bes-2 ) g-4\2 ( e-1 ) |
@@ -41,7 +42,7 @@
     <e, a cis>2 \barre #2 #4 r4 |
     s2. |
     a,2 s4 |
-  }
+%  }
   
   %5
   \stemNeutral
@@ -427,7 +428,7 @@
   s1 |
   \once \override NoteHead.style = #'harmonic-mixed
   d2 d-0 \bar "|." |
-  
+  %}
 }
 
 zique = {
@@ -439,7 +440,7 @@ zique = {
   \set Timing.beamExceptions = #'()
   
   <<
-    
+    {\voiceT} \\
     \relative {
       \tweaks
       \voiceOne
