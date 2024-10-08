@@ -15,7 +15,7 @@
 
 \parallelMusic voiceT, voiceA, voiceB, voiceC {
   
-%  \repeat volta 2 {
+  \repeat volta 2 {
     %1
     s2. |
     \once \override NoteHead.style = #'harmonic-mixed
@@ -25,7 +25,8 @@
     \once \override NoteHead.style = #'harmonic-mixed
     a2. \mp |
     
-    %{2
+    %2
+    s2. |
     \stemNeutral
     \set strokeFingerOrientations = #'(up down)
     g'16-3 \RH #3 ( e-1 ) d-2 ( cis-1 ) e-4 ( d-2 ) bes-2 ( a-1 )  c-4 ( bes-2 ) g-4\2 ( e-1 ) |
@@ -33,18 +34,20 @@
     s2. |
     
     %3
+    s2. |
     \stemUp
     e2-0-> d8. \startBarre #3 #4 e16-4 \stopBarre |
     s2. |
     s2 <g-3 bes>4 |
     
     %4
+    s2. |
     <e, a cis>2 \barre #2 #4 r4 |
     s2. |
     a,2 s4 |
-%  }
+  }
   
-  %5
+  %{5
   \stemNeutral
   \override Fingering.direction = #DOWN
   \textSpannerDown
