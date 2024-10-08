@@ -266,16 +266,16 @@
   s1 |
   
   %32
-  s1 |
+  s8 s8 \startBarre #7 #5 s2. |
   \key d \major
   \stemUp
-  a4-4 \RH #4 ^\markup{\italic "a tempo"} \startBarre #7 #5 a ~ a16 b-1 cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b-1 cis-3 |
+  a4-4 \RH #4 ^\markup{\italic "a tempo"} a ~ a16 b-1 cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b-1 cis-3 |
   r8 <a d> r <a d> s2 |
   d,4-0 \mf fis'-3 e a |
   
   %33
-  s1 |
-  \grace{b16-1 _( cis-3} b8-1 ) a4.-4 r8 e16-3 fis-1 \stopBarre \grace{g-2 _( a-4} g8-2 ) fis16-1 e-3 |
+  s2 s8. s16 \stopBarre s4 |
+  \grace{b16-1 _( cis-3} b8-1 ) a4.-4 r8 e16-3 fis-1 \grace{g-2 _( a-4} g8-2 ) fis16-1 e-3 |
   \override Rest.staff-position = #1
   r8 d-1 r <a d> s2 |
   d,,4 fis'-3 e-1 a,-0 |
