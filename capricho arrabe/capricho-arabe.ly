@@ -260,7 +260,8 @@
   s1 |
   e16-2 f-3 fis-4 g-0 gis-1 a-2 ais-3 b-0 c-1 cis-2 d-3 dis-4
   \tuplet 5/4 {
-    e-0 f-1 \startStringSpan #2 fis-2 g-3 gis-4 \stopStringSpan \!
+    \textSpannerUp
+    e-0 f-1 \startStringSpan #2 fis-2 g-3 gis-4 \!
   } |
   s1 |
   s1 |
@@ -269,7 +270,7 @@
   s8 s8 \startBarre #7 #5 s2. |
   \key d \major
   \stemUp
-  a4-4 \RH #4 ^\markup{\italic "a tempo"} a ~ a16 b-1 cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b-1 cis-3 |
+  a4-4 \RH #4 ^\markup{\italic "a tempo"} \stopStringSpan a ~ a16 b-1 cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b-1 cis-3 |
   r8 <a d> r <a d> s2 |
   d,4-0 \mf fis'-3 e a |
   
