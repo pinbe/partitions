@@ -92,11 +92,13 @@
   r8 <f-3 a-2 d-4> r <a-2 d-4> r <a-2 cis-3> r <g-4 a cis> \barre #2 #4 |
   d,4 \p f'-3 e-1 a,-0 |
   
-  %{10
+  %10
+  s1 |
   s1 |
   r8 <f-3 a-2 d-4> r <a-2 d-4> r <a-2 cis-3> r a-2 |
   d,4 f'-3 e-1 a,-0 |
   
+  %{
   \repeat volta 2 {
     %11
     \override Fingering.add-stem-support = #only-if-beamed
