@@ -267,10 +267,14 @@
   s1 |
   
   %32
-  s8 s8 \startBarre #7 #5 s2. |
+  
+  s8 s8 \startBarre #7 #5
+  \tweak X-offset #-2 
+  ^\markup{\italic "a tempo"}
+  s2. |
   \key d \major
   \stemUp
-  a4-4 \RH #4 ^\markup{\italic "a tempo"} \stopStringSpan a ~ a16 b cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b cis-3 |
+  a4-4 \RH #4 \stopStringSpan a ~ a16 b cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b cis-3 |
   r8 <a d> r <a d> s2 |
   d,4-0 \mf fis'-3 e a |
   
@@ -479,7 +483,7 @@
   s1 |
   s1 |
   r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4> |
-  d,4-0 bes'-1 ees,-1 a-0 |
+  d,4-0 \p bes'-1 ees,-1 _\markup{\italic "rit."} a-0 |
   
   
   %60
