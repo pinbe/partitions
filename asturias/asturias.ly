@@ -3,8 +3,7 @@
 \header {
   title = "Asturias (Leyenda)"
   composer = "Isaac Albéniz"
-  tagline = "19/09/2024"
-  % copyright = "Benoît Pin"
+  tagline = \markup{ \italic \small "Révision des doigtés du 10/10/2024 par Benoît Pin"}
   %{
   sources:
   https://www.thisisclassicalguitar.com/asturias-leyenda-by-albeniz-free-pdf/ ©BradfordWerner
@@ -21,8 +20,9 @@
   
     %1
     \repeat volta 3 {
-      e16 b'-0 \RH #2 b b-0 \RH #2 c b-0 a b-0 b b-0 g b-0 ^\markup { \bold "3 ×"} |
-      e8-1_\5 \RH #1 \p b'-3_\4 \RH #1 c-4 a-1 b-3 g-4_\5 |
+      \set strokeFingerOrientations = #'(up down)
+      e16 \RH #1 b'-0 \RH #2 b \RH #1 b-0 \RH #2 c b-0 a b-0 b b-0 g b-0 ^\markup { \bold "3 ×"} |
+      e8-1_\5 \p b'-3_\4 c-4 a-1 b-3 g-4_\5 |
       s2. |
     }
   
@@ -87,7 +87,12 @@
       \tuplet 3/2 8 {
         \set Voice.baseMoment = #(ly:make-moment 1/8)
         \set Voice.beatStructure = 1,1,1,1,1,1
-        e,16 b'-0 \RH #2 b'_1 \RH #3
+        \override TupletBracket.bracket-visibility = ##t
+        \once \override TupletNumber.extra-offset = #'(0 . 2)
+        \once \override TupletBracket.extra-offset = #'(0 . 2)
+        e,16 \RH #1 b'-0 \RH #2 b'_1 \RH #3
+        \omit TupletBracket
+        \omit TupletNumber
         b, b b'
         c,16 b b'
         a, b b'
@@ -138,13 +143,13 @@
     \repeat volta 2 {
       <fis,-3 b-4 dis-2 fis b>8 \barre #7 #6  %^\markup{"VII"}
       \tuplet 3/2 8 {
-        b16 b-0 \RH #3 b-0 \RH #2
+        b16 \RH #1 b-0 \RH #3 b-0 \RH #2
         c b b
         a b b
         b b b
         fis b b
       } |
-      b8 \! \mf b'\glide-4_\4 \RH #1 c-4 a-1 b-4 fis-3_\5 |
+      b8 \! \mf b'\glide-4_\4 c-4 a-1 b-4 fis-3_\5 |
       s2. |
     }
   
@@ -215,7 +220,7 @@
     %33
     \repeat volta 3 {
       \set fingeringOrientations = #'(left up)
-      <g-2 b-1 g-0 b-0 e'-4>8 ^\markup{"IX pos"}
+      <g-2 b-1 g-0 b-0 e'-4>8 ^\markup{\small \bold "IX pos"}
       \tuplet 3/2 8 {
         b16 b b
         c b b
@@ -375,7 +380,11 @@
       \tuplet 3/2 8{
         \set Voice.baseMoment = #(ly:make-moment 1/8)
         \set Voice.beatStructure = 1,1,1,1,1,1
+        \undo \omit TupletBracket
+        \undo \omit TupletNumber
         b,16 \startBarre #7 #6 dis'-2 b'
+        \omit TupletBracket
+        \omit TupletNumber
         fis, dis' b'
         b, dis b'
         c, dis b'
@@ -648,6 +657,7 @@
 
         %100
         \tempo "Andante"
+        \set strokeFingerOrientations = #'(right)
         c8-1 \RH #4 dis-4 \RH #3 e-0 \RH #4 b16-0 \RH #3 _( c-1 ) a8-3 \RH #2 b-0 \RH #3 |
         <a e'-2 \RH #2 >4 <g-3 e'-2 \RH #2 > fis-2 |
         s2. \mf |
