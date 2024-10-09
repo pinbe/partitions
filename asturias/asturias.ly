@@ -891,33 +891,6 @@
 
 }
 
-fingeringTweaks = {
-  % left hand
-  \override Fingering.staff-padding = #'() 
-  \override Fingering.add-stem-support = ##f
-  \override Fingering.avoid-slur = ##t
-  \override Fingering.font-size = #-5
-  \set fingeringOrientations = #'(left)
-
-  % right hand
-  %\set strokeFingerOrientations = #'(down)
-  \override StrokeFinger.add-stem-support = ##t
-  %\override StrokeFinger.font-shape = #'upright
-  
-  \override StringNumber.script-priority = 110 %
-}
-
-tweaks = {
-  \fingeringTweaks
-  \override Stem.details.beamed-lengths = #'(4.5)
-}
-
-merges = {
-  \mergeDifferentlyHeadedOn
-  \mergeDifferentlyDottedOn
-  \shiftOff
-}
-
 zique = {
   \clef "treble_8"
   \key g \major
@@ -950,16 +923,10 @@ zique = {
 
 \score {
   \new Staff {
-    %\unfoldRepeats
     \zique
   }
 
   \layout { }
-  %{
-  \midi {
-    \tempo 4.=76
-  }
-  %}
 }
 
 \score {
