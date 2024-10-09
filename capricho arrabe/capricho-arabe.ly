@@ -312,7 +312,7 @@
   s1 |
   cis4-4 cis r16 fis-4 \RH #3 _( e-2 ) d-2 b-4\2 gis-1 e-0 d-2\2 |
   \override Rest.staff-position = #3
-  r8 \startBarre #7 #5 e'-3 r e \stopBarre s2 |
+  r8 \startBarre #7 #6 e'-3 r e \stopBarre s2 |
   e4 a \tweak NoteHead.style #'harmonic-mixed e'2-1_\5 _\markup {\italic \fontsize #-2 "har. 7"} |
   
   %39
@@ -348,29 +348,29 @@
   
   %42
   s1 |
-  a4-4 d,-1 r8 \startBarre #2 #6 b16-3 cis-1 \grace{d-2 _( e-4 } d8-2 ) cis16-1 b-3 \stopBarre |
+  a4-4^\2 d, r8 \startBarre #2 #6 b16-3 cis \grace{d-2 _( e-4 } d8-2 ) cis16 b-3 \stopBarre |
   \override Rest.staff-position = #-1
-  r8 \startBarre #7 #4 a-1 \tweak extra-offset #'(1.3 . 0) r a \stopBarre s2 |
-  d,4-0 fis'-3 e,-1 e'-1|
+  r8 a \startBarre #7 #4 \tweak extra-offset #'(1.3 . 0) r a \stopBarre s2 |
+  d,4-0 fis'-3 e, e'|
   
   %43
   s1 |
-  e4-4 a,-1 r8 gis'16\glide-1 _( a-1 ) cis-4 b-2 g-3\2 e-0 |
+  e4-4^\2 a,-1 r8 gis'16\glide-1 _( a-1 ) cis-4 b-2 g-3\2 e-0 |
   \override Rest.staff-position = #-3
-  r8 \startBarre #2 #4 e-1 \tweak extra-offset #'(1.4 . -0.5) r e \stopBarre s2 |
+  r8 e-1 \startBarre #2 #4 \tweak extra-offset #'(1.4 . -0.5) r e \stopBarre s2 |
   a,4-0 cis-3 a2-0 |
   
   %44
-  s1 |
-  a4-4 a-4 ~ a16 b-1 cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b-1 cis-3 |
+  s8 s8 \startBarre #7 #5 s2. |
+  a4-4^\2 a-4 ~ a16 b cis-3 d-4 \grace{cis-3 _( d-4} cis-3 ) a-4 b cis-3 |
   \override Rest.staff-position = #1
-  r8 \startBarre #7 #5 <a d> r <a d> s2 |
-  d,4-0 fis'-3 e-1 a-1 |
+  r8 <a d> r <a d> s2 |
+  d,4-0 fis'-3 e a |
 
   %45
-  s1 |
-  \grace{b16-1 _( cis-3 } b8-1 ) a4.-4 d,,16-0 _( fis-3 ) a-1 d-2 fis-1 a-4 e'16.-4 \fermata  d32-2 |
-  r8 d-1 r <a d> \stopBarre s2 |
+  s4. s8 \stopBarre s2 |
+  \grace{b16 _( cis-3 } b8 ) a4.-4 d,,16-0 _( fis-3 ) a-1 d-2 fis-1 a-4 e'16.-4 \fermata  d32-2 |
+  r8 d r <a d> s2 |
   d,,4-0 fis'-3 s2 |
   
   %46
