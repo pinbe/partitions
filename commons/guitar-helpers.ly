@@ -18,12 +18,14 @@
                          #{
                            \markup {
                              \small
-                             \bold
                              \concat {
+                               { \bold
                                #(format #f "~@r" fretnum)
+                               }
                                \hspace #0.2
                                \lower #0.3
                                \fontsize #-2
+                               \italic
                                #(number->string numOfStr)
                                \hspace #0.5
                              }
