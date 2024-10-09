@@ -1,6 +1,6 @@
 \version "2.24.3"
 
-#(define RH rightHandFinger)
+RH = #rightHandFinger
 
 #(define-markup-command (barreMrkp layout props fretnum numOfStr) (integer? integer?)
    (interpret-markup layout props 
@@ -20,7 +20,7 @@
                              \small
                              \concat {
                                { \bold
-                               #(format #f "~@r" fretnum)
+                                 #(format #f "~@r" fretnum)
                                }
                                \hspace #0.2
                                \lower #0.3
@@ -76,7 +76,7 @@ startBarre =
 stopBarre = \stopTextSpan
 
 startStringSpan = 
-#(define-event-function (stringNum) 
+#(define-event-function (stringNum)
    (number?)
    #{
      \tweak font-size #-5
@@ -107,11 +107,13 @@ fingeringTweaks = {
   \set fingeringOrientations = #'(left)
 
   % right hand
-  %\set strokeFingerOrientations = #'(down)
+  \override StrokeFinger.staff-padding = #'()
   \override StrokeFinger.add-stem-support = ##t
-  %\override StrokeFinger.font-shape = #'upright
-
-  \override StringNumber.script-priority = 110 %
+  \override StrokeFinger.avoid-slur = #'around
+  \override StrokeFinger.script-priority = 110 %
+  
+  % strings
+  \override StringNumber.script-priority = 120 %
 }
 
 tweaks = {
