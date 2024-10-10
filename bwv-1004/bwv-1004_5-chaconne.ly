@@ -21,6 +21,7 @@
         tagline = "21/09/2024"
 }
 
+\include "../commons/guitar-helpers.ly"
 
 fingeringGlobal = {
   \override Fingering.staff-padding = #'()
@@ -104,7 +105,7 @@ fingeringVoiceD = {
   <d a' d>4 <bes f'>2 |
 
   % 8
-  bes'4-2 a8.-4 ^\markup {"II"}  [ g32-4 _( f-1) ] g8. [ e16-0 ] |
+  bes'4-2 a8.-4 \barre #2 #6  [ g32-4 _( f-1) ] g8. [ e16-0 ] |
   s2. |
   s2. |
   <g e'-3 d'-4>4-1 <a e' cis'>2 |
@@ -132,8 +133,7 @@ fingeringVoiceD = {
   <d-4 a'-1>4 bes4..-1 g16-4 |
 
   % 12
-  \override TextSpanner.bound-details.left.text = "II"
-  d4-2 cis4.. \startTextSpan s16 \stopTextSpan |
+  d4-2 cis4.. \startBarre #2 #4 s16 \stopBarre |
   e8.-1 ^[ d16-0 ]
   %\override Fingering.side-axis = #X
   %\override Fingering.direction = #LEFT
@@ -320,8 +320,7 @@ fingeringVoiceD = {
   d,2 r4 |
 
   % 42
-  \override TextSpanner.bound-details.left.text = "II"
-  a16 e' \startTextSpan d'-2 cis \stopTextSpan d,-3 fis-2 a-1 c-4 c bes-1 _( c-4) a\glide-1 |
+  a16 e' \startBarre #2 #4 d'-2 cis \stopBarre d,-3 fis-2 a-1 c-4 c bes-1 _( c-4) a\glide-1 |
   s2. |
   s2. |
   a'4 d2 |
@@ -381,14 +380,13 @@ fingeringVoiceD = {
   bes2-1 g4-4 |
 
   % 52
-  \override TextSpanner.bound-details.left.text = "II"
-  cis16-3 a-0 _( cis) e \startTextSpan a e a cis \stopTextSpan e-0 g,-0 _( a-2) e-1 |
+  cis16-3 a-0 _( cis) e \startBarre #2 #4 a e a cis \stopBarre e-0 g,-0 _( a-2) e-1 |
   s2. |
   s2. |
   r2 a4 |
 
   % 53
-  f16-3 d-0 _( f) a-2 d-4 a d f-1 bes,^\markup{"III"} g' _( a-3) bes-4 |
+  f16-3 d-0 _( f) a-2 d-4 a d f-1 bes, \barre #3 #3 g' _( a-3) bes-4 |
   s2. |
   s2. |
   d,2 r4 |
@@ -436,19 +434,16 @@ fingeringVoiceD = {
   s2. |
 
   % 60
-  \override TextSpanner.bound-details.left.text = "II"
-  r4. a8-4 a16-4 _( \startTextSpan g-2 ) a-4 \stopTextSpan e-0 |
+  r4. a8-4 a16-4 _( \startBarre #2 #4 g-2 ) a-4 \stopBarre e-0 |
   \stemUp a8
   \override Fingering.direction = 1
   d-3 \stemNeutral
   \override Fingering.direction = -1
   \override Fingering.add-stem-support = ##f
-  \override TextSpanner.bound-details.left.text = "II"
-  d16-2 \startTextSpan ^( cis) \stopTextSpan d-2 ^( b) cis4 |
-  \override TextSpanner.bound-details.left.text = "II"
+  d16-2 \startBarre #2 #4 ^( cis) \stopBarre d-2 ^( b) cis4 |
   \override Fingering.extra-offset = #'()
   \override Fingering.add-stem-support = ##f
-  \stemDown \set fingeringOrientations = #'(left) <f-2>16 \startTextSpan ^( e) \stopTextSpan f-2 ^( d-0) e4 e |
+  \stemDown \set fingeringOrientations = #'(left) <f-2>16 \startBarre #2 #4 ^( e) \stopBarre f-2 ^( d-0) e4 e |
   a'4  a a |
 
   % 61
@@ -469,9 +464,8 @@ fingeringVoiceD = {
 
   % 63
   d8-4 s8 bes8 s8 g,16-4 e'-1 b'-0 g'-2 |
-  \override TextSpanner.bound-details.left.text = "III"
   \override Stem.details.beamed-lengths = #'(4.5)
-  f,16-3 ees-1 ^( f-3) d-0 d-4 \startTextSpan c ^( d-4) \stopTextSpan bes-1
+  f,16-3 ees-1 ^( f-3) d-0 d-4 \startBarre #3 #5 c ^( d-4) \stopBarre bes-1
   \revert Stem.details.beamed-lengths
   s4 |
   s2. |
@@ -657,19 +651,15 @@ fingeringVoiceD = {
   d8-1 [ d] d [ d] d-1 [ d] |
 
   % 92
-  \override TextSpanner.bound-details.left.text = "V"
-  g,32 \startTextSpan bes'-4 e bes g,32 a'-3 f'-2 a,
-  \override TextSpanner.bound-details.left.text = "III"
-  g,32 g' e' g, \stopTextSpan  g, \startTextSpan f' d' f, \stopTextSpan
-  \override TextSpanner.bound-details.left.text = "II"
-  a,32 \startTextSpan e' d'-2 e, a,32 e' cis' e, \stopTextSpan |
+  g,32 \startBarre #5 #6 bes'-4 e bes g,32 a'-3 f'-2 a,
+  g,32 g' e' g, \stopBarre  g, \startBarre #3 #6 f' d' f, \stopBarre
+  a,32 \startBarre #2 #4 e' d'-2 e, a,32 e' cis' e, \stopBarre |
   s2. |
   s2. |
   g,8 [ g] g [ g-3] a [ a] |
 
   % 93
-  \override TextSpanner.bound-details.left.text = "III"
-  d,32 \startTextSpan f' d' f, d f d' f, \stopTextSpan \breathe
+  d,32 \startBarre #3 #4 f' d' f, d f d' f, \stopBarre \breathe
   a, f'-3 d'-4 f, a, f' d' f,
   bes, f'-3 d'-4 f, bes, f' d' f, |
   s2. |
@@ -698,19 +688,16 @@ fingeringVoiceD = {
 
   % 96
   a,32 f'-1 d'-2 f, a,32 f' d' f,
-  \override TextSpanner.bound-details.left.text = "II"
-  a,32 \startTextSpan e' d'-2 e, a,32 e' d' e,
-  a,32 g'-4 cis g a,32 g' cis g \stopTextSpan |
+  a,32 \startBarre #2 #4 e' d'-2 e, a,32 e' d' e,
+  a,32 g'-4 cis g a,32 g' cis g \stopBarre |
   s2. |
   s2. |
   a8 [ a] a [ a] a [ a] |
 
   % 97
-  \override TextSpanner.bound-details.left.text = "III"
-  d,32 \startTextSpan f' d' f, d f d' f, \stopTextSpan \breathe
+  d,32 \startBarre #3 #4 f' d' f, d f d' f, \stopBarre \breathe
   d32 f-2 a-1 f d f a f
-  \override TextSpanner.bound-details.left.text = "III"
-  d32 \startTextSpan f bes f d f bes f \stopTextSpan |
+  d32 \startBarre #3 #4 f bes f d f bes f \stopBarre |
   s2. |
   s2. |
   d,8 [ d'-4] d-4 [ d] d-3 [ d] |
@@ -725,18 +712,16 @@ fingeringVoiceD = {
 
   % 99
   d32 g-4 bes-1 g d g bes g
-  \override TextSpanner.bound-details.left.text = "VI"
-  e32 \startTextSpan cis' bes' cis, e, cis' bes' cis, \stopTextSpan
+  e32 \startBarre #6 #6 cis' bes' cis, e, cis' bes' cis, \stopBarre
   f,32 d'\3-1 a'\2-4 d, f,32 d' a' d, |
   s2. |
   s2. |
   d8-3 [ d] e-2 [ e] f_\5-2 [ f] |
 
   % 100
-  \override TextSpanner.bound-details.left.text = "V"
-  g,32 \startTextSpan d'-3 g-4 d g, d' f-2 d
+  g,32 \startBarre #5 #4 d'-3 g-4 d g, d' f-2 d
   a32 d-3 e d a d e d
-  a,32 cis'-2 e cis a, cis' e cis \stopTextSpan |
+  a,32 cis'-2 e cis a, cis' e cis \stopBarre |
   s2. |
   s2. |
   g8 [ g] a-4 [ a] a, [ a] |
@@ -766,18 +751,16 @@ fingeringVoiceD = {
   d,8 [ d'] d [ d] cis-3 [ cis] |
 
   % 104
-  \override TextSpanner.bound-details.left.text = "III"
-  d,32 f' \startTextSpan f'-4 f, d-3 f f' f, \stopTextSpan
+  d,32 f' \startBarre #3 #4 f'-4 f, d-3 f f' f, \stopBarre
   \override TextSpanner.bound-details.left.text = "II"
-  a,32 \startTextSpan e' cis' e, a, e' cis' e,
-  a,32 e' cis' e, a, e' cis' e, \stopTextSpan |
+  a,32 \startBarre #2 #4 e' cis' e, a, e' cis' e,
+  a,32 e' cis' e, a, e' cis' e, \stopBarre |
   s2. |
   s2. |
   d,8 [ d'] a [ a] a [ a] |
 
   % 105
-  \override TextSpanner.bound-details.left.text = "III"
-  d,32 \startTextSpan f' d' f, d f d' f, \stopTextSpan \breathe
+  d,32 \startBarre #3 #4 f' d' f, d f d' f, \stopBarre \breathe
   d32\5-1 a'-3 f'\2-2 a, d, a' f' a,
   d,,32 c''\3-3 f\2-4 c d,, c'' f c |
   s2. |
@@ -794,8 +777,7 @@ fingeringVoiceD = {
 
   % 107
   bes,32 f'-3 ees'-4 f, bes, f' ees' f,
-  \override TextSpanner.bound-details.left.text = "I"
-  bes,32 \startTextSpan f'-3 <d'-4 f> f, bes,32 f' <d' f> f, \stopTextSpan
+  bes,32 \startBarre #1 #5 f'-3 <d'-4 f> f, bes,32 f' <d' f> f, \stopBarre
   bes,32 g'-0 <d'-4 e> g, bes,32 g' <d' e> g, |
   s2. |
   s2. |
@@ -803,9 +785,8 @@ fingeringVoiceD = {
 
   % 108
   a,32 a'-2 <d-4 e-0> a a, a' <d e> a
-  \override TextSpanner.bound-details.left.text = "II"
-  a,32 \startTextSpan e' <cis' a'-4> e, a,32 e' <cis' a'> e,
-  a,32 e' <cis' g'-2> e, a,32 e' <cis' g'> e, \stopTextSpan |
+  a,32 \startBarre #2 #4 e' <cis' a'-4> e, a,32 e' <cis' a'> e,
+  a,32 e' <cis' g'-2> e, a,32 e' <cis' g'> e, \stopBarre |
   s2. |
   s2. |
   a8 [ a] a [ a] a [ a] |
@@ -828,19 +809,15 @@ fingeringVoiceD = {
 
   % 111
   f,32 c'-3 a'-4 c, f, c' a' c,
-  \override TextSpanner.bound-details.left.text = "IV"
-  fis,32 \startTextSpan ees' c'-4 ees, fis,32 ees' c' ees, \stopTextSpan
-  \override TextSpanner.bound-details.left.text = "V"
-  g,32 \startTextSpan d'-3 b'-4 d, g, d' b' d, \stopTextSpan |
+  fis,32 \startBarre #4 #4 ees' c'-4 ees, fis,32 ees' c' ees, \stopBarre
+  g,32 \startBarre #5 #4 d'-3 b'-4 d, g, d' b' d, \stopBarre |
   s2. |
   s2. |
   f8-1 [ f] fis-1 [ fis] g-1 [ g] |
 
   % 112
-  \override TextSpanner.bound-details.left.text = "VI"
-  gis,32 \startTextSpan f' d'-4 f, gis,32 f' d'-4 f, \stopTextSpan
-  \override TextSpanner.bound-details.left.text = "VII"
-  a,32 \startTextSpan e'-3 d'-4 e, a,32 e' d' e, \stopTextSpan
+  gis,32 \startBarre #6 #4 f' d'-4 f, gis,32 f' d'-4 f, \stopBarre
+  a,32 \startBarre #7 #4 e'-3 d'-4 e, a,32 e' d' e, \stopBarre
   a,, e''-3 cis'-4 e, a,, e'' cis' e, |
   s2. |
   s2. |
@@ -864,18 +841,15 @@ fingeringVoiceD = {
 
   % 115
   fis,32 d'-1 c'-2 d, fis,32 d' c' d,
-  \override TextSpanner.bound-details.left.text = "VII"
-  g, \startTextSpan d' b' d, g, d' b' d,
-  f,32 d' b' d, f,32 d' b' d, \stopTextSpan |
+  g, \startBarre #7 #3 d' b' d, g, d' b' d,
+  f,32 d' b' d, f,32 d' b' d, \stopBarre |
   s2. |
   s2. |
   fis8_\5-3 [ fis] g-4 [ g] f-2 [ f] |
 
   % 116
-  \override TextSpanner.bound-details.left.text = "VI"
-  e,32 \startTextSpan cis' bes' cis, e, cis' bes' cis, \stopTextSpan
-  \override TextSpanner.bound-details.left.text = "III"
-  f,32 \startTextSpan d' a'-4 d, f, d' a' d, \stopTextSpan
+  e,32 \startBarre #6 #3 cis' bes' cis, e, cis' bes' cis, \stopBarre
+  f,32 \startBarre #3 #3 d' a'-4 d, f, d' a' d, \stopBarre
   e,32 cis'-2 g'-4 cis, e, cis' g' cis, |
   s2. |
   s2. |
@@ -883,8 +857,7 @@ fingeringVoiceD = {
 
   % 117
   d,32 d'-4 fis-3 d d, d' fis d \breathe
-  \override TextSpanner.bound-details.left.text = "I"
-  a,32 a'-3 <c f> \startTextSpan a a, a' <c f> a \stopTextSpan
+  a,32 a'-3 <c f> \startBarre #1 #3 a a, a' <c f> a \stopBarre
   b,32 g'-0 <d'-4 f-1> g, b, g' <d' f> g, |
   s2. |
   s2. |
@@ -957,13 +930,13 @@ fingeringVoiceD = {
   <d a'-2 d-4>4 <bes-1 f'-2 bes-3>2 |
 
   % 128
-  bes'4-2 a-4^\markup{"III"} g-4 |
+  bes'4-2 a-4 \barre #3 #4 g-4 |
   s2. |
   s2. |
   <g-1 e'-3 d'-4>4 <a f' d'> <a e'-1 cis'-2> |
 
   % 129
-  <a,-1 d-3 g-4>4 <a d-2 fis>^\markup{"II"} s4|
+  <a,-1 d-3 g-4>4 <a d-2 fis> \barre #2 #3 s4|
   s2. |
   s2. |
   d2 c8-3 ^[ f'-1 ] |
@@ -981,7 +954,7 @@ fingeringVoiceD = {
   a,,4  bes-1 a8-0 ^[ d'-1 ] |
 
   % 132
-  s4 cis'4. ^\markup{"II"} \trill d8-4 \bar "||" |
+  s4 cis'4. \barre #2 #4 \trill d8-4 \bar "||" |
   s2. |
   s2. |
   gis,,8-4 ^[ d'' ] <a, e'>2 |
@@ -1000,7 +973,7 @@ fingeringVoiceD = {
   cis'4-3 a2 |
 
   % 135
-  d,4-0 e4.^\markup{"II"} fis16-2 g-4 |
+  d,4-0 e4. \barre #2 #6 fis16-2 g-4 |
   s2. |
   s2. |
   b4-1 <g-3 b>2|
@@ -1021,12 +994,10 @@ fingeringVoiceD = {
   e4 fis16-3 g-0 a-1 g fis8 e-1 |
   s2. |
   s2. |
-  \override TextSpanner.bound-details.left.text = "II"
-  cis8-3 \startTextSpan b \stopTextSpan a4. a8 |
+  cis8-3 \startBarre #2 #6 b \stopBarre a4. a8 |
 
   % 139
-  \override TextSpanner.bound-details.left.text = "II"
-  d4-0 e8 \startTextSpan g16-4 fis-2 e8 \stopTextSpan d |
+  d4-0 e8 \startBarre #2 #6 g16-4 fis-2 e8 \stopBarre d |
   s2. |
   s4 b4. s8 |
   b8-1 a g4.-3 g8 |
@@ -1047,21 +1018,19 @@ fingeringVoiceD = {
   d,4 \once \mergeDifferentlyDottedOff d'4.-4 d8-4|
 
   % 142
-  \override TextSpanner.bound-details.left.text = "II"
-  a8 \startTextSpan [ b-4 ] cis [ d-2 ] \stopTextSpan b-4 [ cis-2 ] |
+  a8 \startBarre #2 #4 [ b-4 ] cis [ d-2 ] \stopBarre b-4 [ cis-2 ] |
   s2. |
   s2. |
   <cis-3 e>4 <a e'>4. <a g'>8 |
 
   % 143
-  \override TextSpanner.bound-details.left.text = "II"
-  d8-2 \startTextSpan [ fis \stopTextSpan ] e-0 [ d-2] cis-1 [ b-0] |
+  d8-2 \startBarre #2 #6 [ fis \stopBarre ] e-0 [ d-2] cis-1 [ b-0] |
   s2. |
   s2. |
   <b-1 fis'-3 b-4>4   <g-4 g'-0 b-0>4. <g g'>8 |
 
   % 144
-  <a-1 fis-3>8 [ <b-0 d,-0>] <cis e,> ^\markup{"II"} [ <d-2 fis,-3>] <e-0 g,-0> [ <cis e,> ^\markup{"II"} ] |
+  <a-1 fis-3>8 [ <b-0 d,-0>] <cis e,> \barre #2 #4 [ <d-2 fis,-3>] <e-0 g,-0> [ <cis e,> \barre #2 #4 ] |
   s2. |
   s2. |
   a4 a4. a8 |
@@ -1073,21 +1042,20 @@ fingeringVoiceD = {
   \shiftOff d,4 s2 |
 
   % 146
-  \override TextSpanner.bound-details.left.text = "II"
-  <e-0 cis-2>4 a4.-4 \startTextSpan g8-2 \stopTextSpan |
+  <e-0 cis-2>4 a4.-4 \startBarre #2 #3 g8-2 \stopBarre |
   s2. |
   s2. |
   \override Stem.details.beamed-lengths = #'(4.2)
   a''8-1 [ b-0] cis [ a] b-3 [ cis ] |
 
   % 147
-  fis8-1 [ e-0] <g d> ^\markup{"III"} [ <fis d-2> ^\markup{"II"} ] <b-4 d,-3> [ <a-4 d,-1>]  |
+  fis8-1 [ e-0] <g d> \barre #3 #3 [ <fis d-2> \barre #2 #3 ] <b-4 d,-3> [ <a-4 d,-1>]  |
   s2. |
   s2. |
   d8-3 [ cis-2] b-3 [ a ] <g-1 b-0> [ <fis-2 b-3>] |
 
   % 148
-  <g-4 cis,>8 ^\markup{"II"} [ <fis d-3> ] ^\markup{"II"} e2-0 |
+  <g-4 cis,>8 \barre #2 #4 [ <fis d-3> ] \barre #2 #3 e2-0 |
   \override Fingering.direction = 1
   s2 cis'4-2 |
   s2. |
