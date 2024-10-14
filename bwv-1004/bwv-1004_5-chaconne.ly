@@ -23,36 +23,26 @@
 
 \include "../commons/guitar-helpers.ly"
 
-fingeringGlobal = {
-  \override Fingering.staff-padding = #'()
-  \override Fingering.avoid-slur = ##t
-  \override Fingering.font-size = #-5
-
-  \override StringNumber.add-stem-support = ##f
-  \override StringNumber.staff-padding = #'()
-  \override StringNumber.script-priority = 110 %
-}
-
 fingeringVoiceA = {
-  \fingeringGlobal
+  \fingeringTweaks
   \override Fingering.add-stem-support = #only-if-beamed
   \set fingeringOrientations = #'(left)
 }
 
 fingeringVoiceB = {
-  \fingeringGlobal
+  \fingeringTweaks
   %\override Fingering.color = red
   \override Fingering.extra-offset = #'(-1.5 . -1.5)
   \override Fingering.add-stem-support = ##f
 }
 
 fingeringVoiceC = {
-  \fingeringGlobal
+  \fingeringTweaks
   %\override Fingering.color = green
 }
 
 fingeringVoiceD = {
-  \fingeringGlobal
+  \fingeringTweaks
   \override Fingering.add-stem-support = #only-if-beamed
   \set fingeringOrientations = #'(left)  
 }
