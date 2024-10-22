@@ -1225,7 +1225,7 @@ fingeringVoiceD = {
 
   % 175
   \override TextSpanner.bound-details.left.text = "VII"
-  b4-1 r16 b16 b b cis16-4 d-4 \startTextSpan d d \stopTextSpan |
+  b4-1 r16 b16 b b cis16-4 d-4 \startBarre #7 #3 d d \stopBarre |
   \override Fingering.add-stem-support = ##f
   g'4-2 s16 g \set fingeringOrientations = #'(left) <g fis-4> <g fis> <g-2 e-3> <fis d> <fis d> <fis d> |
   s2. |
@@ -1233,19 +1233,19 @@ fingeringVoiceD = {
 
   % 176
   \override TextSpanner.bound-details.left.text = "VIII"
-  \offset Beam.positions #'(1 . 1) g,16 \startTextSpan g g g \stopTextSpan
+  \offset Beam.positions #'(1 . 1) g,16 \startBarre #8 #3 g g g \stopBarre
   \override TextSpanner.bound-details.left.text = "II"
-  \offset Beam.positions #'(1 . 1) \override Fingering.add-stem-support = ##f fis16-2 fis \startTextSpan fis fis \stopTextSpan
-  \offset Beam.positions #'(1 . 1) e-0 e e e |
+  \offset Beam.positions #'(1 . 1) \override Fingering.add-stem-support = ##f fis16-2 fis \startBarre #2 #3 fis fis \stopBarre
+  \offset Beam.positions #'(1 . 1) e-0 e-0 e e |
   s2. |
   \set fingeringOrientations = #'(up left) <b,-2 fis'-4>16 \set fingeringOrientations = #'(left) <cis-4 e-2> <cis e> <cis e>
   <d-1 e-0> <fis,-3 a d-2> <fis a d> <fis a d>
-  \once \set fingeringOrientations = #'(up left) <g-4 a-1 d-2> <a, g'-1 cis-2> ^\markup{"VI"} <a g' cis> <a g' cis> |
+  \once \set fingeringOrientations = #'(up left) <g-4 a-1 d-2> <a, g'-1 cis-2> \barre #5 #6 <a g' cis> <a g' cis> |
   s2. |
 
   % 177
   \override Fingering.add-stem-support = #only-if-beamed
-  fis4 ^\markup{"VII"} fis4.-2 fis8 |
+  fis4 \barre #7 #4 fis4.-2 fis8 |
   \set stringNumberOrientations = #'(down)
   s4 d4.\2-3 d8 |
   <fis'-3 a d>4 s2 |
@@ -1265,7 +1265,7 @@ fingeringVoiceD = {
 
   % 180
   \override TextSpanner.bound-details.left.text = "II"
-  c8-1 b8-0 s8 b'8-4 \rightHandFinger #4 \once \set strokeFingerOrientations = #'(up) <a-4 \rightHandFinger #3 > [ g-4] \startTextSpan |
+  c8-1 b8-0 s8 b'8-4 \rightHandFinger #4 \once \set strokeFingerOrientations = #'(up) <a-4 \rightHandFinger #3 > [ g-4] \barre #2 #4 |
   \override Fingering.direction = 1
   \override Fingering.add-stem-support = ##f
   s4 \stemUp cis8^\3-2 [ a\4\tweak Fingering.extra-offset $'(-1 . -0.5)-3 \rightHandFinger #1 ] \stemNeutral b-0 \rightHandFinger #2 ^[ cis] |
@@ -1273,7 +1273,7 @@ fingeringVoiceD = {
   g4 r8 \once \autoBeamOff \set strokeFingerOrientations = #'(down) <g-0\rightHandFinger #2 >8 fis-2 \rightHandFinger #1 [ e] |
 
   % 181
-  <fis d-2>4 <fis d>4. <fis d>8 \stopTextSpan |
+  <fis d-2>4 \startBarre #2 #3 <fis d>4. <fis d>8 \stopBarre |
   s2. |
   s2. |
   \once \override Stem.details.beamed-lengths = #'(4.2)
@@ -1286,13 +1286,13 @@ fingeringVoiceD = {
   g8-0 [ e-1] a-1 [ g-0] fis-4 [ e-1] |
 
   % 183
-  <a-4 c,-3>8 [ fis-1 ] <b-4 d,-3>  [ <a-4 c,-3> ] <g-2 b,-3> [ <fis a,> ^\markup{"II"} ] |
+  <a-4 c,-3>8 [ fis-1 ] <b-4 d,-3>  [ <a-4 c,-3> ] <g-2 b,-3> [ <fis a,> \barre #2 #3 ] |
   s2.|
   s2. |
   d4 g-1 r4 |
 
   % 184
-  <e-0 g,-0>8 <d-2 fis,-3> cis4. ^\markup{"II"} \trill d8-2 |
+  <e-0 g,-0>8 <d-2 fis,-3> cis4. \barre #2 #4 \trill d8-2 |
   s4 e,2 |
   s2. |
   g,4-4 a2 |
@@ -1317,20 +1317,20 @@ fingeringVoiceD = {
   b4-1 e2\5-4 |
 
   % 188
-  <cis-1 g-0>8 <d-2 fis,-3> d4. cis8 ^\markup{"II"} |
+  <cis-1 g-0>8 <d-2 fis,-3> d4. cis8 |
   s4 e8-1 d-0 e4 |
-  s2. |
+  s2 s8 \startBarre #2 #4 s8 \stopBarre |
   a,4-0 s2 |
 
   % 189
   \override TextSpanner.bound-details.left.text = "II"
-  d4-2  <fis d-3 a>4. \startTextSpan <fis d a>8 |
+  d4-2  <fis d-3 a>4. \startBarre #2 #3 <fis d a>8 |
   s2. |
   d4 s2 |
   d,4 d'4. d8 |
 
   % 190
-  <fis d-3 a>4 <fis d a>4. <fis d a>8 \stopTextSpan |
+  <fis d-3 a>4 <fis d a>4. <fis d a>8 \stopBarre |
   s2. |
   s2. |
   c4-2 c4. c8 |
