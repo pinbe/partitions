@@ -742,7 +742,6 @@ fingeringVoiceD = {
 
   % 104
   d,32 f' \startBarre #3 #4 f'-4 f, d-3 f f' f, \stopBarre
-  \override TextSpanner.bound-details.left.text = "II"
   a,32 \startBarre #2 #4 e' cis' e, a, e' cis' e,
   a,32 e' cis' e, a, e' cis' e, \stopBarre |
   s2. |
@@ -1209,7 +1208,6 @@ fingeringVoiceD = {
   r16 a a a a2 |
 
   % 173
-  \override TextSpanner.bound-details.left.text = "II"
   fis4-1 r16 a,-1 a a b-0 b cis \startBarre #2 #3 cis |
   \once \override Fingering.add-stem-support = ##f
   d4-2 s16 a a a a-1 \set fingeringOrientations = #'(right) <a-1 g-4> <a g> <a g> |
@@ -1224,7 +1222,6 @@ fingeringVoiceD = {
   r16 <d d,> <d d,> <d d,> <d d,>2 |
 
   % 175
-  \override TextSpanner.bound-details.left.text = "VII"
   b4-1 r16 b16 b b cis16-4 d-4 \startBarre #7 #3 d d \stopBarre |
   \override Fingering.add-stem-support = ##f
   g'4-2 s16 g \set fingeringOrientations = #'(left) <g fis-4> <g fis> <g-2 e-3> <fis d> <fis d> <fis d> |
@@ -1232,9 +1229,7 @@ fingeringVoiceD = {
   r16 <d d,> <d d,> <d d,> <d d,>2 |
 
   % 176
-  \override TextSpanner.bound-details.left.text = "VIII"
   \offset Beam.positions #'(1 . 1) g,16 \startBarre #8 #3 g g g \stopBarre
-  \override TextSpanner.bound-details.left.text = "II"
   \offset Beam.positions #'(1 . 1) \override Fingering.add-stem-support = ##f fis16-2 fis \startBarre #2 #3 fis fis \stopBarre
   \offset Beam.positions #'(1 . 1) e-0 e-0 e e |
   s2. |
@@ -1264,7 +1259,6 @@ fingeringVoiceD = {
   b4-4 b8-4 a-2 g fis-4 |
 
   % 180
-  \override TextSpanner.bound-details.left.text = "II"
   c8-1 b8-0 s8 b'8-4 \rightHandFinger #4 \once \set strokeFingerOrientations = #'(up) <a-4 \rightHandFinger #3 > [ g-4] \barre #2 #4 |
   \override Fingering.direction = 1
   \override Fingering.add-stem-support = ##f
@@ -1323,7 +1317,6 @@ fingeringVoiceD = {
   a,4-0 s2 |
 
   % 189
-  \override TextSpanner.bound-details.left.text = "II"
   d4-2  <fis d-3 a>4. \startBarre #2 #3 <fis d a>8 |
   s2. |
   d4 s2 |
@@ -1366,46 +1359,41 @@ fingeringVoiceD = {
   g4-1 gis4.-3 gis8 |
 
   % 196
-  \override TextSpanner.bound-details.left.text = "VII"
-  <cis-4 g-2 e-3>8 \startTextSpan <d-4 fis, d> <d-4 g,-2 e-3>4 \stopTextSpan <cis-4 g-2 e-3> |
+  <cis-4 g-2 e-3>8 \startBarre #7 #4 <d-4 fis, d> <d-4 g,-2 e-3>4 \stopBarre <cis-4 g-2 e-3> |
   s2. |
   s2. |
   a4-1 a4 a, |
 
   % 197
-  \override TextSpanner.bound-details.left.text = "VII"
-  <d-4 fis, d>4 \startTextSpan <d fis, d>4. <d fis, d>8 \stopTextSpan |
+  <d-4 fis, d>4 \startBarre #7 #3 <d fis, d>4. <d fis, d>8 \stopBarre |
   s2. |
   s2. |
   d4-0 d4. d8 |
 
   % 198
-  \override TextSpanner.bound-details.left.text = "VII"
-  <cis-4 g-2 e-3>4 <c-2 fis, d>4. \startTextSpan <c fis, d>8 \stopTextSpan |
+  <cis-4 g-2 e-3>4 <c-2 fis, d>4. \startBarre #7 #3 <c fis, d>8 |
   s2. |
   s2. |
   a'4-1 d,4.-0 d8 |
 
   % 199
-  <b g-2 d>4 ^\markup{"VII"} <e,-0 d-3 b-0>4. <e d b>8 |
+  <b g-2 d>4 \stopBarre <e,-0 d-3 b-0>4. <e d b>8 |
   s2. |
   s2. |
   g4-4 gis4.-1 gis8 |
 
   % 200
-  \override TextSpanner.bound-details.left.text = "II"
-  e8-0 [ fis ] \startTextSpan g-2 \stopTextSpan [ b-4 ] a-4 [ g-2 ^\markup{"II"} ] |
+  e8-0 [ fis-1 ] g-2 \barre #2 #3 [ b-4 ] a-4 [ g-2 \barre #2 #4 ] |
   <d-2 b-3>4 <cis a>4. <cis e,>8 |
   s2. |
   a,4 a4. a8 |
 
   % 201
-  \override TextSpanner.bound-details.left.text = "II"
   \override Fingering.add-stem-support = ##f
   \override Fingering.staff-padding = #'()
   \override Arpeggio.positions = #'(-3.5 . -1.5)
   % \arpeggioParenthesis
-  fis4 \startTextSpan d,16-0 \arpeggio <fis' \rightHandFinger #4 a, \rightHandFinger #2 > <fis a,> d,-0 d \arpeggio <fis' a,> <fis a,> d, \stopTextSpan |
+  fis4 \startBarre #2 #3 d,16-0 \arpeggio <fis' \rightHandFinger #4 a, \rightHandFinger #2 > <fis a,> d,-0 d \arpeggio <fis' a,> <fis a,> d, \stopBarre |
   s2. |
   s2. |
   <d a' d-2>4 \once \mergeDifferentlyDottedOff d8.-4 \once \override NoteColumn.force-hshift = #1 d16-4 cis8.-3 cis16 |
@@ -1420,11 +1408,10 @@ fingeringVoiceD = {
   b8.-1 b16 b8. b16 a8.-0 a16 |
 
   % 203
-  \override TextSpanner.bound-details.left.text = "V"
   \override Arpeggio.positions = #'(-4.5 . -2)
   d16-2 \arpeggio <e'-0 b-0> <e b> d,
   \override Arpeggio.positions = #'(-4.5 . -2)
-  e-3 \arpeggio \startTextSpan <a' \rightHandFinger #4 cis,-2 \rightHandFinger #2 > <a cis,> e, e <e' \rightHandFinger #3 cis-2  \rightHandFinger #2 > <e cis> e, \stopTextSpan |
+  e-3 \arpeggio \startBarre #5 #6 <a' \rightHandFinger #4 cis,-2 \rightHandFinger #2 > <a cis,> e, e <e' \rightHandFinger #3 cis-2  \rightHandFinger #2 > <e cis> e, \stopBarre |
   s2. |
   s2. |
   g8.-1 g16 g8. g16 g8. g16 |
@@ -1441,19 +1428,17 @@ fingeringVoiceD = {
   
 
   % 205
-  \override TextSpanner.bound-details.left.text = "II"
   \override Arpeggio.positions = #'(-2.5 . -0.5)
-  a16-1 \arpeggio <g'-3 d-2> <g d> a, a \startTextSpan <fis' d-2> b,-3 <fis' d>
+  a16-1 \arpeggio <g'-3 d-2> <g d> a, a \startBarre #2 #3 <fis' d-2> b,-3 <fis' d>
   \override Arpeggio.positions = #'(-2.5 . 0.5)
-  c-4 \arpeggio <fis d> <fis d> c \stopTextSpan |
+  c-4 \arpeggio <fis d> <fis d> c \stopBarre |
   s2. |
   s2. |
   d8. d16 d8 d d8. d16 |
 
   % 206
-  \override TextSpanner.bound-details.left.text = "V"
   \override Arpeggio.positions = #'(-4.5 . -2.5)
-  d,16 \arpeggio \startTextSpan <fis'-4 d-3> <fis d> d, \stopTextSpan
+  d,16 \arpeggio \startBarre #5 #6 <fis'-4 d-3> <fis d> d, \stopBarre
   \override Arpeggio.positions = #'(-4.5 . -2)
   e-3 \arpeggio <e'-0 \rightHandFinger #3 b-0 \rightHandFinger #2 > e, <e' \rightHandFinger #4 cis-2 \rightHandFinger #2 > e,-3 \arpeggio <e' \rightHandFinger #4 d-4 \rightHandFinger #2 > <e d> e, |
   s2. |
@@ -1470,7 +1455,7 @@ fingeringVoiceD = {
   a8.-0 a16 a8 a ais8.-1 ais16 |
 
   % 208
-  <b-4 d-2>8 <d-3 b'-4> cis4.-2 \trill d8 \bar "||" |
+  <b-4 d-2>8 \barre #2 #6 <d-3 b'-4> cis4.-2 \barre #2 #4 \trill d8 \bar "||" |
   s2. |
   s2. |
   <b-1 fis'-3>8 <g-1 e'-2> <a e'-1>2 |
