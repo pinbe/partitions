@@ -18,7 +18,7 @@
         license = "Creative Commons Attribution-ShareAlike 3.0"
         %footer = "Mutopia-2019/05/30-1426"
         %copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2019 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
-        tagline = \markup{ \italic \small "Révision des doigtés du 27/10/2024 par Benoît Pin"}
+        tagline = \markup{ \italic \small "Révision des doigtés du 03/12/2024 par Benoît Pin"}
 }
 
 \include "../commons/guitar-helpers.ly"
@@ -838,7 +838,7 @@ fingeringVoiceD = {
 
   % 116
   e,32 \startBarre #6 #3 cis' bes' cis, e, cis' bes' cis, \stopBarre
-  f,32 \startBarre #3 #3 d' a'-4 d, f, d' a' d, \stopBarre
+  f,32 \startBarre #3 #4 d' a'-4 d, f, d' a' d, \stopBarre
   e,32 cis'-2 g'-4 cis, e, cis' g' cis, |
   s2. |
   s2. |
@@ -846,7 +846,7 @@ fingeringVoiceD = {
 
   % 117
   d,32 d'-4 fis-3 d d, d' fis d \breathe
-  a,32 a'-3 <c f> \startBarre #1 #3 a a, a' <c f> a \stopBarre
+  a,32 a'-3 <c f> \startBarre #1 #2 a a, a' <c f> a \stopBarre
   b,32 g'-0 <d'-4 f-1> g, b, g' <d' f> g, |
   s2. |
   s2. |
