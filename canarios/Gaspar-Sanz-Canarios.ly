@@ -3,7 +3,7 @@
 \header {
   title = "Canarios"
   composer = "Gaspar Sanz"
-  tagline = \markup{ \italic \small "Révision des doigtés du 07/04/2025 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 10/04/2025 par Benoît Pin"}
 }
 
 \include "../commons/guitar-helpers.ly"
