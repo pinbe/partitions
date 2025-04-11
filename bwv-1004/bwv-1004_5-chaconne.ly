@@ -1,4 +1,4 @@
-\version "2.24.3"
+\version "2.24.4"
 
 \header {
         title = "Partita II BWV 1004"
@@ -18,7 +18,7 @@
         license = "Creative Commons Attribution-ShareAlike 3.0"
         %footer = "Mutopia-2019/05/30-1426"
         %copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2019 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
-        tagline = \markup{ \italic \small "Révision des doigtés du 03/12/2024 par Benoît Pin"}
+        tagline = \markup{ \italic \small "Révision des doigtés du 11/04/2025 par Benoît Pin"}
 }
 
 \include "../commons/guitar-helpers.ly"
@@ -226,7 +226,7 @@ fingeringVoiceD = {
   d4-4 bes2-1 |
 
   % 28
-  d8-4 [ f,8-1 ] e16-1 _( [ f-2) g-0 bes-3 _( ] a-1) [ g f e ] |
+  d8-4 [ f,8-1 ] e16-1 _( [ f-2) g-0 bes-3 _( ] a-1) [ g f-3 e-2 ] |
   s2. |
   s2. |
   s8 g8-3 a2 |
@@ -328,13 +328,13 @@ fingeringVoiceD = {
   a4 a a |
 
   % 45
-  g'16-4 _( e-0) f-1 cis-2 d-4 _( c-1) bes-4 _( a-2) g-0 f-2 _( e-1) d-0 |
+  g'16-4 _( e-0) f-1 cis-2 d-4 _( c-1) bes-3 _( a-2) g-0 f-2 _( e-1) d-0 |
   s2. |
   s2. |
   d,4 d'4 r4 |
 
   % 46
-  cis16-3  bes'-2 _( a-1) g-0 fis-3 ( d-0) a'-1 d,-0 c-3 bes-1 _( c) a |
+  cis16-3  bes'-2 _( a-1) g-0 fis-3 ( d-0) a'-1 d,-0 c-3 _( bes-1 ) c _( a ) |
   s2. |
   s2. |
   cis4 d4-4 r4 |
@@ -352,19 +352,19 @@ fingeringVoiceD = {
   s2. |
 
   % 49
-  d16-0 d'-4 a-2 g-0 f-3 e-2 d-0 c-3 bes-1 d'-4 g,-0 f-4 |
+  d16-0 d'-4 a-1 g-0 f-2 e-1 d-0 c-3 bes-1 d'-4 g,-0 f-4 |
   s2. |
   s2. |
   d,2 bes'4 |
 
   % 50
-  e16-2 c'-1 g-0 f-4 e-2 d-0 c-3 bes-1 a c'-2 f,-4 es-2 |
+  e16-2 c'-1 g-0 f-4 e-2 d-0 c-4 bes-1 a c'-2 f,-4 es-2 |
   s2. |
   s2. |
   c2-3 a4-0 |
 
   % 51
-  d16-0 bes'-4 f-3 ees-1 d-0 c-3 bes-1 a-0 g bes'-2 e,-1 d-0 |
+  d16-0 bes'-4 f-3 ees-1 d-0 c-3 bes-1 a-0 g bes'-2 e,-1 _( d-0 ) |
   s2. |
   s2. |
   bes2-1 g4-4 |
@@ -468,7 +468,7 @@ fingeringVoiceD = {
   s2. |
 
   % 65
-  d16-4 a32-1 _( g-0) f16-2 e-1 d-0 c-3 _( bes-1) a-0 bes-1 d'32\3-4 _( c\glide-2) bes-2 _( a -1) g\4-4 _( f-2) ] |
+  d16-4 a32-1 _( g-0) f16-2 e-1 d-0 c-3 bes-1 a-0 bes-1 d'32\3-4 _( c\glide-2) bes-2 _( a -1) g\4-4 _( f-2) ] |
   s2. |
   s2. |
   d4 s2 |
@@ -558,7 +558,7 @@ fingeringVoiceD = {
   bes4-1 r bes |
 
   % 80
-  a,16 d-0 f-3 a-2 d-4 a f d a e'-1 g-0 cis-2 |
+  a,16 d-0 _( f-3 ) a-2 d-4 a f d a e'-1 g-0 cis-2 |
   s2. |
   s2. |
   a4 r a |
@@ -1560,7 +1560,7 @@ fingeringVoiceD = {
   s2. |
 
   % 225
-  d16-0 a'-1 _( b-3 ) cis-1 d-2 f\2-2 _( g-4 ) a-1 bes16-2 g,32\4-4 _( f-2 ) e-1 _( f-2 ) g16 |
+  d16-0 a'-1 _( b-3 ) cis-1 d-2 \glide f\2-2 _( g-4 ) a-1 bes16-2 g,32\4-4 _( f-2 ) e-1 _( f-2 ) g16 |
   s2. |
   s2. |
   s2. |
@@ -1576,7 +1576,7 @@ fingeringVoiceD = {
   bes,16 d''32-4 _( c-2 ) bes-1 _( c ) d16 g,\2-1 bes32-4 _( a-3 ) g-1 _( a ) bes16 e,16-0 g32-3 _( f-1 ) e _( f ) g16 |
   s2. |
   s2. |
-  bes'4-1 s2 |
+  bes'4-1_\6 s2 |
 
   % 228
   cis,16-1 e32-4 _( d-2 ) cis-1 _( d ) e _( cis ) g16-0 bes32-2 _( a-1 ) g-0 _( a ) bes _( g ) e-1 _( d-0 ) cis-3 _( d-4 ) e-1 _( f ) g-4 _( e ) |
