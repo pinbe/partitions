@@ -18,7 +18,7 @@
         license = "Creative Commons Attribution-ShareAlike 3.0"
         %footer = "Mutopia-2019/05/30-1426"
         %copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2019 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
-        tagline = \markup{ \italic \small "Révision des doigtés du 11/04/2025 par Benoît Pin"}
+        tagline = \markup{ \italic \small "Révision des doigtés du 16/04/2025 par Benoît Pin"}
 }
 
 \include "../commons/guitar-helpers.ly"
@@ -95,7 +95,7 @@ fingeringVoiceD = {
   <d a' d>4 <bes f'>2 |
 
   % 8
-  bes'4-2 a8.-4 \barre #2 #6  [ g32-4 _( f-1) ] g8. [ e16-0 ] |
+  bes'4-2 a8.-4 \barre #2 #4  [ g32-4 _( f-1) ] g8. [ e16-0 ] |
   s2. |
   s2. |
   <g e'-3 d'-4>4-1 <a e' cis'>2 |
@@ -125,13 +125,8 @@ fingeringVoiceD = {
   % 12
   d4-2 cis4.. \startBarre #2 #4 s16 \stopBarre |
   e8.-1 ^[ d16-0 ]
-  %\override Fingering.side-axis = #X
-  %\override Fingering.direction = #LEFT
-  %\override Fingering.extra-offset = #'()
-  %\override Fingering.self-alignment-X = -1
-  %\override Fingering.self-alignment-Y = 0
   \shiftOn
-  e8. ^[ g16-4 ] f8.-2 <e cis' a'-4>16 |
+  e8. ^[ g16-4 ] f8.-2 <e cis' a'\tweak Fingering.extra-offset #'()-4>16 |
   s2.|
   a4 a4.. a16 |
 
@@ -498,7 +493,7 @@ fingeringVoiceD = {
   d4 s2 |
 
   % 70
-  e,16-0 [ c,32-2 _( d-4) e16-1 g-0 ] e [ c e g ] a32-2 [ _( bes-3) c-1 _( d\glide-3) e-3 _( f-4) g-1 _( a-3) ] |
+  e,16-1\2 [ c,32-2 _( d-4) e16-1 g-0 ] e [ c e g ] a32-2 [ _( bes-3) c-1 _( d\glide-3) e-3 _( f-4) g-1 _( a-3) ] |
   s2. |
   s2. |
   s2. |
@@ -612,14 +607,14 @@ fingeringVoiceD = {
   s2. |
 
   % 89
-  f32\5-2 d-0 \rightHandFinger #2 a''\2-4 \rightHandFinger #4 d,, \rightHandFinger #2 f32 \rightHandFinger #1 d \rightHandFinger #2 a'' \rightHandFinger #4 d,, \rightHandFinger #2
+  f32\5-2 d-0 \RH #2 a''\2-4 \RH #4 d,, \RH #2 f32 \RH #1 d \RH #2 a'' \RH #4 d,, \RH #2
   f32 d a'' d,, f32 d a'' d,,
   f32 d a'' d,, f32 d a'' d,, |
   s2. |
   \once \override Arpeggio.positions = #'(-6 . -1.5)
   \arpeggioParenthesis
   \set strokeFingerOrientations = #'(left)
-  d,4 \arpeggio \rightHandFinger #1 s2 |
+  d,4 \arpeggio \RH #1 s2 |
   f'8 [ f] f [ f] f [ f] |
 
   % 90
@@ -663,7 +658,7 @@ fingeringVoiceD = {
   s2. |
   \once \override Arpeggio.positions = #'(-6 . -3)
   \arpeggioParenthesis
-  d4 \arpeggio \rightHandFinger #1 s2 |
+  d4 \arpeggio \RH #1 s2 |
   c8 [ c] bes-1 [ bes] a [ a] |
 
   % 95
@@ -673,7 +668,7 @@ fingeringVoiceD = {
   s2. |
   \once \override Arpeggio.positions = #'(-6 . -3.5)
   \arpeggioParenthesis
-  d4 \arpeggio \rightHandFinger #1 s2 |
+  d4 \arpeggio \RH #1 s2 |
   bes8 [ bes] a [ a] g [ g] |
 
   % 96
@@ -993,12 +988,12 @@ fingeringVoiceD = {
 
   % 140
   \set strokeFingerOrientations = #'(up)
-  cis'8-1 \rightHandFinger #3 d-2 \rightHandFinger #4 \set strokeFingerOrientations = #'(right) e,4.-1 \rightHandFinger #2 a8-1 |
+  cis'8-1 \RH #3 d-2 \RH #4 \set strokeFingerOrientations = #'(right) e,4.-1 \RH #2 a8-1 |
   s2. |
   \set strokeFingerOrientations = #'(down)
-  g'8-0 \rightHandFinger #2 [ fis-3 \rightHandFinger #2 ] s2 |
+  g'8-0 \RH #2 [ fis-3 \RH #2 ] s2 |
   \set strokeFingerOrientations = #'(down)
-  \shiftOnn a4 \rightHandFinger #1 \shiftOff a \rightHandFinger #1 a \rightHandFinger #1 |
+  \shiftOnn a4 \RH #1 \shiftOff a \RH #1 a \RH #1 |
 
   % 141
   fis8-3 [ e-1] d-0 [ e-1] fis-3 [ gis-1] |
@@ -1152,7 +1147,7 @@ fingeringVoiceD = {
   a'4 r2 |
 
   % 165
-  fis16-3 d-4 a' \startBarre #2 #6 a a fis d fis a d-2 fis b,, |
+  fis16-3 d-4 a' \startBarre #2 #3 a a fis d fis a d-2 fis \stopBarre b,, \startBarre #2 #6 |
   s2. |
   s2. |
   d,4 r2 |
@@ -1259,12 +1254,12 @@ fingeringVoiceD = {
   b4-4 b8-4 a-2 g fis-4 |
 
   % 180
-  c8-1 b8-0 s8 b'8-4 \rightHandFinger #4 \once \set strokeFingerOrientations = #'(up) <a-4 \rightHandFinger #3 > [ g-4] \barre #2 #4 |
+  c8-1 b8-0 s8 b'8-4 \RH #4 \once \set strokeFingerOrientations = #'(up) <a-4 \RH #3 > [ g-4] \barre #2 #4 |
   \override Fingering.direction = 1
   \override Fingering.add-stem-support = ##f
-  s4 \stemUp cis8^\3-2 [ a\4\tweak Fingering.extra-offset $'(-1 . -0.5)-3 \rightHandFinger #1 ] \stemNeutral b-0 \rightHandFinger #2 ^[ cis] |
+  s4 \stemUp cis8^\3-2 [ a\4\tweak Fingering.extra-offset $'(-1 . -0.5)-3 \RH #1 ] \stemNeutral b-0 \RH #2 ^[ cis] |
   s2. |
-  g4 r8 \once \autoBeamOff \set strokeFingerOrientations = #'(down) <g-0\rightHandFinger #2 >8 fis-2 \rightHandFinger #1 [ e] |
+  g4 r8 \once \autoBeamOff \set strokeFingerOrientations = #'(down) <g-0\RH #2 >8 fis-2 \RH #1 [ e] |
 
   % 181
   <fis d-2>4 \startBarre #2 #3 <fis d>4. <fis d>8 \stopBarre |
@@ -1335,15 +1330,15 @@ fingeringVoiceD = {
   b4-1 cis4.-3 cis8 |
 
   % 192
-  e8-0 [ \set strokeFingerOrientations = #'(up) d-2 \rightHandFinger #3 ]  d4. cis8-1 \rightHandFinger #3 |
+  e8-0 [ \set strokeFingerOrientations = #'(up) d-2 \RH #3 ]  d4. cis8-1 \RH #3 |
   <a-1 fis-3>4 s2 |
-  s4 \override Fingering.extra-offset = #'(-1.25 . 1.5) \stemUp e8-1 [ \set strokeFingerOrientations = #'(down) fis-3 \rightHandFinger #3 ] \stemNeutral g4-4 \rightHandFinger #2 |
+  s4 \override Fingering.extra-offset = #'(-1.25 . 1.5) \stemUp e8-1 [ \set strokeFingerOrientations = #'(down) fis-3 \RH #3 ] \stemNeutral g4-4 \RH #2 |
   d4-4 a2  |
 
   % 193
   d4-2 <fis-2 d-3 a-1>4. <fis d a>8 |
   s2. |
-  \shiftOn fis8-3 e-1 \rightHandFinger #2 s2 |
+  \shiftOn fis8-3 e-1 \RH #2 s2 |
   d,4 d'4. d8 |
 
   % 194
@@ -1393,14 +1388,14 @@ fingeringVoiceD = {
   \override Fingering.staff-padding = #'()
   \override Arpeggio.positions = #'(-3.5 . -1.5)
   % \arpeggioParenthesis
-  fis4 \startBarre #2 #3 d,16-0 \arpeggio <fis' \rightHandFinger #4 a, \rightHandFinger #2 > <fis a,> d,-0 d \arpeggio <fis' a,> <fis a,> d, \stopBarre |
+  fis4 \startBarre #2 #3 d,16-0 \arpeggio <fis' \RH #4 a, \RH #2 > <fis a,> d,-0 d \arpeggio <fis' a,> <fis a,> d, \stopBarre |
   s2. |
   s2. |
   <d a' d-2>4 \once \mergeDifferentlyDottedOff d8.-4 \once \override NoteColumn.force-hshift = #1 d16-4 cis8.-3 cis16 |
 
   % 202
   \override Arpeggio.positions = #'(-3.5 . -2)
-  d16-0 \arpeggio <fis'-2 \rightHandFinger #3 b,-0 \rightHandFinger #2 > <fis b,> d, d <fis' b,> <fis b,> d,
+  d16-0 \arpeggio <fis'-2 \RH #3 b,-0 \RH #2 > <fis b,> d, d <fis' b,> <fis b,> d,
   \override Arpeggio.positions = #'(-4 . -2)
   d \arpeggio <fis' b,> <fis b,> d,  |
   s2. |
@@ -1411,14 +1406,14 @@ fingeringVoiceD = {
   \override Arpeggio.positions = #'(-4.5 . -2)
   d16-2 \arpeggio <e'-0 b-0> <e b> d,
   \override Arpeggio.positions = #'(-4.5 . -2)
-  e-3 \arpeggio \startBarre #5 #6 <a' \rightHandFinger #4 cis,-2 \rightHandFinger #2 > <a cis,> e, e <e' \rightHandFinger #3 cis-2  \rightHandFinger #2 > <e cis> e, \stopBarre |
+  e-3 \arpeggio \startBarre #5 #6 <a' \RH #4 cis,-2 \RH #2 > <a cis,> e, e <e' \RH #3 cis-2  \RH #2 > <e cis> e, \stopBarre |
   s2. |
   s2. |
   g8.-1 g16 g8. g16 g8. g16 |
 
   % 204
   \override Arpeggio.positions = #'(-4.5 . -2)
-  e16-2 \arpeggio <b''-4 \rightHandFinger #4 d,-3 \rightHandFinger #2 > <b d,> e,, 
+  e16-2 \arpeggio <b''-4 \RH #4 d,-3 \RH #2 > <b d,> e,, 
   \override Arpeggio.positions = #'(-4 . -2)
   e-1 \arpeggio <e'-0 d-3> <fis-2 d> e, e <g'-4 cis,-2> <g cis,> e, |
   s2. |
@@ -1440,7 +1435,7 @@ fingeringVoiceD = {
   \override Arpeggio.positions = #'(-4.5 . -2.5)
   d,16 \arpeggio \startBarre #5 #6 <fis'-4 d-3> <fis d> d, \stopBarre
   \override Arpeggio.positions = #'(-4.5 . -2)
-  e-3 \arpeggio <e'-0 \rightHandFinger #3 b-0 \rightHandFinger #2 > e, <e' \rightHandFinger #4 cis-2 \rightHandFinger #2 > e,-3 \arpeggio <e' \rightHandFinger #4 d-4 \rightHandFinger #2 > <e d> e, |
+  e-3 \arpeggio <e'-0 \RH #3 b-0 \RH #2 > e, <e' \RH #4 cis-2 \RH #2 > e,-3 \arpeggio <e' \RH #4 d-4 \RH #2 > <e d> e, |
   s2. |
   s2. |
   g,8. g16 g8-1 g gis8.-1 gis16  |
@@ -1449,10 +1444,10 @@ fingeringVoiceD = {
   \override Arpeggio.positions = #'(-4 . -2)
   e16-1 \arpeggio <e'-0 d-3> <e d> e, e <e'-0 cis-2>
   \override Arpeggio.positions = #'(-4 . -1.5)
-  fis,-4 \arpeggio <e' cis> g,-0 <e' cis> <e cis> g, |
+  fis,-4 \arpeggio <e' cis> g,-0 \RH #2 <e' cis> <e cis> g, |
   s2. |
   s2. |
-  a8.-0 a16 a8 a ais8.-1 ais16 |
+  a8.-0 a16 a8 a ais8.-1 \RH #1 ais16 |
 
   % 208
   <b-4 d-2>8 \barre #2 #6 <d-3 b'-4> cis4.-2 \barre #2 #4 \trill d8 \bar "||" |
@@ -1639,8 +1634,8 @@ fingeringVoiceD = {
   % 237
   s16 [ a s a s a s a s a s a ]|
   s2. |
-  <f \rightHandFinger #2 d' \rightHandFinger #3 >16 \barre #3 #4 [ s <d-0 c'-3> s <g-3 bes> \startBarre #3 #4 s <f bes> \stopBarre s <e-1 bes'-2>16 s <d-0 bes'-2> s ] |
-  d4 \rightHandFinger #1 s2 |
+  <f \RH #2 d' \RH #3 >16 \barre #3 #4 [ s <d-0 c'-3> s <g-3 bes> \startBarre #3 #4 s <f bes> \stopBarre s <e-1 bes'-2>16 s <d-0 bes'-2> s ] |
+  d4 \RH #1 s2 |
 
 
   % 238
@@ -1672,7 +1667,7 @@ fingeringVoiceD = {
     %\override TupletBracket.bracket-slur = ##f
     %\override TupletBracket.bracket-visibility = ##f
     f-2 [  a-1 d-3 ]
-    a-2 [ d-4 f-1 ]
+    a-2 [ d-3 f-1 ]
     bes, \startBarre #3 #3 [ d g \stopBarre ]
     \override Stem.details.beamed-lengths = #'(6.0)
     g, \startBarre #5 #4 [ d'-3 bes'-2 ] } |
