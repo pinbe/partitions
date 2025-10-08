@@ -3,7 +3,7 @@
 \header {
   title = "Mazurka-chôro"
   composer = "Heitor Villa-Lobos (1887-1959)"
-  tagline = \markup{ \italic \small "Révision des doigtés du 10/10/2024 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 08/10/2025 par Benoît Pin"}
   %{
   sources:
   https://youtu.be/7cmL6WpDSHY
@@ -22,6 +22,7 @@
   \repeat volta 2 {
     %1
     e4. a8-4^\2 c-1 e-4 |
+    %\override NoteHead.font-size = #-2
     g4\rest <c-3_\4 e-2^\3> <c e> |
     a,2. |
     
@@ -36,7 +37,7 @@
     e2. |
     
     %4
-    <e,-3 c'-2>4. \startBarre #7 #3 b'8 \stopBarre <c, a'>4 \barre #5 #3 |
+    <e,-3 c'-2>4. \startBarre #7 #3 <d b'>8 \stopBarre <c a'>4 \barre #5 #3 |
     g,4\rest <e' fis> e |
     a2.|
     
@@ -60,7 +61,7 @@
       \volta 1 {
         %8
         a2 e'4 |
-        <c-2 e>4 \startBarre #2 #6 <c e> \stopBarre e\rest |
+        \shiftOn <c-2 e>4 \startBarre #2 #6 <c e> \stopBarre e\rest |
         a2-4 e4\rest |
       }
       \volta 2 {
@@ -73,13 +74,13 @@
   }
   \repeat volta 2 {
     %10
-    a8-4 \startBarre #3 #6 g b,-2d f-4\2 a-3 |
-    <b'-2 d>4 f b8-2 f'-4 |
+    a8-4 \startBarre #3 #6 g b, d f-4\2 a-3 |
+    <b'-2 d>4 f b8 f'-4 |
     g2.|
     
     %11
     a4-3 g g \stopBarre |
-    f8-4\glissando e-4 <c-3 e-4>4 <c e> |
+    f8\glissando e-4 <c-3 e>4 <c e> |
     c2. |
     
     %12
@@ -117,19 +118,325 @@
       }
       \volta 2 {
         %18
-        e2-0 d4 |
-        g4 <f g b> <f g>|
-        g2 g4 |
+        e2-0 d4-4 |
+        \shiftOn g4-0 <f-3 g b> <f g>|
+        g2-2 b4-1 |
         
         %19
-        c4 c'2-4 |
-        <f g>4 <g-0 e'-1>2 |
-        c4 c2-3_\6 |
+        c4-1 c'2-4 |
+        <e-2 g>4 <g-0 e'-1>2 |
+        c4-3 c2-3_\6 |
       }
     }
   }
   
+  \repeat volta 2 {
+    %20
+    \set Timing.beamExceptions =
+      \beamExceptions {
+        4. 8 [ 8 8 ]
+      }
+    e,4. a8-4^\2 c-1 e-4 |
+    g4\rest <c-3_\4 e-2^\3> <c e> |
+    a2. |
+    
+    %21
+    b2.-4 |
+    b4\rest <gis-1 d'-3 f-2> <gis d' f> |
+    a2. |
+    
+    %22
+    e,4.-0 gis8-1 b\glide-4 d-4 |
+    g4\rest <d'-3_\3 e-2^\2> <d e>8 f-3 |
+    e2. |
+    
+    %23
+    <e,-3 c'-2>4. \startBarre #7 #3 <d b'>8 \stopBarre <c a'>4 \barre #5 #3 |
+    g,4\rest <e' fis> e |
+    a2.|
+    
+    %24
+    e4. a8-4^\2 c-1 e-4 |
+    g,4\rest <c-3_\4 e-2^\3> <c e> |
+    a2. |
+    
+    %25
+    f,4.-1 a8\glide-4 g-4 f |
+    a4\rest <bes-2 d-3> a\rest |
+    d2. |
+    
+    %26
+    \set Timing.beamExceptions = #'()
+    \grace{f16-1 _( g-4} f8-1 ) e d-4  c-1 b gis |
+    f4\rest f8-3 e-2 <d gis-1>4 |
+    e,2. |
 
+    %27
+    a2 e'4 |
+    <c-2 e>4 \startBarre #2 #6 <c e> \stopBarre e\rest |
+    a2-4 e4\rest |
+    
+  }
+  
+  \key a \major
+  \repeat volta 2 {
+    %28
+    \set Timing.beamExceptions =
+      \beamExceptions {
+        4. 8 [ 8 8 ]
+      }
+    e4.-0 cis'8-4 b-3 a-1 |
+    <a-3 cis-2 e-1>4 <a cis e> b\rest |
+    a2.-0 |
+    
+    %29
+    e2.-0 |
+    \set fingeringOrientations = #'(up down)
+    g4\rest <cis\glide-2_\3 e\glide-1^\2>  <b\glide-2 d-1> |
+    a2. |
+    
+    %30
+    cis4. \startBarre #2 #6 g'8-3 fis e-4 |
+    \set fingeringOrientations = #'(left)
+    <e, ais-2>4 <e ais> <e ais cis> |
+    fis2. |
+    
+    %31
+    e4 d-2 \stopBarre f,-2->  |
+    g4\rest <fis-3 b-4> c'\rest |
+    b2 a4 |
+    
+    %32
+    e'4. d'8-4 b-1 gis-3\2 |
+    \shiftOn <e,-1 \accent b'>4 <e b'> g\rest |
+    gis2.-3 |
+    
+    %33
+    e4.-0 b'8 \barre #7 #3 gis-4 e-0 |
+    g4\rest <b-3_\4 d-1> g4\rest |
+    e2. |
+    
+    %34
+    d4.-1 gis8-1 fis-4 ^\markup{"rall."} \startStringSpan #2 e-2 |
+    g4\rest <gis-4 b-2> g\rest |
+    e2. |
+    
+    %35
+    bis2-1 \stopStringSpan cis4 \barre #2 #4 |
+    e4\rest <fis-4 a-2> <e a> |
+    a2. |
+    
+    %36
+    e4.-0 cis'8-4 b-3 a-1 |
+    <a-3 cis-2 e-1>4 <a cis e> b\rest |
+    a2.-0 |
+
+    %37
+    e2.-0 |
+    g4\rest <cis-2_\3 e-1^\2> <b-2 d-1> |
+    a2. |
+
+    %38
+    cis4. \startBarre #2 #6 g'8-3 fis e-4 |
+    <e, ais-2>4 <e ais> <e ais cis> |
+    fis2. |
+    
+    %39
+    e4 d-2 fis \stopBarre |
+    g4\rest <fis-3 b-4> <b d> |
+    b2. |
+
+    %40
+    b4.-4 a8-1 gis-1 fis-4 \startStringSpan #2 |
+    b4\rest <d-2 fis-3> <bis-2 fis'> |
+    d2. |
+    
+    %41
+    \set Timing.beamExceptions =
+      \beamExceptions {
+        8 [ 8 ] 8 [ 8 ] 8 [ 8 ]
+      }
+
+    a8-4 e-1 e e \stopStringSpan d-4\3 cis |
+    g4\rest <a-3_\4 cis-2> e\rest |
+    e,2. |
+    
+    %42
+    fis4 \barre #7 #3 fis8 gis-3 cis-4 \glissando \fermata b \fermata |
+    \shiftOff d'4 d <e-2 gis>8 \glissando <d fis> |
+    e2 e4 |
+    
+    %43
+    \alternative {
+      \volta 1 {
+        a2 \barre #5 #2 e4 |
+        <a-3 cis-2 e>4 <a cis e-1> <a cis e> |
+        a2.|
+      }
+      \volta 2 {
+        a4 \barre #5 #2
+        \once \override NoteHead.style = #'harmonic-mixed a2
+        ^\markup {\italic \fontsize #-2 "har. 7"} |
+        <a-3 cis-2 e>4 e2\rest |
+        a4 \once \override NoteHead.style = #'harmonic-mixed a''2_\4 |
+      }
+    }
+  }
+  \repeat volta 2 {
+    %45
+    \key c \major
+    \set Timing.beamExceptions =
+      \beamExceptions {
+        4. 8 [ 8 8 ]
+      }
+    
+    e4. a8-4^\2 c-1 e-4 |
+    %\override NoteHead.font-size = #-2
+    g4\rest <c-3_\4 e-2^\3> <c e> |
+    a,,2. |
+    
+    %2
+    b2.-4 |
+    b4\rest <gis-1 d'-3 f-2> <gis d' f> |
+    a2. |
+    
+    %3
+    e,4.-0 gis8-1 b\glide-4 d-4 |
+    g4\rest <d'-3_\3 e-2^\2> <d e>8 f-3 |
+    e2. |
+    
+    %4
+    <e,-3 c'-2>4. \startBarre #7 #3 <d b'>8 \stopBarre <c a'>4 \barre #5 #3 |
+    g,4\rest <e' fis> e |
+    a2.|
+    
+    %5
+    e4. a8-4^\2 c-1 e-4 |
+    g,4\rest <c-3_\4 e-2^\3> <c e> |
+    a2. |
+    
+    %6
+    f,4.-1 a8\glide-4 g-4 f |
+    a4\rest <bes-2 d-3> a\rest |
+    d2. |
+    
+    %7
+    \set Timing.beamExceptions = #'()
+    \set Timing.beatStructure = 1,1,1
+    \grace{f16-1 _( g-4} f8-1 ) e d-4  c-1 b gis |
+    f4\rest f8-3 e-2 <d gis-1>4 |
+    e,2. |
+    
+    \alternative {
+      \volta 1 {
+        %8
+        a2 e'4 |
+        \shiftOn <c-2 e>4 \startBarre #2 #6 <c e> \stopBarre e\rest |
+        a2-4 e4\rest |
+      }
+      \volta 2 {
+        %9
+        a,4 a' b,\rest |
+        <c e>4 <c' e> s |
+        a4 \f s2 |
+      }
+    }
+  }
+  \set Timing.beamExceptions = #'()
+  \set Timing.beatStructure = #'()
+  
+  \tuplet 3/2 4 {
+    \override TupletBracket.bracket-visibility = ##t
+    e'8-4 b-3 f-1
+    \omit TupletBracket
+    \omit TupletNumber
+    d'-4 a-3 e-1
+    e'-4 b-3 f-1
+  } |
+  s2. |
+  a2. |
+  
+  \tuplet 3/2 4 {
+    f'8-4 c-3 g-2
+    e' b f
+    d' a e
+  } |
+  s2. |
+  d2. |
+  
+  \tuplet 3/2 4 {
+    e'8 b f
+    d' a e
+    e' b f
+  } |
+  s2. |
+  a2. |
+  
+  \tuplet 3/2 4 {
+    f'8 c g
+    e' b f
+    d' a e
+  } |
+  s2. |
+  d2. |
+
+  \tuplet 3/2 4 {
+    e'8 b f
+    d' a e
+    c'-4 g-3 d-1
+  } |
+  s2. |
+  a2. |
+  
+  \tuplet 3/2 4 {
+    b'8 f c
+    a' e b
+    g' d a
+  } |
+  s2. |
+  d2. |
+  
+  \tuplet 3/2 4 {
+    f'8-2 c-1 g-0
+    e'-4 b f
+    d'-4 a e
+  } |
+  s2. |
+  a2. |
+
+  \tuplet 3/2 4 {
+    c'8 \barre #1 #6 gis e
+    b'-3 fis-2 d-4
+    a'-1 f-3 c-2
+  } |
+  s2. |
+  e2. |
+
+  \tuplet 3/2 4 {
+    gis'8-1 \mf \< e b
+    g'-0 ^\markup{\italic "rall."} e c-4
+    gis' e b \!
+  } |
+  s2. |
+  e2. |
+  
+  f''4\rest b,8 e
+  \stemDown
+  \override NoteHead.style = #'harmonic-mixed
+  e''\1 ^\markup {\italic \fontsize #-2 "har. 5"} b\2 |
+  s2. |
+  <f b d a'>2. |
+
+  e,8\1 ^\markup {\italic \fontsize #-2 "har. 12"} b\2
+  \stemUp
+  \revert NoteHead.style e, b e, b |
+  s2. |
+  s2. |
+  
+  a'4 <e a c e a> r |
+  s2. |
+  a4 \ff a4 r \bar "|."
+  
 }
 
 zique = {
