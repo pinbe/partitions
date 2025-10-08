@@ -185,7 +185,7 @@
       \beamExceptions {
         4. 8 [ 8 8 ]
       }
-    e4.-0 cis'8-4 b-3 a-1 |
+    e4.-0 ^\markup{\italic "meno"} cis'8-4 b-3 a-1 |
     <a-3 cis-2 e-1>4 <a cis e> b\rest |
     a2.-0 |
     
@@ -217,7 +217,7 @@
     e2. |
     
     %34
-    d4.-1 gis8-1 fis-4 ^\markup{"rall."} \startStringSpan #2 e-2 |
+    d4.-1 gis8-1 fis-4 ^\markup{\italic "rall."} \startStringSpan #2 e-2 |
     g4\rest <gis-4 b-2> g\rest |
     e2. |
     
@@ -227,17 +227,19 @@
     a2. |
     
     %36
-    e4.-0 cis'8-4 b-3 a-1 |
+    e4.-0 ^\markup{\italic "a tempo"} cis'8-4 b-3 a-1 |
     <a-3 cis-2 e-1>4 <a cis e> b\rest |
     a2.-0 |
 
     %37
     e2.-0 |
-    g4\rest <cis-2_\3 e-1^\2> <b-2 d-1> |
+    \set fingeringOrientations = #'(up down)
+    g4\rest <cis\glide-2_\3 e\glide-1^\2>  <b\glide-2 d-1> |
     a2. |
 
     %38
     cis4. \startBarre #2 #6 g'8-3 fis e-4 |
+    \set fingeringOrientations = #'(left)
     <e, ais-2>4 <e ais> <e ais cis> |
     fis2. |
     
@@ -247,7 +249,7 @@
     b2. |
 
     %40
-    b4.-4 a8-1 gis-1 fis-4 \startStringSpan #2 |
+    b4.-4 a8-1 gis-1 ^\markup{\italic "rit."} fis-4 \startStringSpan #2 |
     b4\rest <d-2 fis-3> <bis-2 fis'> |
     d2. |
     
@@ -257,7 +259,7 @@
         8 [ 8 ] 8 [ 8 ] 8 [ 8 ]
       }
 
-    a8-4 e-1 e e \stopStringSpan d-4\3 cis |
+    a8-4 ^\markup{\italic "a tempo"} e-1 e e \stopStringSpan d-4\3 cis |
     g4\rest <a-3_\4 cis-2> e\rest |
     e,2. |
     
@@ -269,7 +271,7 @@
     %43
     \alternative {
       \volta 1 {
-        a2 \barre #5 #2 e4 |
+        a2 \startBarre #5 #2 e4 \stopBarre |
         <a-3 cis-2 e>4 <a cis e-1> <a cis e> |
         a2.|
       }
@@ -290,7 +292,7 @@
         4. 8 [ 8 8 ]
       }
     
-    e4. a8-4^\2 c-1 e-4 |
+    e4. ^\markup{\italic "tempo 1°"} a8-4^\2 c-1 e-4 |
     %\override NoteHead.font-size = #-2
     g4\rest <c-3_\4 e-2^\3> <c e> |
     a,,2. |
@@ -347,7 +349,7 @@
   
   \tuplet 3/2 4 {
     \override TupletBracket.bracket-visibility = ##t
-    e'8-4 b-3 f-1
+    e'8-4 ^\markup{\italic "a tempo (final)"} b-3 f-1
     \omit TupletBracket
     \omit TupletNumber
     d'-4 a-3 e-1
@@ -358,8 +360,8 @@
   
   \tuplet 3/2 4 {
     f'8-4 c-3 g-2
-    e' b f
-    d' a e
+    e'-4 b-3 f-1
+    d'-4 a-3 e-1
   } |
   s2. |
   d2. |
@@ -381,31 +383,31 @@
   d2. |
 
   \tuplet 3/2 4 {
-    e'8 b f
-    d' a e
+    e'8-4 b-3 f-1
+    d'-4 a-3 e-1
     c'-4 g-3 d-1
   } |
   s2. |
   a2. |
   
   \tuplet 3/2 4 {
-    b'8 f c
-    a' e b
-    g' d a
+    b'8-4 f-2 c-1
+    a'-4 e-3 b-1
+    g'-4 d-3 a-1
   } |
   s2. |
   d2. |
   
   \tuplet 3/2 4 {
     f'8-2 c-1 g-0
-    e'-4 b f
-    d'-4 a e
+    e'-4 b-3 f-2
+    d'-4 a-2 e-1
   } |
   s2. |
   a2. |
 
   \tuplet 3/2 4 {
-    c'8 \barre #1 #6 gis e
+    c'8 \startBarre #1 #3 gis e-2 \stopBarre
     b'-3 fis-2 d-4
     a'-1 f-3 c-2
   } |
@@ -413,7 +415,7 @@
   e2. |
 
   \tuplet 3/2 4 {
-    gis'8-1 \mf \< e b
+    gis'8-1 \mf \< e-3 b-2
     g'-0 ^\markup{\italic "rall."} e c-4
     gis' e b \!
   } |
@@ -425,7 +427,7 @@
   \override NoteHead.style = #'harmonic-mixed
   e''\1 ^\markup {\italic \fontsize #-2 "har. 5"} b\2 |
   s2. |
-  <f b d a'>2. |
+  <f-1 b-2 d-0 a'-3>2. %{\laissezVibrer %} |
 
   e,8\1 ^\markup {\italic \fontsize #-2 "har. 12"} b\2
   \stemUp
@@ -433,7 +435,7 @@
   s2. |
   s2. |
   
-  a'4 <e a c e a> r |
+  a'4-2 <e-3 a-4 c e a> \barre 5 6 r |
   s2. |
   a4 \ff a4 r \bar "|."
   
