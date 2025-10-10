@@ -3,7 +3,7 @@
 \header {
   title = "Mazurka-chôro"
   composer = "Heitor Villa-Lobos (1887-1959)"
-  tagline = \markup{ \italic \small "Révision des doigtés du 08/10/2025 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 10/10/2025 par Benoît Pin"}
   %{
   sources:
   https://youtu.be/7cmL6WpDSHY
@@ -72,6 +72,8 @@
       }
     }
   }
+  \break
+  
   \repeat volta 2 {
     %10
     a8-4 \startBarre #3 #6 g b, d f-4\2 a-3 |
@@ -84,7 +86,7 @@
     c2. |
     
     %12
-    c8-4 d, e-0 gis-1 c-4\glissando b-4 |
+    c8-4 d, e-0 gis-1 c-4 b-4 |
     <d-3\3 e-1>4 s2 |
     gis'2-2_\4 gis4 |
     
@@ -116,7 +118,7 @@
         \acciaccatura{g8} <g f'>2. |
         
       }
-      \volta 2 {
+      \volta 2 	{
         %18
         e2-0 d4-4 |
         \shiftOn g4-0 <f-3 g b> <f g>|
@@ -129,6 +131,7 @@
       }
     }
   }
+  \break
   
   \repeat volta 2 {
     %20
@@ -249,8 +252,8 @@
     b2. |
 
     %40
-    b4.-4 a8-1 gis-1 ^\markup{\italic "rit."} fis-4 \startStringSpan #2 |
-    b4\rest <d-2 fis-3> <bis-2 fis'> |
+    b4.-4 a8-1 gis-1 ^\markup{\italic "rit."} fis \startStringSpan #2 |
+    b4\rest <d-2 fis-3> \once \set fingeringOrientations = #'(left up) <bis-2 fis'-4> |
     d2. |
     
     %41
@@ -272,7 +275,7 @@
     \alternative {
       \volta 1 {
         a2 \startBarre #5 #2 e4 \stopBarre |
-        <a-3 cis-2 e>4 <a cis e-1> <a cis e> |
+        <a-3 cis-2 e>4 <a cis e> <a cis e> |
         a2.|
       }
       \volta 2 {
@@ -284,6 +287,7 @@
       }
     }
   }
+  \break
   \repeat volta 2 {
     %45
     \key c \major
@@ -338,11 +342,12 @@
       }
       \volta 2 {
         %9
-        a,4 a' b,\rest |
-        <c e>4 <c' e> s |
-        a4 \f s2 |
+        a,4 \barre #2 #6 a' \barre #5 #3 b,\rest |
+        <c-2 e>4 <c' e> s |
+        a4-4 \f s2 |
       }
     }
+    \break
   }
   \set Timing.beamExceptions = #'()
   \set Timing.beatStructure = #'()
@@ -352,7 +357,7 @@
     e'8-4 ^\markup{\italic "a tempo (final)"} b-3 f-1
     \omit TupletBracket
     \omit TupletNumber
-    d'-4 a-3 e-1
+    d'-4 a-3 e-2
     e'-4 b-3 f-1
   } |
   s2. |
@@ -361,7 +366,7 @@
   \tuplet 3/2 4 {
     f'8-4 c-3 g-2
     e'-4 b-3 f-1
-    d'-4 a-3 e-1
+    d'-4 a-3 e-2
   } |
   s2. |
   d2. |
@@ -384,23 +389,23 @@
 
   \tuplet 3/2 4 {
     e'8-4 b-3 f-1
-    d'-4 a-3 e-1
-    c'-4 g-3 d-1
+    d'-4 a-3 e-2
+    c'-4 g-3 d-2
   } |
   s2. |
   a2. |
   
   \tuplet 3/2 4 {
     b'8-4 f-2 c-1
-    a'-4 e-3 b-1
-    g'-4 d-3 a-1
+    a'-4 e-3 b-2
+    g'-4 d-3 a-2
   } |
   s2. |
   d2. |
   
   \tuplet 3/2 4 {
     f'8-2 c-1 g-0
-    e'-4 b-3 f-2
+    e'-4 b-2 f-1
     d'-4 a-2 e-1
   } |
   s2. |
