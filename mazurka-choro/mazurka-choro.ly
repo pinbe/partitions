@@ -15,20 +15,21 @@
 
 \parallelMusic voiceA, voiceB, voiceC {
   %0
-  e'4-0 |
+  \set strokeFingerOrientations = #'(up)
+  e'4-0 \RH #2 |
   r4 |
   s4 \mf |
   
   \repeat volta 2 {
     %1
-    e4. a8-4^\2 c-1 e-4 |
-    %\override NoteHead.font-size = #-2
-    g4\rest <c-3_\4 e-2^\3> <c e> |
+    e4. \RH #4 a8-4^\2 \RH #4 c-1 \RH #4 e-4 \RH #2 |
+    \set strokeFingerOrientations = #'(up)
+    g4\rest <c-3_\4 \RH 2 e-2^\3 \RH 3> <c e> |
     a,2. |
     
     %2
-    b2.-4 |
-    b4\rest <gis-1 d'-3 f-2> <gis d' f> |
+    b2.-4 \RH #4 |
+    b4\rest <gis-1 \RH 2 d'-3 \RH 3 f-2 \RH 4> <gis d' f> |
     a2. |
     
     %3
@@ -37,7 +38,7 @@
     e2. |
     
     %4
-    <e,-3 c'-2>4. \startBarre #7 #3 <d b'>8 \stopBarre <c a'>4 \barre #5 #3 |
+    <e,-3 c'-2>4. <d b'>8 <c a'>4 \barre #5 #3 |
     g,4\rest <e' fis> e |
     a2.|
     
@@ -76,33 +77,34 @@
   
   \repeat volta 2 {
     %10
-    a8-4 \startBarre #3 #6 g b, d f-4\2 a-3 |
-    <b'-2 d>4 f b8 f'-4 |
+    a8-4 \RH 4 \startBarre #3 #6 g \RH 4 b, \RH 2 \RH 3 d \RH 4 f-4\2 \RH 2 \RH 3 a-3 \RH 2 \RH 3 |
+    <b'-2 d>4  f b8 f'-4 |
     g2.|
     
     %11
-    a4-3 g g \stopBarre |
-    f8\glissando e-4 <c-3 e>4 <c e> |
+    a4-3 \RH 2 \RH 3 g \RH 2 \RH 3 \RH 4 g \stopBarre |
+    f8\glissando e-4 \RH 2 <c-3 e>4 <c e> |
     c2. |
     
     %12
-    c8-4 d, e-0 gis-1 c-4 b-4 |
+    c8-4 \RH 4 d, \RH 2 e-0 \RH 3 gis-1 \RH 2 c-4 \RH 3 b-4 \RH 2 |
     <d-3\3 e-1>4 s2 |
     gis'2-2_\4 gis4 |
     
     %13
-    b4 a \startBarre #5 #3 a \stopBarre |
+    b4 \RH 4 a \startBarre #5 #3 a \stopBarre |
     d4\rest <c e> <c e> |
     a2.-3 |
     
     %14
     g8-4 f-1 a, d g f |
     <a-2 d-3>4 s <a d> |
-    d,4 d2 |
+    \set strokeFingerOrientations = #'(down)
+    d,4 d2 \RH #1 |
     
     %15
-    f8 e g, c-1 f-1 ^( e-0 ) |
-    g4\rest e-2 a8-2 _( g-0 ) |
+    f8 e g, \RH 2 \RH 3 c-1 \RH 3 f-1 \RH 2 \RH 4 e-0 |
+    g4\rest e-2 a8-2 g-0 |
     g,2.-3 |
     
     \alternative {
@@ -154,7 +156,7 @@
     e2. |
     
     %23
-    <e,-3 c'-2>4. \startBarre #7 #3 <d b'>8 \stopBarre <c a'>4 \barre #5 #3 |
+    <e,-3 c'-2>4. <d b'>8 <c a'>4 \barre #5 #3 |
     g,4\rest <e' fis> e |
     a2.|
     
@@ -271,14 +273,15 @@
     \shiftOff d'4 d <e-2 gis>8 \glissando <d fis> |
     e2 e4 |
     
-    %43
     \alternative {
       \volta 1 {
+        %43
         a2 \startBarre #5 #2 e4 \stopBarre |
         <a-3 cis-2 e>4 <a cis e> <a cis e> |
         a2.|
       }
       \volta 2 {
+        %44
         a4 \barre #5 #2
         \once \override NoteHead.style = #'harmonic-mixed a2
         ^\markup {\italic \fontsize #-2 "har. 7"} |
@@ -297,36 +300,35 @@
       }
     
     e4. ^\markup{\italic "tempo 1°"} a8-4^\2 c-1 e-4 |
-    %\override NoteHead.font-size = #-2
     g4\rest <c-3_\4 e-2^\3> <c e> |
     a,,2. |
     
-    %2
+    %46
     b2.-4 |
     b4\rest <gis-1 d'-3 f-2> <gis d' f> |
     a2. |
     
-    %3
+    %47
     e,4.-0 gis8-1 b\glide-4 d-4 |
     g4\rest <d'-3_\3 e-2^\2> <d e>8 f-3 |
     e2. |
     
-    %4
-    <e,-3 c'-2>4. \startBarre #7 #3 <d b'>8 \stopBarre <c a'>4 \barre #5 #3 |
+    %48
+    <e,-3 c'-2>4. <d b'>8 <c a'>4 \barre #5 #3 |
     g,4\rest <e' fis> e |
     a2.|
     
-    %5
+    %49
     e4. a8-4^\2 c-1 e-4 |
     g,4\rest <c-3_\4 e-2^\3> <c e> |
     a2. |
     
-    %6
+    %50
     f,4.-1 a8\glide-4 g-4 f |
     a4\rest <bes-2 d-3> a\rest |
     d2. |
     
-    %7
+    %51
     \set Timing.beamExceptions = #'()
     \set Timing.beatStructure = 1,1,1
     \grace{f16-1 _( g-4} f8-1 ) e d-4  c-1 b gis |
@@ -335,13 +337,13 @@
     
     \alternative {
       \volta 1 {
-        %8
+        %52
         a2 e'4 |
         \shiftOn <c-2 e>4 \startBarre #2 #6 <c e> \stopBarre e\rest |
         a2-4 e4\rest |
       }
       \volta 2 {
-        %9
+        %53
         a,4 \barre #2 #6 a' \barre #5 #3 b,\rest |
         <c-2 e>4 <c' e> s |
         a4-4 \f s2 |
@@ -352,6 +354,7 @@
   \set Timing.beamExceptions = #'()
   \set Timing.beatStructure = #'()
   
+  %54
   \tuplet 3/2 4 {
     \override TupletBracket.bracket-visibility = ##t
     e'8-4 ^\markup{\italic "a tempo (final)"} b-3 f-1
@@ -363,6 +366,7 @@
   s2. |
   a2. |
   
+  %55
   \tuplet 3/2 4 {
     f'8-4 c-3 g-2
     e'-4 b-3 f-1
@@ -371,6 +375,7 @@
   s2. |
   d2. |
   
+  %56
   \tuplet 3/2 4 {
     e'8 b f
     d' a e
@@ -379,6 +384,7 @@
   s2. |
   a2. |
   
+  %57
   \tuplet 3/2 4 {
     f'8 c g
     e' b f
@@ -386,7 +392,8 @@
   } |
   s2. |
   d2. |
-
+  
+  %58
   \tuplet 3/2 4 {
     e'8-4 b-3 f-1
     d'-4 a-3 e-2
@@ -395,6 +402,7 @@
   s2. |
   a2. |
   
+  %59
   \tuplet 3/2 4 {
     b'8-4 f-2 c-1
     a'-4 e-3 b-2
@@ -403,6 +411,7 @@
   s2. |
   d2. |
   
+  %60
   \tuplet 3/2 4 {
     f'8-2 c-1 g-0
     e'-4 b-2 f-1
@@ -411,6 +420,7 @@
   s2. |
   a2. |
 
+  %61
   \tuplet 3/2 4 {
     c'8 \startBarre #1 #3 gis e-2 \stopBarre
     b'-3 fis-2 d-4
@@ -419,6 +429,7 @@
   s2. |
   e2. |
 
+  %62
   \tuplet 3/2 4 {
     gis'8-1 \mf \< e-3 b-2
     g'-0 ^\markup{\italic "rall."} e c-4
@@ -427,6 +438,7 @@
   s2. |
   e2. |
   
+  %63
   f''4\rest b,8 e
   \stemDown
   \override NoteHead.style = #'harmonic-mixed
@@ -434,15 +446,40 @@
   s2. |
   <f-1 b-2 d-0 a'-3>2. %{\laissezVibrer %} |
 
+  %64
   e,8\1 ^\markup {\italic \fontsize #-2 "har. 12"} b\2
   \stemUp
   \revert NoteHead.style e, b e, b |
   s2. |
   s2. |
   
+  %65
   a'4-2 <e-3 a-4 c e a> \barre 5 6 r |
   s2. |
   a4 \ff a4 r \bar "|."
+  
+}
+
+
+additionals = {
+  s4 s2. s2. s2.
+  %4
+  s4 s8 \startBarre #7 #3 s8 \stopBarre s4 |
+  
+  s2. s2. s2. s2. s2. s2. s2. s2. s2.
+  s2. s2. s2. s2. s2. s2. s2. s2. s2.
+  
+  %23
+  s4 s8 \startBarre #7 #3 s8 \stopBarre s4 |
+  
+  s2. s2. s2. s2. s2. s2. s2. s2.
+  s2. s2. s2. s2. s2. s2. s2. s2.
+  s2. s2. s2. s2. s2. s2. s2. s2.
+  
+  %48
+  s4 s8 \startBarre #7 #3 s8 \stopBarre s4 |
+  
+  
   
 }
 
@@ -451,6 +488,7 @@ zique = {
   \key c \major
   %\accidentalStyle modern
   \time 3/4
+  %\set Score.currentBarNumber = #2
   \partial 4
   
   <<
@@ -472,6 +510,9 @@ zique = {
       \voiceTwo
       \merges
       \voiceC
+    } \\
+    {
+      \additionals
     }
   >>
 }
