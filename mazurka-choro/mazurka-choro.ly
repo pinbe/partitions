@@ -3,7 +3,7 @@
 \header {
   title = "Mazurka-chôro"
   composer = "Heitor Villa-Lobos (1887-1959)"
-  tagline = \markup{ \italic \small "Révision des doigtés du 10/10/2025 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 15/10/2025 par Benoît Pin"}
   %{
   sources:
   https://youtu.be/7cmL6WpDSHY
@@ -103,7 +103,7 @@
     d,4 d2 \RH #1 |
     
     %15
-    f8 e g, \RH 2 \RH 3 c-1 \RH 3 f-1 \RH 2 \RH 4 e-0 |
+    f8 e g, \RH 2 \RH 3 c-1 \RH 4 f-1 \RH 2 \RH 4 e-0 |
     g4\rest e-2 a8-2 g-0 |
     g,2.-3 |
     
@@ -123,12 +123,12 @@
       \volta 2 	{
         %18
         e2-0 d4-4 |
-        \shiftOn g4-0 <f-3 g b> <f g>|
+        \shiftOn <g-0>4 <f-3 g b> <f g>|
         g2-2 b4-1 |
         
         %19
-        c4-1 c'2-4 |
-        <e-2 g>4 <g-0 e'-1>2 |
+        c4\glide-1 \once \set fingeringOrientations = #'(left up) <e-1 c'-4>2 |
+        \shiftOff <e-2 g>4 <g-0 e'>2 \shiftOn |
         c4-3 c2-3_\6 |
       }
     }
@@ -141,7 +141,7 @@
       \beamExceptions {
         4. 8 [ 8 8 ]
       }
-    e,4. a8-4^\2 c-1 e-4 |
+    e4. a8-4^\2 c-1 e-4 |
     g4\rest <c-3_\4 e-2^\3> <c e> |
     a2. |
     
