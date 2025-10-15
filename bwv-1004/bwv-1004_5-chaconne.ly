@@ -180,7 +180,7 @@ fingeringVoiceD = {
 
   % 21
   f8.-1 [ d32\2-1_( e-3) ] f8.-4 [ g32 a  ] bes8. [ f16 ] |
-  \stemDown d4-3 s4 s8. d16-3 |
+  \stemDown \once \override Fingering.extra-offset = #'() <d-3>4 s4 s8. d16-3 |
   s2. |
   d,4 s2 |
 
