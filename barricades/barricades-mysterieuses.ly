@@ -63,7 +63,7 @@
       %9
       \volta 1 {
         \tag #'layout {
-          c8-1 c e-0 c-4\3~ c \startBarre 3 6 d g
+          c8-1 \prall c e-0 c-4\3~ c \startBarre 3 6 d g
           
          %{ bidouille pour afficher une liaison
             de prolongation, « en l’air à droite »
