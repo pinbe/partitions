@@ -25,6 +25,8 @@
 
   \repeat volta 2 {
     %2
+    \section
+    \sectionLabel "Rondeau"
     b8 c-4 e-0 c~c d g \stopBarre b,-2~ |
     s1 |
     c4 g'-3 g, f'|
@@ -63,7 +65,8 @@
       %9
       \volta 1 {
         \tag #'layout {
-          c8-1 \prall c e-0 c-4\3~ c \startBarre 3 6 d g
+          \once \override Fingering.script-priority = #0
+          c8-1 \mordent c e-0 c-4\3~ c \startBarre 3 6 d g
           
          %{ bidouille pour afficher une liaison
             de prolongation, « en l’air à droite »
@@ -86,6 +89,8 @@
       }
       %10
       \volta 2 {
+        \section
+        \sectionLabel "Couplet 1"
         c8 e g e~ e d g d~ |
         s1|
         <c, e>4 c' g b |
@@ -154,11 +159,16 @@
   g,4 g' c, c |
   
   %23 04:27
-  d8 \prall \breathe c e c~ c d g b,~ |
+  d8 \prall \breathe c e c~ c d g
+  \afterGrace b,-2~ {
+    s4
+    \once \hideNotes
+    b8
+  } |
   s1 |
   g4 c g' g, |
   
-  %24
+  %{24
   b8 c e c~ c d g b,~ |
   s1 |
   c4 g' g, f' |
@@ -172,6 +182,7 @@
   a8 [ c ] f4~ f8 f e \prall d |
   c4\rest a'8\rest a b4 g |
   f,4 d' g,2 |
+  %}
 }
 
 zique = {
