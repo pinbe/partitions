@@ -3,7 +3,7 @@
 \header {
   title = "Les barricades mystérieuses"
   composer = "François Couperin (1668-1733)"
-  tagline = \markup{ \italic \small "Révision des doigtés du 18/11/2025 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 21/11/2025 par Benoît Pin"}
   %{
   sources:
   https://youtu.be/7cmL6WpDSHY
@@ -63,7 +63,7 @@
       %9
       \volta 1 {
         \tag #'layout {
-          \once \override Fingering.script-priority = #0
+          %\once \override Fingering.script-priority = #0
           c8-1 \mordent c e-0 c-4\3~ c \startBarre 3 6 d g
           
           %{ bidouille pour afficher une liaison
@@ -90,78 +90,87 @@
       % Couplet 1
       \volta 2 {
         %10
-        c8 e g e~ e d g d~ |
+        c8-1 \mordent e-4 g \startBarre 3 6 e~ e d g d~ |
         s1|
-        <c, e>4 c' g b |
+        <c,-3 e-2>4 c'-3 g-3 b-2 |
+
         %11
-        d8 e g e~ e d g d~ |
+        d8 e-4 g e~ e d g d~ |
         s1 |
-        c,4 c' g b |
+        c,4 c'-3 g-3 b-2 |
   
         %12
-        d8 e g e~ e d g d~ |
+        d8 e-4 g e~ \stopBarre e d-3 g-4 d~ |
         s1 |
-        c,4 c' b, g' |
+        c,4 c'-3 b,-1 g' |
   
         %13
-        d8 e g e~ e d g d~ |
+        d8 \startBarre 3 6 e-4 g e~ \stopBarre e d-3 g-4 d~ |
         s1 |
-        c,4 c' b, g' |
+        c,4 c'-3 b,-1 g' |
   
         %14 03:55
-        d8 c g' c,~ c c fis c |
+        d8 c-1 g'-4 c,~ c c fis-3 c |
         s1 |
-        a,4 a' d, a' |
+        a,4 a'-2 d, a' |
   
         %15
-        g'8 b, d b~ b a d a~ |
+        g'8-4 b,-0 d-1 b~-2 b a-1 d-2 a |
         s1 |
-        g,4 g' d fis |
+        g,4-2 g'-3 d-4 fis-3 |
   
         %16 04:03
-        a8 b d b~ b a d a~ |
+        a8\rest b-3 d-2 b~ b a-1 d-2 a~ |
         s1 |
-        g,4 g' d fis |
+        g,4-1 g'-4 d-4 fis-3 |
   
         %17
-        a8 b d b~ b b d b~ |
+        a8 b-3 d-2 b~ b b d b~ |
         s1 |
-        g,4 d' b g' |
+        g,4-1 g'-4 b,-1 g' |
   
         %18
-        b8 b e b a4. \prallprall g16 ( a ) |
+        b8 b-0 e-0 a,-1 a4. \prallprall g16 ( a ) |
         s1 |
-        c,4 g' d d |
+        c,4-1 g'-0 d-0 d |
   
         %19
-        g8 b d b~ b a f' b,~ |
+        g8 b-0 d-1 b_~\glide-2 b a-2 f'-1 b,~-0 |
         s1 |
-        g,4 g' d d |
+        g,4-2 g'-3 d-0 d |
   
         %20
-        b8 c e c~ c bes g' bes,~ |
+        b8 c-2 e c~ c bes-3 g'-4 bes,~ |
         s1 |
-        a4 a' e e, |
+        a4 a'-3 e-2 e, |
   
         %21
-        bes8 a c a~ a a f' a,~ |
+        bes8 \startBarre 1 6 a-2 c a~ \stopBarre a a f'-1 a,~ |
         s1 |
-        f4 f' d d |
+        f4 f'-3 d-0 d |
   
         %22
-        a8 b f' b,~ b c e c |
+        a8 b-0 f'-1 b,~ b c-1 e c |
         s1 |
-        g,4 g' c, c |
+        g,4-3 g'-0 c,-3 c |
   
         %23 04:27
-        d8 \prall \breathe c e c~ c d g
-        \afterGrace b,-2~ {
-          s4
-          \once \hideNotes
-          b8
-        } |
-        s1 |
-        g4 c g' g, |
+        \tag #'layout {
+          d8-3 \prall \breathe c-4 e-0 \startBarre 3 6 c~ c d g
+          \afterGrace b,-2~ {
+            s4
+            \once \hideNotes
+            b8 \stopBarre
+          } |
+          s1 |
+          g4-2 c g'-3 g, |
+        }
+        
+        \tag #'midi {
+          d8 \prall \breathe c e c~ c d g b,~ |
+          s1|
+          g4 c g' g, |
+        }
 
         \break
       }
@@ -199,15 +208,21 @@
         f,2 fis4 d' |
         
         %30
-        b8 \prall \breathe c e c~ c d g
-        \afterGrace b,-2~ {
-          s4
-          \once \hideNotes
-          b8
-        } |
-        s1 |
-        g,4 c g' g, |
-        
+        \tag #'layout {
+          b8 \prall \breathe c e c~ c d g
+          \afterGrace b,-2~ {
+            s4
+            \once \hideNotes
+            b8
+          } |
+          s1 |
+          g,4 c g' g, |
+        }
+        \tag #'midi {
+          b8 c e c~ c d g b,~ |
+          s1 |
+          g,4 c g' g, |
+        }
         \break
       }
       
@@ -217,7 +232,7 @@
         %31 05:45
         c8 \mordent c e c~ c c f c |
         s1 |
-        <c e>4 g' a, a' |
+        <c' e>4 g' a, a' |
         
         %32
         r8 c d bes~ bes d g d |
@@ -326,23 +341,28 @@
         g,4 d' f g, |
         
         %53
-        c8 \mordent \breathe c e c~ c d g
-        \afterGrace b,-2~ {
-          s4
-          \once \hideNotes
-          b8
-        } |
-        s1|
-        <c e>8 r c4 g' g, |
-        
-        
+        \tag #'layout {
+          c8 \mordent \breathe c e c~ c d g
+          \afterGrace b,-2~ {
+            s4
+            \once \hideNotes
+            b8
+          } |
+          s1|
+          <c e>8 r c4 g' g, |
+        }
+        \tag #'midi {
+          c8 c e c~ c d g b,~ |
+          s1|
+          <c e>8 r c4 g' g, |
+        }
       }
       
       \volta 5 {
         %54
         s1|
         s1 |
-        <c e g c>1 |
+        <c e g c>1 \fine |
       }
     } % \alternative end
     
