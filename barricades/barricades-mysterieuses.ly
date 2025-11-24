@@ -25,7 +25,8 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
   r4 c g'-3 g,|
   s1 |
 
-  \repeat segno 5 {
+  \repeat volta 5 {
+    \volta #'() { s1*0^\markup { "Rondeau" } }
     %2
     b8 c-4 e-0 c~c d g \stopBarre b,-2~ |
     s1 |
@@ -94,6 +95,8 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
       
       % Couplet 1
       \volta 2 {
+        \override Score.VoltaBracket.stencil = #'()
+        \volta #'() { s1*0^\markup { "Couplet 1" } }
         %10
         \PRIO_DOWN
         c8-1 \mordent \breathe e-4 g \startBarre 3 6 e~ e d g d~ |
@@ -183,6 +186,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
 
       % Couplet 2
       \volta 3 {
+        \volta #'() { s1*0^\markup { "Couplet 2" } }
         %24 04:55
         \PRIO_DOWN
         c8-1 \mordent \breathe c-4 e-0 c~ c \startBarre 3 6 c d b~-2 \stopBarre |
@@ -231,12 +235,12 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
           g,4 c g' g, |
         }
         \section
-        \break
+        \pageBreak
       }
       
       % Couplet 3
       \volta 4 {
-        
+        \volta #'() { s1*0^\markup { "Couplet 3" } }
         %31 05:45
         c8 \mordent c e c~ c c f c |
         s1 |
@@ -422,11 +426,11 @@ zique = {
   \new Staff {
     \set Staff.midiInstrument = "acoustic guitar (nylon)"
     \unfoldRepeats
-    \keepWithTag #'midi    
+    \keepWithTag #'midi
     \zique
   }
   
   \midi {
-    \tempo 4.=72
+    \tempo 2.=45
   }
 }
