@@ -67,7 +67,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
     \alternative {
       %9
       \volta 1 {
-        \tag #'layout {
+        \relative c' { \tag #'layout {
           \PRIO_DOWN
           c8-1 \mordent c e-0 c-4\3~ c \startBarre 3 6 d g
           
@@ -81,14 +81,14 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
             b8 \stopBarre
           } |
           s1|
-          <c-3 e-2>4 g'-0 g, g'-3 |
-        }
+          <c,-3 e-2>4 g'-0 g, g'-3 |
+        }}
         % idem mais avec liaison audible à la reprise
-        \tag #'midi {
+        \relative c' { \tag #'midi {
           c8 c e c~ c d g b,~ |
           s1|
           <c, e>4 g' g, g' |
-        }
+        }}
         \section
         \break
       }
@@ -101,7 +101,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         \PRIO_DOWN
         c8-1 \mordent \breathe e-4 g \startBarre 3 6 e~ e d g d~ |
         s1|
-        <c,-3 e-2>4 c'-3 g-3 b-2 |
+        <c-3 e-2>4 c'-3 g-3 b-2 |
 
         %11
         d8 e-4 g e~ e d g d~ |
@@ -164,22 +164,22 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         g,4-3 g'-0 c,-3 c |
   
         %23 04:27
-        \tag #'layout {
-          d8-3 \prall \breathe c-4 e-0 \startBarre 3 6 c~ c d g
+        \relative { \tag #'layout {
+          d'8-3 \prall \breathe c-4 e-0 \startBarre 3 6 c~ c d g
           \afterGrace b,-2~ {
             s4
             \once \hideNotes
             b8 \stopBarre
           } |
           s1 |
-          g4-2 c g'-3 g, |
-        }
+          g,4-2 c g'-3 g, |
+        }}
         
-        \tag #'midi {
-          d8 \prall \breathe c e c~ c d g b,~ |
+        \relative { \tag #'midi {
+          d'8 c e c~ c d g b,~ |
           s1|
-          g4 c g' g, |
-        }
+          g,4 c g' g, |
+        }}
         \section
         \break
       }
@@ -219,7 +219,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         f,2-1 fis4-2 d' |
         
         %30
-        \tag #'layout {
+        \relative { \tag #'layout {
           b8 \prall \breathe c-4 e-0 \startBarre 3 6 c~ c d g
           \afterGrace b,-2~ {
             s4
@@ -228,12 +228,12 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
           } |
           s1 |
           g,4-3 c g'-3 g, |
-        }
-        \tag #'midi {
+        }}
+        \relative { \tag #'midi {
           b8 c e c~ c d g b,~ |
           s1 |
           g,4 c g' g, |
-        }
+        }}
         \section
         \pageBreak
       }
@@ -245,7 +245,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         \PRIO_DOWN
         c8-1 \mordent c e-0 c~ c c-1\3 f-2 c |
         s1 |
-        <c'-3 e-2>4 g'-0 a, a' |
+        <c-3 e-2>4 g'-0 a, a' |
         
         %32
         r8 c-3 \barre 3 6 d bes~ bes d g d |
@@ -353,7 +353,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         g,4-3 d' f-4 g, |
         
         %53
-        \tag #'layout {
+        \relative c' { \tag #'layout {
           \PRIO_DOWN
           c8-1 \mordent \breathe c8-4 e-0 \startBarre 3 6 c~ c d g
           \afterGrace b,-2~ {
@@ -362,13 +362,13 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
             b8 \stopBarre
           } |
           s1|
-          <c-3 e-2>8 r c4 g'-3 g, |
-        }
-        \tag #'midi {
+          <c,-3 e-2>8 r c4 g'-3 g, |
+        }}
+        \relative c' { \tag #'midi {
           c8 c e c~ c d g b,~ |
           s1|
-          <c e>8 r c4 g' g, |
-        }
+          <c, e>8 r c4 g' g, |
+        }}
         \section
       }
       
@@ -430,7 +430,6 @@ zique = {
     \keepWithTag #'midi
     \zique
   }
-  
   \midi {
     \tempo 2.=45
   }
