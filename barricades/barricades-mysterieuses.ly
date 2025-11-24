@@ -214,13 +214,13 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         d4 d e, e'-2 |
         
         %29 05:13
-        g8 e' f e d-4 [ c-1 b a-2 ] |
+        g8 e' f-2 e d-4 [ c-1 b a-2 ] |
         s1 |
         f,2-1 fis4-2 d' |
         
         %30
         \tag #'layout {
-          b8-1 \prall \breathe c-4 e-0 \startBarre 3 6 c~ c d g
+          b8 \prall \breathe c-4 e-0 \startBarre 3 6 c~ c d g
           \afterGrace b,-2~ {
             s4
             \once \hideNotes
@@ -242,85 +242,85 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
       \volta 4 {
         \volta #'() { s1*0^\markup { "Couplet 3" } }
         %31 05:45
-        c8 \mordent c e c~ c c f c |
+        \PRIO_DOWN
+        c8-1 \mordent c e-0 c~ c c-1\3 f-2 c |
         s1 |
-        <c' e>4 g' a, a' |
+        <c'-3 e-2>4 g'-0 a, a' |
         
         %32
-        r8 c d bes~ bes d g d |
+        r8 c-3 \barre 3 6 d bes~ bes d g d |
         s1|
-        bes,4 f' g, bes' |
+        bes,4-4 f' g, bes' |
         
         %33
-        r8 d e c~ c c f c |
+        r8 d-4 e-0 c~-1 c c f c |
         s1|
-        c,4 g' a, a' |
+        c,4-3 g' a, a' |
         
         %34
-        r8 d f d~ d bes e bes |
-        s1|
-        bes,4 g' c, c |
+        r8 d f d~ d bes-4 e bes |
+        s4*3 s8 \once \hideNotes bes~ |
+        bes,4-1 g' c,-3 c |
         
         %35 05:59
-        f'2~ f8 f a f |
-        % TODO liaison avec le sib précédent
-        s8 bes a c f, r s4 |
-        f,2~ f8 s c''4 |
+        f'2~ \barre 1 6 f8 f-4 a-3 f |
+        bes8 bes a-2 c f, r s4 |
+        f,2~ f8 s c''4-2 |
         
         %36
-        r8 d a' d,~ d d a' d,~ |
+        r8 d-1 a'-4 d,~ d d a' d,~ |
         s1 |
-        fis,4 c' d, c' |
+        fis,4-2 c'-3 d,-0 c' |
         
         %37
-        d8 d a' d,~ d d a' d, |
+        d8 \barre 3 6 d a' d,~ d d a' d, |
         s1 |
-        g4 bes f bes |
+        g4-3 bes f bes |
         
         %38
-        r8 c g' c,~ c c g' c,~ |
+        r8 c-1 g'-4 c,~ c c g' c,~ |
         s1 |
-        e,4 bes' c, bes' |
+        e,4-2 bes'-3 c,-2 bes' |
         
         %39
         c8 c g' c,~ c c g' c,~ |
         s1 |
-        f4 a e a |
+        f4-3 a e-2 a-3 |
         
         %40
-        c8 d f d~ d d f d~ |
+        c8 d-3 f-1 d~ d d-4 f d~ |
         s1 |
-        d,4 a' b, a' |
+        d,4 a'-2 b,-2 a'-3 |
         
         %41
         d8 b f' b,~ b b f' b,~ |
         s1 |
-        e4 g d g |
+        e4-2 g d-0 g |
         
         %42 06:24
         b8 c e c~ c c e c |
         s1 |
-        c,4 g' a, g' |
+        c,4-3 g' a, g' |
         
         %43
-        r8 a e' a,~ a a e' a, |
+        r8 a-1 e' a,~ a a e' a, |
         s1|
-        d4 f c f |
+        d4-4 f-2 c-2 f-3 |
         
         %44
-        r8 g d' g,~ g g d' g,~ |
+        r8 g d'-4 g,~ g g d' g,~ |
         s1|
-        b,4 f' g, f' |
+        b,4-1 f'-3 g,-2 f' |
         
         %45
-        g8 g d' g,~ g g c g~ |
+        g8 g d' g,~ g g c-1 g~ |
         s1|
-        c4 e e, e' |
+        c4-3 e e, e' |
         
         %46
-        g8 a c a~ a g c g~ |
+        g8 a-4 c a~ a g c g~ |
         s1|
-        f,4 d' g, e' |
+        f,4-2 d' g,-3 e' |
         
         %47
         g8 a c a~ a g c g~ |
@@ -328,9 +328,9 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         a,4 f' e, e' |
 
         %48
-        g8 a c a~ a a c a~ |
+        g8 a-4 c a~ a a c a~ |
         s1|
-        f,4 d' a f' | 
+        f,4-2 d' a f' | 
 
         %49 07:36
         a8 g b g~ g g c g~ |
@@ -338,30 +338,31 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         g,4 d' e, e' |
         
         %50
-        g8 a c a~ a g c g~ |
+        g8 a-4 c a~ a g c g~ |
         s1|
-        f,4 d' g, e' |
+        f,4-2 d' g, e' |
         
         %51
-        g8 a c a~ a a c a |
+        g8 a c a~ a a-4 c a |
         s1|
-        a,4 f' f, d' |
+        a,4 f' f,-2 d' |
         
         %52
         r8 g c g~ g g c b |
         s1|
-        g,4 d' f g, |
+        g,4-3 d' f-4 g, |
         
         %53
         \tag #'layout {
-          c8 \mordent \breathe c e c~ c d g
+          \PRIO_DOWN
+          c8-1 \mordent \breathe c8-4 e-0 \startBarre 3 6 c~ c d g
           \afterGrace b,-2~ {
             s4
             \once \hideNotes
-            b8
+            b8 \stopBarre
           } |
           s1|
-          <c e>8 r c4 g' g, |
+          <c-3 e-2>8 r c4 g'-3 g, |
         }
         \tag #'midi {
           c8 c e c~ c d g b,~ |
