@@ -2,39 +2,44 @@
 
 RH = #rightHandFinger
 
-#(define-markup-command (barreMrkp layout props fretnum numOfStr) (integer? integer?)
-   (interpret-markup layout props 
-                     (if (= numOfStr 6)
-                         #{
-                           \markup { 
-                             \small
-                             \bold
-                             \concat {
-                               #(format #f "~@r" fretnum)
-                               \hspace #0.2
-                             }
-                           }
-                         #}
-                         #{
-                           \markup {
-                             \small
-                             \concat {
-                               { \bold
+#(define-markup-command (barreMrkp layout props fretnum numOfStr) (integer? scheme?)
+   (interpret-markup layout props
+                     (let ((label 
+                            (cond
+                             ((number? numOfStr) (number->string numOfStr))
+                             ((string? numOfStr) numOfStr)
+                            )))
+                       (if (and (number? numOfStr) (= numOfStr 6))
+                           #{
+                             \markup { 
+                               \small
+                               \bold
+                               \concat {
                                  #(format #f "~@r" fretnum)
+                                \hspace #0.2
                                }
-                               \hspace #0.2
-                               \lower #0.3
-                               \fontsize #-2
-                               \italic
-                               #(number->string numOfStr)
-                               \hspace #0.5
                              }
-                           }
-                         #})))
+                           #}
+                           #{
+                             \markup {
+                               \small
+                               \concat {
+                                 { \bold
+                                   #(format #f "~@r" fretnum)
+                                 }
+                                 \hspace #0.2
+                                 \lower #0.3
+                                 \fontsize #-2
+                                 \italic
+                                 #label
+                                 \hspace #0.5
+                               }
+                             }
+                           #}))))
 
 barre = 
 #(define-event-function (fretnum numOfStr)
-   (number? number?)
+   (number? scheme?)
    #{
      ^\markup \barreMrkp #fretnum #numOfStr
    #}
@@ -42,7 +47,7 @@ barre =
 
 startBarre = 
 #(define-event-function (fretnum numOfStr) 
-   (number? number?)
+   (number? scheme?)
    #{
      \tweak bound-details.left.text
      \markup{
@@ -52,7 +57,7 @@ startBarre =
      \tweak font-shape #'upright
      \tweak style #'dashed-line
      \tweak dash-fraction #0.3
-     \tweak dash-period #1
+     \tweak dash-period #1 
      
      \tweak bound-details.left.stencil-align-dir-y #0.35
      \tweak bound-details.left.padding 0.25
