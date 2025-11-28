@@ -3,7 +3,7 @@
 \header {
   title = "Les barricades mystérieuses"
   composer = "François Couperin (1668-1733)"
-  tagline = \markup{ \italic \small "Révision des doigtés du 27/11/2025 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 29/11/2025 par Benoît Pin"}
   %{
   sources:
   https://youtu.be/7cmL6WpDSHY
@@ -22,14 +22,14 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
   \set strokeFingerOrientations = #'(up)
   
   %1
-  r8 c'-4\3 \RH #2 e-0 \RH #4 \startBarre 3 6 c \RH #2 ~ c d \RH #3 g \RH #4 b,-2~ \RH #2 |
+  r8 c'-4\3 \RH #2 e-0 \RH #4 \startBarre 3 "[5-6]" c \RH #2 ~ c \stopBarre d \startBarre 3 6 \RH #3 g \RH #4 b,-2~ \RH #2 |
   r4 c g'-3 g,|
   s1 |
 
   \repeat volta 5 {
     \volta #'() { s1*0^\markup { "Rondeau" } }
     %2
-    b8 c-4 e-0 c~c d g \stopBarre b,-2~ |
+    b8 c-4 \stopBarre e-0 \startBarre 3 "[5-6]" c~c \stopBarre \startBarre 3 6 d g b,-2~ \stopBarre |
     s1 |
     c4 g'-3 g, f'|
   
@@ -49,7 +49,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
     c4-1 g'-3 g, g'-3 |
 
     %6
-    b8 c-4 e-0 c~ c d g b,-2~ \stopBarre  |
+    b8 c-4 \stopBarre e-0 \startBarre 3 "[5-6]" c~ c \stopBarre \startBarre 3 6 d g b,-2~ \stopBarre  |
     s1|
     c,4 g'-3 g, f' |
     
@@ -221,7 +221,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         
         %30
         \relative { \tag #'layout {
-          b8-\finger \markup \tied-lyric "0~1~0" \prall \breathe c-4 e-0 \startBarre 3 6 c~ c d g
+          b8-\finger \markup \tied-lyric "0~1~0" \prall \breathe c-4 e-0 \startBarre 3 "[5-6]" c~ c \stopBarre d \startBarre 3 6 g
           \afterGrace b,-2~ {
             s4
             \once \hideNotes
@@ -355,7 +355,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         
         %53
         \relative c' { \tag #'layout {
-          c8-\finger \markup \tied-lyric "1~0~1" \mordent \breathe c8-4 e-0 \startBarre 3 6 c~ c d g
+          c8-\finger \markup \tied-lyric "1~0~1" \mordent \breathe c8-4 e-0 \startBarre 3 "[5-6]" c~ c \stopBarre d \startBarre 3 6 g
           \afterGrace b,-2~ {
             s4
             \once \hideNotes
