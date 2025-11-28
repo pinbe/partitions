@@ -1,4 +1,4 @@
-\version "2.24.3"
+\version "2.24.4"
 
 RH = #rightHandFinger
 
@@ -31,6 +31,7 @@ RH = #rightHandFinger
                                  \lower #0.3
                                  \fontsize #-2
                                  \italic
+                                 \whiteout
                                  #label
                                  \hspace #0.5
                                }
@@ -59,7 +60,7 @@ startBarre =
      \tweak dash-fraction #0.3
      \tweak dash-period #1 
      
-     \tweak bound-details.left.stencil-align-dir-y #0.35
+     \tweak bound-details.left.stencil-align-dir-y #0
      \tweak bound-details.left.padding 0.25
      \tweak bound-details.left.attach-dir -1
      
