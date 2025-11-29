@@ -431,7 +431,7 @@ zique = {
   l’original au clavecin est écrit à trois voies entrelacées
   où la durée de chaque note est écrite explicitement.
   Il suffira de laisser vibrer chaque note du milieu des groupes
-  de trois croches jusqu’à la suivante homologue (soit une durée
+  de trois croches jusqu’au groupe suivant (soit une durée
   typique d’une noire pointée). De la sorte, on retrouvera le \italic{legato}
   qui a besoin d’être explicite au clavecin mais qui s’exécute naturellement
   à la guitare, sans qu’il y ait besoin de garder la notation originale plus complexe.
