@@ -125,7 +125,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         a,4 a'-2 d, a' |
   
         %15
-        g'8-4 \RH #4 b,-0 \RH #2 d-1 \RH #3 b~-2 b a-1 d-2 a |
+        g'8-4 b,-0 d-1 b~-2 b a-1 d-2 a |
         s1 |
         g,4-2 g'-3 d-4 fis-3 |
   
@@ -166,7 +166,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
   
         %23 04:27
         \relative { \tag #'layout {
-          d'8\finger \markup "3 0 3" \prall \breathe c-4 e-0 \startBarre 3 6 c~ c d g
+          d'8\finger \markup "3 0 3" \prall \breathe c-4 e-0 \startBarre 3 "[5-6]" c~c \stopBarre d \startBarre 3 6 g
           \afterGrace b,-2~ {
             s4
             \once \hideNotes
@@ -190,7 +190,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         \volta #'() { s1*0^\markup { "Couplet 2" } }
         %24 04:55
         \PRIO_DOWN
-        c8-\finger \markup \tied-lyric "1~0~1" \mordent \breathe c-4 e-0 c~ c \startBarre 3 6 c d b~-2 \stopBarre |
+        c8-\finger \markup \tied-lyric "1~0~1" \mordent \breathe c-4\3 e-0 c~ c \startBarre 3 6 c d b~-2 \stopBarre |
         s1|
         <c-3 e-2>8 r g'4-3 g,-1 f' |
         
@@ -200,7 +200,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         a,4 e'-2 e, e' |
         
         %26
-        a8-3 f'-4 a-3 f~ f f g-1 e~-3 |
+        a8-2 f'-4 a-3 f~ f f g-1 e~-3 |
         s1 |
         f,4-1 f'-1 cis-1 a |
         
@@ -259,7 +259,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         c,4-3 g' a, a'-3 |
         
         %34
-        r8 d-4 f-1 d~ d bes-4 \RH #2 e \RH #4 bes |
+        r8 d-4 f-2 d~ d bes-4 \RH #2 e \RH #4 bes |
         s4*3 s8 \once \hideNotes bes~ |
         bes,4-1 g'-0 c,-3 c |
         
