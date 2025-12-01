@@ -428,7 +428,7 @@ zique = {
 }
 \markup \justify {
   Notation du rythme simplifiée pour la guitare,
-  l’original au clavecin est écrit à trois voies entrelacées
+  l’original au clavecin est écrit à trois voix entrelacées
   où la durée de chaque note est écrite explicitement.
   Il suffira de laisser vibrer chaque note du milieu des groupes
   de trois croches jusqu’au groupe suivant (soit une durée
