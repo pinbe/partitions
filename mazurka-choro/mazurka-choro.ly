@@ -3,7 +3,7 @@
 \header {
   title = "Mazurka-chôro"
   composer = "Heitor Villa-Lobos (1887-1959)"
-  tagline = \markup{ \italic \small "Révision des doigtés du 15/10/2025 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 01/12/2025 par Benoît Pin"}
   %{
   sources:
   https://youtu.be/7cmL6WpDSHY
@@ -444,17 +444,18 @@
   \override NoteHead.style = #'harmonic-mixed
   e''\1 ^\markup {\italic \fontsize #-2 "har. 5"} b\2 |
   s2. |
-  <f-1 b-2 d-0 a'-3>2. %{\laissezVibrer %} |
+  <f-1 b-2 d-0 a'-3>2.~ |
 
   %64
   e,8\1 ^\markup {\italic \fontsize #-2 "har. 12"} b\2
   \stemUp
-  \revert NoteHead.style e, b e, b |
+  \revert NoteHead.style e, b e,-2\5 b-3\6 |
   s2. |
-  s2. |
+  \once \hideNotes
+  <f b d a'>2. |
   
   %65
-  a'4-2 <e-3 a-4 c e a> \barre 5 6 r |
+  a'4-4 <e-3 a-4 c e a> \barre 5 6 r |
   s2. |
   a4 \ff a4 r \bar "|."
   
@@ -523,6 +524,13 @@ zique = {
   }
 
   \layout { }
+}
+
+\markup \justify {
+  Les harmoniques naturelles en fin de morceau sont
+  à exécuter comme des harmoniques artificielles
+  pour laisser vibrer l’accord précédent
+  le plus longtemps possible.
 }
 
 \score {
