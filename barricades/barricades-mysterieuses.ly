@@ -3,7 +3,7 @@
 \header {
   title = "Les barricades mystérieuses"
   composer = "François Couperin (1668-1733)"
-  tagline = \markup{ \italic \small "Révision des doigtés du 01/12/2025 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 23/12/2025 par Benoît Pin"}
   %{
   sources:
   https://youtu.be/7cmL6WpDSHY
@@ -39,7 +39,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
     a,4 e'-2 e, e'-2 |
     
     %4
-    a8-2 \startBarre 1 6 [ c ] \stopBarre f4-1~ f8 f \PRIO_DOWN e-\finger \markup \tied-lyric "0~1~0" \prall d-4 |
+    a8-2 \startBarre 1 6 [ c ] \stopBarre f4-1~ f8 f e-\finger \markup \tied-lyric "0~1~0" \prall d-4 |
     c4\rest a'8\rest a-2 b4-0 g |
     f,4 d'-0 g,2-3 |
     
@@ -69,7 +69,6 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
       %9
       \volta 1 {
         \relative c' { \tag #'layout {
-          \PRIO_DOWN
           c8-\finger \markup \tied-lyric "1~0~1" \mordent c e-0 c-4\3~ c \startBarre 3 6 d g
           
           %{ bidouille pour afficher une liaison
@@ -99,7 +98,6 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         \override Score.VoltaBracket.stencil = #'()
         \volta #'() { s1*0^\markup { "Couplet 1" } }
         %10
-        \PRIO_DOWN
         c8-\finger \markup \tied-lyric "1~0~1" \mordent e-4 g \startBarre 3 6 e~ e d g d~ |
         s1|
         <c-3 e-2>4 c'-3 g-3 b-2 |
@@ -189,7 +187,6 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
       \volta 3 {
         \volta #'() { s1*0^\markup { "Couplet 2" } }
         %24 04:55
-        \PRIO_DOWN
         c8-\finger \markup \tied-lyric "1~0~1" \mordent \breathe c-4\3 e-0 c~ c \startBarre 3 6 c d b~-2 \stopBarre |
         s1|
         <c-3 e-2>8 r g'4-3 g, f' |
@@ -243,7 +240,6 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
       \volta 4 {
         \volta #'() { s1*0^\markup { "Couplet 3" } }
         %31 05:45
-        \PRIO_DOWN
         c8-\finger \markup \tied-lyric "1~0~1" \mordent c e-0 c~ c c-1\3 f-2 c |
         s1 |
         <c-3 e-2>4 g'-0 a, a'-3 |
