@@ -53,13 +53,13 @@
   \stemNeutral
   \override Fingering.direction = #DOWN
   \textSpannerDown
-  a,4.-0 \mf cis8-3 e-1 \startStringSpan #4 g\glide-4 |
+  a,4.-0 \RH 1 \mf cis8-3 \RH 1 e-1 \RH 1 \startStringSpan #4 g\glide-4 \RH 1 |
   s2. |
   s2. |
   
   %6
   s2. |
-  bes8-4 a\glide-3 e'4.-3 d8-2 \RH #3 |
+  bes8-4 \RH 1 a\glide-3 \RH 1 e'4.-3 \RH 1 d8-2 \RH #3 |
   s2. |
   s2. |
   
