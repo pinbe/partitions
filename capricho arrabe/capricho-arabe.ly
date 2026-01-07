@@ -3,7 +3,7 @@
 \header {
   title = "Capricho Árabe"
   composer = "Francisco Tárrega"
-  tagline = \markup{ \italic \small "Révision des doigtés du 09/10/2024 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 07/01/2026 par Benoît Pin"}
   %{
   sources :
   https://youtu.be/muhg8aCLQzU?feature=shared
@@ -53,13 +53,13 @@
   \stemNeutral
   \override Fingering.direction = #DOWN
   \textSpannerDown
-  a,4.-0 \mf cis8-3 e-1 \startStringSpan #4 g-4 |
+  a,4.-0 \mf cis8-3 e-1 \startStringSpan #4 g\glide-4 |
   s2. |
   s2. |
   
   %6
   s2. |
-  bes8-4 a-3 \override Fingering.direction = #UP e'4.-4 d8-2 \RH #3 |
+  bes8-4 a\glide-3 e'4.-3 d8-2 \RH #3 |
   s2. |
   s2. |
   
@@ -67,6 +67,7 @@
   s2. |
   \tupletNeutral
   \tuplet 6/4 4 {
+    \override Fingering.direction = #UP
     \override TupletBracket.bracket-visibility = ##t
     cis16-1 \RH #2 d-2 e-4 d-2 cis-1 bes-2
     \override Fingering.direction = #DOWN
