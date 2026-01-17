@@ -124,7 +124,7 @@ fingeringVoiceD = {
 
   % 12
   d4-2 cis4.. \startBarre #2 #4 s16 \stopBarre |
-  e8.-1 ^[ d16-0 ]
+  \once \override Fingering.extra-offset = #'() <e-1>8. ^[ d16-0 ]
   \shiftOn
   e8. ^[ g16-4 ] f8.-2 <e cis' a'\tweak Fingering.extra-offset #'()-4>16 |
   s2.|
