@@ -213,7 +213,7 @@
     
     %32
     e'4. d'8-4 b-1 gis-3\2 |
-    \shiftOn <e,-1 \accent b'>4 <e b'> g\rest |
+    \shiftOn <e,-1 \tweak extra-offset #'(-1 . 0) \accent b'>4 <e b'> g\rest |
     gis2.-3 |
     
     %33
@@ -449,7 +449,7 @@
   %64
   e,8\1 ^\markup {\italic \fontsize #-2 "har. 12"} b\2
   \stemUp
-  \revert NoteHead.style e, b e,-2\5 b-3\6 |
+  \revert NoteHead.style e, b e,-3\5 b-2\6 |
   s2. |
   \once \hideNotes
   <f b d a'>2. |
