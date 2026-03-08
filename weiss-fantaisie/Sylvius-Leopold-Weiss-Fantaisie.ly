@@ -183,6 +183,7 @@ zique = {
 
 \score {
   \new Staff {
+    \set Staff.midiInstrument = "acoustic guitar (nylon)"
     \zique
   }
 
