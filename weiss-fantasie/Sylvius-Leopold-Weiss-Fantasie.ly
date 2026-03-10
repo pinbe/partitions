@@ -153,7 +153,7 @@
 
   %26
   \time 2/4
-  r16 fis-3 a e' b dis-4 a dis \stopBarre |
+  r16 fis-3 a e'-4 b dis-4 a dis \stopBarre |
   s2 |
   b4 b'8-3 a |
 
@@ -176,7 +176,7 @@
   } 2 = 54
 
   %27
-  e2 g |
+  e2 g-2 |
   s1 |
   <e, g'>1 |
 
@@ -203,7 +203,7 @@
   %32
   fis2 fis |
   s1 |
-  e4.-4 \startBarre #2 #6 d16-2 ( cis ) d4 b-3 \stopBarre \break |
+  e4.-4 \startBarre #2 #3 d16-2 ( cis ) d4 b-3 \stopBarre \break |
 
   %33
   e4-0 g-3 fis-1 e |
@@ -281,14 +281,14 @@
   g2.-3 a4 \break |
 
   %48
-  r4 dis-4 e fis-3 |
+  r4 dis-3 e\glide-2 fis\glide-2 |
   s1 |
-  b2-1 cis4-3 dis-1 |
+  b2\glide-1 cis4\glide-1 dis\glide-1 |
 
   %49
-  g4-3 e-0 gis2-4 |
+  g4-2 e-3 gis2-4 |
   s1 |
-  e2-1 r4 d'-2 |
+  e2-1 r4 d'-1 |
 
   %50
   a4 \startBarre #5 #6 e \stopBarre b'2-4 |
@@ -316,7 +316,7 @@
   a,2 r |
 
   %55
-  r8 d'-4 a-3 d fis, \startBarre #7 #6 d' d, d' \stopBarre |
+  r8 d'-4 a-3 d fis, \startBarre #7 #3 d' d, d' \stopBarre |
   s4 a' fis d |
   fis'2-1_\5 r |
 
@@ -326,12 +326,12 @@
   g2-0 r \break |
 
   %57
-  r8 c'-4 g-3 c e, \startBarre #5 #6 c'-4 c, c' \stopBarre |
+  r8 c'-4 g-3 c e, \startBarre #5 #3 c'-4 c, c' \stopBarre |
   s4 g e c |
   e2-1_\5 r |
 
   %58
-  r8 \startBarre #7 #6 c-2 c b \stopBarre a-4 g-2 fis-1 e-3 |
+  r8 c-2 c b-1 a-4 g-2 fis-1 e-3 |
   s1 |
   fis2-3_\5 r |
 
@@ -341,22 +341,22 @@
   b,2 r |
 
   %60
-  r8 b \startBarre #7 #3 b a-4 g-2 b d, b' \stopBarre |
+  r8 b-1 b a-4 g-2 b \startBarre #7 #3 d, b' \stopBarre |
   s1 |
   e,1 \break |
 
   %61
-  r8 c, \startBarre #5 #6 e b'-4 fis-3 a e a \stopBarre |
+  r8 c, \startBarre #5 #3 e b'-4 fis-3 a e a \stopBarre |
   s2 fis4 e |
   a1 |
 
   %62
-  r8 \startBarre #2 #6 a-4 fis dis \stopBarre r \startBarre #3 #6 g e-4 c-3 \stopBarre |
+  r8 \startBarre #2 #5 a-4 fis dis-3 \stopBarre r \startBarre #3 #5 g e-4 c-3 \stopBarre |
   s1 |
   b2 c |
 
   %63
-  r8 fis-1 e-4 c-3 r \startBarre #2 #6 fis dis-4 b-3 \stopBarre |
+  r8 fis-1 e-4 c-3 r \startBarre #2 #5 fis dis-4 b-3 \stopBarre |
   s1 |
   a2 b-1 |
 
@@ -377,14 +377,14 @@
   cis4-3 \stopStringSpan r fis-4 e\glide-1|
 
   %67
-  a2-2 a |
+  a2-2 a\glide-2 |
   s1 |
-  dis4-1 cis8-3_\3 b-1 cis4 dis-1 |
+  dis4-1 cis8-3_\3 b-1 cis4 dis |
 
   %68
-  <e-3 g-1>2  <b e> |
+  <e-4 g-2>2  <b e> |
   s1 |
-  r4 e,, g-2 e \break |
+  r4 e,, g-1 e \break |
 
   %69
   <a-2 e'>2 <fis-3 dis'-4> |
@@ -394,16 +394,16 @@
   %70
   e'2-0 fis-2 |
   g,8\rest b-0 b b g\rest b b b |
-  g2-2 fis-1 |
+  g2-3 fis-1 |
 
   %71
-  g2-0 gis-2 |
+  g2-2 gis-2 |
   g8\rest b-0 b b b\rest e-3 e e |
   e2 d' |
 
   %72
   a2-4 b |
-  b8\rest e e e b\rest \startBarre #7 #6 gis'-3 gis gis \stopBarre |
+  b8\rest e\glide-3 e e b\rest \startBarre #7 #6 gis'-3 gis gis \stopBarre |
   c2-1 b \break |
 
   %73
@@ -419,7 +419,7 @@
   %75
   e4-1 <g'-3 e'-4> r <fis-3 dis'-4> |
   s1 |
-  e,2 b'-1 |
+  e,2 b'-1_\6 |
 
   %76
   <g-2 b-3 e-4>1 |
