@@ -3,7 +3,17 @@
 \header {
   title = "Fantasie"
   composer = "Sylvius Leopold Weiss"
-  tagline = ##f
+  tagline = \markup{ \italic \small "Révision des doigtés du 10/03/2026 par Benoît Pin"}
+  %{
+  sources:
+  Sky Guitar Youtube channel
+  https://youtu.be/16KktOFaVsI
+  https://drive.google.com/file/d/1L9Sj5925d0n_CoNe44jOTpnrr9Ta0fwD/view
+
+  www.luthbaroque.fr / Manuscrit Weiss de Londres
+  https://www.luthbaroque.fr/Les_fac-similes/Les_manuscrits/Londres/Fac-similes/Lbl_new/Lbl134_067v.jpg
+  https://www.luthbaroque.fr/Les_fac-similes/Les_manuscrits/Londres/Fac-similes/Lbl_new/Lbl135_068r.jpg
+  %}
 }
 
 \include "../commons/guitar-helpers.ly"
@@ -30,7 +40,7 @@
   %3
   r16 \startBarre #3 #6 g,-3 b-2 g e'-4 b g' e \stopBarre b'-4 a-2 b d,-3\3 |
   s2. |
-  g2 r4 \break |
+  g2 r4 |
 
   %4
   r16 c-1 b c r d-4 c d r b a-2 b |
@@ -47,7 +57,7 @@
   \time 3/4
   r16 \startBarre #8 #3 c' e,-2 g \stopBarre r fis-2\1 c-1 d-3 b-0 d-3 g-4 g, |
   s2. |
-  a,4 d s \break |
+  a,4 d s |
 
   %7
   \time 2/4
@@ -68,7 +78,7 @@
   %10
   r16 cis-1 b-3 g-4 r \startBarre #2 #6 ais-2 fis' e-4 |
   s2 |
-  e4 fis \break |
+  e4 fis |
 
   %11
   r16 dis-3 e-4 fis \stopBarre r b-4 a-2 b |
@@ -88,7 +98,7 @@
   %14
   r16 e-3\3 fis-1 g-2 a-4 b-1 c-2 a-4 |
   s2 |
-  d2 \break |
+  d2 |
 
   %15
   r16 a-4 b-1 c-2 d-4 b-1 g-2 fis-1 |
@@ -108,7 +118,7 @@
   %18
   r16 \startBarre #7 #6 dis-2 e-3 fis \stopBarre r fis-3 b-4 a-1 |
   s2 |
-  b4  dis-2_\5 \break |
+  b4  dis-2_\5 |
 
   %19
   g16-1 e-0 dis-2 e a-4 e dis-3 e |
@@ -124,7 +134,7 @@
   %21
   dis16-2 \startBarre #7 #6 b-3 fis' dis a'-4 fis \stopBarre c'-1 a-3 dis-4 a-3 e'-4 a,-3\3 |
   s2. |
-  b4. r8 r4 \break |
+  b4. r8 r4 |
 
   %22
   \time 2/4
@@ -144,7 +154,7 @@
   \time 3/4
   g16-2 b-1 a-4 g-2  fis a-4 g-2 fis \stopBarre e-0 g-2\1 fis-1 e-0 |
   s2. |
-  b2 r4  \break |
+  b2 r4 |
 
   %25
   r16 \startBarre #2 #6 dis-3 e-4 fis a, c-4 b-3 a \stopBarre g b e e, \startBarre #2 #6 |
@@ -183,7 +193,7 @@
   %28
   fis2-1 b-4 |
   s1 |
-  b''2\glide-3 d-3 \break |
+  b''2\glide-3 d-3 |
 
   %29
   b4-4 a8-2 gis-1 a2 |
@@ -203,7 +213,7 @@
   %32
   fis2 fis |
   s1 |
-  e4.-4 \startBarre #2 #3 d16-2 ( cis ) d4 b-3 \stopBarre \break |
+  e4.-4 \startBarre #2 #3 d16-2 ( cis ) d4 b-3 \stopBarre |
 
   %33
   e4-0 g-3 fis-1 e |
@@ -228,7 +238,7 @@
   %37
   g4-3\2  e-0 b'-4 e, |
   s1 |
-  e,2 g-1 \break |
+  e,2 g-1 |
 
   %38
   e4 dis8-4 cis-2 dis2 |
@@ -278,7 +288,7 @@
   %47
   b4 g e'2 |
   s1 |
-  g2.-3 a4 \break |
+  g2.-3 a4 |
 
   %48
   r4 dis-3 e\glide-2 fis\glide-2 |
@@ -303,7 +313,7 @@
   %52
   d4-4 a-3 dis2-4 |
   s1 |
-  fis2-1_\5 b4-2_\4 a-1 \break |
+  fis2-1_\5 b4-2_\4 a-1 |
 
   %53
   r8 e-4 b-3\2 e g,-1\2 e' e,-2\3 e' |
@@ -323,7 +333,7 @@
   %56
   r8 d-4 d c-2 b-1 a-4 g-2 fis-1 |
   s1 |
-  g2-0 r \break |
+  g2-0 r |
 
   %57
   r8 c'-4 g-3 c e, \startBarre #5 #3 c'-4 c, c' \stopBarre |
@@ -343,7 +353,7 @@
   %60
   r8 b-1 b a-4 g-2 b \startBarre #7 #3 d, b' \stopBarre |
   s1 |
-  e,1 \break |
+  e,1 |
 
   %61
   r8 c, \startBarre #5 #3 e b'-4 fis-3 a e a \stopBarre |
@@ -363,7 +373,7 @@
   %64
   r4 e g-2 e |
   s1 |
-  e,1 \break |
+  e,1 |
 
   %65
   fis2-1 b-4 |
@@ -377,14 +387,14 @@
   cis4-3 \stopStringSpan r fis-4 e\glide-1|
 
   %67
-  a2-2 a\glide-2 |
+  a2-2 \once \override Fingering.add-stem-support = ##f  a\glide-2 |
   s1 |
   dis4-1 cis8-3_\3 b-1 cis4 dis |
 
   %68
   <e-4 g-2>2  <b e> |
   s1 |
-  r4 e,, g-1 e \break |
+  r4 e,, g-1 e |
 
   %69
   <a-2 e'>2 <fis-3 dis'-4> |
@@ -404,7 +414,7 @@
   %72
   a2-4 b |
   b8\rest e\glide-3 e e b\rest \startBarre #7 #6 gis'-3 gis gis \stopBarre |
-  c2-1 b \break |
+  c2-1 b |
 
   %73
   c8-2 b-1 a-4\2 g-2 fis4-1 e-0 |
