@@ -1,0 +1,43 @@
+name: Build Scores
+
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches: [ main ]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
+
+        - name: Install LilyPond
+          run: |
+                sudo apt-get update
+                sudo apt-get install -y lilypond
+
+        - name: Avoid Lilypond version issues
+          run: |
+                find . -name "*.ly" -type f | while read -r file; do
+                    echo "Processing $file"
+                    convert-ly -e -c "$file"
+                done
+
+        - name: Generate PDFs and MIDIs
+          run: |
+                find . -name "*.ly" -type f | while read -r file; do
+                    echo "Processing $file"
+                    lilypond -dno-point-and-click "$file"
+                done
+
+
+        - name: Upload generated files
+          uses: actions/upload-artifact@v4
+          with:
+            name: scores
+            path: |
+                    **/*.pdf
+                    **/*.midi
