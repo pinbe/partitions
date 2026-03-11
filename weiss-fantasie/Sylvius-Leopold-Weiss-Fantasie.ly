@@ -165,7 +165,7 @@
   \time 2/4
   r16 fis-3 a e'-4 b dis-4 a dis \stopBarre |
   s2 |
-  b4 b'8-3 a |
+  b4 b'8-3 a \pageBreak |
 
   % deuxième partie
   \undo \omit Staff.TimeSignature
@@ -468,6 +468,7 @@ zique = {
 \score {
   \new Staff {
     \set Staff.midiInstrument = "acoustic guitar (nylon)"
+    \override Score.BarNumber.break-visibility = ##(#f #f #f)
     \zique
   }
 
