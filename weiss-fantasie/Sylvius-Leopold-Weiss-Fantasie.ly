@@ -3,7 +3,7 @@
 \header {
   title = "Fantasie"
   composer = "Sylvius Leopold Weiss"
-  tagline = \markup{ \italic \small "Révision des doigtés du 12/03/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 13/03/2026 par Benoît Pin"}
   %{
   sources:
   Sky Guitar Youtube channel
@@ -56,7 +56,7 @@
   \time 2/4
   g16 g'-2 b, fis'-1 c e-4 b e |
   s2 |
-  g'8-0 \once \textSpannerDown b-3 \startStringSpan #3  c-3 b-2 \stopStringSpan |
+  g'8-0 \once \textSpannerDown b\glide-3 \startStringSpan #3  c-3 b-2 \stopStringSpan |
 
   %6
   \time 3/4
@@ -231,17 +231,17 @@
   b,2 d |
 
   %35
-  e,4-2\3 b'-4 ais2-4 |
+  e,4 \startBarre #9 #6 b'\glide-4 \stopBarre ais2-4 |
   s1 |
-  cis2-1 fis4-2 e-1 |
+  cis2-1 fis4-2 e\glide-1 |
 
   %36
-  <fis-3 b-4>4 r a2-4\2 |
+  <fis-3 b-4>4 r a2\glide-2 |
   s1 |
-  dis4-1_\5 cis8-2_\6 b-1 cis4-2 dis-1_\5 |
+  dis4\glide-1_\5 cis8-1 b-4 cis4-1 dis-3 |
 
   %37
-  g4-3\2  e-0 b'-4 e, |
+  g4-2  e-0 b'-4 e, |
   s1 |
   e,2 g-1 |
 
@@ -266,12 +266,12 @@
   d,1 |
 
   %42
-  g4\glide-1 a-1 b-3 g-4\2 |
+  g4-1 a\glide-2 b-2 g\glide-3\2 |
   s1 |
   g1 |
 
   %43
-  a4-4 \startBarre #7 #6 d,  d'-4 fis, |
+  a4-3 \RH 3 d, \RH 2 \startBarre #7 #6  d'-4 \RH 4 fis, |
   s1 |
   fis1-2 |
 
@@ -281,9 +281,9 @@
   e2 cis-2_\6 |
 
   %45
-  g8-3\1 fis-2 e-0 d-3 g4-4 b,-0 |
+  g8\glide-1 fis-1 e-3 d-1 g4-4 b,-0 |
   s1 |
-  d2-0 b-1 |
+  d2-0 b-2_\6 |
 
   %46
   c4-1 e d-4 c |
@@ -361,12 +361,12 @@
   e,1 |
 
   %61
-  r8 c, \startBarre #5 #3 e b'-4 fis-3 a e a \stopBarre |
+  r8 c, \RH 2 \startBarre #5 #3 e \RH 3 b'-4 \RH 4 fis-3 a e a \stopBarre |
   s2 fis4 e |
   a1 |
 
   %62
-  r8 \startBarre #2 #5 a-4 fis dis-3 \stopBarre r \startBarre #3 #5 g e-4 c-3 \stopBarre |
+  r8 \startBarre #2 #6 a-4 \RH 2 fis \RH 3 dis-3 \RH 2 \stopBarre r \startBarre #3 #6 g \RH 4 e-4 \RH 3 c-3 \RH 2 \stopBarre |
   s1 |
   b2 c |
 
