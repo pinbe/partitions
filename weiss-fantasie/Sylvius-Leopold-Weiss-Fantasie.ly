@@ -3,7 +3,7 @@
 \header {
   title = "Fantasie"
   composer = "Sylvius Leopold Weiss"
-  tagline = \markup{ \italic \small "Révision des doigtés du 10/03/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 12/03/2026 par Benoît Pin"}
   %{
   sources:
   Sky Guitar Youtube channel
@@ -26,10 +26,15 @@
   \accidentalStyle neo-modern
   \tempo 4 = 54
 
-  %1
   \override Fingering.add-stem-support = ##t
-  r16 g b g e' b g'-1 e-3 b'-1 g-2 c-3 e,-4\3 |
+
+
+  %1
+  \set strokeFingerOrientations = #'(up)
+  r16 g \RH 2 b \RH "m…" g e' b g'-1 e-3 b'-1 g-2 c-3 \RH 4 e,-4\3 \RH 2 |
+  \set strokeFingerOrientations = #'(up)
   s2. |
+  \set strokeFingerOrientations = #'(down)
   e,2. |
 
   %2
@@ -38,12 +43,12 @@
   fis2 r4 |
 
   %3
-  r16 \startBarre #3 #6 g,-3 b-2 g e'-4 b g' e \stopBarre b'-4 a-2 b d,-3\3 |
+  r16 \startBarre #3 #6 g,-3 b-2 g e'-4 b g' e \stopBarre b'-4 a-2 b \RH 4 d,-3\3 \RH 2 |
   s2. |
   g2 r4 |
 
   %4
-  r16 c-1 b c r d-4 c d r b a-2 b |
+  r16 c-1 \RH 3 b c r d-4 \RH 2 c d r b \RH 3 a-2 b |
   s2. |
   a4 fis-2 g-3 |
 
@@ -55,13 +60,13 @@
 
   %6
   \time 3/4
-  r16 \startBarre #8 #3 c' e,-2 g \stopBarre r fis-2\1 c-1 d-3 b-0 d-3 g-4 g, |
+  r16 \startBarre #8 #3 c' \RH 4  e,-2 \RH 2 g \RH 3 \stopBarre r fis-2\1 \RH 3 c-1 d-3 b-0 \RH 2 d-3 \RH 3 g-4 \RH 4 g, \RH 2 |
   s2. |
   a,4 d s |
 
   %7
   \time 2/4
-  r16 a \startBarre #2 #6 g'-2 fis \stopBarre r fis-4 b,-0 a-3 |
+  r16 a \RH 2 \startBarre #2 #6 g'-2 \RH 4 fis \RH 3 \stopBarre r fis-4 \RH 4 b,-0 \RH 3 a-3 \RH 2 |
   s2 |
   cis4-3 dis-1 |
 
@@ -71,17 +76,17 @@
   e8-2 g-0 cis-3 b-0 |
 
   %9
-  r16 \startBarre #2 #6 e-4 ais,-2 fis-3 \stopBarre r \startBarre #3 #6 d' b-2 g-3 \stopBarre |
+  r16 \startBarre #2 #6 e-4 \RH 4 ais,-2 \RH 3 fis-3 \RH 2 \stopBarre r \startBarre #3 #6 d' \RH 4 b-2 \RH 3 g-3 \RH 2 \stopBarre |
   s2 |
   fis,4 g |
 
   %10
-  r16 cis-1 b-3 g-4 r \startBarre #2 #6 ais-2 fis' e-4 |
+  r16 cis-1 \RH 4 b-3 \RH 3 g-4 \RH 2 r \startBarre #2 #6 ais-2 \RH 2 fis' \RH 4 e-4 \RH 3 |
   s2 |
   e4 fis |
 
   %11
-  r16 dis-3 e-4 fis \stopBarre r b-4 a-2 b |
+  r16 dis-3 \RH 2 e-4 \RH 3 fis \RH 4 \stopBarre r b-4 a-2 b |
   s2 |
   b4  b'-1_\3 |
 
@@ -211,9 +216,9 @@
   e4-1 b-0 e2-3 |
 
   %32
-  fis2 fis |
+  fis2 \RH 3 \RH 4  fis |
   s1 |
-  e4.-4 \startBarre #2 #3 d16-2 ( cis ) d4 b-3 \stopBarre |
+  e4.-4 \startBarre #2 #3 d16-2 \RH 2 ^( cis ) d4 b-3 \stopBarre |
 
   %33
   e4-0 g-3 fis-1 e |
@@ -413,7 +418,7 @@
 
   %72
   a2-4 b |
-  b8\rest e\glide-3 e e b\rest \startBarre #7 #6 gis'-3 gis gis \stopBarre |
+  b8\rest e-3 e e\glide-3 b\rest \startBarre #7 #6 gis'-3 gis gis \stopBarre |
   c2-1 b |
 
   %73
