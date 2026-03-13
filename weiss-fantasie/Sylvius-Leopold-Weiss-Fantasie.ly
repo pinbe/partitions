@@ -198,7 +198,7 @@
   %28
   fis2-1 b-4 |
   s1 |
-  b''2\glide-3 d-3 |
+  b''2\glide-3 \RH "p…" d-3 |
 
   %29
   b4-4 a8-2 gis-1 a2 |
@@ -216,9 +216,9 @@
   e4-1 b-0 e2-3 |
 
   %32
-  fis2 \RH 3 \RH 4  fis |
+  fis2 \RH 2  fis |
   s1 |
-  e4.-4 \startBarre #2 #3 d16-2 \RH 2 ^( cis ) d4 b-3 \stopBarre |
+  e4.-4 \RH 1 \startBarre #2 #3 d16-2 \RH "p…" ^( cis ) d4 b-3 \stopBarre |
 
   %33
   e4-0 g-3 fis-1 e |
@@ -286,7 +286,7 @@
   d2-0 b-2_\6 |
 
   %46
-  c4-1 e d-4 c |
+  c4-1\2 e d-4 c |
   s1 |
   a2 fis-2 |
 
@@ -303,12 +303,12 @@
   %49
   g4-2 e-3 gis2-4 |
   s1 |
-  e2-1 r4 d'-1 |
+  e2-1 r4 d'\glide-1 \RH 1 |
 
   %50
   a4 \startBarre #5 #6 e \stopBarre b'2-4 |
   s1 |
-  c2 r4 b-0 |
+  c2-1 \RH 1 r4 b-0 |
 
   %51
   c4-4 a-1 cis2-4 |
@@ -321,17 +321,17 @@
   fis2-1_\5 b4-2_\4 a-1 |
 
   %53
-  r8 e-4 b-3\2 e g,-1\2 e' e,-2\3 e' |
+  r8 e-4 \RH 3 b-3 \RH 2 e \RH 3 g,-1 \RH 2 e' \RH 3 e,-2 \RH 2 e' \RH 4 |
   s1 |
   g2-0 r |
 
   %54
-  r8 e-4 e d-2 c-1 b-4\2 a-2 g-1 |
+  r8 e-4 e d-2 c-1 b-4 a-2 g-1 |
   s1 |
   a,2 r |
 
   %55
-  r8 d'-4 a-3 d fis, \startBarre #7 #3 d' d, d' \stopBarre |
+  r8 d'-4 \RH 3 a-3 \RH 2 d \RH 3 fis, \RH 2 \startBarre #7 #3 d' \RH 3 d, \RH 2 d' \RH 4 \stopBarre |
   s4 a' fis d |
   fis'2-1_\5 r |
 
@@ -341,22 +341,22 @@
   g2-0 r |
 
   %57
-  r8 c'-4 g-3 c e, \startBarre #5 #3 c'-4 c, c' \stopBarre |
+  r8 c'-4 \RH 3 g-3 \RH 2 c \RH 3 e, \RH 2 \startBarre #5 #3 c'-4 \RH 3 c, \RH 2 c' \RH 4 \stopBarre |
   s4 g e c |
   e2-1_\5 r |
 
   %58
-  r8 c-2 c b-1 a-4 g-2 fis-1 e-3 |
+  r8 c-2 c b-1 a-4 g-2 fis-1 e-4 |
   s1 |
   fis2-3_\5 r |
 
   %59
-  r8 \startBarre #7 #6 b' fis b dis,-2 b' b,-3 b' \stopBarre |
+  r8 \startBarre #7 #6 b' \RH 3 fis \RH 2 b \RH 3 dis,-2 \RH 2 b' \RH 4 b,-3 \RH 2 b' \RH 4 \stopBarre |
   s1 |
   b,2 r |
 
   %60
-  r8 b-1 b a-4 g-2 b \startBarre #7 #3 d, b' \stopBarre |
+  r8 b-1 \RH 3 b \RH 2 a-4 \RH 3 g-2 \RH 2 b \RH 3 \startBarre #7 #3 d, \RH 2 b' \RH 4 \stopBarre |
   s1 |
   e,1 |
 
@@ -366,12 +366,12 @@
   a1 |
 
   %62
-  r8 \startBarre #2 #6 a-4 \RH 2 fis \RH 3 dis-3 \RH 2 \stopBarre r \startBarre #3 #6 g \RH 4 e-4 \RH 3 c-3 \RH 2 \stopBarre |
+  r8 \startBarre #2 #6 a-4 \RH 2 fis \RH 3 dis-3 \RH 2 \stopBarre r \startBarre #3 #6 g \RH "a…" e-4 \RH "m…" c-3 \RH "i…" \stopBarre |
   s1 |
   b2 c |
 
   %63
-  r8 fis-1 e-4 c-3 r \startBarre #2 #5 fis dis-4 b-3 \stopBarre |
+  r8 fis-1 e-4 c-3 r \startBarre #2 #6 fis dis-4 b-3 \stopBarre |
   s1 |
   a2 b-1 |
 
