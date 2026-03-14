@@ -5,7 +5,7 @@
         subtitle = "Sechs Sonaten für Violine"
         piece = "5. Chaconne"
         mutopiatitle = "BWV 1004 Chaconne"
-        composer = "Johann Sebastian Bach (1685-1750)"
+        composer = "Johann Sebastian Bach"
         mutopiacomposer = "BachJS"
         opus = "BWV 1004"
         date = "1720"
