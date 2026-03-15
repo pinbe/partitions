@@ -16,7 +16,7 @@
   %}
 }
 
-\include "../commons/guitar-helpers.ly"
+\include "../../commons/guitar-helpers.ly"
 
 
 \parallelMusic voiceA, voiceB, voiceC {
