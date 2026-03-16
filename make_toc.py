@@ -1,17 +1,25 @@
-from os import walk
 import re
+from argparse import ArgumentParser
+from os import walk
+from os.path import join
+from posixpath import splitext
 
+def file_links_md(dirpath:str, filename:str, giturl:str, branch:str, composer:str, title:str) -> str :
+    pdf_link = f"{dirpath}/{filename}.pdf"
+    midi_link = f"{dirpath}/{filename}.midi"
+    ly_link = f"{giturl}/blob/{branch}/{dirpath}/{filename}.ly"
+    return f"[{composer} — {title}]({pdf_link}) [[MIDI]({midi_link})] [[Source]({ly_link})]"
 
-def main() :
+def main(basefolder:str, giturl:str, branch:str) -> None :
 
-    with open("scores-index.md", "w") as index_file :
+    with open(join(basefolder, "index.md"), "w") as index_file :
 
         def pr(*args) : print(*args, file=index_file)
 
         pr("# Partitions")
         pr("")
 
-        for (dirpath, dirnames, filenames) in walk(".") :
+        for (dirpath, dirnames, filenames) in walk(basefolder) :
             for filename in [f for f in filenames if f.endswith(".ly")] :
                 with open(f"{dirpath}/{filename}", "r") as f :
                     lycode = f.read()
@@ -25,9 +33,20 @@ def main() :
 
                     except AttributeError :
                         continue
-
-                    pr(f"- [{composer} — {title}]({dirpath}/{filename})")
+                    basename = splitext(filename)[0]
+                    pr("- %s" % file_links_md(dirpath, basename, giturl, branch, composer, title))
 
 
 if __name__ == "__main__" :
-    main()
+    parser = ArgumentParser()
+    parser.add_argument("basefolder",
+                        help="Base folder to search for .ly files")
+    parser.add_argument("giturl",
+                        help="Git URL for the repository "
+                             "(used for links to source files in the index)")
+    parser.add_argument("--branch",
+                        default="master",
+                        help="Git branch for the repository "
+                             "(used for links to source files in the index)")
+    args = parser.parse_args()
+    main(args.basefolder, args.giturl, args.branch)

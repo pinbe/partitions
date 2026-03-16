@@ -33,34 +33,25 @@ jobs:
           find . -name "*.ly" -type f | while read -r file; do
               echo "Processing $file"
               pushd "$(dirname "$file")"
-              lilypond -dno-point-and-click "$(basename "$file")"
+              lilypond -dno-point-and-click \
+                       --formats=pdf,midi,png \
+                       "$(basename "$file")"
               popd
           done
 
-      - name: Install mdBook
-        run: |
-          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-          . "$HOME/.cargo/env"
-          cargo install mdbook
+      - uses: actions/setup-python@v6
 
-      - name: Build pages with mdBook
+      - name: Generate index
         run: |
-          . "$HOME/.cargo/env"
-          mdbook build
+          python make_toc.py "${{ github.server_url }}/${{ github.repository }}" --branch "${{ github.ref_name }}"
+          
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          path: ./book
-      
+          name: scores
+          path: ./scores
 
-      # - name: Upload generated files
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: scores
-      #     path: |
-      #       **/*.pdf
-      #       **/*.midi
   # deploy:
   #   # Add a dependency to the build job
   #   needs: build
