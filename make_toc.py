@@ -1,8 +1,8 @@
 import re
 from argparse import ArgumentParser
-from os import walk
-from os.path import join
+from os import walk, chdir
 from posixpath import splitext
+
 
 def file_links_md(dirpath:str, filename:str, giturl:str, branch:str, composer:str, title:str) -> str :
     pdf_link = f"{dirpath}/{filename}.pdf"
@@ -10,16 +10,19 @@ def file_links_md(dirpath:str, filename:str, giturl:str, branch:str, composer:st
     ly_link = f"{giturl}/blob/{branch}/{dirpath}/{filename}.ly"
     return f"[{composer} — {title}]({pdf_link}) [[MIDI]({midi_link})] [[Source]({ly_link})]"
 
+
 def main(basefolder:str, giturl:str, branch:str) -> None :
 
-    with open(join(basefolder, "index.md"), "w") as index_file :
+    chdir(basefolder)
+
+    with open("index.md", "w") as index_file :
 
         def pr(*args) : print(*args, file=index_file)
 
         pr("# Partitions")
         pr("")
 
-        for (dirpath, dirnames, filenames) in walk(basefolder) :
+        for (dirpath, dirnames, filenames) in walk('.') :
             for filename in [f for f in filenames if f.endswith(".ly")] :
                 with open(f"{dirpath}/{filename}", "r") as f :
                     lycode = f.read()

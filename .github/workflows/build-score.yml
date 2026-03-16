@@ -16,10 +16,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install LilyPond
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y lilypond
+      - name: Setup LilyPond
+        uses: codello/setup-lilypond@main
+        with:
+          lilypond-version: 2.24
 
       - name: Avoid Lilypond version issues
         run: |
@@ -28,7 +28,7 @@ jobs:
               convert-ly -e -c "$file"
           done
 
-      - name: Generate PDFs and MIDIs
+      - name: Generate PDFs, MIDIs and PNGs
         run: |
           find . -name "*.ly" -type f | while read -r file; do
               echo "Processing $file"
@@ -40,11 +40,18 @@ jobs:
           done
 
       - uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
 
       - name: Generate index
         run: |
-          python make_toc.py "${{ github.server_url }}/${{ github.repository }}" --branch "${{ github.ref_name }}"
-          
+          python make_toc.py scores "${{ github.server_url }}/${{ github.repository }}" --branch "${{ github.ref_name }}"
+      
+      - name: Create html index
+        run: |
+          apt-get update && apt-get install -y pandoc
+          cd scores
+          pandoc -s -o index.html index.md
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
