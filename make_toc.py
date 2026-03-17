@@ -1,7 +1,7 @@
 import re
 from argparse import ArgumentParser
-from os import walk, chdir
-from posixpath import splitext
+from os import chdir, walk
+from os.path import splitext
 
 
 def file_links_md(basefolder:str, dirpath:str, filename:str, giturl:str, branch:str, composer:str, title:str) -> str :
