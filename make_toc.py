@@ -4,10 +4,10 @@ from os import walk, chdir
 from posixpath import splitext
 
 
-def file_links_md(dirpath:str, filename:str, giturl:str, branch:str, composer:str, title:str) -> str :
+def file_links_md(basefolder:str, dirpath:str, filename:str, giturl:str, branch:str, composer:str, title:str) -> str :
     pdf_link = f"{dirpath}/{filename}.pdf"
     midi_link = f"{dirpath}/{filename}.midi"
-    ly_link = f"{giturl}/blob/{branch}/{dirpath}/{filename}.ly"
+    ly_link = f"{giturl}/blob/{branch}/{basefolder}/{dirpath}/{filename}.ly"
     return f"[{composer} — {title}]({pdf_link}) [[MIDI]({midi_link})] [[Source]({ly_link})]"
 
 
@@ -37,7 +37,7 @@ def main(basefolder:str, giturl:str, branch:str) -> None :
                     except AttributeError :
                         continue
                     basename = splitext(filename)[0]
-                    pr("- %s" % file_links_md(dirpath, basename, giturl, branch, composer, title))
+                    pr("- %s" % file_links_md(basefolder, dirpath, basename, giturl, branch, composer, title))
 
 
 if __name__ == "__main__" :
