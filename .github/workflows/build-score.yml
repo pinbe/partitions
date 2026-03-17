@@ -2,9 +2,9 @@ name: Build Scores
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
   workflow_dispatch:
 
@@ -49,15 +49,28 @@ jobs:
       
       - name: Create html index
         run: |
+          sudo apt-get update -y
           sudo apt-get install -y pandoc
           cd scores
           pandoc -s -o index.html index.md
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           name: scores
-          path: ./scores
+          path: scores
+
+
+  # deploy:
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
 
   # deploy:
   #   # Add a dependency to the build job
