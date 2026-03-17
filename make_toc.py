@@ -19,7 +19,7 @@ def main(basefolder:str, giturl:str, branch:str) -> None :
 
         def pr(*args) : print(*args, file=index_file)
 
-        pr("# Partitions")
+        pr("# Partitions pour guitare classique")
         pr("")
 
         for (dirpath, dirnames, filenames) in walk('.') :
