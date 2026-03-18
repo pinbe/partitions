@@ -1752,7 +1752,7 @@ fingeringVoiceD = {
   \tuplet 3/2 8 {
     bes,16-1 [ f''-4\2 _( ees-2 ) ]
     d-1 [ d-3 _( c-1 ) ]
-    bes-3 [ bes-2 _( a-1 ) ]
+    bes-2 [ bes-2 _( a-1 ) ]
     g-4\4 [ g _( f-2 ) ]
     e-1 [ e _( d-0 ) ]
     cis-3 [ cis _( b-1 ) ]
