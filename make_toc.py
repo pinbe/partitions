@@ -43,7 +43,7 @@ def main(basefolder:str, giturl:str, branch:str) -> None :
                     )
 
         items.sort(
-            key=lambda x: (re.findall(r"[^\W\d_]+", x[5])[-1], x[6])
+            key=lambda x: (re.findall(r"[^\W\d_]+(?:-[^\W\d_]+)*", x[5])[-1], x[6])
         )  # Sort by composer, then title
 
         for item in items :
