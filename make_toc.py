@@ -22,6 +22,7 @@ def main(basefolder:str, giturl:str, branch:str) -> None :
         pr("# Partitions pour guitare classique")
         pr("")
 
+        items = []
         for (dirpath, dirnames, filenames) in walk('.') :
             for filename in [f for f in filenames if f.endswith(".ly")] :
                 with open(f"{dirpath}/{filename}", "r") as f :
@@ -37,7 +38,16 @@ def main(basefolder:str, giturl:str, branch:str) -> None :
                     except AttributeError :
                         continue
                     basename = splitext(filename)[0]
-                    pr("- %s" % file_links_md(basefolder, dirpath, basename, giturl, branch, composer, title))
+                    items.append(
+                        (basefolder, dirpath, basename, giturl, branch, composer, title)
+                    )
+
+        items.sort(
+            key=lambda x: (re.findall(r"[^\W\d_]+", x[5])[-1], x[6])
+        )  # Sort by composer, then title
+
+        for item in items :
+            pr("- %s" % file_links_md(*item))
 
 
 if __name__ == "__main__" :
