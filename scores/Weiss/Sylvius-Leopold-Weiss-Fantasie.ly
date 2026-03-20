@@ -60,7 +60,7 @@
 
   %6
   \time 3/4
-  r16 \startBarre #8 #3 c' \RH 4  e,-2 \RH 2 g \RH 3 \stopBarre r fis-2\1 \RH 3 c-1 d-3 b-0 \RH 2 d-3 \RH 3 g-4 \RH 4 g, \RH 2 |
+  r16 \startBarre #8 #3 c' \RH 4  e,-2 \RH 2 g \RH 3 \stopBarre r fis-4\2 c-1 d-3 b-0 \RH 2 d-3 \RH 3 g-4 \RH 4 g, \RH 2 |
   s2. |
   a,4 d s |
 
