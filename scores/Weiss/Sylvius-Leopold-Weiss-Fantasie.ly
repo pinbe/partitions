@@ -3,7 +3,7 @@
 \header {
   title = "Fantasie"
   composer = "Sylvius Leopold Weiss"
-  tagline = \markup{ \italic \small "Révision des doigtés du 20/03/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 22/03/2026 par Benoît Pin"}
   %{
   sources:
   Sky Guitar Youtube channel
@@ -31,7 +31,7 @@
 
   %1
   \set strokeFingerOrientations = #'(up)
-  r16 g \RH 2 b \RH "m…" g e' b g'-1 e-3 b'-1 g-2 c-3 e,-0 |
+  r16 g \RH 2 b \RH "m…" g e' b g'\glide-1 e-3 b'-1 g-2 c-3 e,-0 |
   \set strokeFingerOrientations = #'(up)
   s2. |
   \set strokeFingerOrientations = #'(down)
@@ -60,7 +60,7 @@
 
   %6
   \time 3/4
-  r16 \startBarre #8 #3 c' \RH 4  e,-2 \RH 2 g \RH 3 \stopBarre r fis-4\2 c-1 d-3 b-0 \RH 2 d-3 \RH 3 g-4 \RH 4 g, \RH 2 |
+  r16 \startBarre #8 #3 c' \RH 4  e,-2 \RH 2 g \RH 3 \stopBarre r fis-4\2 \RH 3 c-1 d-3 b-0 \RH 2 d-3 \RH 3 g-4 \RH 4 g, \RH 2 |
   s2. |
   a,4 d s |
 
@@ -96,12 +96,12 @@
   e,,4 e''-1_\3 |
 
   %13
-  r16 b-3\2 c-4 d-1 e-3 c-4 a-1 g-3\3 |
+  r16 b-3\2 c-4 d-1 e-3 c-4 a-1 g\glide-3\3 |
   s2 |
   a,,2 |
 
   %14
-  r16 e-3\3 fis-1 g-2 a-4 b-1 c-2 a-4 |
+  r16 e-3 fis-1 g-2 a-4 b-1 c-2 a-4 |
   s2 |
   d2 |
 
@@ -128,7 +128,7 @@
   %19
   g16-1 e-0 dis-2 e a-4 e dis-3 e |
   s2 |
-  e,4 fis-1 |
+  e,4 fis\glide-1 |
 
   %20
   \time 3/4
@@ -137,7 +137,7 @@
   g4-1 a a |
 
   %21
-  dis16-2 \startBarre #7 #6 b-3 fis' dis a'-4 fis \stopBarre c'-1 a-3 dis-4 a-3 e'-4 a,-3\3 |
+  dis16-2 \startBarre #7 #6 b-3 fis' dis a'-4 fis \stopBarre c'-1 a-3 dis-4 a-3 e'\glide-4 a,-3\3 |
   s2. |
   b4. r8 r4 |
 
@@ -145,13 +145,13 @@
   \time 2/4
   r16 fis'-4 e\glide-3 dis-3 e4-4 |
   s2 |
-  <b'-0 g'-2\tweak extra-offset #'(-1.5 . 0 )\3>4 r16
+  <b'-0 \RH #2 g'-2\tweak extra-offset #'(-1.5 . 0 )\3 \RH #3 >4 r16
   \override Fingering.direction = #UP
   g'-3 fis\glide-2 e-2
   \override Fingering.direction = #DOWN |
 
   %23
-  r16 \startBarre #7 #6 e-4 dis-4 cis-3 dis-4 b a-4 fis |
+  r16 \startBarre #7 #6 e\glide-4 dis-4 cis-3 dis-4 b a-4 fis |
   s2 |
   <b, fis''>2 |
 
@@ -323,37 +323,37 @@
   %53
   r8 e-4 \RH 3 b-3 \RH 2 e \RH 3 g,-1 \RH 2 e' \RH 3 e,-2 \RH 2 e' \RH 4 |
   s1 |
-  g2-0 r |
+  g2.-0 r4 |
 
   %54
   r8 e-3 e d-1 c-4 b-3 a\glide-1 g-1 |
   s1 |
-  a,2 r |
+  a,1 |
 
   %55
   r8 d'-4 \RH 3 a-3 \RH 2 d \RH 3 fis, \RH 2 \startBarre #7 #6 d' \RH 3 d, \RH 2 d' \RH 4 \stopBarre |
   s4 a' fis d |
-  fis'2-2_\5 r |
+  fis'1-2_\5 |
 
   %56
   r8 d-4 d c-2 b-1 a-4 g-2 fis-1 |
   s1 |
-  g2-0 r |
+  g1-0 |
 
   %57
   r8 c'-4 \RH 3 g-3 \RH 2 c \RH 3 e, \RH 2 \startBarre #5 #6 c'-4 \RH 3 c, \RH 2 c' \RH 4 \stopBarre |
   s4 g e c |
-  e2-2_\5 r |
+  e1-2_\5 |
 
   %58
   r8 c-2 c b-1 a-4 g-2 fis-1 e-4 |
   s1 |
-  fis2-3_\5 r |
+  fis1-3_\5 |
 
   %59
   r8 \startBarre #7 #6 b' \RH 3 fis \RH 2 b \RH 3 dis,-2 \RH 2 b' \RH 4 b,-3 \RH 2 b' \RH 4 \stopBarre |
   s1 |
-  b,2 r |
+  b,1 |
 
   %60
   r8 b-1 \RH 3 b \RH 2 a-4 \RH 3 g-2 \RH 2 b \RH 3 \startBarre #7 #3 d, \RH 2 b' \RH 4 \stopBarre |
