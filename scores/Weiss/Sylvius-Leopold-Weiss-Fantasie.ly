@@ -228,7 +228,7 @@
   %34
   d4-2 \startBarre #2 #6 fis \stopBarre r b-4\2 |
   s1 |
-  b,2 d |
+  <b, b'-3>2 d |
 
   %35
   e,4 \startBarre #9 #6 b'\glide-4 \stopBarre ais2-4 |
