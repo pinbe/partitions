@@ -3,7 +3,7 @@
 \header {
   title = "Les barricades mystérieuses"
   composer = "François Couperin (1668-1733)"
-  tagline = \markup{ \italic \small "Révision des doigtés du 23/12/2025 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 22/03/2026 par Benoît Pin"}
   %{
   sources:
   https://youtu.be/7cmL6WpDSHY
@@ -260,7 +260,7 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
         bes,4-1 g'-0 c,-3 c |
         
         %35 05:59
-        f'2~ \barre 1 6 f8 \breathe f-4\2 a-3 f |
+        f'2~ \startBarre 1 6 f8 \stopBarre \breathe f-4\2 a-3 f |
         bes8 bes-4 a-2 c f,\tweak extra-offset #'(1.5 . 3.5)-3 r s4 |
         f,2~ f8 s c''4-2 |
         
