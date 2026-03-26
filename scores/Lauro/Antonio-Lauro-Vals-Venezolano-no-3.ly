@@ -43,8 +43,9 @@ six_huit = {
   s8 s2 |
   s8 \mf s2 |
 
-  %2
+
   \repeat volta 2 {
+    %2
     \six_huit
     g'8-2\2 _( fis-1 ) e-0
     \once \override NoteHead.style = #'harmonic-mixed b'4.
