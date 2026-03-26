@@ -1,7 +1,7 @@
 \version "2.24.4"
 
 \header {
-  title = "Vals Venezolano no3"
+  title = "Vals Venezolano no 3"
   subsubtitle = "Natalia"
   composer = "Antonio Lauro"
   tagline = \markup{ \italic \small "Révision des doigtés du 26/03/2026 par Benoît Pin"}
