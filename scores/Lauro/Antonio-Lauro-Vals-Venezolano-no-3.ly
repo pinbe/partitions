@@ -307,78 +307,45 @@ six_huit = {
     r8 a,4-2 c8-1 a4-2 |
     a2.-0 |
 
-    %{44
+    %44
     \six_huit
-    dis'4.-4 cis |
-    r8 \startBarre 9 6 e' gis r  e gis \stopBarre |
-    cis2. |
-    %}
-
-    %45
-    %{
-    \trois_quatre
-    r4 b4.-3 cis8-4 |
-    r8 d4-2_\3 f8-1_\2 d4-2_\3 |
-    e,2. |
-    %}
-
-    %46
-    %{
-    \six_huit
-    b4. a |
-    r8 cis-2 e r cis e |
-    a2.-0 |
-    %}
-
-    %47
-    %{
-    \trois_quatre
-    r4 fis4.-3 gis8-4 |
-    r8 a,4-2 c8-1 a4-2 |
-    a2. |
-    %}
-
-    %48
-    \six_huit
-    fis4.-4 e-0 |
+    Yfis4.-4 e-0 |
     r8 gis-1 b-0 r gis b |
     b2.-2 |
 
-    %49
+    %45
     \trois_quatre
     r4 cis4.-3 dis8-4 |
     r8 e,4-2 g8-0 e4-2 |
     ais2.-1 |
 
-    %50
+    %46
     \six_huit
     cis4.-4 b4-0 b8-0 |
     \override Rest.staff-position = #-4
     r8 dis-1 a'-2 r dis, b' |
     b2.-2 |
 
-    %51
+    %47
     \trois_quatre
     ais8-2 b-0 gis'4.-4 fis8-3 |
     r8 b4 a4.-2 |
     b2-1 b4 |
 
-    %52
+    %48
     e8 gis,-1 b-0 e-0 gis-3 b-1 |
     s2. |
     e,2 b'4_\6 |
 
     \alternative {
       \volta 1 {
-        % 53
+        % 49
         e8-4 cis,16-1 [ _( b-0 ) ] ais8-2  b-0 cis-1 _( b-0 ) |
         s2. |
         e4 r r |
       }
     }
-
   }
-
 }
 
 zique = {
