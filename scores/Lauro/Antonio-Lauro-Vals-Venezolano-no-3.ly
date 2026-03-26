@@ -1,10 +1,10 @@
 \version "2.24.4"
 
 \header {
-  title = \markup { "Vals Venezolano n" \super "o" "3" }
+  title = \markup { Vals Venezolano n \super {o} 3 }
   subsubtitle = "Natalia"
   composer = "Antonio Lauro"
-  tagline = \markup{ \italic \small "Révision des doigtés du 22/03/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 26/03/2026 par Benoît Pin"}
   %{
   sources:
   Benjamin French Guitar
@@ -29,6 +29,15 @@ six_huit = {
   \set Timing.beatStructure = 3,3
 }
 
+%{
+segno = \markup {
+  \musicglyph #"scripts.open"
+}
+
+coda = \markup {
+  \musicglyph #"scripts.coda"
+}
+%}
 
 
 \parallelMusic voiceA, voiceB, voiceC {
@@ -46,6 +55,7 @@ six_huit = {
 
   \repeat volta 2 {
     %2
+    \segnoMark \default
     \six_huit
     g'8-2\2 _( fis-1 ) e-0
     \once \override NoteHead.style = #'harmonic-mixed b'4.
@@ -336,7 +346,7 @@ six_huit = {
     %48
     e8 gis,-1 b-0 e-0 gis-3 b-1 |
     s2. |
-    e,2 b'4_\6 |
+    e,2 b'4_\6 \codaMark \default |
 
     \alternative {
       \volta 1 {
@@ -351,13 +361,26 @@ six_huit = {
         %50
         r8 c16-1 _( b-0 ) ais8-3 b-0 c-1 _( b-0 ) |
         s2.|
-        e,2. |
+        e,2.
+        \jump \markup {
+          \column {
+            \line { D.S. \segno al \coda }
+            \line { e poi la Coda }
+          }
+
+        }
+        |
       }
     }
-    <e gis e'-4>4 \fermata r r |
-    s2. |
-    e4 \fermata r r |
+    \section
   }
+
+  \sectionLabel "Coda"
+  <e gis e'-4>4 \fermata r r |
+  s2. |
+  e4 \fermata r r \fine |
+
+
 }
 
 zique = {
