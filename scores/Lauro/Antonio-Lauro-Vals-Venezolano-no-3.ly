@@ -32,14 +32,14 @@ six_huit = {
 \parallelMusic voiceA, voiceB, voiceC {
 
   \time 3/4
-  \partial 8*5
-  %\override Fingering.add-stem-support = ##t
-
-  %1
-  \trois_quatre
-  c'16-1 _( b-0 ) ais8-3 b-0  c _( b ) |
-  s8 s2 |
-  s8 \mf s2 |
+  \tag #'anacrouse {
+    \partial 8*5
+    %1
+    \trois_quatre
+    c'16-1 _( b-0 ) ais8-3 b-0  c _( b ) |
+    s8 s2 |
+    s8 \mf s2 |
+  }
 
 
   \repeat volta 2 {
@@ -87,9 +87,11 @@ six_huit = {
     %9
     \alternative {
       \volta 1 {
-        r8 c16-1 _( b-0 ) ais8-3 b-0 c-1 _( b-0 ) |
-        s2.|
-        e,2. |
+        \tag #'repeat1 {
+          r8 c16-1 _( b-0 ) ais8-3 b-0 c-1 _( b-0 ) |
+          s2.|
+          e,2. |
+        }
       }
 
       %10
@@ -143,7 +145,7 @@ six_huit = {
     d4.-0 d8 cis4\glide-2 |
 
     %16
-    r8 \startBarre 2 6 c <d-3 f> r \stopBarre r <g, c e> \barre 5 4 |
+    r8 \startBarre 2 6 c <d-3 f> r \stopBarre r <g,-2 c-3 e-4> |
     s2. |
     c4.-2 b8 a4-0 |
 
@@ -201,9 +203,11 @@ six_huit = {
     \alternative {
       %26
       \volta 1 {
-        r8 f16-1 _( e-0 ) dis8-4 e-0 f-1 _( e-0 )  |
-        s2. |
-        e2. |
+        \tag #'repeat1 {
+          r8 f16-1 _( e-0 ) dis8-4 e-0 f-1 _( e-0 )  |
+          s2. |
+          e2. |
+        }
       }
 
       %27
@@ -336,39 +340,51 @@ six_huit = {
     %48
     e8 gis,-1 b-0 e-0 gis-3 b-1 |
     s2. |
-    e,2 b'4_\6 \codaMark \default |
+    e,2 b'4_\6
+    \tag #'manurepeats {
+      \codaMark \default
+    }
+    |
 
     \alternative {
+
       \volta 1 {
-        % 49
-        e8-4 cis,16-1 [ _( b-0 ) ] ais8-2  b-0 cis-1 _( b-0 ) |
-        s2. |
-        e4 r r |
+        \tag #'repeat1 {
+          % 49
+          e8-4 cis,16-1 [ _( b-0 ) ] ais8-2  b-0 cis-1 _( b-0 ) |
+          s2. |
+          e4 r r |
+        }
       }
 
 
       \volta 2 {
-        %50
-        r8 c16-1 _( b-0 ) ais8-3 b-0 c-1 _( b-0 ) |
-        s2.|
-        e,2.
-        \jump \markup {
-          \column {
-            \line { D.S. \segno al \coda }
-            \line { e poi la Coda }
-          }
+        \tag #'repeat1 {
+          %50
+          e'8-4 c,16-1 [ _( b-0 ) ] ais8-3 b-0 c-1 _( b-0 ) |
+          s2.|
+          e,2.
+          \jump \markup {
+            \column {
+              \line { D.S. \segno al \coda }
+              \line { e poi la Coda }
+            }
 
+          }
+          |
         }
-        |
       }
     }
     \section
   }
-
-  \sectionLabel "Coda"
-  <e gis e'-4>4 \fermata r r |
-  s2. |
-  e4 \fermata r r \fine |
+  \tag #'coda {
+    \tag #'manurepeats {
+      \sectionLabel "Coda"
+    }
+    <e gis e'-4>4 \fermata r r |
+    s2. |
+    e4 \fermata r r \fine |
+  }
 }
 
 zique = {
@@ -410,9 +426,16 @@ zique = {
 \score {
   \new Staff {
     \set Staff.midiInstrument = "acoustic guitar (nylon)"
+
     \unfoldRepeats
+    \removeWithTag #'coda
+    \zique
+
+    \removeWithTag #'(anacrouse repeat1 manurepeats)
     \zique
   }
+
+  %\layout {}
 
   \midi {
     \tempo 4.=120
