@@ -1,7 +1,7 @@
 \version "2.24.4"
 
 \header {
-  title = \markup { Vals Venezolano n \super {o} 3 }
+  title = "Vals Venezolano no3"
   subsubtitle = "Natalia"
   composer = "Antonio Lauro"
   tagline = \markup{ \italic \small "Révision des doigtés du 26/03/2026 par Benoît Pin"}
@@ -28,17 +28,6 @@ six_huit = {
   \set Timing.baseMoment = #(ly:make-moment 1/8)
   \set Timing.beatStructure = 3,3
 }
-
-%{
-segno = \markup {
-  \musicglyph #"scripts.open"
-}
-
-coda = \markup {
-  \musicglyph #"scripts.coda"
-}
-%}
-
 
 \parallelMusic voiceA, voiceB, voiceC {
 
@@ -111,6 +100,7 @@ coda = \markup {
       }
     }
   }
+
   \repeat volta 2 {
     %11
     \six_huit
@@ -379,8 +369,6 @@ coda = \markup {
   <e gis e'-4>4 \fermata r r |
   s2. |
   e4 \fermata r r \fine |
-
-
 }
 
 zique = {
