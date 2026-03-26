@@ -309,7 +309,7 @@ six_huit = {
 
     %44
     \six_huit
-    Yfis4.-4 e-0 |
+    fis4.-4 e-0 |
     r8 gis-1 b-0 r gis b |
     b2.-2 |
 
@@ -343,6 +343,14 @@ six_huit = {
         e8-4 cis,16-1 [ _( b-0 ) ] ais8-2  b-0 cis-1 _( b-0 ) |
         s2. |
         e4 r r |
+      }
+
+
+      \volta 2 {
+        %50
+        r8 c16-1 _( b-0 ) ais8-3 b-0 c-1 _( b-0 ) |
+        s2.|
+        e,2. |
       }
     }
   }
