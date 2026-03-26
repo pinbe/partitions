@@ -353,6 +353,9 @@ six_huit = {
         e,2. |
       }
     }
+    <e gis e'-4>4 \fermata r r |
+    s2. |
+    e4 \fermata r r |
   }
 }
 
