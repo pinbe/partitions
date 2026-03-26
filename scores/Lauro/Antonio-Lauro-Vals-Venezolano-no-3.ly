@@ -198,18 +198,193 @@ six_huit = {
     e,2. |
 
     \alternative {
+      %26
       \volta 1 {
         r8 f16-1 _( e-0 ) dis8-4 e-0 f-1 _( e-0 )  |
         s2. |
         e2. |
       }
+
+      %27
+      \volta 2 {
+        r8 cis16-1 _( b-0 ) ais8-2  b-0 cis-1 _( b-0 ) |
+        s2. |
+        e4 r r |
+      }
     }
   }
+
+  \repeat volta 2 {
+
+    \key e \major
+    %28
+    gis'2.-4\2 |
+    \override Rest.staff-position = #-3
+    %\override Fingering.direction = #UP
+    r4 r8 b'-3_\4 e,4-1_\5 |
+    e2. |
+
+    %29
+    dis8 \startBarre 4 6 _( e-2 ) fis4.-4 e8-2 \stopBarre |
+    r4 r8 b' gis4-3 |
+    gis2. |
+
+    %30
+    a2.-4 |
+    r4 \startBarre 2 6 r8 cis8 a4 \stopBarre |
+    fis2. |
+
+    %31
+    eis8-1 _( fis-2 ) gis4.-4 fis8-3 |
+    r4 r8 cis-1_\3 a4-2_\4 |
+    a2. |
+
+    %32
+    cis'2-4 \startBarre 7 6 b4 \stopBarre |
+    \override Rest.staff-position = #0
+    r8 a dis fis b4 |
+    b2. |
+
+    %33
+    \six_huit
+    gis4.-4\2 fis |
+    r8 ais,-1 e'-3 r \startBarre 7 6 a, dis \stopBarre |
+    fis'4.-2_\5 b, |
+
+    %34
+    \trois_quatre
+    fis8-4\2 _( e-2 ) dis-1 cis-3\3 b-0 ais-2 |
+    s2. |
+    e,2. ~ |
+
+    %35
+    cis8-1 _( b-0 ) ais-2 b-0 cis16-1 _( dis-3 e-0 fis-1 ) |
+    s2. |
+    e2. |
+
+    %36
+    gis2.-4 |
+    \override Rest.staff-position = #-3
+    r4 r8 b-0 \once \override Fingering.direction = #UP gis4-1 |
+    e2 b'4-2 |
+
+    %37
+    dis8 \startBarre 4 6 _( e-2 ) fis4.-4 e8-2 \stopBarre |
+    r4 r8 b8 gis4-3 |
+    gis2. |
+
+    %38
+    a2.-4 |
+    \override Rest.staff-position = #0
+    r4 \startBarre 2 6 r8 cis8 a4 \stopBarre |
+    fis2. |
+
+    %39
+    fisis8-4 \startBarre 4 6 gis a4.-3 gis8 \stopBarre |
+    r4 r8 dis bis4-2 |
+    gis2. |
+
+    %40
+    \six_huit
+    dis'4.-4 cis |
+    r8 \startBarre 9 6 e gis r e gis \stopBarre |
+    cis2. |
+
+    %41
+    r4 b4.-3 cis8-4 |
+    r8 d4-2_\3 f8-1_\2 d4-2_\3 |
+    e,2. |
+
+    %42
+    \six_huit
+    b4.-4 a |
+    r8 \startBarre 5 3 cis-2 e r cis e  \stopBarre |
+    a2.-0 |
+
+    %43
+    \trois_quatre
+    r4 fis4.-3 gis8-4 |
+    r8 a,4-2 c8-1 a4-2 |
+    a2.-0 |
+
+    %{44
+    \six_huit
+    dis'4.-4 cis |
+    r8 \startBarre 9 6 e' gis r  e gis \stopBarre |
+    cis2. |
+    %}
+
+    %45
+    %{
+    \trois_quatre
+    r4 b4.-3 cis8-4 |
+    r8 d4-2_\3 f8-1_\2 d4-2_\3 |
+    e,2. |
+    %}
+
+    %46
+    %{
+    \six_huit
+    b4. a |
+    r8 cis-2 e r cis e |
+    a2.-0 |
+    %}
+
+    %47
+    %{
+    \trois_quatre
+    r4 fis4.-3 gis8-4 |
+    r8 a,4-2 c8-1 a4-2 |
+    a2. |
+    %}
+
+    %48
+    \six_huit
+    fis4.-4 e-0 |
+    r8 gis-1 b-0 r gis b |
+    b2.-2 |
+
+    %49
+    \trois_quatre
+    r4 cis4.-3 dis8-4 |
+    r8 e,4-2 g8-0 e4-2 |
+    ais2.-1 |
+
+    %50
+    \six_huit
+    cis4.-4 b4-0 b8-0 |
+    \override Rest.staff-position = #-4
+    r8 dis-1 a'-2 r dis, b' |
+    b2.-2 |
+
+    %51
+    \trois_quatre
+    ais8-2 b-0 gis'4.-4 fis8-3 |
+    r8 b4 a4.-2 |
+    b2-1 b4 |
+
+    %52
+    e8 gis,-1 b-0 e-0 gis-3 b-1 |
+    s2. |
+    e,2 b'4_\6 |
+
+    \alternative {
+      \volta 1 {
+        % 53
+        e8-4 cis,16-1 [ _( b-0 ) ] ais8-2  b-0 cis-1 _( b-0 ) |
+        s2. |
+        e4 r r |
+      }
+    }
+
+  }
+
 }
 
 zique = {
   \clef "treble_8"
   \key e \minor
+  \set Score.currentBarNumber = #2
 
   <<
 
