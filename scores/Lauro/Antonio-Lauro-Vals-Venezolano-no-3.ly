@@ -19,7 +19,7 @@
   top-margin = #12
   bottom-margin = #12
   systems-per-page = #6
-  
+
   %annotate-spacing = ##t
 }
 
@@ -42,7 +42,7 @@ six_huit = {
   \time 3/4
   \trois_quatre
   \accidentalStyle modern
-  
+
   \tag #'anacrouse {
     \partial 8*5
     %1
@@ -111,7 +111,7 @@ six_huit = {
 
       %10
       \volta 2 {
-        r8 f'16-1 _( e-0 ) dis8-4 e-0 f-1 _( e-0 )  |
+        r8 f'16-1 \RH 3 _( e-0 ) dis8-4 \RH 2 e-0 \RH 3 f-1 \RH 2 _( e-0 )  |
         s2. |
         e2. |
       }
@@ -122,7 +122,9 @@ six_huit = {
     %11
     \six_huit
     \set fingeringOrientations = #'(up left)
-    r8 f8-4\3 \RH 2 <gis-3 \RH #3 b\glide-1 \RH #4 > r8 r <d-4 \RH #2 f-2 \RH #3 a-1 \RH #4 > |
+    r8 f8-4\3 \RH 2
+    \once \set fingeringOrientations = #'(right up)
+    <gis-3 \RH #3 b\glide-1 \RH #4 > r8 r <d-4 \RH #2 f-2 \RH #3 a-1 \RH #4 > |
     s2. |
     d'4. d8 b4-3_\6 |
 
@@ -160,7 +162,7 @@ six_huit = {
     d4.-0 d8 cis4\glide-2 |
 
     %16
-    r8 \startBarre 2 6 a <d-3 fis> r \stopBarre r <g,-2 c-3 e-4> |
+    r8 \startBarre 2 6 a <d-3 fis> r \stopBarre r <g,-2 c-3 e-4\2> |
     s2. |
     c4.-2 b8 a4-0 |
 
@@ -173,52 +175,62 @@ six_huit = {
 
     %18
     \trois_quatre
-    <g-0 b-0>8 c16-1 _( b-0 ) ais8-4 b c _( b ) |
+    \override Arpeggio.positions = #'(-5 . 0)
+    <g-0 b-0>8 \arpeggio c16-1 \RH 3 _( b-0 ) ais8-4 \RH 2 b \RH 3 c \RH 2 _( b ) |
     s2. |
     <g-3 d'-0>2. |
 
     %19
     \override Rest.staff-position = #6
-    r8  c'4. ~ c4 |
-    r8 \startBarre 7 6 c'-3 a-4 dis,-2 a fis' \stopBarre |
-    b2. |
+    r8  c'4. \RH 4 ~ c4 |
+    \set strokeFingerOrientations = #'(up)
+    r8 \startBarre 7 6 c'-3 a-4 \RH 3 dis,-2 \RH 2
+    \once \set strokeFingerOrientations = #'(down) a \RH 1 fis' \RH 2 \stopBarre |
+    b2. \RH 1 |
 
     %20
-    r8 \startBarre 10 4 fis4. ~ fis8 dis-3 \stopBarre |
-    r8 fis'-4 a,8 fis-2 c4 |
-    a2.-0 |
+    r8 \startBarre 10 4 fis4. ~ fis8 dis-3 \RH 2 \stopBarre |
+    r8 fis'-4 \RH 4 a,8 \RH 3 fis-2 \RH 2 \once \set strokeFingerOrientations = #'(down) c4 \RH 1 |
+    a2.-0 \RH 1 |
 
     %21
-    r8 c4.-4 ~ c8 b-3 |
-    r8 c' b,-0 g-0 r4 |
-    g2-1 e'4-2_\5 |
+    r8 c4.-4 \RH 4 ~ c8 b-3 \RH 2 |
+    r8 c' b,-0 \RH 3 g-0 \RH 2 r4 |
+    g2-1 \RH 1 e'4-2_\5 \RH 1 |
 
     %22
-    r8 g4.-4 ~ g8 fis-4 |
-    r8 g'8 c,-1 a-3 \once \override Fingering.direction = #DOWN e4-2 |
-    a,2.-0 |
+    r8 g4.-4 \RH 4 ~ g8\glide-4 fis-4 \RH 2 |
+    r8 g'8 c,-1 \tweak extra-offset #'(0 . 1) \RH 3 a-3 \RH 2
+    \once \override Fingering.direction = #DOWN
+    \once \set strokeFingerOrientations = #'(down)
+    e4-2 \RH 1 |
+    a,2.-0 \RH 1 |
 
     %23
-    r8 fis4.-4 ~ fis8 e-0 |
-    r8 fis' b,-0 g-0 \once \override Fingering.direction = #DOWN e4-3 |
-    b2.-2  |
+    r8 fis4.-4 \RH 4 ~ fis8 e-0 |
+    r8 fis' b,-0 \RH 3 g-0 \RH 2
+    \once \override Fingering.direction = #DOWN
+    \once \set strokeFingerOrientations = #'(down)
+    e4-3 \RH 1 |
+    b2.-2 \RH 1 |
 
     %24
-    r8 \startBarre 2 6 e4.-4 ~ e8 dis-4 \stopBarre |
-    r8 e' a, fis-3  g4\rest |
-    b2 b4 |
+    r8 \startBarre 2 6 e4.-4 \RH 4 ~ e8\glide-4 dis-4 \RH 2 \stopBarre |
+    r8 e' a, \RH 3 fis-3 \RH 2  g4\rest |
+    b2 \RH 1 b4 \RH 1 |
 
     %25
-    r8 e-0 ~ e2 |
+    r8 e-0 \RH 4 ~ e2 |
     \override Fingering.direction = #DOWN
-    r8 e' b-0 g-0 e-2 b-1 |
-    e,2. |
+    \set strokeFingerOrientations = #'(down)
+    r8 e' b-0 \RH 3 g-0 \RH 2 e-2 \RH 1 b-1 \RH 1 |
+    e,2. \RH 1 |
 
     \alternative {
       %26
       \volta 1 {
         \tag #'repeat1 {
-          r8 f16-1 _( e-0 ) dis8-4 e-0 f-1 _( e-0 )  |
+          r8 f16-1 \RH 3 _( e-0 ) dis8-4 \RH 2 e-0 \RH 3 f-1 \RH 2 _( e-0 )  |
           s2. |
           e2. |
         }
@@ -226,13 +238,13 @@ six_huit = {
 
       %27
       \volta 2 {
-        r8 cis16-1 _( b-0 ) ais8-2  b-0 cis-1 _( b-0 ) |
+        r8 cis16-1 \RH 3 _( b-0 ) ais8-2 \RH 2  b-0 \RH 3 cis-1 \RH 2 _( b-0 ) |
         s2. |
         e2. |
       }
     }
   }
-  
+
   \pageBreak
 
   \repeat volta 2 {
@@ -241,35 +253,36 @@ six_huit = {
     %28
     gis'2.-4 \RH 4 |
     \override Rest.staff-position = #-3
-    %\override Fingering.direction = #UP
+    \override Fingering.direction = #UP
+    \set strokeFingerOrientations = #'(up)
     r4 r8 b'-0 \RH 3 e,4-1 \RH 2 |
     e2. |
 
     %29
-    dis8 \startBarre 4 6 _( e-2 ) fis4.-4 e8-2 \stopBarre |
-    r4 r8 b' gis4-3 |
+    dis8 \RH 3 \startBarre 4 6 _( e-2 ) fis4.-4 \RH 4 e8-2 \RH 3 \stopBarre |
+    r4 r8 b'-0 \RH 3 gis4-3 \RH 2 |
     gis2. |
 
     %30
-    a2.-4 |
-    r4 \startBarre 2 6 r8 cis8 a4 \stopBarre |
+    a2.-4 \RH 4 |
+    r4 \startBarre 2 6 r8 cis8 \RH 3 a4 \RH 2 \stopBarre |
     fis2. |
 
     %31
-    eis8-1 \startStringSpan 2 _( fis-2 ) gis4.-4 fis8-3 \stopStringSpan |
-    r4 r8 cis-1_\3 a4-2_\4 |
+    eis8-1 \RH 2 \startStringSpan 2 _( fis-2 ) gis4.-4 \RH 4 fis8-3 \RH 3 \stopStringSpan |
+    r4 r8 cis-1_\3 \RH 3 a4-2_\4 \RH 2 |
     a2. |
 
     %32
-    cis'2-4 \startBarre 7 6 b4 \stopBarre |
+    cis'2-4 \RH 4 \startBarre 7 6 b4 \RH 2 \stopBarre |
     \override Rest.staff-position = #0
-    r8 a dis-2 fis b4 |
+    r8 a \RH 2 dis-2 \RH 3 fis \RH 4 b4 |
     b2. |
 
     %33
     \six_huit
-    gis4.-4\2 fis |
-    r8 ais,-1 e'-3 r \startBarre 7 6 a, dis-2 \stopBarre |
+    gis4.-4\2 \RH 4 fis \RH 4 |
+    r8 ais,-1 \RH 2 e'-3 \RH 3 r \startBarre 7 6 a, \RH 2 dis-2 \RH 3 \stopBarre |
     fis'4.-2_\5 b, |
 
     %34
@@ -279,86 +292,86 @@ six_huit = {
     e,2. ~ |
 
     %35
-    cis8-1 _( b-0 ) ais-2 b-0 cis16-1 _( dis-3 e-0 fis-1 ) |
+    cis8-1 _( b-0 ) ais-2 b-0 cis16-1 _( dis-3 ) e-0 _( fis-1 ) |
     s2. |
     e2. |
 
     %36
-    gis2.-4 |
+    gis2.-4 \RH 4 |
     \override Rest.staff-position = #-3
-    r4 r8 b-0 \once \override Fingering.direction = #UP gis4-1 |
-    e2 b'4-2 |
+    r4 r8 b-0 \RH 3 \once \override Fingering.direction = #UP gis4-1 \RH 2 |
+    e2 \RH 1 b'4-2 \RH 1 |
 
     %37
-    dis8 \startBarre 4 6 _( e-2 ) fis4.-4 e8-2 \stopBarre |
-    r4 r8 b8 gis4-3 |
+    dis8 \RH 3 \startBarre 4 6 _( e-2 ) fis4.-4 \RH 4 e8-2 \RH 3 \stopBarre |
+    r4 r8 b8 \RH 3 gis4-3 \RH 2 |
     gis2. |
 
     %38
-    a2.-4 |
+    a2.-4 \RH 4 |
     \override Rest.staff-position = #0
-    r4 \startBarre 2 6 r8 cis8 a4 \stopBarre |
+    r4 \startBarre 2 6 r8 cis8 \RH 3 a4 \RH 2 \stopBarre |
     fis2. |
 
     %39
-    fisis8-4 \startBarre 4 6 gis a4.-3 gis8 \stopBarre |
-    g4\rest r8 dis' bis4-2 |
+    fisis8-4 \RH 2 \startBarre 4 6 gis \RH 3 a4.-3 \RH 4 gis8 \RH 3 \stopBarre |
+    g4\rest r8 dis' \RH 3 bis4-2 \RH 2 |
     gis2. |
 
     %40
     \six_huit
-    dis'4.-4 cis |
-    r8 \startBarre 9 6 e gis r e gis \stopBarre |
+    dis'4.-3 \RH 4 cis \RH 4 |
+    r8 \startBarre 9 6 e \RH 2 gis \RH 3 r e \RH 2 gis \RH 3 \stopBarre |
     cis2. |
 
     %41
-    r4 b4.-3 cis8-4 |
-    r8 d4-2_\3 f8-1_\2 d4-2_\3 |
+    r4 b4.-3 \RH 4 cis8\glide-4 \RH 3 |
+    r8 d4-2\3 \RH 2 f8-1\2 \RH 3 d4-2\3 \RH 2 |
     e,2. |
 
     %42
     \six_huit
-    b4.-4 a |
-    r8 \startBarre 5 3 cis-2 e r cis e  \stopBarre |
+    b4.-4 \RH 4 a \RH 4 |
+    r8 \startBarre 5 3 cis-2 \RH 2 e \RH 3 r cis \RH 2 e \RH 3  \stopBarre |
     a2.-0 |
 
     %43
     \trois_quatre
-    r4 fis4.-3 gis8-4 |
-    r8 a,4-2 c8-1 a4-2 |
+    r4 fis4.-3 \RH 4 gis8\glide-4 \RH 3 |
+    r8 a,4-2 \RH 2 c8-1 \RH 3 a4-2 \RH 2 |
     a2.-0 |
 
     %44
     \six_huit
-    fis4.-4 e-0 |
-    r8 gis-1 b-0 r gis b |
+    fis4.-4 \RH 4 e-0 \RH 4 |
+    r8 gis-1 \RH 2 b-0 \RH 3 r gis \RH 2 b \RH 3 |
     b2.-2 |
 
     %45
     \trois_quatre
-    r4 cis4.-3 dis8-4 |
-    r8 e,4-2 g8-0 e4-2 |
+    r4 cis4.-3 \RH 4 dis8\glide-4 \RH 3 |
+    r8 e,4-2 \RH 2 g8-0 \RH 3 e4-2 \RH 2 |
     ais2.-1 |
 
     %46
     \six_huit
-    cis4.-4 b4-0 b8-0 |
+    cis4.-4 \RH 4 b4-0 \RH 4 b8-0 \RH 4 |
     \override Rest.staff-position = #-4
-    r8 dis-1 a'-2 r dis, b' |
+    r8 dis-1 \RH 2 a'-3 \RH 3 r dis, \RH 2 b' |
     b2.-2 |
 
     %47
     \trois_quatre
-    ais8-2 _( \startBarre 2 6 b-3 ) gis'4.-4 fis8 \stopBarre |
-    r8 b4 a4. |
-    b2-1 b4 |
+    ais8-2 \RH 2 _( \startBarre 2 6 b-3 ) gis'4.-4 \RH 4 fis8 \RH 2 \stopBarre |
+    r8 b4 a4. \RH 2 |
+    b2 b4 |
 
     %48
-    e8 gis,-1 b-0 e-0 gis-3 b-1 |
+    e8 \RH 4 gis,-1 \RH 2 b-0 \RH 3 e-0 \RH 4 gis-3 \startBarre 7 6 \RH 2 b-1 \RH 3 \stopBarre |
     s2. |
-    e,2 b'4_\6
+    e,2 b'4
     \tag #'manurepeats {
-      \codaMark \default
+      \codaMark  \default
     }
     |
 
@@ -367,7 +380,7 @@ six_huit = {
       \volta 1 {
         \tag #'repeat1 {
           % 49
-          e8-4 cis,16-1 [ _( b-0 ) ] ais8-2  b-0 cis-1 _( b-0 ) |
+          e8-4 \RH 4 cis,16-1 \RH 3 [ _( b-0 ) ] ais8-2 \RH 2  b-0 \RH 3 cis-1 \RH 2 _( b-0 ) |
           s2. |
           e,2. |
         }
