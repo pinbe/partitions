@@ -452,6 +452,10 @@ zique = {
   \layout {}
 }
 
+\markup \justify {
+  Après le renvoi \italic {"dal segno,"} ne pas exécuter les reprises en jouant directement les deuxièmes alternatives.
+}
+
 \score {
   \new Staff {
     \set Staff.midiInstrument = "acoustic guitar (nylon)"
