@@ -29,7 +29,7 @@ def main(basefolder:str, giturl:str, branch:str) -> None :
                     lycode = f.read()
                     try :
                         title = re.search(
-                            r"\\header.*title\s*=\s*\"([^\"]+)\"", lycode, re.DOTALL
+                            r"\\header.*\btitle\s*=\s*\"([^\"]+)\"", lycode, re.DOTALL
                         ).group(1)
                         composer = re.search(
                             r"\\header.*\bcomposer\b\s*=\s*\"([^\"]+)\"", lycode, re.DOTALL
