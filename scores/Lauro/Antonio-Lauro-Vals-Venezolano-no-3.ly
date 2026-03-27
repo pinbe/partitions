@@ -18,7 +18,7 @@
 \paper {
   top-margin = #12
   bottom-margin = #12
-  %systems-per-page = #6
+  systems-per-page = #6
   
   %annotate-spacing = ##t
 }
@@ -42,12 +42,17 @@ six_huit = {
   \time 3/4
   \trois_quatre
   \accidentalStyle modern
+  
   \tag #'anacrouse {
     \partial 8*5
     %1
     \trois_quatre
-    c'16-1 _( b-0 ) ais8-3 b-0  c _( b ) |
+    \set strokeFingerOrientations = #'(up)
+    c'16-1 \RH 3 _( b-0 ) ais8-3 \RH 2 b-0 \RH 3  c \RH 2 _( b ) |
+    \set strokeFingerOrientations = #'(down)
+    \override Rest.staff-position = #0
     s8 s2 |
+    \set strokeFingerOrientations = #'(down)
     s8 \mf s2 |
   }
 
@@ -56,49 +61,49 @@ six_huit = {
     %2
     \segnoMark \default
     \six_huit
-    g'8-2\2 _( fis-1 ) e-0
-    \once \override NoteHead.style = #'harmonic-mixed b'4.
+    g'8-2\2 \RH 3 _( fis-1 ) e-0 \RH 4
+    \once \override NoteHead.style = #'harmonic-mixed b'4. \RH 3
     ^\markup {\italic \fontsize #-2 "har. 12"} |
     \override Fingering.direction = #UP
-    s4. \once \override NoteHead.style = #'harmonic-mixed b'8 g,-0 e'-0 |
+    s4. \once \override NoteHead.style = #'harmonic-mixed b'8 g,-0 \RH 2 e'-0 \RH 4 |
     e,2.|
 
     %3
-    r8 d,-1 _( b ) f'-4\2 _( d-1 ) b-0 |
+    r8 d,-1 \RH 3 _( b ) f'-4\2 \RH 2 _( d-1 ) b-0 \RH 3 |
     s2. |
     gis4.-2 d'-0 |
 
     %4
-    b8-3 _( a-1 ) e'-0 a-2\2 e'-4 fis,-3\3 |
+    b8-3 \RH 2 _( a-1 ) e'-0 \RH 4 a-2\2 \RH 2 e'-4 \RH 3 fis,-3\3 \RH 2 |
     s2. |
     c4.-2 r |
 
     %5
-    c'8-1 c,-3\4 e-2\3 fis,-1\5 c' e |
+    c'8-1 \RH 4 c,-3\4 \RH 2 e-2\3 \RH 3 fis,-1\5 \RH 2 c' \RH 3 e \RH 4 |
     s2. |
     s2. |
 
     %6
     \trois_quatre
-    b,8 \startBarre 7 6 dis'-2 b' \stopBarre r \startBarre 5 6 r a \stopBarre |
-    b,4. c' |
-    s2 a4 |
+    b,8 \startBarre 7 6 dis'-2 \RH 2 b' \RH 4 \stopBarre r \startBarre 5 6 r a \RH 4 \stopBarre |
+    b,4. \RH 1 c' \RH 2 |
+    s2 a4 \RH 1 |
 
     %7
-    ais,,8 \startBarre 6 6 ais'-3 g'-4 \stopBarre r \startBarre 7 6 r fis \stopBarre |
-    ais,4. a' |
-    s2 b4 |
+    ais,,8 \startBarre 6 6 ais'-3 \RH 2 g'-4 \RH 4 \stopBarre r \startBarre 7 6 r fis \RH 4 \stopBarre |
+    ais,4. \RH 1 a' \RH 2 |
+    s2 b4 \RH 1 |
 
     %8
-    r4 e2-0 |
-    r8  b-0 ~ b2 |
-    e,4. c'16-3 ^( b-2 ) ais8-1 ^( b-2 ) |
+    r4 e2-0 \RH 3 |
+    r8  b-0 \RH 2 ~ b2 |
+    e,4. \RH 1 c'16-3 \RH 1 ^( b-2 ) ais8-1 \RH 1 ^( b-2 ) |
 
     %9
     \alternative {
       \volta 1 {
         \tag #'repeat1 {
-          r8 c16-1 _( b-0 ) ais8-3 b-0 c-1 _( b-0 ) |
+          r8 c16-1 \RH 3 _( b-0 ) ais8-3 \RH 2 b-0 \RH 3 c-1 \RH 2 _( b-0 ) |
           s2.|
           e,2. |
         }
@@ -117,7 +122,7 @@ six_huit = {
     %11
     \six_huit
     \set fingeringOrientations = #'(up left)
-    r8 f8-4\3 <gis-3 b\glide-1> r8 r <d-4 f-2 a-1> |
+    r8 f8-4\3 \RH 2 <gis-3 \RH #3 b\glide-1 \RH #4 > r8 r <d-4 \RH #2 f-2 \RH #3 a-1 \RH #4 > |
     s2. |
     d'4. d8 b4-3_\6 |
 
@@ -175,7 +180,6 @@ six_huit = {
     %19
     \override Rest.staff-position = #6
     r8  c'4. ~ c4 |
-    \override Rest.staff-position = #0
     r8 \startBarre 7 6 c'-3 a-4 dis,-2 a fis' \stopBarre |
     b2. |
 
@@ -235,10 +239,10 @@ six_huit = {
 
     \key e \major
     %28
-    gis'2.-4\2 |
+    gis'2.-4 \RH 4 |
     \override Rest.staff-position = #-3
     %\override Fingering.direction = #UP
-    r4 r8 b'-3_\4 e,4-1_\5 |
+    r4 r8 b'-0 \RH 3 e,4-1 \RH 2 |
     e2. |
 
     %29
@@ -252,20 +256,20 @@ six_huit = {
     fis2. |
 
     %31
-    eis8-1 _( fis-2 ) gis4.-4 fis8-3 |
+    eis8-1 \startStringSpan 2 _( fis-2 ) gis4.-4 fis8-3 \stopStringSpan |
     r4 r8 cis-1_\3 a4-2_\4 |
     a2. |
 
     %32
     cis'2-4 \startBarre 7 6 b4 \stopBarre |
     \override Rest.staff-position = #0
-    r8 a dis fis b4 |
+    r8 a dis-2 fis b4 |
     b2. |
 
     %33
     \six_huit
     gis4.-4\2 fis |
-    r8 ais,-1 e'-3 r \startBarre 7 6 a, dis \stopBarre |
+    r8 ais,-1 e'-3 r \startBarre 7 6 a, dis-2 \stopBarre |
     fis'4.-2_\5 b, |
 
     %34
@@ -345,8 +349,8 @@ six_huit = {
 
     %47
     \trois_quatre
-    ais8-2 b-0 gis'4.-4 fis8-3 |
-    r8 b4 a4.-2 |
+    ais8-2 _( \startBarre 2 6 b-3 ) gis'4.-4 fis8 \stopBarre |
+    r8 b4 a4. |
     b2-1 b4 |
 
     %48
@@ -394,7 +398,7 @@ six_huit = {
       \sectionLabel "Coda"
     }
     \override Arpeggio.positions = #'(-6 . 6)
-    <e gis e'-4>4 \arpeggio \fermata r r |
+    <e gis e'-4>4 \barre 9 3 \arpeggio \fermata r r |
     s2. |
     e4 \fermata r r \fine |
   }
