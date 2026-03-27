@@ -232,7 +232,7 @@ six_huit = {
         \tag #'repeat1 {
           r8 f16-1 \RH 3 _( e-0 ) dis8-4 \RH 2 e-0 \RH 3 f-1 \RH 2 _( e-0 )  |
           s2. |
-          e2. |
+          e2. \RH 1 |
         }
       }
 
