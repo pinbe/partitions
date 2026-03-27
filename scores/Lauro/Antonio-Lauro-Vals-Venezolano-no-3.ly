@@ -4,7 +4,7 @@
   title = "Vals Venezolano no 3"
   subsubtitle = "Natalia"
   composer = "Antonio Lauro"
-  tagline = \markup{ \italic \small "Révision des doigtés du 26/03/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 27/03/2026 par Benoît Pin"}
   %{
   sources:
   Benjamin French Guitar
@@ -18,7 +18,8 @@
 \paper {
   top-margin = #12
   bottom-margin = #12
-  systems-per-page = #6
+  %systems-per-page = #6
+  
   %annotate-spacing = ##t
 }
 
@@ -39,6 +40,8 @@ six_huit = {
 \parallelMusic voiceA, voiceB, voiceC {
 
   \time 3/4
+  \trois_quatre
+  \accidentalStyle modern
   \tag #'anacrouse {
     \partial 8*5
     %1
@@ -66,12 +69,12 @@ six_huit = {
     gis4.-2 d'-0 |
 
     %4
-    b8-3 _( a-1 ) e'-0 a-2\2 e'-4 gis,-3\3 |
+    b8-3 _( a-1 ) e'-0 a-2\2 e'-4 fis,-3\3 |
     s2. |
     c4.-2 r |
 
     %5
-    c8-1 c,-3\4 e-2\3 fis,-1\5 c' e |
+    c'8-1 c,-3\4 e-2\3 fis,-1\5 c' e |
     s2. |
     s2. |
 
@@ -135,7 +138,7 @@ six_huit = {
     \once \set fingeringOrientations = #'(up right)
     <e-3 gis-1 d'-4> |
     s2. |
-    c4.-2 c8\glide-2 b4-2 |
+    c4.-2 c8\glide-2 \once \override Fingering.add-stem-support = ##t b4-2 |
 
     %14
     \trois_quatre
@@ -152,7 +155,7 @@ six_huit = {
     d4.-0 d8 cis4\glide-2 |
 
     %16
-    r8 \startBarre 2 6 c <d-3 f> r \stopBarre r <g,-2 c-3 e-4> |
+    r8 \startBarre 2 6 a <d-3 fis> r \stopBarre r <g,-2 c-3 e-4> |
     s2. |
     c4.-2 b8 a4-0 |
 
@@ -167,7 +170,7 @@ six_huit = {
     \trois_quatre
     <g-0 b-0>8 c16-1 _( b-0 ) ais8-4 b c _( b ) |
     s2. |
-    <g-3 d'>2. |
+    <g-3 d'-0>2. |
 
     %19
     \override Rest.staff-position = #6
@@ -221,10 +224,12 @@ six_huit = {
       \volta 2 {
         r8 cis16-1 _( b-0 ) ais8-2  b-0 cis-1 _( b-0 ) |
         s2. |
-        e4 r r |
+        e2. |
       }
     }
   }
+  
+  \pageBreak
 
   \repeat volta 2 {
 
@@ -293,7 +298,7 @@ six_huit = {
 
     %39
     fisis8-4 \startBarre 4 6 gis a4.-3 gis8 \stopBarre |
-    r4 r8 dis bis4-2 |
+    g4\rest r8 dis' bis4-2 |
     gis2. |
 
     %40
@@ -360,7 +365,7 @@ six_huit = {
           % 49
           e8-4 cis,16-1 [ _( b-0 ) ] ais8-2  b-0 cis-1 _( b-0 ) |
           s2. |
-          e4 r r |
+          e,2. |
         }
       }
 
@@ -370,7 +375,7 @@ six_huit = {
           %50
           e'8-4 c,16-1 [ _( b-0 ) ] ais8-3 b-0 c-1 _( b-0 ) |
           s2.|
-          e,2.
+          e2.
           \jump \markup {
             \column {
               \line { D.S. \segno al \coda }
@@ -388,7 +393,8 @@ six_huit = {
     \tag #'manurepeats {
       \sectionLabel "Coda"
     }
-    <e gis e'-4>4 \fermata r r |
+    \override Arpeggio.positions = #'(-6 . 6)
+    <e gis e'-4>4 \arpeggio \fermata r r |
     s2. |
     e4 \fermata r r \fine |
   }
