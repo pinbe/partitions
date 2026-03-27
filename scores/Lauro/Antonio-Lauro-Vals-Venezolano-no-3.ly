@@ -15,6 +15,13 @@
   %}
 }
 
+\paper {
+  top-margin = #12
+  bottom-margin = #12
+  systems-per-page = #6
+  %annotate-spacing = ##t
+}
+
 \include "../../commons/guitar-helpers.ly"
 
 trois_quatre = {
@@ -54,7 +61,7 @@ six_huit = {
     e,2.|
 
     %3
-    r8 d,	-1 _( b ) f'-4\2 _( d-1 ) b-0 |
+    r8 d,-1 _( b ) f'-4\2 _( d-1 ) b-0 |
     s2. |
     gis4.-2 d'-0 |
 
@@ -417,7 +424,6 @@ zique = {
 
 \score {
   \new Staff {
-    \set Staff.midiInstrument = "acoustic guitar (nylon)"
     \zique
   }
   \layout {}
