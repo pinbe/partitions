@@ -4,7 +4,7 @@
   title = "Vals Venezolano no 3"
   subsubtitle = "Natalia"
   composer = "Antonio Lauro"
-  tagline = \markup{ \italic \small "Révision des doigtés du 27/03/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 28/03/2026 par Benoît Pin"}
   %{
   sources:
   Benjamin French Guitar
@@ -390,7 +390,7 @@ six_huit = {
       \volta 2 {
         \tag #'repeat1 {
           %50
-          e'8-4 c,16-1 [ _( b-0 ) ] ais8-3 b-0 c-1 _( b-0 ) |
+          e'8-4 \RH 4 c,16-1 \RH 3 [ _( b-0 ) ] ais8-3 \RH 2 b-0 \RH 3 c-1 \RH 2 _( b-0 ) |
           s2.|
           e2.
           \jump \markup {
