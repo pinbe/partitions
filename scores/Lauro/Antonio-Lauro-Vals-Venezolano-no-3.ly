@@ -162,7 +162,7 @@ six_huit = {
     d4.-0 d8 cis4\glide-2 |
 
     %16
-    r8 \startBarre 2 6 a <d-3 fis> r \stopBarre r <g,-2 c-3 e-4\2> |
+    r8 \startBarre 2 6 a <d-3 fis> r \stopBarre r \once \arpeggioBracket <g,-2 c-3 e-4\2>\arpeggio |
     s2. |
     c4.-2 b8 a4-0 |
 
@@ -367,7 +367,7 @@ six_huit = {
     b2 b4 |
 
     %48
-    e8 \RH 4 gis,-1 \RH 2 b-0 \RH 3 e-0 \RH 4 gis-3 \startBarre 7 6 \RH 2 b-1 \RH 3 \stopBarre |
+    e8 \RH 4 gis,-1 \RH 2 b-0 \RH 3 e-0 \RH 4 gis-3 \startBarre 7 6 \RH 2 b \RH 3 \stopBarre |
     s2. |
     e,2 b'4
     \tag #'manurepeats {
