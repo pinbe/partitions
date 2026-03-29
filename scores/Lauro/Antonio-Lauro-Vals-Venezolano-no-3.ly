@@ -4,7 +4,7 @@
   title = "Vals Venezolano no 3"
   subsubtitle = "Natalia"
   composer = "Antonio Lauro"
-  tagline = \markup{ \italic \small "Révision des doigtés du 28/03/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 29/03/2026 par Benoît Pin"}
   %{
   sources:
   Benjamin French Guitar
