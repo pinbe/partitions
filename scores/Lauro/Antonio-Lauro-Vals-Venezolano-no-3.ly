@@ -287,12 +287,12 @@ six_huit = {
 
     %34
     \trois_quatre
-    fis8-3\2 _( e-1 ) dis-4\3 cis\glide-2 b\tweak extra-offset #'(0 . 1.2) -0 ais-2 |
+    fis8-3\2 \RH 3 _( e-1 ) dis-4\3 \RH 2 _( cis\glide-2 ) b\tweak extra-offset #'(0 . 1.2)-0 \RH 3 ais-2 \RH 2 |
     s2. |
     e,2. ~ |
 
     %35
-    cis8-1 _( b-0 ) ais-2 b-0 cis16-1 _( dis-3 ) e-0 _( fis-1 ) |
+    cis8-1 \RH 3 _( b-0 ) ais-2 \RH 2 b-0 \RH 3 cis16-1 \RH 2 _( dis-3 ) e-0 \RH 3 _( fis-1 ) |
     s2. |
     e2. |
 
