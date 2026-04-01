@@ -68,6 +68,7 @@ accent = \tweak script-priority 110\accent
     \once \override NoteHead.style = #'harmonic-mixed b'4. \RH 3
     ^\markup {\italic \fontsize #-2 "har. 12"} |
     \override Fingering.direction = #UP
+    \set strokeFingerOrientations = #'(up)
     s4. \once \override NoteHead.style = #'harmonic-mixed b'8 g,-0 \RH 2 e'-0 \RH 4 |
     e,2.|
 
@@ -89,6 +90,7 @@ accent = \tweak script-priority 110\accent
     %6
     \trois_quatre
     b,8 \startBarre 7 6 dis'-2 \RH 2 b' \RH 4 \stopBarre r \startBarre 5 6 r a \RH 4 \stopBarre |
+    \set strokeFingerOrientations = #'(down)
     b,4. \RH 1 c' \RH 2 |
     s2 a4 \RH 1 |
 
