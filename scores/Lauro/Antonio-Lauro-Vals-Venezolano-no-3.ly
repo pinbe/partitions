@@ -4,7 +4,7 @@
   title = "Vals Venezolano no 3"
   subsubtitle = "Natalia"
   composer = "Antonio Lauro"
-  tagline = \markup{ \italic \small "Révision des doigtés du 30/03/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 01/04/2026 par Benoît Pin"}
   %{
   sources:
   Benjamin French Guitar
@@ -37,9 +37,12 @@ six_huit = {
   \set Timing.beatStructure = 3,3
 }
 
+accent = \tweak script-priority 110\accent
+
 \parallelMusic voiceA, voiceB, voiceC {
 
   \time 3/4
+  \tempo "Allegro ritmico"
   \trois_quatre
   \accidentalStyle modern
 
@@ -124,24 +127,25 @@ six_huit = {
     \set fingeringOrientations = #'(up left)
     r8 f8-4\3 \RH 2
     \once \set fingeringOrientations = #'(right up)
-    <gis-3 \RH #3 b\glide-1 \RH #4 > r8 r <d-4 \RH #2 f-2 \RH #3 a-1 \RH #4 > |
+    <gis-3 \RH #3 b\glide-1 \RH #4 > \accent
+    r8 r <d-4 \RH #2 f-2 \RH #3 a-1 \RH #4 > \accent |
     s2. |
-    d'4. d8 b4-3_\6 |
+    d'4. \f d8 b4-3_\6 |
 
     %12
     \set fingeringOrientations = #'(left)
     r8 \startBarre 7 6 b-3
     \once \set fingeringOrientations = #'(up)
-    <d gis-4> r \stopBarre r \startBarre 5 6
+    <d gis-4> \accent r \stopBarre r \startBarre 5 6
     \once \set fingeringOrientations = #'(up left)
-    <a-3 c f-2> \stopBarre |
+    <a-3 c f-2> \accent \stopBarre |
     s2. |
     e4. e8 d4 |
 
     %13
     r8 \startBarre 2 6 e
     \once \set fingeringOrientations = #'(up)
-    <a e'-4> r \stopBarre r
+    <a e'-4> \accent r \stopBarre r
     \once \set fingeringOrientations = #'(up right)
     <e-3 gis-1 d'-4> |
     s2. |
@@ -155,14 +159,15 @@ six_huit = {
 
     %15
     \six_huit
-    r8 c \startBarre 5 3 <e a> \stopBarre r r
+    r8 c \startBarre 5 3 <e a> \accent \stopBarre r r
     \once \set fingeringOrientations = #'(right)
-    <bes e-4 g> \barre 3 3 |
+    <bes e-4 g> \accent \barre 3 3 |
     s2. |
     d4.-0 d8 cis4\glide-2 |
 
     %16
-    r8 \startBarre 2 6 a <d-3 fis> r \stopBarre r \once \arpeggioBracket <g,-2 c-3 e-4\2>\arpeggio |
+    r8 \startBarre 2 6 a <d-3 fis> \accent
+    r \stopBarre r \once \arpeggioBracket <g,-2 c-3 e-4\2> \arpeggio \accent |
     s2. |
     c4.-2 b8 a4-0 |
 
@@ -256,7 +261,7 @@ six_huit = {
     \override Fingering.direction = #UP
     \set strokeFingerOrientations = #'(up)
     r4 r8 b'-0 \RH 3 e,4-1 \RH 2 |
-    e2. |
+    e2. \p |
 
     %29
     dis8 \RH 3 \startBarre 4 6 _( e-2 ) fis4.-4 \RH 4 e8-2 \RH 3 \stopBarre |
@@ -274,14 +279,14 @@ six_huit = {
     a2. |
 
     %32
-    cis'2-4 \RH 4 \startBarre 7 6 b4 \RH 2 \stopBarre |
+    cis'2-3 \RH 4 \startBarre 7 6 b4 \RH 2 \stopBarre |
     \override Rest.staff-position = #0
     r8 a \RH 2 dis-2 \RH 3 fis \RH 4 b4 |
     b2. |
 
     %33
     \six_huit
-    gis4.-4\2 \RH 4 fis \RH 4 |
+    gis4.-4\2 \RH 4 \accent fis \RH 4 \accent |
     r8 ais,-1 \RH 2 e'-3 \RH 3 r \startBarre 7 6 a, \RH 2 dis-2 \RH 3 \stopBarre |
     fis'4.-2_\5 b, |
 
@@ -314,7 +319,7 @@ six_huit = {
     fis2. |
 
     %39
-    fisis8-4 \RH 2 \startBarre 4 6 gis \RH 3 a4.-3 \RH 4 gis8 \RH 3 \stopBarre |
+    fisis8-4 \< \RH 2 \startBarre 4 6 gis \RH 3 a4.-3 \RH 4 gis8 \RH 3 \stopBarre \! |
     g4\rest r8 dis' \RH 3 bis4-2 \RH 2 |
     gis2. |
 
@@ -327,7 +332,7 @@ six_huit = {
     %41
     r4 b4.-3 \RH 4 cis8\glide-4 \RH 3 |
     r8 d4-2\3 \RH 2 f8-1\2 \RH 3 d4-2\3 \RH 2 |
-    e,2. |
+    e,2. \mf |
 
     %42
     \six_huit
