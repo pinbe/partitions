@@ -18,7 +18,7 @@
         license = "Creative Commons Attribution-ShareAlike 3.0"
         %footer = "Mutopia-2019/05/30-1426"
         %copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2019 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
-        tagline = \markup{ \italic \small "Révision des doigtés du 18/03/2026 par Benoît Pin"}
+        tagline = \markup{ \italic \small "Révision des doigtés du 06/04/2026 par Benoît Pin"}
 }
 
 \include "../../commons/guitar-helpers.ly"
@@ -1596,7 +1596,7 @@ fingeringVoiceD = {
   % 231
   s16 [ a-2 s a \startBarre #2 #4 s a s a s a s a ] |
   s2. |
-  d16-0 [ s a' s g-4 s f-2 s e s d-4 s ] |
+  d16\tweak extra-offset #'(0.5 . 0.5)-0 [ s a' s g-4 s f-2 s e s d-4 s ] |
   <d, bes'-1>4 s2  |
 
   % 232
@@ -1659,13 +1659,12 @@ fingeringVoiceD = {
   % 241
   \override Fingering.add-stem-support = ##f
   f,16-2 [ a' ]
-  %\override TupletBracket.bracket-slur = ##t
-  %\override TupletBracket.bracket-visibility = ##t
   \tuplet 3/2 8 {
+    \override TupletBracket.bracket-visibility = ##t
     \override Stem.details.beamed-lengths = #'(5.0)
     d,,-4 [ f-2 a-1 ]
-    %\override TupletBracket.bracket-slur = ##f
-    %\override TupletBracket.bracket-visibility = ##f
+    \omit TupletBracket
+    \omit TupletNumber
     f-2 [  a-1 d-3 ]
     a-2 [ d-3 f-1 ]
     bes, \startBarre #3 #3 [ d g \stopBarre ]
@@ -1698,7 +1697,7 @@ fingeringVoiceD = {
     d-3 [ f \startBarre #3 #6 bes ]
     f [ bes d ]
     g,-3 [ bes ees-2 ]
-    \set stringNumberOrientations = #'(down)
+    \once \set stringNumberOrientations = #'(down)
     ees,-4\5 [ bes' g' \stopBarre ]
   }
   |
@@ -1709,7 +1708,6 @@ fingeringVoiceD = {
   % 244
   \tuplet 3/2 8 {
     e,16-2 \startBarre #6 #6 [ cis' bes' \stopBarre ]
-    \override TextSpanner.bound-details.left.text = "III"
     f, \startBarre #3 #4 [ d' a'-4 \stopBarre ]
     g,-0 [ e'-3 g-1 ]
     gis, \startBarre #1 #3 [ d'-3 f \stopBarre ]
@@ -1827,7 +1825,7 @@ fingeringVoiceD = {
   \once \override NoteColumn.force-hshift = #1 d2.-0 |
   s2. |
   s2. |
-  <d, d'-1^\5>2. \bar "|."|
+  <d, d'-1\5>2. \fine |
 }
 
 merges = {
