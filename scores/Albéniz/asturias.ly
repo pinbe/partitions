@@ -746,7 +746,7 @@
           ais, g' b
           b, g' b
         } |
-        g'8-4_\5 ais-3_\4 b-4 d-1 ais\glide-3 b-3 |
+        g'8-4_\5 ais\glide-3_\4 b-3 d-1 ais\glide-3 b-3 |
         s2. _\markup \italic "a tempo" |
 
         %113
