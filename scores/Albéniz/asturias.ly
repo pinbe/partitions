@@ -255,7 +255,7 @@
       %\override TextSpanner.bound-details.left.text = "VIII"
       <g-3 ais e'-2 g e'-4>8 \startBarre #8 #6
       \tuplet 3/2 8 {
-        c16 e-2 c'_1
+        c16 e-2 c'
         d, e c'
         b, e c'
         c, e c'
@@ -263,21 +263,21 @@
         ^\markup { \bold "3 ×"}
         \stopBarre
       }|
-      c,8-1 c'8-3 d-4 b-3 c-4 g-3 |
+      c,8 c'8-3 d-4 b-3 c-4 g-3 |
       s2. |
     }
 
     %40
     \set Score.currentBarNumber = #40
     \tuplet 3/2 8 {
-      a,16 \startBarre #7 #6 fis'-1 c'_2
+      a,16 \startBarre #7 #6 fis' c'_2
       fis,, fis' c'
       g, fis' c'
       a, fis' c'
       e,, fis' c'
       fis,, fis' c' \stopTextSpan
     } |
-    a8-1 fis-3 g-4 a-1 e-1 fis-3 |
+    a8 fis-3 g-4 a e fis-3 |
     s2. |
 
     \repeat volta 2 {
@@ -305,7 +305,7 @@
         g, e' c'
         \stopBarre
       }|
-      c8-1 c'8-3 d-4 b-3 c-4 g-3 |
+      c8 c'8-3 d-4 b-3 c-4 g-3 |
       s2. |
     }
 
@@ -499,7 +499,7 @@
 
         %69
         b2-4 <d,,-3 g-4 b-2>4 \startBarre #3 #6 |
-        b2-0 g,4-1 |
+        b2-0 g,4 |
         s2. |
 
         %70
@@ -561,9 +561,10 @@
         %80
         r4 \startBarre #4 #4
         \override Fingering.add-stem-support = ##t
-        \grace{ees16-1 _( f-3 )}
+        \grace{ees16 _( f-3}
         \override Fingering.add-stem-support = ##f
-        <c-2 ees-1>8 d-4 ees-1 c'-4 \stopTextSpan |
+        \once \set fingeringOrientations = #'(right)
+        <c-2 ees ) >8 d-4 ees c'-4 \stopTextSpan |
         fis2.\glide-1 |
         s2. |
 
@@ -739,14 +740,14 @@
         \tuplet 3/2 8 {
           \once \undo \omit TupletBracket
           \once \undo \omit TupletNumber
-          g16 \startBarre #7 #6 g'-2 b-1
+          g16 \startBarre #7 #6 g'-2 b
           ais, g' b
           b, g' b
           d, g b
           ais, g' b
           b, g' b
         } |
-        g'8-4_\5 ais\glide-3_\4 b-3 d-1 ais\glide-3 b-3 |
+        g'8-4_\5 ais\glide-3_\4 b-3 d ais\glide-3 b-3 |
         s2. _\markup \italic "a tempo" |
 
         %113
@@ -759,7 +760,7 @@
           fis, d' fis
         }
         \stopBarre |
-        d,8-4 eis-2 fis-3 a-1 eis-2 fis-3 |
+        d,8-4 eis-2 fis-3 a eis-2 fis-3 |
         s2. |
 
         %114
