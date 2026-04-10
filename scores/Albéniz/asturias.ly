@@ -3,7 +3,7 @@
 \header {
   title = "Asturias (Leyenda)"
   composer = "Isaac Albéniz"
-  tagline = \markup{ \italic \small "Révision des doigtés du 09/04/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 10/04/2026 par Benoît Pin"}
   %{
   sources:
   https://www.thisisclassicalguitar.com/asturias-leyenda-by-albeniz-free-pdf/ ©BradfordWerner
