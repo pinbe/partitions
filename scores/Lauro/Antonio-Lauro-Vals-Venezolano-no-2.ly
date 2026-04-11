@@ -149,10 +149,7 @@
 
     %22
     a4.-3 c |
-    \override TextSpanner.bound-details.left.text = "I"
-    \override Arpeggio.positions = #'(-2.5 . 1)
-    \arpeggioBracket
-    s4 \stemUp dis,4.\arpeggio^\markup{"I"}  dis8-1  |
+    s4 \stemUp dis,4. \startBarre 1 4 dis8-1 \stopBarre  |
     b4-2 dis b-2 |
 
     %23
