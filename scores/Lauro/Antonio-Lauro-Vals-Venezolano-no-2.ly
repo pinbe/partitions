@@ -2,8 +2,9 @@
 
 \header {
   title = "Vals Venezolano no 2"
+  subsubtitle = "Andreina"
   composer = "Antonio Lauro"
-  tagline = ##f
+  tagline = \markup{ \italic \small "Révision des doigtés du 11/04/2026 par Benoît Pin"}
 }
 
 \paper {
@@ -52,7 +53,7 @@
     a2. |
 
     %5
-    e8-4 \startBarre 2 6 _( dis-3 ) d-2  dis-3 g-2 _( fis ) \stopBarre |
+    e8-4 \startBarre 2 6 _( dis-3 ) cisis-2  dis-3 g-2 _( fis ) \stopBarre |
     s4 a2 |
     b2. |
 
