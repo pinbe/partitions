@@ -2,7 +2,7 @@
 
 \header {
   title = "Vals Venezolano no 2"
-  subsubtitle = "Andreina"
+  subsubtitle = "Andreína"
   composer = "Antonio Lauro"
   tagline = \markup{ \italic \small "Révision des doigtés du 11/04/2026 par Benoît Pin"}
 }
