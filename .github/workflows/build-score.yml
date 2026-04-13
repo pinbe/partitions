@@ -19,7 +19,7 @@ jobs:
       - name: Setup LilyPond
         uses: codello/setup-lilypond@main
         with:
-          lilypond-version: 2.24
+          lilypond-version: 2.25.81
 
       - name: Avoid Lilypond version issues
         run: |
