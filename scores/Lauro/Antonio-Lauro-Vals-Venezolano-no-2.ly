@@ -1,10 +1,10 @@
-\version "2.24.4"
+\version "2.25.81"
 
 \header {
   title = "Vals Venezolano no 2"
   subsubtitle = "Andreína"
   composer = "Antonio Lauro"
-  tagline = \markup{ \italic \small "Révision des doigtés du 11/04/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 13/04/2026 par Benoît Pin"}
 }
 
 \paper {
@@ -27,8 +27,11 @@
 
 
   % anacrouse
+  \set strokeFingerOrientations = #'(up)
   r8 b8 cis-1 dis-3 e-0 fis-1 |
+  \set strokeFingerOrientations = #'(up)
   s2. |
+  \set strokeFingerOrientations = #'(down)
   s2. |
 
   \repeat volta 2 {
@@ -126,10 +129,10 @@
 
   \repeat volta 2 {
     %17
-    d4.-2 \rightHandFinger #3 e \rightHandFinger #4 |
+    d4.-2 \RH #3 e \RH #4 |
     \override Fingering.direction = 1
-    s4 c4.-4 \rightHandFinger #2 c8 \rightHandFinger #2 _~ |
-    fis4-1 \rightHandFinger #1 d'\rightHandFinger #1 a \rightHandFinger #1 |
+    s4 c4.-4 \RH #2 c8 \RH #2 _~ |
+    fis4-1 \RH #1 d'\RH #1 a \RH #1 |
 
     %18
     d4. e |
@@ -160,10 +163,10 @@
     %23
     g2. |
     s2. |
-    g'8 g,-3 \rightHandFinger #1 b-1 \rightHandFinger #1 e-2 \rightHandFinger #1 g \rightHandFinger #2 b \rightHandFinger #3 |
+    g'8 g,-3 \glide \RH #1 b-1 \glide \RH #1 e-2 \RH #1 g \RH #2 b \RH #3 |
 
     %24
-    e'8 \rightHandFinger #4 b-0 cis-1 dis-3 e-0 fis-1 |
+    e'8 \RH #4 b-0 cis-1 dis-3 e-0 fis-1 |
     s2. |
     s2. |
 
