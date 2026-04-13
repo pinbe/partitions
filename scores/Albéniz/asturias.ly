@@ -1,4 +1,4 @@
-\version "2.24.3"
+\version "2.25.81"
 
 \header {
   title = "Asturias (Leyenda)"
@@ -10,6 +10,13 @@
   https://www.youtube.com/watch?v=CCVBDCavI_c
   Eythor Thorlaksson https://www.free-scores.com/partitions_telecharger.php?partition=767
   %}
+}
+
+\paper {
+  top-margin = 5\mm
+  bottom-margin = 6\mm
+  left-margin = 10\mm
+  right-margin = 10\mm
 }
 
 \include "../../commons/guitar-helpers.ly"
