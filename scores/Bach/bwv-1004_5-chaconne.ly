@@ -1,27 +1,35 @@
-\version "2.24.4"
+\version "2.25.81"
 
 \header {
-        title = "Partita II BWV 1004"
-        subtitle = "Sechs Sonaten für Violine"
-        piece = "5. Chaconne"
-        mutopiatitle = "BWV 1004 Chaconne"
-        composer = "Johann Sebastian Bach"
-        mutopiacomposer = "BachJS"
-        opus = "BWV 1004"
-        date = "1720"
-        mutopiainstrument = "Guitar"
-        style = "Baroque"
-        %source = "Bach-Gesellschaft Edition 1879 Band 27.1"
-        %maintainer = "Hajo Dezelski"
-        %maintainerEmail = "dl1sdz (at) gmail.com"
+  title = "Partita II BWV 1004"
+  subtitle = "Sechs Sonaten für Violine"
+  piece = "5. Chaconne"
+  mutopiatitle = "BWV 1004 Chaconne"
+  composer = "Johann Sebastian Bach"
+  mutopiacomposer = "BachJS"
+  opus = "BWV 1004"
+  date = "1720"
+  mutopiainstrument = "Guitar"
+  style = "Baroque"
+  %source = "Bach-Gesellschaft Edition 1879 Band 27.1"
+  %maintainer = "Hajo Dezelski"
+  %maintainerEmail = "dl1sdz (at) gmail.com"
 
-        license = "Creative Commons Attribution-ShareAlike 3.0"
-        %footer = "Mutopia-2019/05/30-1426"
-        %copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2019 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
-        tagline = \markup{ \italic \small "Révision des doigtés du 06/04/2026 par Benoît Pin"}
+  license = "Creative Commons Attribution-ShareAlike 3.0"
+  %footer = "Mutopia-2019/05/30-1426"
+  %copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2019 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+  tagline = \markup{ \italic \small "Révision des doigtés du 06/04/2026 par Benoît Pin"}
+}
+
+\paper {
+  top-margin = 5\mm
+  bottom-margin = 6\mm
+  left-margin = 10\mm
+  right-margin = 10\mm
 }
 
 \include "../../commons/guitar-helpers.ly"
+
 
 fingeringVoiceA = {
   \fingeringTweaks
@@ -44,7 +52,7 @@ fingeringVoiceC = {
 fingeringVoiceD = {
   \fingeringTweaks
   \override Fingering.add-stem-support = #only-if-beamed
-  \set fingeringOrientations = #'(left)  
+  \set fingeringOrientations = #'(left)
 }
 
 \parallelMusic voiceA, voiceB, voiceC, voiceD {
@@ -630,9 +638,9 @@ fingeringVoiceD = {
   e8-2 [ e] e-3  [ e] e-3 [ e]|
 
   % 91
-  d,32 d-0 f'-2 d, d d f' d, 
+  d,32 d-0 f'-2 d, d d f' d,
   d32 d f' d, d d f' d,
-  d32 a'-3 f'-2 a, d a f' a, | 
+  d32 a'-3 f'-2 a, d a f' a, |
   s2. |
   s2. |
   d8-1 [ d] d [ d] d-1 [ d] |
@@ -755,7 +763,7 @@ fingeringVoiceD = {
 
   % 106
   g,32 g'-3 <bes-1 f'-4> g g, g' <bes f'> g
-  g,32 g' <bes-1 e-4> g g, g' <bes e> g 
+  g,32 g' <bes-1 e-4> g g, g' <bes e> g
   a,32 f'-3 ees'-4 f, a, f' ees' f, |
   s2. |
   s2. |
@@ -786,8 +794,8 @@ fingeringVoiceD = {
   d,8 [ d'] d [ d] d [ d] |
 
   % 110
-  d,32 bes'-3 g'-4 bes, d,32 bes' g' bes, 
-  d,32 b'-3 gis'-4 b, d,32 b' gis' b, 
+  d,32 bes'-3 g'-4 bes, d,32 bes' g' bes,
+  d,32 b'-3 gis'-4 b, d,32 b' gis' b,
   e,32 d'-2 gis-4 d e, d' gis d |
   s2. |
   s2. |
@@ -1415,14 +1423,14 @@ fingeringVoiceD = {
 
   % 204
   \override Arpeggio.positions = #'(-4.5 . -2)
-  e16-2 \arpeggio <b''-4 \RH #4 d,-3 \RH #2 > <b d,> e,, 
+  e16-2 \arpeggio <b''-4 \RH #4 d,-3 \RH #2 > <b d,> e,,
   \override Arpeggio.positions = #'(-4 . -2)
   e-1 \arpeggio <e'-0 d-3> <fis-2 d> e, e <g'-4 cis,-2> <g cis,> e, |
   s2. |
-  s2. |	
+  s2. |
   gis8.-1 gis16 a8. a16 a8. a16 |
-  
-  
+
+
 
   % 205
   \override Arpeggio.positions = #'(-2.5 . -0.5)
@@ -1456,7 +1464,7 @@ fingeringVoiceD = {
   s2. |
   s2. |
   <b-1 fis'-3>8 <g-1 e'-2> <a e'-1>2 |
-  
+
   % 209
   \key d \minor d4 bes4. \barre #3 #4 bes8-3 |
   \key d \minor s2. |
@@ -1506,7 +1514,7 @@ fingeringVoiceD = {
   s2. |
   s2. |
   <a g'-0>8 <g-3 f'> <a~ e'-1>4 a8. a'16-2 |
-  
+
   % 217
   d,16 a'-2 cis-3 g'-4 f-1 d-4 cis-2 d d, d' cis d |
   s2.|
@@ -1524,7 +1532,7 @@ fingeringVoiceD = {
   s2.|
   s2. |
   f4 r f8 r |
-  
+
   % 220
   g,16-3 bes \startBarre #3 #3 d bes'-4 \stopBarre e,-0 d-4 cis-2 d a-1 d-4 cis-2 e-0 |
   s2.|
@@ -1542,7 +1550,7 @@ fingeringVoiceD = {
   s2. |
   s2. |
   s2. |
-  
+
   % 223
   d16 bes f es-4 d-3 f \stopBarre bes,-1 a-0
   g-4 cis-3 e-1 bes'-2 |
@@ -1561,7 +1569,7 @@ fingeringVoiceD = {
   s2. |
   s2. |
   s2. |
-  
+
   % 226
   % c,16-1 g'-2 _( a-4 ) bes-1 c-2 e\2-3 _( f-4 ) g-1 a-3 [ f,32-3\4 _( e-2 ) d-0 _( e ) f16 ] |
   c,16-1 g'-2\4 _( a-4 ) bes-1\3 c\glide-2 e-2 _( f-3 ) g-1\2 a-3 [ f,32-4\5 _( e-3 ) d-1 _( e ) f16 ] |
@@ -1580,7 +1588,7 @@ fingeringVoiceD = {
   s2. |
   s2. |
   s2. |
- 
+
   % 229
   s16 [ a-1 s a s a s a s a s a ] |
   s2. |
@@ -1589,12 +1597,12 @@ fingeringVoiceD = {
   f16-2 [ s a s bes-2 s a s g-4 s f-3 s ] |
   \shiftOnn <d, a'>4 s2 |
 
-   % 230
+  % 230
   s16 \startBarre #2 #4 [ a s a s a s a s a \stopBarre s a-3 ] |
   s2. |
   e16 [ s bes'-3 s a s g-4 s f-2 s e-2 s ] |
   c'4-2 s2 |
-  
+
   % 231
   s16 [ a-2 s a \startBarre #2 #4 s a s a s a s a ] |
   s2. |
@@ -1607,7 +1615,7 @@ fingeringVoiceD = {
   e16 [ s f-2 s g-4 s bes-2 s a s g-4 s ] |
   a'4 s2 |
 
-  
+
   % 233
   s16 [ a-1 s a s a s a s a s a ] |
   s2. |
@@ -1631,7 +1639,7 @@ fingeringVoiceD = {
   s2. |
   <a, a'-1>16 [ s <b a'> \startBarre #2 #5 s <c-2 a'> s <cis-3 a'> \stopBarre s <d-0 b'-0> s <e cis'> \barre #2 #4 s ] |
   s2. |
-  
+
 
   % 237
   s16 [ a s a s a s a s a s a ]|
@@ -1657,7 +1665,7 @@ fingeringVoiceD = {
   s2. |
   <cis g'>16 [ s <cis-3 e-1> s <cis-3 a'-1> s <a-0 g'-0> s <b-1 f'-2> s <cis-3 e-1> s ] |
   s2. |
-  
+
   % 241
   \override Fingering.add-stem-support = ##f
   f,16-2 [ a' ]
@@ -1671,7 +1679,8 @@ fingeringVoiceD = {
     a-2 [ d-3 f-1 ]
     bes, \startBarre #3 #3 [ d g \stopBarre ]
     \override Stem.details.beamed-lengths = #'(6.0)
-    g, \startBarre #5 #4 [ d'-3 bes'-2 ] } |
+    g, \startBarre #5 #4 [ d'-3 bes'-2 ]
+  } |
   s2. |
   s2. |
   d8 s s2 |
@@ -1686,7 +1695,8 @@ fingeringVoiceD = {
     g-0 [ c-1 e-0 ]
     a,-2 [ c \startBarre #1 #3 f \stopBarre ]
     \override Stem.details.beamed-lengths = #'(6.5)
-    f,-1 [ c'-3 a'-4 ] } |
+    f,-1 [ c'-3 a'-4 ]
+  } |
   s2. |
   s2. |
   s2. |
@@ -1720,7 +1730,7 @@ fingeringVoiceD = {
   s2. |
   s2. |
   s2. |
-  
+
   % 245
   \tuplet 3/2 8 {
     \override Stem.details.beamed-lengths = #'(4.5)
@@ -1729,7 +1739,8 @@ fingeringVoiceD = {
     d-1 [ d-3 _( c-1 ) ]
     bes-2 [ bes-2 _( a-1 ) ]
     g-4\4 [ bes-1 _( c-3 ) ]
-    d-1 _( [ e-3 ) f-4 ] }
+    d-1 _( [ e-3 ) f-4 ]
+  }
   |
   s2. |
   s2. |
@@ -1742,7 +1753,8 @@ fingeringVoiceD = {
     c-4 [ c _( bes-2 ) ]
     a-1 [ a _( g-0 ) ]
     f-3 [ a-2 _( bes-3 ) ]
-    c-1 _( [ d-3 ) ees-4 ] }
+    c-1 _( [ d-3 ) ees-4 ]
+  }
   |
   s2. |
   s2. |
@@ -1785,7 +1797,7 @@ fingeringVoiceD = {
   <g-4 bes-1>4 <g-4 a-1>2 |
   s2. |
   d4-3 cis2-3 |
-  
+
   % 251
   f4-1 d4.-4 c8\3-4 |
   \stemUp<a-2 d-4>4 <f-2 bes-3>2 \stemNeutral |
@@ -1798,7 +1810,7 @@ fingeringVoiceD = {
   s2. |
   s2. |
   g4-3 a cis-3 |
-  
+
   % 253
   g16-4 _( e-1 ) f-2 _( d-0 ) <f bes>4 \barre #3 #4 <fis-3 a-1> |
   s2. |
@@ -1838,7 +1850,7 @@ merges = {
   \override TextSpanner.font-shape = #'upright
   \override TextSpanner.dash-fraction = #1
   \override TextSpanner.bound-details.right.text =
-      \markup { \draw-line #'(0 . -1) }
+  \markup { \draw-line #'(0 . -1) }
 
 }
 
@@ -1855,7 +1867,7 @@ merges = {
       %\partCombine
       %\autoBeamOff
       %\partCombineChords
-      
+
       \relative {
         \voiceOne
         \merges
@@ -1880,6 +1892,6 @@ merges = {
   }
   \layout { }
   \midi {
-    \tempo 4 = 45 
+    \tempo 4 = 45
   }
 }
