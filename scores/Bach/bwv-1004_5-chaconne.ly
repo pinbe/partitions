@@ -56,6 +56,7 @@ fingeringVoiceD = {
 }
 
 \parallelMusic voiceA, voiceB, voiceC, voiceD {
+  \dropD
   % 1
   \fingeringVoiceA
   a4.-1 a8 |

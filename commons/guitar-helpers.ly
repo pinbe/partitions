@@ -4,19 +4,19 @@ RH = #rightHandFinger
 
 #(define-markup-command (barreMrkp layout props fretnum numOfStr) (integer? scheme?)
    (interpret-markup layout props
-                     (let ((label 
+                     (let ((label
                             (cond
                              ((number? numOfStr) (number->string numOfStr))
                              ((string? numOfStr) numOfStr)
-                            )))
+                             )))
                        (if (and (number? numOfStr) (= numOfStr 6))
                            #{
-                             \markup { 
+                             \markup {
                                \small
                                \bold
                                \concat {
                                  #(format #f "~@r" fretnum)
-                                \hspace #0.2
+                                 \hspace #0.2
                                }
                              }
                            #}
@@ -24,7 +24,8 @@ RH = #rightHandFinger
                              \markup {
                                \small
                                \concat {
-                                 { \bold
+                                 {
+                                   \bold
                                    #(format #f "~@r" fretnum)
                                  }
                                  \hspace #0.2
@@ -38,7 +39,7 @@ RH = #rightHandFinger
                              }
                            #}))))
 
-barre = 
+barre =
 #(define-event-function (fretnum numOfStr)
    (number? scheme?)
    #{
@@ -46,8 +47,8 @@ barre =
    #}
    )
 
-startBarre = 
-#(define-event-function (fretnum numOfStr) 
+startBarre =
+#(define-event-function (fretnum numOfStr)
    (number? scheme?)
    #{
      \tweak bound-details.left.text
@@ -58,23 +59,23 @@ startBarre =
      \tweak font-shape #'upright
      \tweak style #'dashed-line
      \tweak dash-fraction #0.3
-     \tweak dash-period #1 
-     
+     \tweak dash-period #1
+
      \tweak bound-details.left.stencil-align-dir-y #0
      \tweak bound-details.left.padding 0.25
      \tweak bound-details.left.attach-dir -1
-     
+
      \tweak bound-details.left-broken.text ##f
      \tweak bound-details.left-broken.attach-dir -1
      \tweak bound-details.left-broken.padding 1.5
-     
-     
-     
+
+
+
      \tweak bound-details.right.padding 0
      \tweak bound-details.right.attach-dir 1
      \tweak bound-details.right.text
      \markup {
-       \with-dimensions #'(0 . 0) #'(-.3 . 0) 
+       \with-dimensions #'(0 . 0) #'(-.3 . 0)
        \draw-line #'(0 . -1)
      }
 
@@ -82,12 +83,12 @@ startBarre =
      \tweak bound-details.right-broken.padding 0
 
      \tweak direction 1 % UP
-     \startTextSpan 
+     \startTextSpan
    #})
 
 stopBarre = \stopTextSpan
 
-startStringSpan = 
+startStringSpan =
 #(define-event-function (stringNum)
    (number?)
    #{
@@ -102,7 +103,7 @@ startStringSpan =
      \tweak bound-details.right.attach-dir 1
      \tweak style #'dashed-line
      \tweak dash-fraction #0.3
-     \tweak dash-period #1 
+     \tweak dash-period #1
      \startTextSpan
    #})
 
@@ -123,7 +124,7 @@ fingeringTweaks = {
   \override StrokeFinger.add-stem-support = ##t
   \override StrokeFinger.avoid-slur = #'around
   \override StrokeFinger.script-priority = 110 %
-  
+
   % strings
   \override StringNumber.script-priority = 120 %
 }
@@ -137,4 +138,16 @@ merges = {
   \mergeDifferentlyHeadedOn
   \mergeDifferentlyDottedOn
   \shiftOff
+}
+
+dropD = \textMark \markup {
+  \concat {
+    \fontsize #-5 {
+      \circle \number 6
+    }
+    \hspace #0.5
+    "="
+    \hspace #0.5
+    "ré"
+  }
 }

@@ -10,6 +10,7 @@
 
 
 \parallelMusic voiceA, voiceB {
+  \dropD
   d'8-3 e-0 |
   s4|
   
