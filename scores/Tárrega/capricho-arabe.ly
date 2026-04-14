@@ -3,7 +3,7 @@
 \header {
   title = "Capricho Árabe"
   composer = "Francisco Tárrega"
-  tagline = \markup{ \italic \small "Révision des doigtés du 07/01/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 14/04/2026 par Benoît Pin"}
   %{
   sources :
   https://youtu.be/muhg8aCLQzU?feature=shared
@@ -12,6 +12,13 @@
   %}
 }
 \include "../../commons/guitar-helpers.ly"
+
+\paper {
+  top-margin = 5\mm
+  bottom-margin = 6\mm
+  left-margin = 10\mm
+  right-margin = 10\mm
+}
 
 \parallelMusic voiceT, voiceA, voiceB, voiceC {
   \dropD
@@ -30,7 +37,7 @@
     s2. |
     \stemNeutral
     \set strokeFingerOrientations = #'(up down)
-    g'16-3 \RH #3 ( e-1 ) d-2 ( cis-1 ) e-4 ( d-2 ) bes-2 ( a-1 )  c-4 ( bes-2 ) g-4\2 ( e-1 ) |
+    g'16-3 \RH #3 ( e\tweak extra-offset #'(0 . 0.5)\glide\tweak extra-offset #'(0 . 0.5)-1 ) d-2 ( cis\tweak extra-offset #'(0 . 0.5)-1 ) e-4 ( d\glide-2 ) bes-2 ( a-1 )  c-4 ( bes-2 ) g-4\2 ( e-1 ) |
     s2. |
     s2. |
 
@@ -52,6 +59,7 @@
   s2. |
   \stemNeutral
   \override Fingering.direction = #DOWN
+  \set strokeFingerOrientations = #'(down)
   \textSpannerDown
   a,4.-0 \RH 1 \mf cis8-3 \RH 1 e-1 \RH 1 \startStringSpan #4 g\glide-4 \RH 1 |
   s2. |
@@ -59,7 +67,7 @@
 
   %6
   s2. |
-  bes8-4 \RH 1 a\glide-3 \RH 1 e'4.-3 \RH 1 d8-2 \RH #3 |
+  bes8-4 \RH 1 a\glide-3 \RH 1 e'4.-3 \RH 1 \set strokeFingerOrientations = #'(up) d8-2 \RH #3 |
   s2. |
   s2. |
 
@@ -68,7 +76,7 @@
   \tupletNeutral
   \tuplet 6/4 4 {
     \override Fingering.direction = #UP
-    \override TupletBracket.bracket-visibility = ##t
+    %\override TupletBracket.bracket-visibility = ##t
     cis16-1 \RH #2 d-2 e-4 d-2 cis-1 bes-2
     \override Fingering.direction = #DOWN
     a-1 c-4 bes-2 a-1 g-4 f-2
@@ -79,7 +87,7 @@
 
   %8
   s2. |
-  bes'2-2\fermata a4-1 |
+  bes'2-2\fermata _\RH 1 a4-1 |
   s2. |
   s2.  \bar "||" |
 
@@ -119,7 +127,7 @@
 
     %13
     s1 |
-    \slashedGrace{c8-4 _( } a4-1 ) a r8 gis16-3^\2 a-4 b-1 cis-3 d-1 e-3 |
+    \slashedGrace{c8-4 _( } a4-1 ) a r8 gis16-3^\2 a-4 b\glide-1 _( cis\tweak extra-offset #'(0 . 1)-3 ) d-1 _( e-3 ) |
     r8 <a-3 f'-2> r <a-3 f'-2> s2 |
     d,4 f'-4_\5 e-1 a,-0 |
 
@@ -145,8 +153,8 @@
 
     %17
     s1 |
-    \grace{c16-1 _( d-3} c8 )
-    \override Fingering.add-stem-support = ##f
+    \grace{c16-1 _( d-3} c8\glide-1 )
+    \once \set fingeringOrientations = #'(left up)
     <g-3 bes-1> a-4 \startBarre #3 #6 <e-3 g>\stopBarre
     \override Fingering.add-stem-support = #only-if-beamed
     \override TextSpanner.bound-details.left.text = "accel."
@@ -165,7 +173,7 @@
     %19
     s1 |
     s1 ^\markup{\italic "a tempo"} |
-    r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4>  |
+    r8 <f-3 d'-4> r \set fingeringOrientations = #'(left up) <f-3 d'\glide-4> r <g-0 ees'\glide-4> r <e-2 a-3 cis-4>  |
     d,4-0 bes'-1 ees,-1 a-0 |
 
     \alternative {
@@ -173,7 +181,8 @@
         %20
         s1 |
         s1 \p |
-        r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4> |
+        \set fingeringOrientations = #'(left)
+        r8 <f-3 d'-4> r \set fingeringOrientations = #'(left up) <f-3 d'\glide-4> r <g-0 ees'\glide-4> r <e-2 a-3 cis-4>  |
         d,4-0 bes'-1 ees,-1 a-0 |
       }
 
@@ -183,6 +192,7 @@
         \override TextSpanner.bound-details.left.text = "rit."
         \textSpannerDown
         s2 s4 \startTextSpan s8 s8 \stopTextSpan |
+        \set fingeringOrientations = #'(left)
         r8 <f-3 d'-4> r <f-3 d'-4> r \startBarre #3 #6 <bes d> r <g-3 bes e-4> \stopBarre |
         d,4-0 bes'-1 g-3 c |
       }
@@ -211,11 +221,12 @@
 
   %25
   s1 |
-  \grace{g16-1 \RH #4 _( a-3} g4-1 ) c,4-1\2 \RH #4 r16 bes-3 d-4 e-0 d-4 c-1 bes-3 c,-2 |
+  \grace{g16-1 \RH #4 _( a-3} g4-1 ) c,4-1\2 \RH #4 r16 bes-3 d-4 e-0 d-4 c-1 bes-3 c, |
   \revert Rest.staff-position
+  \set strokeFingerOrientations = #'(up)
+  c,8 \startBarre #3 #6 c'-3 \RH #2 \stopBarre r <e,-2 bes'-3>
   \override Fingering.direction = #DOWN
-  \override Fingering.add-stem-support = #only-if-beamed
-  c,8-1 \startBarre #3 #6 c'-3 \RH #2 \stopBarre r <e,-2 bes'-3> c4..-2 _\markup{\italic "rit."} c16 |
+  c4..-2 _\markup{\italic "rit."} c16 |
   s1 |
 
   %26
@@ -244,7 +255,7 @@
 
   %29
   s1 |
-  r16 e-1 \RH #2 a-1 \RH #3 cis-2 \RH #4 e-0 \RH #3 a-2\2 \RH #2 cis-1 \RH # 3 e-4 \RH #2
+  r16 e-1 \RH #2 a-1 \RH #3 cis\glide-2 \RH #4 e-0 \RH #3 a-2\2 \RH #2 cis-1 \RH # 3 e\glide-4 \RH #2
   r bes-4 \RH #3 _( g-1 ) e-0 \RH #2 d-2 \RH #3 bes-1 \RH #2 g-0 \RH #3 e-1 \RH #2 |
   s1 |
   a2 a |
@@ -252,7 +263,7 @@
   %30
   s1 |
   \stemNeutral
-  a,16-0 \RH #1 e'-1 \RH #2 a-1 \RH #3 cis-2 \RH #4 e-0 \RH #3 a-2\2 \RH #2 a \RH #3 a \RH #2
+  a,16-0 \RH #1 e'-1 \RH #2 a-1 \RH #3 cis\glide-2 \RH #4 e-0 \RH #3 a-2\2 \RH #2 a \RH #3 a \RH #2
   a \RH #3 a,, \RH #2 \< _\markup{\italic "accel."} ais-1 b-2 c-3 cis-4 d-0 dis-1 |
   s1 |
   s1 |
@@ -262,7 +273,7 @@
   e16-2 f-3 fis-4 g-0 gis-1 a-2 ais-3 b-0 c-1 cis-2 d-3 dis-4
   \tuplet 5/4 {
     \textSpannerUp
-    e-0 f-1 \startStringSpan #2 fis-2 g-3 gis-4 \!
+    e-0 f-1 \startStringSpan #2 fis-2 g-3 gis\glide-4 \!
   } |
   s1 |
   s1 |
@@ -315,7 +326,7 @@
 
   %38
   s1 |
-  cis4-4 cis r16 fis-4 \RH #3 _( e-2 ) d-2 b-4\2 gis-1 e-0 d-2\2 |
+  cis4-4 cis r16 fis-4 \RH #3 _( e\glide-2 ) d-2 b-4\2 gis-1 e-0 d-2\2 |
   \override Rest.staff-position = #3
   r8 \startBarre #7 #6 e'-3 r e \stopBarre s2 |
   e4 a \tweak NoteHead.style #'harmonic-mixed e'2-1_\5 _\markup {\italic \fontsize #-2 "har. 7"} |
@@ -323,9 +334,9 @@
   %39
   s1 |
   \override Fingering.direction = #DOWN
-  \set strokeFingerOrientations = #'(down)
+  \set strokeFingerOrientations = #'(up)
   \tuplet 6/4 4 {
-    d16-2 \RH #3 _( cis-1 ) cis b'-4_\2 b _( a-2 )
+    d16-2 \RH 3 _( cis-1 ) cis b'-4_\2 b _( a-2 )
     a\glide-2 g-2 g _( fis-1 ) fis e-3_\3
     e _( d-1 ) d\glide-1 cis-1 cis b-4_\4
     \textSpannerDown
@@ -374,25 +385,27 @@
 
   %45
   s4. s8 \stopBarre s2 |
-  \grace{b16 _( cis-3 } b8 ) a4.-4 d,,16-0 _( fis-3 ) a-1 d-2 fis-1 a-4 e'16.-4 \fermata  d32-2 |
+  \grace{b16 _( cis-3 } b8 ) a4.-4 d,,16-0 _( fis-3 ) a-1 d-2 fis-1 a\glide-4 e'16.-4 \fermata  d32-2 |
   r8 d r <a d> s2 |
   d,,4-0 fis'-3 s2 |
 
   %46
   s1 |
   \grace{d16-2 _( e-4 } d8-2 ) s4.
+  \override Fingering.add-stem-support = ##f
   \set strokeFingerOrientations = #'(right)
-  r16 \startBarre #2 #6 b,-3 cis d-2 \stopBarre <cis-3 \RH #2 a'-2\2 \RH #4 >8. <b-3 g'-2\2>16 |
+  \set fingeringOrientations = #'(down left up)
+  r16 \startBarre #2 #6 b,-3 cis d\glide-2 \stopBarre <cis\glide-3 \RH #2 a'\glide-2\2 \RH #4 >8. <b-3 g'-2\2>16 |
   r8 <b-0 e-0>4 <b-0 e-0>8 s2 |
-  g4-0 g,-4 e r |
+  g4-0 g,-4 e a\rest |
 
   %47
   s1 |
   \tuplet 3/2{
     \override Fingering.add-stem-support = ##f
-    <b-3 \RH #2 g'-2 \RH #4 >8 a'-4 \RH #3 g-2 \RH #2
+    <b-3 \RH #2 g'-2 \RH #4 >8 a'-4 \RH #3 g\glide-2 \RH #2
 
-  } <a,-1\4 fis'-2\2>4 r <g-1 cis-3 e-2>
+  } <a,-1\4 fis'\glide-2\2>4 d\rest <g,-1 cis-3 e\glide-2>
   \set strokeFingerOrientations = #'(up down) |
   s1 |
   a2-0 _\markup{\italic "molto rit."} a |
@@ -409,7 +422,7 @@
   s1 |
   s1 |
   \override Rest.staff-position = #-1
-  r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4>  |
+  r8 <f-3 d'-4> r \set fingeringOrientations = #'(left up) <f-3 d'\glide-4> r <g-0 ees'\glide-4> r <e-2 a-3 cis-4>  |
   d,4-0 bes'-1 ees,-1 a-0 |
 
   %50
@@ -420,7 +433,7 @@
   \slashedGrace{ f8\glide-1 \RH #4 } a4-1 a4.-> g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
   \override Rest.staff-position = #2
   \stemDown
-  \grace{s8} r8 <a-3 \RH #2 f'-2 \RH #3 > r <a-3 f'-2> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
+  \grace{s8} r8 \set fingeringOrientations = #'(left) <a-3 \RH #2 f'-2 \RH #3 > r <a-3 f'-2> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
   \grace{s8} d,4 \mf f'-4_\5 e-3 a,-0 |
 
   %51
@@ -431,7 +444,7 @@
 
   %52
   s1 |
-  \slashedGrace{c8-4 _( } a4-1 ) a r8 gis16-3^\2 a-4 b-1 cis-3 d-1 e-3 |
+  \slashedGrace{c8-4 _( } a4-1 ) a r8 gis16-3^\2 a-4 b\glide-1 _( cis\tweak extra-offset #'(0 . 1)-3 ) d-1 _( e-3 ) |
   r8 <a-3 f'-2> r <a-3 f'-2> s2 |
   d,4 f'-4_\5 e-1 a,-0 |
 
@@ -457,8 +470,8 @@
 
   %56
   s1 |
-  \grace{c16-1 _( d-3} c8 )
-  \override Fingering.add-stem-support = ##f
+  \grace{c16-1 _( d-3} c8\glide-1 )
+  \once \set fingeringOrientations = #'(left up)
   <g-3 bes-1> a-4 \startBarre #3 #6 <e-3 g>\stopBarre
   \override Fingering.add-stem-support = #only-if-beamed
   \override TextSpanner.bound-details.left.text = "accel."
@@ -477,14 +490,15 @@
   %58
   s1 |
   s1 ^\markup{\italic "a tempo"} |
-  r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4>  |
+  r8 <f-3 d'-4> r \set fingeringOrientations = #'(left up) <f-3 d'\glide-4> r <g-0 ees'\glide-4> r <e-2 a-3 cis-4>  |
   d,4-0 bes'-1 ees,-1 a-0 |
 
   %59
   s1 |
   s1 |
-  r8 <f-3 d'-4> r <f-3 d'-4> r <g-0 ees'-4> r <e-2 a-3 cis-4> |
-  d,4-0 \p bes'-1 ees,-1 _\markup{\italic "rit."} a-0 |
+  \set fingeringOrientations = #'(left)
+  r8 <f-3 d'-4> r \set fingeringOrientations = #'(left up) <f-3 d'\glide-4> r <g-0 ees'\glide-4> r <e-2 a-3 cis-4>  |
+  d,4-0 bes'-1 ees,-1 a-0 |
 
 
   %60
