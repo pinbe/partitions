@@ -3,7 +3,7 @@
 \header {
   title = "Fantasie"
   composer = "Sylvius Leopold Weiss"
-  tagline = \markup{ \italic \small "Révision des doigtés du 29/03/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 14/04/2026 par Benoît Pin"}
   %{
   sources:
   Sky Guitar Youtube channel
@@ -31,7 +31,7 @@
 
   %1
   \set strokeFingerOrientations = #'(up)
-  r16 g \RH 2 b \RH "m…" g e' b g'\glide-1 e-3 b'-1 g-2 c-3 e,-0 |
+  r16 g \RH 2 b \RH "m…" g e' b g'\glide-1 e\tweak extra-offset #'(0 . -0.3)-3 b'-1 g-2 c-3 e,-0 |
   \set strokeFingerOrientations = #'(up)
   s2. |
   \set strokeFingerOrientations = #'(down)
@@ -121,7 +121,7 @@
   fis4-2 r8 a,-0 |
 
   %18
-  r16 \startBarre #7 #6 dis-2 e-3 fis \stopBarre r fis-3 b-4 a-1 |
+  r16 \startBarre #7 #6 dis-2 e-3 fis \stopBarre r fis-3 b-4 a\glide-1 |
   s2 |
   b4  dis-2_\5 |
 
@@ -137,7 +137,7 @@
   g4-1 a a |
 
   %21
-  dis16-2 \startBarre #7 #6 b-3 fis' dis a'-4 fis \stopBarre c'-1 a-3 dis-4 a-3 e'\glide-4 a,-3\3 |
+  dis16-2 \startBarre #7 #6 b-3 fis' dis a'-4 fis \stopBarre c'-1 a-3 dis-4 a-3 e'\glide-4 a,\tweak extra-offset #'(0 . -0.5)-3\3 |
   s2. |
   b4. r8 r4 |
 
@@ -392,11 +392,12 @@
   cis4-3 \stopStringSpan r fis-4 e\glide-1|
 
   %67
-  a2-2 \once \override Fingering.add-stem-support = ##f  a\glide-2 |
+  a2-2 a\glide-2 |
   s1 |
   dis4-1 cis8-3_\3 b-1 cis4 dis |
 
   %68
+  \once \set fingeringOrientations = #'(left up)
   <e-4 g-2>2  <b e> |
   s1 |
   r4 e,, g-1 e |
