@@ -3,7 +3,7 @@
 \header {
   title = "Capricho Árabe"
   composer = "Francisco Tárrega"
-  tagline = \markup{ \italic \small "Révision des doigtés du 14/04/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 15/04/2026 par Benoît Pin"}
   %{
   sources :
   https://youtu.be/muhg8aCLQzU?feature=shared
@@ -44,7 +44,8 @@
     %3
     s2. |
     \stemUp
-    e2-0-> d8. \startBarre #3 #4 e16-4 \stopBarre |
+    \set strokeFingerOrientations = #'(up)
+    e2-0-> d8. \RH 2 \RH 3 \RH 4 \startBarre #3 #4 e16-4 \RH 2 \stopBarre |
     s2. |
     s2 <g-3 bes>4 |
 
