@@ -202,10 +202,10 @@
 
   %22
   s1 |
-  c4-2 c _~ c16 d e-3 f-4 \grace{e-3 _( f-4} e-3-> ) c-2 d e-3 |
+  c4-2 c r16 d e-3 f-4 \grace{e-3 _( f-4} e-3-> ) c-2 d e-3 |
   \override Rest.staff-position = #8
   r8 ^\markup{\italic "a tempo"} \startBarre #3 #6 <f'-4 a-3> r <f a> s2 |
-  f,4 \mp c' g'-2_\4 c, |
+  f,4 \mp c' g'-2 c, |
 
   %23
   s1 |
@@ -232,10 +232,10 @@
 
   %26
   s1 ^\markup{\italic "a tempo"} |
-  c'4-2 c _~ c16 d e-3 f-4 \grace{e-3 _( f-4} e-3-> ) c-2 d e-3 |
+  c'4-2 c r16 d e-3 f-4 \grace{e-3 _( f-4} e-3-> ) c-2 d e-3 |
   \override Rest.staff-position = #8
   r8 \startBarre #3 #6 <f'-4 a-3> r8 <f a> s2 |
-  f,4 c' g'-2_\4 c, |
+  f,4 c' g'-2 c, |
 
   %27
   s1 |
