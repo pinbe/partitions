@@ -117,19 +117,19 @@
     \slashedGrace{ f''8\glide-1 \RH #4 } a4-1 a4.-> g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
     \override Rest.staff-position = #2
     \stemDown
-    \grace{s8} r8 <a-3 \RH #2 f'-2 \RH #3 > r <a-3 f'-2> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
+    \grace{s8} r8 <a-3 \RH #2 f'-2 \RH #3 > r <a f'> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
     \grace{s8} d,4 \mf f'-4_\5 e-3 a,-0 |
 
     %12
     s1 |
     a4-1 a4.-> g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
-    r8 <a-3 f'-2> r <a-3 f'-2> s2 |
+    r8 <a-3 f'-2> r <a f'> s2 |
     d,4 f'-4_\5 e-3 a,-0 |
 
     %13
     s1 |
     \slashedGrace{c8-4 _( } a4-1 ) a r8 gis16-3^\2 a-4 b\glide-1 _( cis\tweak extra-offset #'(0 . 1)-3 ) d-1 _( e-3 ) |
-    r8 <a-3 f'-2> r <a-3 f'-2> s2 |
+    r8 <a-3 f'-2> r <a f'> s2 |
     d,4 f'-4_\5 e-1 a,-0 |
 
     %14
@@ -194,7 +194,7 @@
         \textSpannerDown
         s2 s4 \startTextSpan s8 s8 \stopTextSpan |
         \set fingeringOrientations = #'(left)
-        r8 <f-3 d'-4> r <f-3 d'-4> r \startBarre #3 #6 <bes d> r <g-3 bes e-4> \stopBarre |
+        r8 <f-3 d'-4> r <f d'> r \startBarre #3 #6 <bes d> r <g-3 bes e-4> \stopBarre |
         d,4-0 bes'-1 g-3 c |
       }
     }
@@ -202,45 +202,46 @@
 
   %22
   s1 |
-  s2 r16 d e-3 f-4 \grace{e-3 _( f-4} e-3-> ) c-2 d e-3 |
-  \override Rest.staff-position = #4
-  r8 ^\markup{\italic "a tempo"} \startBarre #3 #6 <f'-4 a-3> r <f-4 a-3> s2 |
-  <f, c''-2>4 \mp <c' c'-2> g'-2_\4 c, |
+  c4-2 c _~ c16 d e-3 f-4 \grace{e-3 _( f-4} e-3-> ) c-2 d e-3 |
+  \override Rest.staff-position = #8
+  r8 ^\markup{\italic "a tempo"} \startBarre #3 #6 <f'-4 a-3> r <f a> s2 |
+  f,4 \mp c' g'-2_\4 c, |
 
   %23
   s1 |
   \grace{d16 _( e-3} d8 ) s8 s4 r8 g16-4 \RH #2 a \RH #3 \grace{bes-2 \RH #2 _( c-4} bes8-2-> ) a16 \RH #3 g-4 \RH #2 |
-  s8 <a,-4 c-2>4 <a-4 c-2> \stopBarre \startBarre #5 #4 s8 s4 |
+  s8 <a,-4 c-2>4 <a c> \stopBarre \startBarre #5 #4 s8 s4 |
   f,4 c' g' c |
 
   %24
   s1 |
-  \slashedGrace{a8 \RH #4 _(} c4-4 ) f,4.-2-> d16-3 \RH #2 e \RH #3 \grace{f16-2 \RH #2 _( g-4} f8-2-> ) e16 \RH #3 d-3 \RH #2 |
+  \slashedGrace{a8 \RH #4 _(} c4-4 ) f,4.-2 d16-3 \RH #2 e \RH #3 \grace{f16-2 \RH #2 _( g-4} f8-2-> ) e16 \RH #3 d-3 \RH #2 |
   \override Rest.staff-position = #-1
   r8 <a-3 c> r <a c> \stopBarre s4 \startBarre #5 #6 s8. s16 \stopBarre |
   a,2-0 d4 g, |
 
   %25
   s1 |
-  \grace{g16-1 \RH #4 _( a-3} g4-1 ) c,4-1\2 \RH #4 r16 bes-3 d-4 e-0 d-4 c-1 bes-3 c, |
+  \grace{g16-1 \RH #4 _( a-3} g4-1 ) c,4-1->\2 \RH #4 c,16-2 bes'-3 d-4 e-0 d-4 c-1 bes-3 c,-2 |
   \revert Rest.staff-position
   \set strokeFingerOrientations = #'(up)
-  c,8 \startBarre #3 #6 c'-3 \RH #2 \stopBarre r <e,-2 bes'-3>
+  b8\rest \startBarre #3 #6 c-3 \RH #2 \stopBarre r <e,-2 bes'-3>
   \override Fingering.direction = #DOWN
-  c4..-2 _\markup{\italic "rit."} c16 |
-  s1 |
+  c4.. _\markup{\italic "rit."} c16 |
+  c4 s2. |
 
   %26
-  s1 |
-  s2 ^\markup{\italic "a tempo"} r16 d' e-3 f-4 \grace{e-3 _( f-4} e-3-> ) c-2 d e-3 |
-  \override Rest.staff-position = #4
-  r8 \startBarre #3 #6 <f'-4 a-3> r <f-4 a-3> s2 |
-  <f c''-2>4 <c' c'-2> g'-2_\4 c, |
+  s1 ^\markup{\italic "a tempo"} |
+  c'4-2 c _~ c16 d e-3 f-4 \grace{e-3 _( f-4} e-3-> ) c-2 d e-3 |
+  \override Rest.staff-position = #8
+  r8 \startBarre #3 #6 <f'-4 a-3> r8 <f a> s2 |
+  f,4 c' g'-2_\4 c, |
 
   %27
   s1 |
+  \override Rest.staff-position = #0
   \grace{d16 _( e-3} d8 ) s8 s4 r16 \startBarre #5 #6 bes-4 \RH #2 c d-3 e f-2 g-4 bes-2 \stopBarre |
-  s8 <a,-4 c-2>4 <a-4 c-2> \stopBarre s8 s4 |
+  s8 <a,-4 c-2>4 <a c>8  \stopBarre s2 |
   f,4 c' g g' |
 
   %28
@@ -249,7 +250,7 @@
   \once \override NoteHead.style = #'harmonic-mixed
   \once \override TextScript.self-alignment-X = #CENTER
   a-3\4 ^\markup {\italic \fontsize #-2 "har. 7"}
-  r16 d-4 \RH #3 _( bes-1 ) g-3\2 \RH #2 e-0 \RH #4 d-2 \RH #3 bes-1 \RH #2 g-0 \RH #3 |
+  d16\rest d-4 \RH #3 _( bes-1 ) g-3\2 \RH #2 e-0 \RH #4 d-2 \RH #3 bes-1 \RH #2 g-0 \RH #3 |
   \override Rest.staff-position = #0
   \grace{s16 \startBarre #5 #3 s s}  r8 <cis-2 e-1> r <cis e> \stopBarre s2 |
   a,2-0 a |
@@ -257,7 +258,7 @@
   %29
   s1 |
   r16 e-1 \RH #2 a-1 \RH #3 cis\glide-2 \RH #4 e-0 \RH #3 a-2\2 \RH #2 cis-1 \RH # 3 e\glide-4 \RH #2
-  r bes-4 \RH #3 _( g-1 ) e-0 \RH #2 d-2 \RH #3 bes-1 \RH #2 g-0 \RH #3 e-1 \RH #2 |
+  bes\rest bes-4 \RH #3 _( g-1 ) e-0 \RH #2 d-2 \RH #3 bes-1 \RH #2 g-0 \RH #3 e-1 \RH #2 |
   s1 |
   a2 a |
 
@@ -327,7 +328,7 @@
 
   %38
   s1 |
-  cis4-4 cis r16 fis-4 \RH #3 _( e\glide-2 ) d-2 b-4\2 gis-1 e-0 d-2\2 |
+  cis4-4 cis fis16\rest fis-4 \RH #3 _( e\glide-2 ) d-2 b-4\2 gis-1 e-0 d-2\2 |
   \override Rest.staff-position = #3
   r8 \startBarre #7 #6 e'-3 r e \stopBarre s2 |
   e4 a \tweak NoteHead.style #'harmonic-mixed e'2-1_\5 _\markup {\italic \fontsize #-2 "har. 7"} |
@@ -397,7 +398,7 @@
   \set strokeFingerOrientations = #'(right)
   \set fingeringOrientations = #'(down left up)
   r16 \startBarre #2 #6 b,-3 cis d\glide-2 \stopBarre <cis\glide-3 \RH #2 a'\glide-2\2 \RH #4 >8. <b-3 g'-2\2>16 |
-  r8 <b-0 e-0>4 <b-0 e-0>8 s2 |
+  r8 <b-0 e-0>4 <b e>8 s2 |
   g4-0 g,-4 e a\rest |
 
   %47
@@ -434,19 +435,19 @@
   \slashedGrace{ f8\glide-1 \RH #4 } a4-1 a4.-> g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
   \override Rest.staff-position = #2
   \stemDown
-  \grace{s8} r8 \set fingeringOrientations = #'(left) <a-3 \RH #2 f'-2 \RH #3 > r <a-3 f'-2> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
+  \grace{s8} r8 \set fingeringOrientations = #'(left) <a-3 \RH #2 f'-2 \RH #3 > r <a f'> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
   \grace{s8} d,4 \mf f'-4_\5 e-3 a,-0 |
 
   %51
   s1 |
   a4-1 a4.-> g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
-  r8 <a-3 f'-2> r <a-3 f'-2> s2 |
+  r8 <a-3 f'-2> r <a f'> s2 |
   d,4 f'-4_\5 e-3 a,-0 |
 
   %52
   s1 |
   \slashedGrace{c8-4 _( } a4-1 ) a r8 gis16-3^\2 a-4 b\glide-1 _( cis\tweak extra-offset #'(0 . 1)-3 ) d-1 _( e-3 ) |
-  r8 <a-3 f'-2> r <a-3 f'-2> s2 |
+  r8 <a-3 f'-2> r <a f'> s2 |
   d,4 f'-4_\5 e-1 a,-0 |
 
   %53
