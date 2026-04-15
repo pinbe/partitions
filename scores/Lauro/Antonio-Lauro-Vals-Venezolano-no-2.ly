@@ -25,12 +25,13 @@
 
 
   %0 anacrouse
+  \partial 8*5
   \set strokeFingerOrientations = #'(up)
-  r8 b8 \RH 3 cis-1 \RH 2 dis-3 \RH 3 e-0 \RH 2 fis-1 \RH 3 |
+  b8 \RH 3 cis-1 \RH 2 dis-3 \RH 3 e-0 \RH 2 fis-1 \RH 3 |
   \set strokeFingerOrientations = #'(up)
-  s2. |
+  s8 s2 |
   \set strokeFingerOrientations = #'(down)
-  s2. |
+  s8 s2 |
 
   \repeat volta 2 {
     %1
