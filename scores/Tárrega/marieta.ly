@@ -149,149 +149,94 @@
 
 
     \volta 1  {
-      %17
-      \tweaks \voiceOne  \merges
-      r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
-      \grace{b'16-1 _( cis-3} <fis, b-1 )>4 ^> \barre 7 3 |
-      \tweaks \voiceTwo \merges
-      s2.|
-      \key a \major
-      \once \override NoteColumn.X-offset = #-2
-      \slashedGrace{<f,,-1 c'-3>8 \f \glissando}
-      <a e'>2 <a a'>4 |
+      \repeat volta 2{
+        %17
+        \tweaks \voiceOne  \merges
+        r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
+        \grace{b'16-1 _( cis-3} <fis, b-1 )>4 ^> \barre 7 3 |
+        \tweaks \voiceTwo \merges
+        s2.|
+        \key a \major
+        \once \override NoteColumn.X-offset = #-2
+        \slashedGrace{<f,,-1 c'-3>8 \f \glissando}
+        <a e'>2 <a a'>4 |
 
-      %18
-      r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
-      \grace{d'16-1 _( e-4} <fis,-2 d'-1 )>4 ^> |
-      s2. |
-      <a e'-3>2\arpeggio <a b'-0>4|
+        %18
+        r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
+        \grace{d'16-1 _( e-4} <fis,-2 d'-1 )>4 ^> |
+        s2. |
+        <a e'-3>2\arpeggio <a b'-0>4|
 
-      %19
-      \override Fingering.add-stem-support = ##f
-      \tuplet 3/2 4 {
-        a8-2\2 \< e'-4 _( e, )
-        fis \startBarre 7 6 cis'-3 _( b )
-        f b a-4
-      } |
-      cis,4-3 d dis-2 |
-      s2. |
-
-      %20
-      \tuplet 3/2 4 {
-        gis8-4 \! \once \override Fingering.direction = #DOWN b-1 gis \stopBarre
-      }
-      e4-0 r |
-      e4-3
-      \tuplet 3/2 4 {
-        \override Fingering.direction = #UP
-        \override Staff.Stem.stemlet-length = #1
-        \override StringNumber.staff-padding = #'()
-        g,8\rest [ fis-3 \> ^\5 ^( e-1 ) ]
-        d-4\6 _\markup \italic "rit." cis-3 b-1 \!
-      }|
-      s2.|
-
-      %21
-      r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
-      \grace{b'16-1 _( cis-3} <fis, b-1 )>4 ^> \barre 7 6 |
-      s2. |
-      <a e'-3>2 \f _\markup \italic "a tempo" \arpeggio <a a'>4 |
-
-      %22
-      r8 \startBarre 5 6 <cis-2 e>16 a' <d,-3 fis-4>4 \stopBarre
-      \grace{d'16-1 _( e-3}
-      \tuplet 3/2 4 {
+        %19
         \override Fingering.add-stem-support = ##f
-        d8\tweak script-priority 0-1-> ) e-3 fis\glide-4
-      } |
-      s2.  |
-      <a e'-3>2\arpeggio <a b'-0 fis'-2>4  \f|
+        \tuplet 3/2 4 {
+          a8-2\2 \< e'-4 _( e, )
+          fis \startBarre 7 6 cis'-3 _( b )
+          f b a-4
+        } |
+        cis,4-3 d dis-2 |
+        s2. |
 
-      %23
-      \tuplet 3/2 4 {
-        e8-4 _( cis-1 ) \> a\tweak extra-offset #'(0 . 0.2)\glide-2\2
-        e\tweak extra-offset #'(0 . -0.3)-0 cis-2 a \!
-        fis-3 \slashedGrace{e'8-4 _( } d-2 ) _\markup \italic "rit." gis,-1
-      }|
-      s2. |
-      e2 e4 \p  |
+        %20
+        \tuplet 3/2 4 {
+          gis8-4 \! \once \override Fingering.direction = #DOWN b-1 gis \stopBarre
+        }
+        e4-0 r |
+        e4-3
+        \tuplet 3/2 4 {
+          \override Fingering.direction = #UP
+          \override Staff.Stem.stemlet-length = #1
+          \override StringNumber.staff-padding = #'()
+          g,8\rest [ fis-3 \> ^\5 ^( e-1 ) ]
+          d-4\6 _\markup \italic "rit." cis-3 b-1 \!
+        }|
+        s2.|
 
-      %24
-      <e a>4 \barre 2 6 <cis' a'-4> \barre 2 4 r |
-      s2. |
-      <a-4 cis-3>4 <a-0 e'> r|
+        %21
+        r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
+        \grace{b'16-1 _( cis-3} <fis, b-1 )>4 ^> \barre 7 6 |
+        s2. |
+        <a e'-3>2 \f _\markup \italic "a tempo" \arpeggio <a a'>4 |
 
-      %25
-      r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
-      \grace{b'16-1 _( cis-3} <fis, b-1 )>4 ^> \barre 7 3 |
-      s2.|
-      \once \override NoteColumn.X-offset = #-2
-      \slashedGrace{<f-1 c'-3>8 \glissando}
-      <a e'>2 _\markup \italic "a tempo" <a a'>4 |
+        %22
+        r8 \startBarre 5 6 <cis-2 e>16 a' <d,-3 fis-4>4 \stopBarre
+        \grace{d'16-1 _( e-3}
+        \tuplet 3/2 4 {
+          \override Fingering.add-stem-support = ##f
+          d8\tweak script-priority 0-1-> ) e-3 fis\glide-4
+        } |
+        s2.  |
+        <a e'-3>2\arpeggio <a b'-0 fis'-2>4  \f|
 
-      %26
-      r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
-      \grace{d'16-1 _( e-4} <fis,-2 d'-1 )>4 ^> |
-      s2. |
-      <a e'-3>2\arpeggio <a b'>4|
+        %23
+        \tuplet 3/2 4 {
+          e8-4 _( cis-1 ) \> a\tweak extra-offset #'(0 . 0.2)\glide-2\2
+          e\tweak extra-offset #'(0 . -0.3)-0 cis-2 a-1 \!
+          fis-3 \slashedGrace{e'8-4 _( } d-2 ) _\markup \italic "rit." gis,-1
+        }|
+        s2. |
+        e2 e4 \p  |
 
-      %27
-      \override Fingering.add-stem-support = ##f
-      \tuplet 3/2 4 {
-        a8-2 e'-4 _( e, )
-        fis \startBarre 7 6 cis'-3 _( b )
-        f b a-4
-      } |
-      \override Fingering.direction = #DOWN
-      cis'4-3 d dis-2 |
-      s2. |
+        \alternative {
+          \volta 1{
 
-      %28
-      \tuplet 3/2 4 {
-        gis8-4 \once \override Fingering.direction = #DOWN b-1 gis \stopBarre
+            %24
+            <e a>4 \barre 2 6 <cis' a'-4> \barre 2 4 r |
+            s2. |
+            <a-4 cis-3>4 <a-0 e'> r|
+          }
+          \volta 2{
+
+            %25
+            <e, a>4 r
+            \slashedGrace {c'8-1 \glissando}
+            \once \override NoteColumn.X-offset = #2
+            e8. _\markup \italic "a tempo" f16-2 |
+            s2. |
+            <a-4 cis-3>4 r s |
+          }
+        }
       }
-      e4-0 r |
-      e4-3
-      \tuplet 3/2 4 {
-        \override Fingering.direction = #UP
-        \override Staff.Stem.stemlet-length = #1
-        g,8\rest [ fis-3\5 ^( e-1 ) ]
-        d-4\6 cis-3 b-1
-      }|
-      s2.|
-
-      %29
-      r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
-      \grace{b'16-1 _( cis-3} <fis, b-1 )>4 ^> \barre 7 6 |
-      s2. |
-      <a e'-3>2 \arpeggio <a a'>4 |
-
-      %30
-      r8 \startBarre 5 6 <cis-2 e>16 a' <d,-3 fis-4>4 \stopBarre
-      \grace{d'16-1 _( e-3}
-      \tuplet 3/2 4 {
-        \override Fingering.add-stem-support = ##f
-        d8\tweak script-priority 0-1-> ) e-3 fis\glide-4
-      } |
-      s2.  |
-      <a e'-3>2\arpeggio <a b' fis'-2>4|
-
-      %31
-      \tuplet 3/2 4 {
-        e8-4 _( cis-1 ) \> a-2\2
-        e cis a \!
-        fis-3 \slashedGrace{e'8-4 _( } d-2 ) gis,-1
-      }|
-      s2. |
-      e2 e4 \p |
-
-      %32
-      <e a>4 r
-      \slashedGrace {c'8-1 \glissando}
-      \once \override NoteColumn.X-offset = #2
-      e8. f16-2 |
-      s2. |
-      <a-4 cis-3>4 r s \section |
     }
   }
 }
