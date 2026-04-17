@@ -22,18 +22,25 @@
   \set Timing.beamExceptions = #'()
   \tempo "Lento"
 
-  %0 anacrouse
-  \partial 4
-  \override Fingering.add-stem-support = ##t
-  \override Glissando.thickness = #1.5
-  \slashedGrace {c8-1 \glissando}
-  \once \override NoteColumn.X-offset = #2
-  e8. f16-2 \section |
-  s4 |
-  s4 |
-
-
   \repeat segno 2 {
+
+    %0 anacrouse
+    \tag #'layout {
+      %{ XXX Workarround to prevent grace note issue
+           at first position inside a \repeat section %}
+      \partial 8*3
+    }
+    \tag #'midi {
+      \partial 4
+    }
+    \override Fingering.add-stem-support = ##t
+    \override Glissando.thickness = #1.5
+    \tag #'layout {s8}
+    \slashedGrace {c8-1 \glissando}
+    \once \override NoteColumn.X-offset = #2
+    e8. f16-2  |
+    \tag #'layout {s8} s4 |
+    \tag #'layout {s8} s4 |
 
     %1
     f4-2-> \startBarre 5 3 ~ f8. e16 e8. \stopBarre dis16-1 |
@@ -47,7 +54,7 @@
     a2. |
 
     %3
-    c4.\glide-4 \startBarre #4 #6 b8-4 \stopBarre <d,-3 ais'-2> b'\glide-4 \slashedGrace {e-4} |
+    c4.\glide-4 \startBarre #4 #6 b8-4 \stopBarre <d,-3 ais'-2> b'-4 \glissando \slashedGrace {e-4 ~ } |
     r4 <b e-2> s |
     gis2 e4 |
 
@@ -60,7 +67,7 @@
 
     %5
     bes2-4 \!\grace {gis16-1  _( a-2 bes-3}  a8.-2-> \glissando )
-    \slashedGrace { cis,8-2} cis16-2 \stopStringSpan |
+    \slashedGrace { cis,8-2 ~ } cis16-2 \stopStringSpan |
     \override Rest.staff-position = #2
     r4 <cis-3 e-1> s |
     g'2-2_\5 r4 |
@@ -110,7 +117,7 @@
     e4\rest
     \set fingeringOrientations = #'(left up)
     <e'-0 gis-3\2> <e gis> |
-    c4.-4 b8-2\4 <ais-1>  b-2 \glissando \slashedGrace{e8-2} |
+    c4.-4 b8-2\4 <ais-1>  b-2 \glissando \slashedGrace{e8-2 _~ } |
     e2 e4 |
 
     %12
@@ -124,7 +131,7 @@
 
     %13
     r4 <e-0 g-1\2> s |
-    bes2 \! \grace{gis16-1\3 _( a-2 bes-3} a8. ) cis,16-3\5 \glissando |
+    bes2 \! \grace{gis16-1\3 _( a-2 bes-3} a8. ) cis,16\glide_3_\5 |
     cis2-3_\6 r4 |
 
     %14
@@ -165,12 +172,12 @@
         \key a \major
         \tag #'layout {s8}
         \once \override NoteColumn.X-offset = #-2
-        \slashedGrace{<f,,-1 c'-3>8 \f \glissando}
+        \slashedGrace{<f,,-1 c'-3>8 \arpeggio \f \glissando}
         <a e'>2 <a a'>4 |
 
         %18
         r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
-        \grace{d'16-1 _( e-4} <fis,-2 d'-1 )>4 ^> |
+        \grace{d'16-1 _( e-3} <fis,-2 d'-1 )>4 ^> |
         s2. |
         <a e'-3>2\arpeggio <a b'-0>4|
 
@@ -179,7 +186,7 @@
         \tuplet 3/2 4 {
           a8-2\2 \< e'-4 _( e, )
           fis \startBarre 7 6 cis'-3 _( b )
-          f b a-4
+          fis b a-4
         } |
         cis,4-3 d dis-2 |
         s2. |
@@ -235,12 +242,10 @@
           \volta 2{
 
             %25
-            <e, a>4 r
-            \slashedGrace {c'8-1 \glissando}
-            \once \override NoteColumn.X-offset = #2
-            e8. _\markup \italic "a tempo" f16-2 |
-            s2. |
-            <a-4 cis-3>4 r s |
+            \partial 4*2
+            <e, a>4 r |
+            s2 |
+            <a-4 cis-3>4 r |
           }
         }
       }
@@ -276,7 +281,7 @@ zique = {
 
 \score {
   \new Staff {
-    %\unfoldRepeats
+    \removeWithTag #'midi
     \zique
   }
 
@@ -288,6 +293,7 @@ zique = {
     \set Staff.midiInstrument = "acoustic guitar (nylon)"
     \unfoldRepeats
     \removeWithTag #'layout
+    \keepWithTag #'midi
     \zique
   }
 
