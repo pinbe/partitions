@@ -3,7 +3,7 @@
 \header {
   title = "¡Marieta!"
   composer = "Francisco Tárrega"
-  tagline = \markup{ \italic \small "Révision des doigtés du 16s/04/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Révision des doigtés du 17/04/2026 par Benoît Pin"}
   %{
   sources :
   %}
