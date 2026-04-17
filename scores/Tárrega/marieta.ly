@@ -36,44 +36,48 @@
     \override Fingering.add-stem-support = ##t
     \override Glissando.thickness = #1.5
     \tag #'layout {s8}
-    \slashedGrace {c8-1 \glissando}
+    \set strokeFingerOrientations = #'(up)
+    \slashedGrace {c8-1 \RH 2 \glissando}
     \once \override NoteColumn.X-offset = #2
-    e8. f16-2  |
+    e8. f16-2 \RH 3  |
     \tag #'layout {s8} s4 |
     \tag #'layout {s8} s4 |
 
     %1
-    f4-2-> \startBarre 5 3 ~ f8. e16 e8. \stopBarre dis16-1 |
+    f4-2-> \RH 4 \startBarre 5 3 ~ f8. \RH 2 \RH 3 e16 \RH 4 e8. \RH 2 \RH 3 \RH 4 \stopBarre dis16-1 \RH 2 |
     \override Rest.staff-position = #-2
-    r4 <a-3 c> <a c>8. r16 |
+    r4 <a-3 c>  <a c>8. r16 |
     a,2. \p |
 
     %2
-    dis2-1-> \grace {dis16-1 _( e-2 f-3} e8.->\2 ) c'16-4 |
-    r4 <a-4 c-2> e' |
+    dis2-1-> \RH 4 \grace {dis16-1 \RH 2 _( e-2 f-3} e8.->\2 ) c'16-4 \RH 3 |
+    \set strokeFingerOrientations = #'(up)
+    r4 <a-4 \RH 2 c-2 \RH 3 > e' |
     a2. |
 
     %3
-    c4.\glide-4 \startBarre #4 #6 b8-4 \stopBarre <d,-3 ais'-2> b'-4 \glissando \slashedGrace {e-4 ~ } |
-    r4 <b e-2> s |
+    c4.\glide-4 \RH 4 \startBarre #4 #6 b8-4 \RH 2 \stopBarre <d,-3 \RH 2 ais'-2 \RH 4 > b'-4 \RH 2 \glissando \slashedGrace {e-4 \RH 4 ~ } |
+    r4 <b \RH 2 e-2 \RH 3 > s |
     gis2 e4 |
 
     %4
     \override Hairpin.to-barline = ##f
     \override Hairpin.after-line-breaking = ##t
-    e4-4-> ~ e8. a,16-3 \startStringSpan 2 a8.\< bes16-4 |
+    e4-4-> ~ e8. \RH 2 \RH 3 a,16-3 \RH 4 \startStringSpan 2 a8. \RH 2 \RH 3 \RH 4 \< bes16-4 \RH 2 |
     r4 <c-2 e-1> <c e> |
     a2. |
 
     %5
-    bes2-4 \!\grace {gis16-1  _( a-2 bes-3}  a8.-2-> \glissando )
-    \slashedGrace { cis,8-2 ~ } cis16-2 \stopStringSpan |
+    bes2-4 \RH 4 \!\grace {gis16-1 \RH 3  _( a-2 bes-3}  a8.-2-> \glissando )
+    \slashedGrace {
+      \once \override Fingering.add-stem-support = ##f
+      cis,8-2 \RH 2 ~ } cis16-2 \stopStringSpan |
     \override Rest.staff-position = #2
-    r4 <cis-3 e-1> s |
+    r4 <cis-3 \RH 2 e-1 \RH 3 > s |
     g'2-2_\5 r4 |
 
     %6
-    e4-0 \> ~ e8 d-4 a-2 b-0 \! |
+    e4-0 \RH 3 \> ~ e8 d-4 \RH 2 a-2 \RH 2 \RH 3 b-0 \RH 4 \! |
     \override Rest.staff-position = #0
     s4 a-2 <f,-1 d'-0> |
     f2-3 s4 |
@@ -81,7 +85,7 @@
     %7
     \override TextSpanner.direction = #DOWN
     \override TextSpanner.bound-details.left.text = \markup \italic "rit."
-    c8-1 \< d32-4 \startTextSpan _( c-1 b c-1 d8-4 c-1 ) \! b-0 a-4 |
+    c8-1 \RH 2 \RH 4 \< d32-4 \startTextSpan _( c-1 b c-1 d8-4 c-1 ) \! b-0 a-4 |
     s2. |
     \once \set fingeringOrientations = #'(right)
     <e, e'\glide-2>2
