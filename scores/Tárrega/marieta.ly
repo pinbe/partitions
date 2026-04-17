@@ -150,7 +150,7 @@
 
     %16
     s2. |
-    <c-2 e>4 \barre 2 6
+    <c-2 e a>4 \barre 2 6
     \once \override NoteHead.style = #'harmonic-mixed a''-4\4 ^\markup {\italic \fontsize #-2 "har. 7"} r |
     a4-4 \once \override NoteHead.style = #'harmonic-mixed e''-4_\5 r \volta 2 \fine \break |
 
