@@ -41,15 +41,15 @@
   gis2 e4 |
 
   %4
-  e4-4-> ~ e8. a,16-3 \startStringSpan 2 a8. \< bes16-4 |
+  \override Hairpin.to-barline = ##f
+  \override Hairpin.after-line-breaking = ##t
+  e4-4-> ~ e8. a,16-3 \startStringSpan 2 a8.\< bes16-4 |
   r4 <c-2 e-1> <c e> |
   a2. |
 
   %5
-  bes2-4 \! \grace {gis16-1 _( a-2 bes-3}  a8.-2-> \glissando )
-  %\once \override NoteColumn.X-offset = #2
-  \slashedGrace { cis,8-2}
-  cis16-2 \stopStringSpan |
+  bes2-4 \!\grace {gis16-1  _( a-2 bes-3}  a8.-2-> \glissando )
+  \slashedGrace { cis,8-2} cis16-2 \stopStringSpan |
   \override Rest.staff-position = #2
   r4 <cis-3 e-1> s |
   g'2-2_\5 r4 |
