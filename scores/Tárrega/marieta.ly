@@ -44,20 +44,21 @@
     \tag #'layout {s8} s4 |
 
     %1
-    f4-2-> \RH 4 \startBarre 5 3 ~ f8. \RH 2 \RH 3 e16 \RH 4 e8. \RH 2 \RH 3 \RH 4 \stopBarre dis16-1 \RH 2 |
+    f4\tweak script-priority 0-2-> \RH 4 \startBarre 5 3 ~ f8. \RH 2 \RH 3 e16 \RH 4 e8. \RH 2 \RH 3 \RH 4 \stopBarre dis16-1 \RH 2 |
     \override Rest.staff-position = #-2
     r4 <a-3 c>  <a c>8. r16 |
     a,2. \p |
 
     %2
-    dis2-1-> \RH 4 \grace {dis16-1 \RH 2 _( e-2 f-3} e8.->\2 ) c'16-4 \RH 3 |
+    dis2-1-> \RH 4
+    \grace {dis16-1 \RH 2 _( e-2 f-3} e8.->\2 ) c'16-4 \RH 3 |
     \set strokeFingerOrientations = #'(up)
-    r4 <a-4 \RH 2 c-2 \RH 3 > e' |
+    r4 <a-4 \RH 2 c-2 \RH 3> e' |
     a2. |
 
     %3
-    c4.\glide-4 \RH 4 \startBarre #4 #6 b8-4 \RH 2 \stopBarre <d,-3 \RH 2 ais'-2 \RH 4 > b'-4 \RH 2 \glissando \slashedGrace {e-4 \RH 4 ~ } |
-    r4 <b \RH 2 e-2 \RH 3 > s |
+    c4.\glide-4 \RH 4 \startBarre #4 #6 b8-4 \RH 2 \stopBarre <d,-3 \RH 2 ais'-2 \RH 4> b'-4 \RH 2 \glissando \slashedGrace {e-4 \RH 4 ~ } |
+    r4 <b \RH 2 e-2 \RH 3> s |
     gis2 e4 |
 
     %4
@@ -71,9 +72,10 @@
     bes2-4 \RH 4 \!\grace {gis16-1 \RH 3  _( a-2 bes-3}  a8.-2-> \glissando )
     \slashedGrace {
       \once \override Fingering.add-stem-support = ##f
-      cis,8-2 \RH 2 ~ } cis16-2 \stopStringSpan |
+      cis,8-2 \RH 2 ~
+    } cis16-2 \stopStringSpan |
     \override Rest.staff-position = #2
-    r4 <cis-3 \RH 2 e-1 \RH 3 > s |
+    r4 <cis-3 \RH 2 e-1 \RH 3> s |
     g'2-2_\5 r4 |
 
     %6
@@ -85,7 +87,7 @@
     %7
     \override TextSpanner.direction = #DOWN
     \override TextSpanner.bound-details.left.text = \markup \italic "rit."
-    c8-1 \RH 2 \RH 4 \< d32-4 \startTextSpan _( c-1 b c-1 d8-4 c-1 ) \! b-0 a-4 |
+    c8-1 \RH 2 \RH 4 \< d32-4 \RH 3 \startTextSpan _( c-1 b c-1 d8-4 c-1 ) \! b-0 \RH 2 \RH 4 a-4 \RH 3 |
     s2. |
     \once \set fingeringOrientations = #'(right)
     <e, e'\glide-2>2
@@ -94,69 +96,75 @@
 
     %8
     gis,16 e'-1 b'-0 e-0
-    \once \override NoteHead.style = #'harmonic-mixed e'4
+    \once \override NoteHead.style = #'harmonic-mixed e'4 \RH "i ← a"
     ^\markup {\italic \fontsize #-2 "har. 12"} \stopTextSpan s |
     % mélodie à la basse
     \tweaks \voiceOne \merges
-    \override Fingering.add-stem-support = ##f
-    s2 \slashedGrace {c'8-3\5 _\markup \italic "a tempo" \glissando}
+    \revert Fingering.add-stem-support
+    \set strokeFingerOrientations = #'(down)
+    s2 \slashedGrace {c'8-3\5 \RH 1 _\markup \italic "a tempo" \glissando}
     \once \override NoteColumn.X-offset = #1.5
-    e8.-3 f16-4 |
-    gis4-3 s2 |
+    e8.-3 f16-4 \RH 1 |
+    \set strokeFingerOrientations = #'(down)
+    gis4-3 \RH 1 s2 |
 
     %9
     \tweaks \voiceTwo \merges
-    s4 \startBarre #5 #4 \once \stemDown <a,,-3 c> <a c> |
-    f4..\tweak script-priority 0-4-> e16-2 e8. dis16-2 |
+    s4 \startBarre #5 #4 \once \stemDown <a,,-3 \RH 2 c \RH 3> <a \RH 2 c\RH 3> |
+    f4..\tweak script-priority 0-4-> e16-2 \RH 1 e8. \RH 1 dis16-2 \RH 1 |
     \once \override Arpeggio.positions = #'(-4 . -1)
-    a2. \arpeggio |
+    a2. \RH 1 \arpeggio |
 
     %10
-    \tweak extra-offset #'(-1 . 0) c4\rest <a-3 c fis-4> \stopBarre s |
-    dis2\tweak script-priority 0-2-> \grace {dis16-1 _( e-2 f-3} e8.\tweak script-priority 0-2 ^> ) c'16-4\4 |
+    \tweak extra-offset #'(-1 . 0) c4\rest <a-3 \RH 2 c \RH 3 fis-4 \RH 4> \stopBarre s |
+    dis2\tweak script-priority 0-2-> \grace {dis16-1 \RH 1 _( e-2 f-3} e8.\tweak script-priority 0-2 ^> ) c'16-4\4 \RH 1 |
     \once \override Arpeggio.positions = #'(-4 . -2)
-    a2 \arpeggio r4 |
+    a2 \RH 1 \arpeggio r4 |
 
     %11
     e4\rest
     \set fingeringOrientations = #'(left up)
-    <e'-0 gis-3\2> <e gis> |
-    c4.-4 b8-2\4 <ais-1>  b-2 \glissando \slashedGrace{e8-2 _~ } |
-    e2 e4 |
+    <e'-0 \RH 3 gis-3\2 \RH 4> <e gis \RH 2 \RH 3 \RH 4>   |
+    c4.-4 ^\RH 2 b8-2\4 \RH 1 <ais-1>  b-2 \RH 1 \glissando \slashedGrace{e8-2 _~ } |
+    e2 \RH 1 e4 \RH 1 |
 
     %12
     \override Rest.staff-position = #8
-    r4 <e-0 c'-1\2>  s |
+    r4 <e-0 \RH 2 c'-1\2 \RH 3>  s |
     \override Hairpin.to-barline = ##f
     \override Hairpin.after-line-breaking = ##t
-    e2 a,8.-1\4 \< bes16-2 |
+    e2 a,8.-1\4 \tweak extra-offset #'(-1 . 0)\RH 1 \< bes16-2 \RH 1 |
     \once \override Arpeggio.positions = #'(-4 . 2)
-    a2 \arpeggio r4 |
+    a2 \RH 1 \arpeggio r4 |
 
     %13
-    r4 <e-0 g-1\2> s |
-    bes2 \! \grace{gis16-1\3 _( a-2 bes-3} a8. ) cis,16\glide_3_\5 |
-    cis2-3_\6 r4 |
+    r4 <e-0 \RH 3 g-1\2 \RH 4> s |
+    \once \set strokeFingerOrientations = #'(right) 
+    bes2-2 \RH 2 \! \grace{gis16-1\3 \RH 1 _( a-2 bes-3} a8. ) cis,16\glide_3_\5 \RH 1 |
+    cis2-3_\6 \RH 1 r4 |
 
     %14
-    b4\rest <a-4 f'-2> <f-3 d'-4> |
+    \set fingeringOrientations = #'(left)
+    b4\rest <a-4 \RH 2 f'-2 \RH 4> <f-3 \RH 2 d'-4 \RH 4> |
     \override Fingering.direction = #DOWN
-    e4.-3 \> d8-1_\5 c-2 _\markup \italic "rit." b-1 \! |
+    e4.-3 \RH 1 \> d8\glide-1_\5 \RH 1 <c-2 \tweak extra-offset #'(1 . 0.5)\RH 1> _\markup \italic "rit." b-1 \RH 1 \! |
     s2. |
 
     %15
-    e'2 \once \override Fingering.direction = #UP \once \stemUp gis,4-1 |
+    e'2 \RH 2 \RH 3 \RH 4 \once \override Fingering.direction = #UP \once \stemUp gis,4-1 |
     \override Fingering.direction = #UP
-    <c-2 a'-1>4 \grace{b16-1 _( c-2 d-4}
+    <c-2 a'\tweak extra-offset #'(-0.2 . 0)-1>4 \grace{b16-1 \RH 1 _( c-2 d-4}
     \once \set fingeringOrientations = #'(right)
     <c\glide-2>4 ) <b\glide-2 d-0> |
-    e,2 e4-0 |
+    e,2 \RH 1 e4-0 |
 
     %16
     s2. |
     <c-2 e a>4 \barre 2 6
-    \once \override NoteHead.style = #'harmonic-mixed a''-4\4 ^\markup {\italic \fontsize #-2 "har. 7"} r |
-    a4-4 \once \override NoteHead.style = #'harmonic-mixed e''-4_\5 r \volta 2 \fine \break |
+    \set strokeFingerOrientations = #'(right)
+    \once \override NoteHead.style = #'harmonic-mixed a''-4\4 \RH 3 ^\markup {\italic \fontsize #-2 "har. 7"} r |
+    \set strokeFingerOrientations = #'(right)
+    a4-4 \once \override NoteHead.style = #'harmonic-mixed e''-4_\5 \RH 2 r \volta 2 \fine \break |
 
 
     \volta 1  {
@@ -169,15 +177,16 @@
           \partial 8*7
         }
         \tweaks \voiceOne  \merges
-        \tag #'layout {s8} r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
-        \grace{b'16-1 _( cis-3} <fis, b-1 )>4 ^> \barre 7 3 |
+        \tag #'layout {s8} r8 \startBarre 5 6 <cis-2 \RH 2 e \RH 3>16 e \RH 4 <d-3 \RH 2 fis-4 \RH 3>4 \stopBarre
+        \grace{b'16-1 \RH 4 _( cis-3} \once \set strokeFingerOrientations = #'(right) <fis, \RH 3 b )>4 ^> \barre 7 3 |
         \tweaks \voiceTwo \merges
         \tag #'layout {s8} s2.|
         \key a \major
         \tag #'layout {s8}
         \once \override NoteColumn.X-offset = #-2
-        \slashedGrace{<f,,-1 c'-3>8 \arpeggio \f \glissando}
-        <a e'>2 <a a'>4 |
+        \set strokeFingerOrientations = #'(down right)
+        \slashedGrace{<f,,-1 \RH 1 c'-3>8 \arpeggio \f \glissando}
+        <a e'>2 <a \RH 1 a' \RH 2>4 |
 
         %18
         r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
@@ -186,51 +195,61 @@
         <a e'-3>2\arpeggio <a b'-0>4|
 
         %19
-        \override Fingering.add-stem-support = ##f
+        %\override Fingering.add-stem-support = ##f
+        \once \override TupletBracket.bracket-visibility = ##t
+        \override TupletBracket.avoid-scripts = ##f
+        \override TupletBracket.padding = #3
+        %\override TupletBracket.direction = #DOWN
         \tuplet 3/2 4 {
-          a8-2\2 \< e'-4 _( e, )
-          fis \startBarre 7 6 cis'-3 _( b )
-          fis b a-4
+          a8-2\tweak extra-offset #'(-0.5 . -4)\2 \RH 2 \< e'-4 \RH 3 _( e, )
+          \omit TupletNumber
+          fis \RH 2 \startBarre 7 6 cis'-3 \RH 3 _( b )
+          fis \RH 2 b \RH 3  a-4 \RH 2
         } |
         cis,4-3 d dis-2 |
         s2. |
 
         %20
         \tuplet 3/2 4 {
-          gis8-4 \! \once \override Fingering.direction = #DOWN b-1 gis \stopBarre
+          gis8-4 \RH 2 \! \once \override Fingering.direction = #DOWN b-1 \RH 3  gis \RH 2 \stopBarre
         }
-        e4-0 r |
+        e4-0 \RH 3 r |
         e4-3
         \tuplet 3/2 4 {
           \override Fingering.direction = #UP
           \override Staff.Stem.stemlet-length = #1
           \override StringNumber.staff-padding = #'()
-          g,8\rest [ fis-3 \> ^\5 ^( e-1 ) ]
+          \once \override TupletBracket.bracket-visibility = ##t
+          \override TupletBracket.padding = #3
+          \set strokeFingerOrientations = #'(down)
+          g,8\rest [ fis-3 \RH "p…" \> ^\5 ^( e-1 ) ]
+          \omit TupletNumber
           d-4\6 _\markup \italic "rit." cis-3 b-1 \!
         }|
         s2.|
 
         %21
         r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
-        \grace{b'16-1 _( cis-3} <fis, b-1 )>4 ^> \barre 7 6 |
+        \grace{b'16-1 _( cis-3} <fis, b-1 )>4 ^> \barre 7 3 |
         s2. |
         <a e'-3>2 \f _\markup \italic "a tempo" \arpeggio <a a'>4 |
 
         %22
         r8 \startBarre 5 6 <cis-2 e>16 a' <d,-3 fis-4>4 \stopBarre
-        \grace{d'16-1 _( e-3}
+        \grace{d'16-1 \RH 4 _( e-3}
+        \once \undo \omit TupletNumber
+        \once \override TupletBracket.bracket-visibility = ##t
         \tuplet 3/2 4 {
-          \override Fingering.add-stem-support = ##f
-          d8\tweak script-priority 0-1-> ) e-3 fis\glide-4
+          d8\tweak script-priority 0-1-> ) e-3 \RH 3 fis\glide-4 \RH 2
         } |
         s2.  |
         <a e'-3>2\arpeggio <a b'-0 fis'-2>4  \f|
 
         %23
         \tuplet 3/2 4 {
-          e8-4 _( cis-1 ) \> a\tweak extra-offset #'(0 . 0.2)\glide-2\2
-          e\tweak extra-offset #'(0 . -0.3)-0 cis-2 a-1 \!
-          fis-3 \slashedGrace{e'8-4 _( } d-2 ) _\markup \italic "rit." gis,-1
+          e8-4 \RH 3 _( cis-1 ) \> a\tweak extra-offset #'(0 . 0.2)\glide-2\2 \RH 2
+          e\tweak extra-offset #'(0 . -0.3)-0 \RH 3 cis-2 \RH 2 a-1 \RH 3 \!
+          fis-3 \RH 2 \slashedGrace{e'8-4 \tweak extra-offset #'(0 . 0.6) \RH 3 _( } d-2 ) _\markup \italic "rit." gis,-1 \RH 2
         }|
         s2. |
         e2 e4 \p  |
