@@ -8,6 +8,7 @@
   tagline = \markup{ \italic \small "Révision des doigtés du 17/04/2026 par Benoît Pin"}
   %{
   sources :
+  https://imslp.org/
   %}
 }
 
@@ -195,11 +196,9 @@
         <a e'-3>2\arpeggio <a b'-0>4|
 
         %19
-        %\override Fingering.add-stem-support = ##f
         \once \override TupletBracket.bracket-visibility = ##t
         \override TupletBracket.avoid-scripts = ##f
         \override TupletBracket.padding = #3
-        %\override TupletBracket.direction = #DOWN
         \tuplet 3/2 4 {
           a8-2\tweak extra-offset #'(-0.5 . -4)\2 \RH 2 \< e'-4 \RH 3 _( e, )
           \omit TupletNumber
