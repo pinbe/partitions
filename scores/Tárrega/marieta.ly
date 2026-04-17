@@ -193,8 +193,8 @@
 
   %23
   \tuplet 3/2 4 {
-    e8-4 _( cis-1 ) a\glide-2\2
-    e-0 cis-2 a
+    e8-4 _( cis-1 ) a\tweak extra-offset #'(0 . 0.2)\glide-2\2
+    e\tweak extra-offset #'(0 . -0.3)-0 cis-2 a
     fis-3 \slashedGrace{e'8-4 _( } d-2 ) gis,-1
   }|
   s2. |
