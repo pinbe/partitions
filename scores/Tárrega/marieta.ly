@@ -12,7 +12,7 @@
 }
 
 \paper {
-  %ragged-last-bottom = ##f
+  ragged-last-bottom = ##f
 }
 
 \include "../../commons/guitar-helpers.ly"
@@ -151,12 +151,19 @@
     \volta 1  {
       \repeat volta 2{
         %17
+        %{ XXX workarround to prevent grace notes outside measure
+           and double left repeat bars
+        %}
+        \tag #'layout {
+          \partial 8*7
+        }
         \tweaks \voiceOne  \merges
-        r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
+        \tag #'layout {s8} r8 \startBarre 5 6 <cis-2 e>16 e <d-3 fis-4>4 \stopBarre
         \grace{b'16-1 _( cis-3} <fis, b-1 )>4 ^> \barre 7 3 |
         \tweaks \voiceTwo \merges
-        s2.|
+        \tag #'layout {s8} s2.|
         \key a \major
+        \tag #'layout {s8}
         \once \override NoteColumn.X-offset = #-2
         \slashedGrace{<f,,-1 c'-3>8 \f \glissando}
         <a e'>2 <a a'>4 |
@@ -280,6 +287,7 @@ zique = {
   \new Staff {
     \set Staff.midiInstrument = "acoustic guitar (nylon)"
     \unfoldRepeats
+    \removeWithTag #'layout
     \zique
   }
 
