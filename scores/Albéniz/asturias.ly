@@ -95,8 +95,7 @@
         \set Voice.baseMoment = #(ly:make-moment 1/8)
         \set Voice.beatStructure = 1,1,1,1,1,1
         \override TupletBracket.bracket-visibility = ##t
-        \once \override TupletNumber.extra-offset = #'(0 . 2)
-        \once \override TupletBracket.extra-offset = #'(0 . 2)
+        \once \override TupletBracket.padding = #3
         e,16 \RH #1 b'-0 \RH #2 b'_1 \RH #3
         \omit TupletBracket
         \omit TupletNumber
