@@ -403,6 +403,7 @@
 
   %47
   s1 |
+  \override TupletBracket.bracket-visibility = ##t
   \tuplet 3/2{
     \override Fingering.add-stem-support = ##f
     <b-3 \RH #2 g'-2 \RH #4 >8 a'-4 \RH #3 g\glide-2 \RH #2
@@ -426,82 +427,6 @@
   \override Rest.staff-position = #-1
   r8 <f-3 d'-4> r \set fingeringOrientations = #'(left up) <f-3 d'\glide-4> r <g-0 ees'\glide-4> r <e-2 a-3 cis-4>  |
   d,4-0 bes'-1 ees,-1 a-0 |
-
-  %50
-  s1 |
-  \override Fingering.add-stem-support = #only-if-beamed
-  \stemUp
-  \override Fingering.direction = #UP
-  \slashedGrace{ f8\glide-1 \RH #4 } a4-1 a4.-> g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
-  \override Rest.staff-position = #2
-  \stemDown
-  \grace{s8} r8 \set fingeringOrientations = #'(left) <a-3 \RH #2 f'-2 \RH #3 > r <a f'> s2 | % \grace{s8} : workaround pour éviter barre de reprise à gauche parasite
-  \grace{s8} d,4 \mf f'-4_\5 e-3 a,-0 |
-
-  %51
-  s1 |
-  a4-1 a4.-> g16-4\2 a-1 \grace{bes16-2 _( c-4} bes-2 ) a-1 bes-2 c-4 |
-  r8 <a-3 f'-2> r <a f'> s2 |
-  d,4 f'-4_\5 e-3 a,-0 |
-
-  %52
-  s1 |
-  \slashedGrace{c8-4 _( } a4-1 ) a r8 gis16-3^\2 a-4 b\glide-1 _( cis\tweak extra-offset #'(0 . 1)-3 ) d-1 _( e-3 ) |
-  r8 <a-3 f'-2> r <a f'> s2 |
-  d,4 f'-4_\5 e-1 a,-0 |
-
-  %53
-  s1 |
-  f8-4 f16 \startBarre #10 #3 _( e-3 ) d4 r16 \stopBarre cis-2 \RH #2 e-4 \RH #3 cis \RH #2 bes-4^\2 \RH #3 g-1 \RH #4 e-2^\3 \RH #3 cis-4^\4 \RH#2 |
-  r8 <f' a> r <f a> s2 |
-  d,4-0 a'-0 e'-1_\5 a,-0 |
-
-  %54
-  s1 |
-  \textSpannerUp
-  a'4-4\2 a-> r8  g16-4 \startStringSpan #2 f-2 e-1 _( f ) g e |
-  r8 <a, d> \startBarre #7 $4 r <a d> \stopBarre s2 |
-  d,4-0 f'-2 e-3 a,-0 |
-
-  %55
-  s1 |
-  f4-2 fis-4 \stopStringSpan r16 \startBarre #5 #6 a,-3 c fis-4 a \stopBarre c\glide-4 ees16.-4 \fermata d32-3 |
-  \override Rest.staff-position = #0
-  r8 <a-3\4 d-4\3> r <a-3 c-1> s2 |
-  d,2-0 d'4 _\markup{\italic "poco cresc."} r |
-
-  %56
-  s1 |
-  \grace{c16-1 _( d-3} c8\glide-1 )
-  \once \set fingeringOrientations = #'(left up)
-  <g-3 bes-1> a-4 \startBarre #3 #6 <e-3 g>\stopBarre
-  \override Fingering.add-stem-support = #only-if-beamed
-  \override TextSpanner.bound-details.left.text = "accel."
-  \textSpannerDown
-  bes'16-2 \RH #3 \startTextSpan _( a-1 ) d-2 _( cis-1 ) e-3 _( d-1 ) f-2 _( e-1) |
-  s1 |
-  g4-0 bes a,2 |
-
-  %57
-  s1 |
-  g16-4 _( e-1 ) d-2 _( cis-1 ) e-4 \stopTextSpan _( d-2 ) bes-2 _( a-1 )
-  c-4 _( bes-2 ) g-2 _( e-0 ) d-2 \RH #3  bes-1 \RH #2 cis-2 a-1 |
-  s1 |
-  a2..-0 a8 |
-
-  %58
-  s1 |
-  s1 ^\markup{\italic "a tempo"} |
-  r8 <f-3 d'-4> r \set fingeringOrientations = #'(left up) <f-3 d'\glide-4> r <g-0 ees'\glide-4> r <e-2 a-3 cis-4>  |
-  d,4-0 bes'-1 ees,-1 a-0 |
-
-  %59
-  s1 |
-  s1 |
-  \set fingeringOrientations = #'(left)
-  r8 <f-3 d'-4> r \set fingeringOrientations = #'(left up) <f-3 d'\glide-4> r <g-0 ees'\glide-4> r <e-2 a-3 cis-4>  |
-  d,4-0 bes'-1 ees,-1 a-0 |
-
 
   %60
   s1 |
