@@ -5,7 +5,7 @@
   title = "¡Marieta!"
   subsubtitle = "Mazurka"
   composer = "Francisco Tárrega"
-  tagline = \markup{ \italic \small "Révision des doigtés du 17/04/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 21/04/2026 par Benoît Pin"}
   %{
   sources :
   https://imslp.org/
@@ -140,7 +140,7 @@
 
     %13
     r4 <e-0 \RH 3 g-1\2 \RH 4> s |
-    \once \set strokeFingerOrientations = #'(right) 
+    \once \set strokeFingerOrientations = #'(right)
     bes2-2 \RH 2 \! \grace{gis16-1\3 \RH 1 _( a-2 bes-3} a8. ) cis,16\glide_3_\5 \RH 1 |
     cis2-3_\6 \RH 1 r4 |
 
@@ -156,7 +156,7 @@
     \override Fingering.direction = #UP
     <c-2 a'\tweak extra-offset #'(-0.2 . 0)-1>4 \grace{b16-1 \RH 1 _( c-2 d-4}
     \once \set fingeringOrientations = #'(right)
-    <c\glide-2>4 ) <b\glide-2 d-0> |
+    <c\glide-2>4 ) <b-\tweak bound-details.left.padding 2 \glide-2 d-0> |
     e,2 \RH 1 e4-0 |
 
     %16
