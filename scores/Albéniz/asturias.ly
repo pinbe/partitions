@@ -3,7 +3,7 @@
 \header {
   title = "Asturias (Leyenda)"
   composer = "Isaac Albéniz"
-  tagline = \markup{ \italic \small "Révision des doigtés du 10/04/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition 21/04/2026 par Benoît Pin"}
   %{
   sources:
   https://www.thisisclassicalguitar.com/asturias-leyenda-by-albeniz-free-pdf/ ©BradfordWerner
@@ -86,7 +86,9 @@
 
     %16
     c16 b a b b b g b a b fis b |
-    c8-2 \stopStringSpan a-4_\5 b-1 g-2 a-4 fis\glide-2 |
+    c8-2 \stopStringSpan a-4_\5 b-1 g-2 a-4
+    \once \set fingeringOrientations = #'(right)
+    <fis\glide-2> \noBreak|
     s2. |
 
     %17
@@ -106,7 +108,7 @@
         g, b b'
         ^\markup { \bold "3 ×"}
       } |
-      e8^2  b'\glide-4_\4  c-4 a-2 b-4 g-0 |
+      <e-2>8  b'\glide-4_\4  c-4 a-2 b-4 g-0 |
       \override Arpeggio.positions = #'(-6 . -2)
       e,2. \arpeggio \f |
     }
@@ -848,7 +850,9 @@
   s2. |
 
   %126
-  <e-3 a-4 c>2 \barre #5 #6 fis4\glide-4 |
+  <e-3 a-4 c>2 \barre #5 #6
+  \once \set fingeringOrientations = #'(down)
+  <fis\glide-4>4 |
   a2. |
   s2. |
 
@@ -869,7 +873,7 @@
 
   %130
   \once \set fingeringOrientations = #'(right left)
-  <a,-3\glide c-1 e-0>2. |
+  <a,\glide-3 c-1 e-0>2. |
   b,2.-2 |
   s2. |
 
