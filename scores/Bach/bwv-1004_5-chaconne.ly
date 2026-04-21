@@ -18,7 +18,7 @@
   license = "Creative Commons Attribution-ShareAlike 3.0"
   %footer = "Mutopia-2019/05/30-1426"
   %copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2019 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
-  tagline = \markup{ \italic \small "Révision des doigtés du 06/04/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 06/04/2026 par Benoît Pin"}
 }
 
 \paper {
@@ -269,6 +269,7 @@ fingeringVoiceD = {
   cis8 e'\2-3 a-4 g\glide-1 fis-1 c, |
   s2. |
   s2. |
+  \override Fingering.add-stem-support = ##t
   cis4-2 r r8 c\glide-2 |
 
   % 35
@@ -293,6 +294,7 @@ fingeringVoiceD = {
   cis,16 e'-3 a-4 g\glide-1 fis-1 a-4 fis-1 d-3 a-1 fis-3 d-4 c\glide-2 |
   s2. |
   s2. |
+  \override Fingering.add-stem-support = ##f
   cis4\glide-2 c2-2 |
 
   % 39
@@ -305,7 +307,7 @@ fingeringVoiceD = {
   f16-1 _( e-0) d-4 _( c-1) bes-4 _( a-2) gis-1 _( a-2) cis,-3 g'-4 _( f-2) e-1 |
   s2. |
   s2. |
-  a4 a cis-3 |
+  a4 a cis |
 
   % 41
   f16-2 _( d-0) e-1 _( f-2) g-0 _( a-1) b-0 _( cis-1) d-3 f,-2 _( e-1) d-0 |
@@ -1566,7 +1568,7 @@ fingeringVoiceD = {
   s2. |
 
   % 225
-  d16-0 a'-1 _( b-3 ) cis-1 d-2 \glide f\2-2 _( g-4 ) a-1 bes16-2 g,32\4-4 _( f-2 ) e-1 _( f-2 ) g16 |
+  d16-0 a'-1 _( b-3 ) cis-1 d\glide-2 f\2-2 _( g-4 ) a-1 bes16-2 g,32\4-4 _( f-2 ) e-1 _( f-2 ) g16 |
   s2. |
   s2. |
   s2. |
