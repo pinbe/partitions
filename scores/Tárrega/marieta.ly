@@ -200,10 +200,10 @@
         \override TupletBracket.avoid-scripts = ##f
         \override TupletBracket.padding = #3
         \tuplet 3/2 4 {
-          a8-2\tweak extra-offset #'(-0.5 . -4)\2 \RH 2 \< e'-4 \RH 3 _( e, )
+          a8-2\tweak extra-offset #'(-0.5 . -4)\2 \RH 3 \< e'-4 \RH 4  e,-1 \RH 2
           \omit TupletNumber
-          fis \RH 2 \startBarre 7 6 cis'-3 \RH 3 _( b )
-          fis \RH 2 b \RH 3  a-4 \RH 2
+          fis \RH 2 \startBarre 7 6 cis'-3 \RH 4  b \RH 3
+          fis \RH 2 b \RH 4  a-4 \RH 3
         } |
         cis,4-3 d dis-2 |
         s2. |
@@ -221,7 +221,7 @@
           \once \override TupletBracket.bracket-visibility = ##t
           \override TupletBracket.padding = #3
           \set strokeFingerOrientations = #'(down)
-          g,8\rest [ fis-3 \RH "p…" \> ^\5 ^( e-1 ) ]
+          g,8\rest [ fis-3 \RH "p…" \> ^\5 e-1 ]
           \omit TupletNumber
           d-4\6 _\markup \italic "rit." cis-3 b-1 \!
         }|
