@@ -5,7 +5,7 @@
   title = "¡Marieta!"
   subsubtitle = "Mazurka"
   composer = "Francisco Tárrega"
-  tagline = \markup{ \italic \small "Édition du 21/04/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 22/04/2026 par Benoît Pin"}
   %{
   sources :
   https://imslp.org/
