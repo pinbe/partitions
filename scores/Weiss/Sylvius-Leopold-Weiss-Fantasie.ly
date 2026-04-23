@@ -3,7 +3,7 @@
 \header {
   title = "Fantasie"
   composer = "Sylvius Leopold Weiss"
-  tagline = \markup{ \italic \small "Révision des doigtés du 14/04/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 14/04/2026 par Benoît Pin"}
   %{
   sources:
   Sky Guitar Youtube channel

@@ -3,7 +3,7 @@
 \header {
   title = "Les barricades mystérieuses"
   composer = "François Couperin (1668-1733)"
-  tagline = \markup{ \italic \small "Révision des doigtés du 22/03/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 22/03/2026 par Benoît Pin"}
   %{
   sources:
   https://youtu.be/7cmL6WpDSHY
