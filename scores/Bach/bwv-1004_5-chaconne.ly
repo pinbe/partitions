@@ -117,7 +117,7 @@ fingeringVoiceD = {
   d,8. s16 s2|
 
   % 10
-  <b-0 e-0>4 <a-1 e'-0>2 |
+  <bes-1 e-0>4 <a-1 e'-0>2 |
   s2. |
   \stemUp \shiftOn <g-4>8. f16-2
   \override Fingering.extra-offset = #'()
