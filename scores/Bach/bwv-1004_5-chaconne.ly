@@ -476,7 +476,7 @@ fingeringVoiceD = {
   s2. |
 
   % 65
-  d16-4 a32-1 _( g-0) f16-2 e-1 d-0 c-3 bes-1 a-0 bes-1 d'32\3-4 _( c\glide-2) bes-2 _( a -1) g\4-4 _( f-2) ] |
+  d16-4 a32-1 _( g-0) f16-2 e-1 d-0 c-3 bes-1 a-0 bes\6-4 d'32\3-3 _( c-1) bes\4-4 _( a\glide-3 ) g-3 _( f\glide-1) ] |
   s2. |
   s2. |
   d4 s2 |
@@ -485,13 +485,13 @@ fingeringVoiceD = {
   e16-1 [ g32-4 _(f-2) e16-1 d-0 ] c-3 [ bes-1 _( a-0) g-4 ] a [ c'32\3-4 _( bes-2) a-1 _( g-0) f-3 _( ees-1)] |
   s2. |
   s2. |
-  s2.  |
+  c'16-2 s s8 s2  |
 
   % 67
   d16-0 [ f32-3 _( ees-1) d16 c ] bes-1 [ d32-4 _( c-2) bes16 a ] g-4 [ bes'32-2 _( a-1) g-4 _( f-2) e-1 _( d) ] |
   s2. |
   s2. |
-  s2. |
+  bes16-1 s s8 s2 |
 
   % 68
   cis32-3 [ _( b-1) a-0 _( b-1) cis-3 _( d-4) e-1 _( f-2)] g [ _( a) bes-2 _( a-1) g-4 _( f-2) e-1 _( d-0)] cis16-3 [ e'32-\2-4 _( d-2) cis-1 _( b-0) a-1 _( g-0)] |
@@ -503,7 +503,7 @@ fingeringVoiceD = {
   f16-2 [ d32-0 _( e-1) f16 a\glide-1 ] f-2 [ d-4 f a ] bes32-1 [ _(c-3) d-1 _( e-3) f-2 _( g-4) a-1 _( bes-2) ] |
   s2. |
   s2. |
-  d4 s2 |
+  d,4 s2 |
 
   % 70
   e,16-1\2 [ c,32-2 _( d-4) e16-1 g-0 ] e [ c e g ] a32-2 [ _( bes-3) c-1 _( d\glide-3) e-3 _( f-4) g-1 _( a-3) ] |
