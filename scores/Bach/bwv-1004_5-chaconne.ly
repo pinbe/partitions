@@ -316,7 +316,7 @@ fingeringVoiceD = {
   d,2 r4 |
 
   % 42
-  a16 e' \startBarre #2 #4 d'-2 cis \stopBarre d,-3 fis-2 a-1 c-4 c bes-1 _( c-4) a\glide-1 |
+  a16 e' \startBarre #2 #4 d'-2 _( cis ) \stopBarre d,-3 fis-2 a-1 c-4 c bes-1 _( c-4) a\glide-1 |
   s2. |
   s2. |
   a'4 d2 |
