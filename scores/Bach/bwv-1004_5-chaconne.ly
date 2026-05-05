@@ -291,7 +291,7 @@ fingeringVoiceD = {
   d,4 d'2 |
 
   % 38
-  cis,16 e'-3 a-4 g\glide-1 fis-1 a-4 fis-1 d-3 a-1 fis-3 d-4 c\glide-2 |
+  cis,16 e'-3 a-4 g\glide-1 fis-1 a-4 _( fis-1 ) d-3 a-1 fis-3 _( d-0 ) c\glide-2 |
   s2. |
   s2. |
   \override Fingering.add-stem-support = ##f
