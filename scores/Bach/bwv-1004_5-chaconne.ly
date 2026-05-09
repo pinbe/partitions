@@ -1113,13 +1113,13 @@ fingeringVoiceD = {
   s2. |
 
   % 157
-  fis16-3 d-0 a-0 d fis-3 d-4 a' \startBarre #2 #4 fis-3 d'-2 a fis \stopBarre d-0 |
+  fis16-3 d-0 a-0 d fis-3 d-4 a' \startBarre #2 #4 fis-3 d'-2 a fis' d \stopBarre |
   s2. |
   s2. |
   d,4 r2 |
 
   % 158
-  a''16-4 e-0 cis-1 e a\2-2 e-0 cis'-1 a-2 e'-1 cis-3 fis-4 cis |
+  a'16-4 e-0 cis-1 e a\2-2 e-0 cis'-1 a-2 e'-1 cis-3 fis-4 cis |
   s2. |
   s2. |
   a'4 r2 |
