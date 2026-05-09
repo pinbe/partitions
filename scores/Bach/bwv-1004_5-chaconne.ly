@@ -1458,7 +1458,7 @@ fingeringVoiceD = {
   \override Arpeggio.positions = #'(-4 . -2)
   e16-1 \arpeggio <e'-0 d-3> <e d> e, e <e'-0 cis-2>
   \override Arpeggio.positions = #'(-4 . -1.5)
-  fis,-4 \arpeggio <e' cis> g,-0 \RH #2 <e' cis> <e cis> g, |
+  fis,-4 \arpeggio <e' cis> g,-0 \RH #2 <e' cis> \once \set fingeringOrientations = #'(right) <e cis\glide-2> g, |
   s2. |
   s2. |
   a8.-0 a16 a8 a ais8.-1 \RH #1 ais16 |
