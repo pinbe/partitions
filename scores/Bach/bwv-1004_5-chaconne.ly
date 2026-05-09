@@ -259,6 +259,8 @@ fingeringVoiceD = {
   s2. |
   b4-2 bes-1 a |
 
+  \break
+
   % 33
   d8\glide-3  f-3 bes-4 a-2 gis-1 d, |
   s2. |
@@ -571,6 +573,8 @@ fingeringVoiceD = {
   s2. |
   a4 r a |
 
+  \break
+
   % 81
   d,,16 bes'''-1 bes gis\2-4 gis f-1 f d\3-2 d b\4-4 gis\4-1 e\5-2 |
   s2. |
@@ -618,6 +622,8 @@ fingeringVoiceD = {
   s2. |
   s2. |
   s2. |
+
+  \break
 
   % 89
   f32\5-2 d-0 \RH #2 a''\2-4 \RH #4 d,, \RH #2 f32 \RH #1 d \RH #2 a'' \RH #4 d,, \RH #2
@@ -956,6 +962,8 @@ fingeringVoiceD = {
   s2. |
   gis,,8-4 ^[ d'' ] <a, e'>2 |
 
+  \break
+
   % 133
   \key d \major
   d4-4 fis,4.-2 g8-4 |
@@ -1184,6 +1192,8 @@ fingeringVoiceD = {
   s2. |
   s2. |
 
+  \break
+
   % 169
   s4 r16 a'-4 a fis-2 fis d d fis  |
   \once \stemUp fis,4-3 s8.
@@ -1397,6 +1407,8 @@ fingeringVoiceD = {
   s2. |
   a,4 a4. a8 |
 
+  \break
+
   % 201
   \override Fingering.add-stem-support = ##f
   \override Fingering.staff-padding = #'()
@@ -1468,6 +1480,8 @@ fingeringVoiceD = {
   s2. |
   s2. |
   <b-1 fis'-3>8 <g-1 e'-2> <a e'-1>2 |
+
+  \break
 
   % 209
   \key d \minor d4 bes4. \barre #3 #4 bes8-3 |
@@ -1843,7 +1857,9 @@ fingeringVoiceD = {
   \once \override NoteColumn.force-hshift = #1 d2.-0 |
   s2. |
   s2. |
-  <d, d'-1\5>2. \fine |
+  \override Score.RehearsalMark.break-visibility = #begin-of-line-invisible
+  <d, d'-1\5>2. \mark \markup { \musicglyph "scripts.ufermata" } \bar "|." |
+
 }
 
 merges = {
