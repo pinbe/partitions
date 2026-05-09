@@ -1006,7 +1006,7 @@ fingeringVoiceD = {
   \set strokeFingerOrientations = #'(down)
   g'8-0 \RH #2 [ fis-3 \RH #2 ] s2 |
   \set strokeFingerOrientations = #'(down)
-  \shiftOnn a4 \RH #1 \shiftOff a \RH #1 a \RH #1 |
+  \shiftOnn a4 \RH #1 \shiftOff a2 \RH #1 |
 
   % 141
   fis8-3 [ e-1] d-0 [ e-1] fis-3 [ gis-1] |
