@@ -789,8 +789,8 @@ fingeringVoiceD = {
   a8 [ a] a [ a] a [ a] |
 
   % 109
-  d,32 a''-2 <d-4 f-1>  a d, a' <d f> a \breathe
-  d,32-0 d'-3 fis-2 d d, d' fis d
+  d,32 \startBarre 1 3 a''-2 f'  a, d, a' f' a, \stopBarre \breathe
+  d,32-0 \startBarre 2 3 a' <d-2 fis> a d, a' <d fis> a \stopBarre
   d,32 c'-1 fis-2 c d, c' fis c |
   s2.  |
   s2. |
