@@ -1055,8 +1055,9 @@ fingeringVoiceD = {
   <g-4 cis,>8 \barre #2 #4 [ <fis d-3> ] \barre #2 #3 e2-0 |
   \override Fingering.direction = 1
   s2 cis'4-2 |
-  s2. |
-  <e a>8 [ <d a'> ] \once \set fingeringOrientations = #'(right) <a'-1 d-3>4 a, |
+  % s2. |
+  <e a>8 [ <d a'> ] \once \override Fingering.direction = #UP d'4-3 s |
+  s4 <a, a'-1>2 |
 
   % 149
   d16-4 _( cis-2) b-0 a-2 gis-1 b-0 d-4 fis-2 e8-0 <e b-0 gis-1> |
