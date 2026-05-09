@@ -921,22 +921,22 @@ fingeringVoiceD = {
   <d'-3 g-4 bes-1>4 \once \set fingeringOrientations = #'(right) <cis-3 g'-4 a-1>2  |
 
   % 127
-  f4-1 d4.-4 d8\3-4 |
+  f4-1 d4.-4 d8-1 |
   s2. |
   s2. |
   <d a'-2 d-4>4 <bes-1 f'-2 bes-3>2 |
 
   % 128
-  bes'4-2 a-4 \barre #3 #4 g-4 |
+  bes'4-4 a-4 \barre #3 #4 g-4 |
   s2. |
   s2. |
-  <g-1 e'-3 d'-4>4 <a f' d'> <a e'-1 cis'-2> |
+  <g-2 g'-0 d'-1>4 <a f' d'> <a e'-1 cis'-2> |
 
   % 129
   <a,-1 d-3 g-4>4 <a d-2 fis> \barre #2 #3 s4|
   s2. |
   s2. |
-  d2 c8-3 ^[ f'-1 ] |
+  d4 d c8-3 ^[ f'-1 ] |
 
   % 130
   <g-0 d'-4 f-1>4   <g-0 c-1 e-0> s4 |
