@@ -10,6 +10,12 @@
   tagline = \markup{ \italic \small "Édition du 24/05/2026 par Benoît Pin"}
 }
 
+\paper {
+  %ragged-last-bottom = ##f
+  % annotate-spacing = ##t
+  markup-system-spacing.basic-distance = #20
+}
+
 \include "../../commons/guitar-helpers.ly"
 
 \parallelMusic voiceA, voiceB, voiceC {
@@ -42,7 +48,10 @@
   a4. a4 s8 |
   d4 d,8 a'4 r8 |
 
-  \break
+  \tag #'manubr {
+    \break
+  }
+
 
   %5 (ligne 2)
   fis8 \RH 3  \startBarre 2 2 cis \RH 2 \stopBarre d-2 \RH 3 ~ d b-0 \RH 2 d \RH 3 |
@@ -69,7 +78,10 @@
   s2. |
   a,4-0 gis8-3 a4 c8\glide-1 |
 
-  \break
+  \tag #'manubr {
+    \break
+  }
+
 
   %10 (ligne 3)
   e8 d-2 \RH 2 f\glide-4 \RH 3 ~ f e-4 \RH 2 d-2 \RH 3 \stopStringSpan |
@@ -108,7 +120,9 @@
     s2. |
     a4 r8 cis4-3 r8 |
 
-    \break
+    \tag #'manubr {
+      \break
+    }
 
     %15 (ligne 4)
     fis8 d-2 \RH 2 e-0 \RH 3 ~ e cis\glide-2 \RH 2 d-2 \RH 3 |
@@ -136,7 +150,10 @@
     s2. |
     b4 e,8-3 fis4. |
 
-    \break
+    \tag #'manubr {
+      \break
+    }
+
 
     %20 (ligne 5)
     b4.-4 \RH 3 ~ b4  d8\glide-2 \RH 2 |
@@ -163,7 +180,10 @@
     s2. |
     a4. ~ a4 r8 |
 
-    \break
+    \tag #'manubr {
+      \break
+    }
+
     %25
     f8-2 \RH 3 e \RH 2 \stopBarre g-4 \startStringSpan 2 \RH 3 ~ g f-2 \RH 2 a-4 \RH 3 ~ |
     s2. |
@@ -249,6 +269,7 @@ zique = {
 
 \score {
   \new Staff {
+    \removeWithTag #'(manubr)
     \zique
   }
   \layout {
