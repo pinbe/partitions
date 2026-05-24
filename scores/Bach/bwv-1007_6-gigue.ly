@@ -62,7 +62,7 @@
   %8
   gis8-1 \RH 2 b-0 \RH 3 e-0 \RH 4 ~ e4 b8-1 \startStringSpan 3 \RH 2 |
   s2. |
-  d4.-2 e'4-3 r8 |
+  e4.-2 e'4-3 r8 |
 
   %9
   c8-2 \RH 3 b \RH 2 d-4 \RH 3 ~ d c-2 \stopStringSpan \RH 2 e-4 ~ \RH 3 \startStringSpan 2 |
@@ -88,7 +88,7 @@
   a4. \RH 3 \startBarre 2 4 ~ a4 \stopBarre |
   s4. s4 |
   \set strokeFingerOrientations = #'(down)
-  a'8 e8 \RH 2 cis-3 \RH 1 a4-0 \RH 1 |
+  a'8 [ e8 \RH 2 cis-3 \RH 1 ] a4-0 \RH 1 |
 
   \repeat volta 2 {
     %12 bis (anacrouse)
@@ -154,7 +154,7 @@
     e4 a,8-0 d4 r8 |
 
     %23
-    c8-2 \RH 3 \startBarre 4 6 b-4 \RH 2 b \RH 3 \stopBarre e16 \RH 4 \startBarre 5 6 _( fis-3 ) g8-4 \RH 2 e \RH 3 \stopBarre |
+    c8-2 \RH 3 \startBarre 4 6 a-4 \RH 2 b \RH 3 \stopBarre e16 \RH 4 \startBarre 5 6 _( fis-3 ) g8-4 \RH 2 e \RH 3 \stopBarre |
     s2. |
     fis,4 dis'8-3 g,4. |
 
@@ -191,7 +191,7 @@
     %29
     d8-2 \RH 4 b16-3 \RH 2 _( c\glide-4 ) \stopBarre d8-4 \RH 3 \startBarre 4 6 fis, \RH 2 g-3 \RH 2 \stopBarre b-0 \RH 4 |
     s2. |
-    b'4 d,8 g4-2 d'8-0 |
+    b'4 fis8 g4-2 d'8-0 |
 
     e8-2 \startBarre 4 6 \RH 3 cis16-3 \RH 2 _( d\glide-4 ) e8-4 \RH 3 \stopBarre gis,-1 \RH 2 a-3 \RH 2 cis-1\3 \RH 3 |
     s2. |
