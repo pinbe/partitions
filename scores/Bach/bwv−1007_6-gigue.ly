@@ -50,7 +50,7 @@
   d4-0 r8 b4-1 r8 |
 
   %6
-  e8-4 \RH 2 b-0 \RH 3 cis \RH 2 \startBarre 2 6 ~ cis b \RH 2 cis \RH 3 |
+  e8-4 \RH 2 b-0 \RH 3 cis \RH 2 \startBarre 2 6 ~ cis a \RH 2 cis \RH 3 |
   s2. |
   cis4-3 r8 fis,4-3 r8 |
 
