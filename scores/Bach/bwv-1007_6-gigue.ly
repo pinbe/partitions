@@ -7,7 +7,8 @@
   opus = "BWV 1007"
   style = "Baroque"
   license = "Creative Commons Attribution-ShareAlike 3.0"
-  tagline = \markup{ \italic \small "Édition du 24/05/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 25/05/2026 par Benoît Pin"}
+  % fingering Maurice Rosset
 }
 
 \paper {
@@ -39,13 +40,13 @@
   fis4-3 s8 d4 s8 |
 
   %3
-  d16 \RH 2 _( e-4 ) fis8 \RH 3 e-0 \RH 2 e16 \RH 3 _( fis-1 ) g8-2 \RH 2 fis \RH 3 |
+  d16-2 \RH 2 _( e-4 ) fis8-1 \RH 3 e-0 \RH 2 e16 \RH 3 _( fis-1 ) g8\glide-2 \RH 2 fis-2 \RH 3 |
   s2. |
   d4 a'8-0 cis4-3 d8 |
 
   %4
-  fis4. \trill e4-4 e8-0 |
-  a4. a4 s8 |
+  fis4.-\finger \markup \tied-lyric "2~3" \trill e4-4 e8-0 |
+  <a-1>4. a4 s8 |
   d4 d,8 a'4 r8 |
 
   %5
@@ -98,7 +99,7 @@
     \set Score.barNumberVisibility = #all-bar-numbers-visible
     %12 bis (anacrouse)
     \partial 8*1
-    e'8-4 \RH 2 \startStringSpan 3 |
+    e'8-4 ~ \RH 2 \startStringSpan 3 |
     s8 |
     r8 |
 
@@ -119,7 +120,7 @@
     d4-0  r8 ais4-1 r8 |
 
     %16
-    d16 \RH 2 _( \startBarre 2 6 e-4 ) fis8 \RH 4 d \RH 3 b-3 \RH 2 a'-4 \RH 4 \stopBarre g-1 \RH 3 ~ |
+    d16-2 \RH 2 _( \startBarre 2 6 e-4 ) fis8 \RH 4 d \RH 3 b-3 \RH 2 a'-4 \RH 4 \stopBarre g-1 \RH 3 ~ |
     s2. |
     b4. ~ b8 r r |
 
@@ -137,7 +138,7 @@
     %19
     d8-2 \RH 2 \startBarre 2 6 cis \RH 3 b-4 \RH 2  ~ b b \RH 3 ais-2 \RH 2 \stopBarre |
     s2. |
-    b4 e,8-3 fis4. |
+    b4 e,8 fis4.-3 |
 
     %20
     b4.-4 \RH 3 ~ b4  d8\glide-2 \RH 2 |
@@ -150,7 +151,7 @@
     fis'4 b,8 e4 r8 |
 
     %22
-    d8-2 \RH 2 b-3 \RH 3 c-4 \RH 2 fis16-1 \RH 4 [ _( g-2 ) a8-4 \RH 3 ]  b,\glide-2 \RH 2 |
+    d8-2 \RH 2 b-3 \RH 3 c-4\3 \RH 2 fis16-1 \RH 4 [ _( g-2 ) a8-4 \RH 3 ]  b,\glide-2\3 \RH 2 |
     s2. |
     e4 a,8-0 d4 r8 |
 
@@ -185,7 +186,8 @@
     d4.-4 \RH 3 ~ d8 fis,8-3 \RH 2 a \RH 3 \startBarre 2 6  |
     \revert Rest.staff-position
     \override Fingering.direction = #UP
-    g8\rest fis16\glide-1 ^( g-1 ) a8-3 d,-0 r r |
+    \set strokeFingerOrientations = #'(down)
+    g8\rest fis16\glide-1 \RH 1 ^( g-1 ) a8-3 \RH 1 \once \set strokeFingerOrientations = #'(left) d,-0 \RH 1 r r |
     d,4. ~ d8 s s |
 
     %29
@@ -193,7 +195,7 @@
     s2. |
     b'4 fis8 g4-2 d'8-0 |
 
-    e8-2 \startBarre 4 6 \RH 3 cis16-3 \RH 2 _( d\glide-4 ) e8-4 \RH 3 \stopBarre gis,-1 \RH 2 a-3 \RH 2 cis-1\3 \RH 3 |
+    e8-2 \startBarre 4 6 \RH 3 cis16-3 \RH 2 _( d\glide-4 ) e8-4 \RH 3 \stopBarre gis,-1 \startStringSpan 4 \RH 2 a-3 \stopStringSpan \RH 2 cis-1\3 \RH 3 |
     s2. |
     cis4 gis8-1 a4-0 e'8-2 |
 
