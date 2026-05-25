@@ -146,14 +146,14 @@
     b'8 fis-3 \RH 2 d-0 \RH 1 b4-1 \RH 1 r8 |
 
     %21
-    e8-2 \RH 3 \startBarre 4 6 cis-3 \RH 2 \stopBarre d-2 \RH 3 \startBarre 2 6 gis16-3 \RH 4 [ _( a\glide-4 ) \stopBarre b8-4 \RH 3 ] cis,-3 \RH 2 |
+    e8\glide-2 \RH 3 cis\tweak extra-offset #'(0 . 1)-3 \tweak extra-offset #'(0 . 1) \RH 2 d-2 \RH 3 \startBarre 2 6 gis16-3 \RH 4 [ _( a\glide-4 ) \stopBarre b8-4 \RH 3 ] cis,-3 \RH 2 |
     s2. |
-    fis'4 b,8 e4 r8 |
+    fis'4-1 b,8 e4 r8 |
 
     %22
     d8-2 \RH 2 b-3 \RH 3 c-4\3 \RH 2 fis16-1 \RH 4 [ _( g-2 ) a8-4 \RH 3 ]  b,\glide-2\3 \RH 2 |
     s2. |
-    e4 a,8-0 d4 r8 |
+    e4-1 a,8-0 d4 r8 |
 
     %23
     c8-2 \RH 3 \startBarre 4 6 a-4 \RH 2 b \RH 3 \stopBarre e16 \RH 4 \startBarre 5 6 _( fis-3 ) g8-4 \RH 2 e \RH 3 \stopBarre |
