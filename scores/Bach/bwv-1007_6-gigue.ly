@@ -7,7 +7,7 @@
   opus = "BWV 1007"
   style = "Baroque"
   license = "Creative Commons Attribution-ShareAlike 3.0"
-  tagline = \markup{ \italic \small "Édition du 25/05/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 27/05/2026 par Benoît Pin"}
   % fingering Maurice Rosset
 }
 
@@ -110,7 +110,7 @@
     a4-0 r8 gis4-3 r8 |
 
     %14
-    cis16 \RH 3 \startBarre 2 3 _( d-2 ) e8-4 \RH 2 cis \RH 3 a \RH 2 g'-2 \RH 4 \stopBarre fis \RH 3 ~ |
+    cis16 \RH 3 \startBarre 2 3 _( d-2 ) e8-4 \RH 2 cis \RH 3 a \RH 2 g'-2 \RH 4 fis \stopBarre \RH 3 ~ |
     s2. |
     a4 r8 cis4-3 r8 |
 
@@ -132,7 +132,7 @@
 
     %18
     fis8 g-4 \RH 4 fis \RH 3 ~ fis fis \RH 4 e-0 \RH 3 |
-    <d-3 \RH 2 >4 r8  <g,-0 \RH 2 >4 r8 |
+    <d-3 \RH 2 >4 r8  <g,-0 \RH 2 >4 g8\rest |
     b4-1 a8-0 b4-1 cis8-4 |
 
     %19
@@ -161,7 +161,7 @@
     fis,4 dis'8-3 g,4. |
 
     %24
-    cis16-2\3 \RH 2 _( d-3 ) e8-1 \RH 3 cis \RH 2 a4-3\4 \RH 1 e'8 \RH 2 \startBarre 5 6 |
+    cis16-2\3 \RH 2 _( d-3 ) e8-1 \RH 3 cis \RH 2 a4-3\4 \RH 1 e'8 \RH 2 \startBarre 5 5 |
     s2. |
     a4. ~ a4 r8 |
 
@@ -169,13 +169,12 @@
     f8-2 \RH 3 e \RH 2 \stopBarre g-4 \startStringSpan 2 \RH 3 ~ g f-2 \RH 2 a-4 \RH 3 ~ |
     s2. |
     \override Fingering.add-stem-support = ##t
-    d4 cis8\glide-1 d4\glide-1 f8-1 |
+    d4 cis8\glide-1 d4\glide-1 f8\glide-1 |
 
     %26
     a8 g-2 \RH 2 bes\glide-4 \RH 3 ~ bes a-4 \RH 2 g-2 \RH 3 \stopStringSpan |
     s2. |
-    \revert Fingering.add-stem-support
-    e4-1 g8-0 \once \override Fingering.add-stem-support = ##t f4\glide-1 e8-1 |
+    e4-1 \revert Fingering.add-stem-support g8-0 \once \override Fingering.add-stem-support = ##t f4\glide-1 e8-1 |
 
     %27
     f8-2 \startBarre 5 6 \RH 2 e \RH 3 d-4 \stopBarre \RH 2 ~ d d \RH 3 cis-3 \RH 2 |
