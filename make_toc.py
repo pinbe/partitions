@@ -4,11 +4,20 @@ from os import chdir, walk
 from os.path import splitext
 
 
-def file_links_md(basefolder:str, dirpath:str, filename:str, giturl:str, branch:str, composer:str, title:str) -> str :
+def file_links_md(basefolder:str,
+                  dirpath:str,
+                  filename:str,
+                  giturl:str,
+                  branch:str,
+                  composer:str,
+                  title:str,
+                  piece:str) -> str :
     pdf_link = f"{dirpath}/{filename}.pdf"
     midi_link = f"{dirpath}/{filename}.midi"
     ly_link = f"{giturl}/blob/{branch}/{basefolder}/{dirpath}/{filename}.ly"
-    return f"[{composer} — {title}]({pdf_link}) [[MIDI]({midi_link})] [[Source]({ly_link})]"
+    txt = f'{composer} — {title}'
+    txt = txt if not piece else f'{txt}, {piece}'
+    return f"[{txt}]({pdf_link}) [[MIDI]({midi_link})] [[Source]({ly_link})]"
 
 
 def main(basefolder:str, giturl:str, branch:str) -> None :
@@ -34,17 +43,21 @@ def main(basefolder:str, giturl:str, branch:str) -> None :
                         composer = re.search(
                             r"\\header.*\bcomposer\b\s*=\s*\"([^\"]+)\"", lycode, re.DOTALL
                         ).group(1)
+                        piece = re.search(
+                            r"\\header.*\bpiece\b\s*=\s*\"([^\"]+)\"", lycode, re.DOTALL
+                        )
+                        piece = piece.group(1) if piece is not None else ''
 
                     except AttributeError :
                         continue
                     basename = splitext(filename)[0]
                     items.append(
-                        (basefolder, dirpath, basename, giturl, branch, composer, title)
+                        (basefolder, dirpath, basename, giturl, branch, composer, title, piece)
                     )
 
         items.sort(
-            key=lambda x: (re.findall(r"[^\W\d_]+(?:-[^\W\d_]+)*", x[5])[-1], x[6])
-        )  # Sort by composer, then title
+            key=lambda x: (re.findall(r"[^\W\d_]+(?:-[^\W\d_]+)*", x[5])[-1], x[6], x[7])
+        )  # Sort by composer, then title, then piece
 
         for item in items :
             pr("- %s" % file_links_md(*item))
