@@ -18,7 +18,7 @@
   license = "Creative Commons Attribution-ShareAlike 3.0"
   %footer = "Mutopia-2019/05/30-1426"
   %copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2019 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
-  tagline = \markup{ \italic \small "Édition du 09/05/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 17/06/2026 par Benoît Pin"}
 }
 
 \paper {
@@ -478,7 +478,7 @@ fingeringVoiceD = {
   s2. |
 
   % 65
-  d16-4 a32-1 _( g-0) f16-2 e-1 d-0 c-3 bes-1 a-0 bes\6-4 d'32\3-3 _( c-1) bes\4-4 _( a\glide-3 ) g-3 _( f\glide-1) ] |
+  d16-4 a32-1 _( g-0) f16-2 e-1 d-0 c-3 bes-1 a-0 bes d'32-4 _( c-1) bes-4 _( a-2 ) g-0 f-3 ] |
   s2. |
   s2. |
   d4 s2 |
