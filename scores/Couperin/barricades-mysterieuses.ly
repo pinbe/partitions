@@ -3,7 +3,7 @@
 \header {
   title = "Les barricades mystérieuses"
   composer = "François Couperin (1668-1733)"
-  tagline = \markup{ \italic \small "Édition du 22/03/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 31/05/2026 par Benoît Pin"}
   %{
   sources:
   https://youtu.be/7cmL6WpDSHY
@@ -70,13 +70,13 @@ PRIO_DOWN = \once \override Fingering.script-priority = #0
       \volta 1 {
         \relative c' {
           \tag #'layout {
-            c8-\finger \markup \tied-lyric "1~0~1" \mordent c e-0 c-4\3~ c \startBarre 3 6 d g
+            c8-\finger \markup \tied-lyric "1~0~1" \mordent c \RH 2 e-0 \RH 3 c-4\3 \RH 2 ~ c \startBarre 3 6 d \RH 3 g \RH 4
 
             %{ bidouille pour afficher une liaison
             de prolongation, « en l’air à droite »
             pour prolonger la première note de la reprise.
             %}
-            \afterGrace b,-2~ {
+            \afterGrace b,-2 \RH 2 ~ {
               s4
               \once \hideNotes
               b8 \stopBarre
