@@ -7,7 +7,7 @@
   opus = "BWV 1007"
   style = "Baroque"
   license = "Creative Commons Attribution-ShareAlike 3.0"
-  tagline = \markup{ \italic \small "Édition du 27/05/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 01/07/2026 par Benoît Pin"}
   % fingering Maurice Rosset
 }
 
@@ -194,7 +194,7 @@
     s2. |
     b'4 fis8 g4-2 d'8-0 |
 
-    e8-2 \startBarre 4 6 \RH 3 cis16-3 \RH 2 _( d\glide-4 ) e8-4 \RH 3 \stopBarre gis,-1 \startStringSpan 4 \RH 2 a-3 \stopStringSpan \RH 2 cis-1\3 \RH 3 |
+    e8-2 \startBarre 4 6 \RH 3 cis16-3 \RH 2 _( d\glide-4 ) \stopBarre e8-4 \RH 3 gis,-1 \startStringSpan 4 \RH 2 a-3 \stopStringSpan \RH 2 cis-1\3 \RH 3 |
     s2. |
     cis4 gis8-1 a4-0 e'8-2 |
 
