@@ -4,7 +4,7 @@
   title = "Vals Venezolano no 2"
   subsubtitle = "Andreína"
   composer = "Antonio Lauro"
-  tagline = \markup{ \italic \small "Édition du 13/04/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 09/07/2026 par Benoît Pin"}
 }
 
 \paper {
@@ -56,7 +56,7 @@
     a2. |
 
     %5
-    e8-4 \RH 3 \startBarre 2 6 _( dis-3 ) cisis-2 \RH 2 dis-3 g-2 \RH 3 _( fis ) \stopBarre |
+    e8-4 \RH 3 \startBarre 2 6 _( dis-3 ) cisis-2 \RH 2 _( dis-3 ) g-2 \RH 3 _( fis ) \stopBarre |
     s4 a2 |
     b2. |
 
