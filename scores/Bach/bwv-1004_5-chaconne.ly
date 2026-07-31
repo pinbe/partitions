@@ -594,7 +594,7 @@ fingeringVoiceD = {
   b2-1 r4 |
 
   % 84
-  a16-0 _(cis) cis e-1 e g32-4 _( f-2) g16 bes32 _( a-1) bes16 cis32 _( d) e16-0  g, |
+  a16-0 _( cis-3 ) cis e-1 e g32-4 _( f-2) g16-4 bes32-2 _( a-1) bes16 cis32-1 _( d-2 ) e16-0  g,-0 |
   s2. |
   s2. |
   s2. |
