@@ -67,7 +67,7 @@
 
     %11
     f16 e d'-4 _( b ) gis e _( d ) cis-4 |
-    r4 a|
+    e4 r |
 
     %12
     c16-3 \RH 1 <e a \RH 2 \RH 3 >8 <e a>16 r16 a _( gis ) g |
