@@ -22,36 +22,36 @@
   s4. |
 
   %1
-  fis8 \barre 7 6 eis-4\3 fis gis-2 |
+  fis8 \startBarre 7 3 eis-4 fis gis-2 |
   <d d'>2 |
 
   %2
-  b8 a-4 gis a |
+  b8 a-4 gis-2 a \stopBarre |
   <d f'-3>2 |
 
   %3
-  cis8 \barre 9 6 e, a cis |
-  <e, ~ e'' a>2 |
+  cis8 \startBarre 9 3 e, a cis \stopBarre |
+  <e, ~ e'' a-2>2 |
 
   %4
   e8-4 dis d cis |
   e2 |
 
   %5
-  b8 \barre 7 6 a-4 gis fis |
+  b8 \startBarre 7 3 a-4 gis-3 fis \stopBarre |
   <e ~ d'' gis>2 |
 
   %6
-  e8-0 d cis b |
+  e8-0 d-2 cis-1 b-0 |
   e2 |
 
   %7
   a2 \barre 2 6 |
-  <a cis e>2 |
+  <a-4 cis-3 e>2 |
 
   %8
   e'4 \fermata r16 e,-2 \RH 2 dis \RH 3 e \RH 2 |
-  <e b' d gis b>4 r |
+  <e b'-2 d gis-1 b e>4 \arpeggio r |
 
   \key a \minor
 
