@@ -106,82 +106,135 @@
   }
 
   \repeat volta 2 {
-    % 18
+    % 19
     \key a \major
     a16-4 \RH 3 \startBarre 2 3 a, \RH 2 cis \RH 3 gis'-3 \RH 4 ~ gis a, cis fis |
     a4 a |
 
-    %19
+    %20
     fis16 \RH 3 a, cis \stopBarre e-0 ~ e a,-1 cis-2 fis \startBarre 2 3 |
     a4 a |
 
-    %20
+    %21
     fis16 \RH 3 a, cis \stopBarre e-0 ~ e a,-1 cis-2 e |
     a4 a |
 
-    %21
+    %22
     fis16-1 b,-3 d-2 e-0 ~ e b d fis-1 |
     e4 e |
 
-    %22
+    %23
     a16-4 b, d gis-4 ~ gis b, d fis-1 |
     e4 e |
 
-    %23
+    %24
     fis16 b, d e ~ e b d fis |
     e4 e |
 
-    %24
+    %25
     a16 b, d gis ~ gis b,-3  d-2 fis \startBarre 2 3 |
     e4 e |
 
-    %25
-    fis16 a, cis \stopBarre e ~ e a,-1 cis-2 e |
-    a4 a |
-
     %26
-    a16-4 \startBarre 2 3 a, cis gis'-3 ~ gis a, cis fis |
+    fis16 a, cis \stopBarre e ~ e a,-1 cis-2 e |
     a4 a |
 
     %27
-    fis16 a, cis \stopBarre e ~ e a,-1 cis-2 e |
+    a16-4 \startBarre 2 3 a, cis gis'-3 ~ gis a, cis fis |
     a4 a |
 
     %28
+    fis16 a, cis \stopBarre e-0  ~ e a,-1 cis-2 e |
+    a4 a |
+
+    %29
     fis16-2 _( e ) cis-2 ais-3 fis' _( e ) cis ais |
     fis4-1 fis |
 
-    %29
+    %30
     b16-0 ais-3 b cis-2 d4-3 |
     b4-1 r |
 
-    %30
+    %31
     d,16-0 cis-4 d e-2 fis-4 gis-1 a-2 b-0 |
     s2 |
 
-    %31
+    %32
     cis16-1 _( d-2 ) dis-3 _( e-4\2 ) fis-1 _( e-0 ) d-2 _( cis-1 ) |
     a4 r |
 
-    %32
+    %33
     b16-3\3 _( a\glide-1 ) gis-1 fis-4 _( e-2 ) d-0 cis-4 _( b-2 ) |
     e4 r |
 
     \alternative {
       \volta 1 {
-        %33
+        %34
         a8 r r16 a'-1 cis-2 e |
         r8 e a r |
       }
 
       \volta 2 {
 
-        %34
+        %35
         a,,8 r r16 e' dis e |
         r8 e a r |
       }
     }
   }
+
+  \key a \minor
+
+  \repeat volta 2 {
+
+    %36
+    f16-3 \RH 3 e8-2 \RH 2 <a-3 c-1 e-0 \RH 2 \RH 3 \RH 4 >16 ~ <a c e> e-2 \RH 2 dis-1 e |
+    a4 a |
+
+    %37
+    f16-3 e8-2 <gis-1 d'-4 e>16 ~ <gis d' e>16 e-2 dis-1 e |
+    e4 e |
+
+    %38
+    f16-3 e-2 d'-4 _( b-0 ) gis-1 e-2 _( d-0 ) cis-4 |
+    e4 r |
+
+    %39
+    c16-3 \RH 1 <e-1 a-2 \RH 2 \RH 3 >8 <e a>16 r16 a-2 _( gis-1 ) g-0 |
+    r4 a |
+
+    %40
+    f16-3 \RH 2 \startBarre 1 6 a8-2 \RH 3 \once \set fingeringOrientations = #'(up) <f a d-4>16 ~ <f a d> c' \RH 4 a \RH 3 f \RH 2 \stopBarre |
+    f4 f |
+
+    %41
+    e16-2 a8-3 \once \set fingeringOrientations = #'(up) <e a c-1>16 ~ <e a c> c' _( b-0 ) ais-3 |
+    a4 a |
+
+    \alternative {
+      \volta 1{
+
+        %42
+        b16-0 b,-2 \RH 1 dis-1 \RH 1 _( fis-4 ) a-2 c-1 _( b-0 ) a |
+        s2 |
+
+        %43
+        gis16-1 <d'-4 e \RH 3 \RH 4 >8 <d e>16 ~ <d e> e,-2 dis-1 e |
+        e4 e |
+      }
+
+      \volta 2{
+        %44
+        b'16-0 \RH 3 e,-2 \RH 1 gis-1 \RH 2 b-0 \RH 3 e-0 \RH 4 d-3 c-1 _( b-0 ) |
+        s2 |
+
+        %45
+        a8-2 r r16 b-4\3 \RH 2 a aes |
+        r8 e a r |
+      }
+    }
+  }
+
 }
 
 zique = {
