@@ -235,6 +235,70 @@
     }
   }
 
+  %46
+  g16 \RH 3 c, \RH 1 e \RH 2 g \RH 3 c \RH 4 e \RH 3 g-1 gis-2 |
+  s2 |
+
+  %47
+  a8.-3 \RH 4 <c,-2 f-4>16 r b a aes |
+  d4 d8 r |
+
+  %48
+  g16 b,-2 f'-4 g b d \RH 3 \barre 3 6 f-4 \RH 2 g \RH 3 |
+  s2 |
+
+  %49
+  a8.-4 \RH 4 <c,-2 e-3>16 r c'-4 c c |
+  c4 r |
+
+  %50
+  c16 \barre 5 6 c, e c' b-4 c, fis-3 b |
+  e4-3 ees-2 |
+
+  %51
+  a16 <c, f-2>8 <c f>16 r b' b b |
+  d4-0 d |
+
+  %52
+  b16 g,-0 b b' a-4 g, b a' |
+  g4-1_\4 f-1 |
+
+  %53
+  g8-4 _( e16 ) c g e c _( a ) |
+  e4-2 r |
+
+  %54
+  g8-3 e'16 \RH 1 g \RH 2 c \RH 3 e \RH 4 g gis |
+  s2 |
+
+  %55
+  a8. <c, f>16 r b a aes |
+  d4 d8 r |
+
+  %56
+  g16 b, f' g b d \barre 3 6 f g |
+  s2 |
+
+  %57
+  a8. <c, e>16 r c b bes-3 |
+  c4 r |
+
+  %58
+  a16 \barre 1 6 _( gis ) a b-0 d-4 _( c ) b c |
+  f,4 fis-2 |
+
+  %59
+  e16 \RH 4 g, c e g \RH 3 _( fis ) f e |
+  g8 r r4 |
+
+  %60
+  d16 _( c ) b a g f e d |
+  r4 g |
+
+  %61
+  c8 r r16 e dis e |
+  r8 g8 c r |
+
 }
 
 zique = {
