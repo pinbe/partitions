@@ -299,6 +299,58 @@
   c8 r r16 e dis e |
   r8 g8 c r |
 
+
+  \repeat volta 2 {
+
+    %62
+    f16-3 \RH 3 e8-2 \RH 2 <a-3 c-1 e-0 \RH 2 \RH 3 \RH 4 >16 ~ <a c e> e-2 \RH 2 dis-1 e |
+    a4 a |
+
+    %63
+    f16-3 e8-2 <gis-1 d'-4 e>16 ~ <gis d' e>16 e-2 dis-1 e |
+    e4 e |
+
+    %64
+    f16-3 e-2 d'-4 _( b-0 ) gis-1 e-2 _( d-0 ) cis-4 |
+    e4 r |
+
+    %65
+    c16-3 \RH 1 <e-1 a-2 \RH 2 \RH 3 >8 <e a>16 r16 a-2 _( gis-1 ) g-0 |
+    r4 a |
+
+    %66
+    f16-3 \RH 2 \startBarre 1 6 a8-2 \RH 3 \once \set fingeringOrientations = #'(up) <f a d-4>16 ~ <f a d> c' \RH 4 a \RH 3 f \RH 2 \stopBarre |
+    f4 f |
+
+    %67
+    e16-2 a8-3 \once \set fingeringOrientations = #'(up) <e a c-1>16 ~ <e a c> c' _( b-0 ) ais-3 |
+    a4 a |
+
+    \alternative {
+      \volta 1{
+
+        %68
+        b16-0 b,-2 \RH 1 dis-1 \RH 1 _( fis-4 ) a-2 c-1 _( b-0 ) a |
+        s2 |
+
+        %69
+        gis16-1 <d'-4 e \RH 3 \RH 4 >8 <d e>16 ~ <d e> e,-2 dis-1 e |
+        e4 e |
+      }
+
+      \volta 2{
+        %70
+        b'16-0 \RH 3 e,-2 \RH 1 gis-1 \RH 2 b-0 \RH 3 e-0 \RH 4 d-3 c-1 _( b-0 ) |
+        s2 |
+
+        %71
+        a8-2 <gis b e> <c e a> \barre 5 6 r |
+        r8 e a r  \fine |
+      }
+    }
+  }
+
+
 }
 
 zique = {
