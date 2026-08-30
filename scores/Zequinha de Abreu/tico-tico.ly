@@ -3,7 +3,7 @@
 \header {
   title = "Tico-tico no Fubá"
   composer = "Zequinha de Abreu"
-  tagline = \markup{ \italic \small "Édition du 29/08/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 30/08/2026 par Benoît Pin"}
   %{
   sources :
   Guitar dell’ arte
@@ -34,7 +34,7 @@
   <e, ~ e'' a-2>2 |
 
   %4
-  e8-4 dis-3 d-2 cis-1 |
+  e8-4 dis-3 d\glide-2 cis-2 |
   e2 |
 
   %5
@@ -124,15 +124,15 @@
     e4 e |
 
     %23
-    a16-4 b, d gis-4 ~ gis b, d fis-1 |
+    a16-4 b,-3 d-2 gis-4 ~ gis b, d fis-1 |
     e4 e |
 
     %24
-    fis16 b, d e ~ e b d fis |
+    fis16-1 b,-3 d-2 e-0 ~ e b d fis |
     e4 e |
 
     %25
-    a16 b, d gis ~ gis b,-3  d-2 fis \startBarre 2 3 |
+    a16\glide-4 b,-3 d-2 gis-4 ~ gis b,-3  d-2 fis \startBarre 2 3 |
     e4 e |
 
     %26
@@ -177,7 +177,7 @@
       \volta 2 {
 
         %35
-        a,,8 r r16 e' dis e |
+        a,,8 r r16 e'-2 \RH 2 dis-1 \RH 3 e \RH 2 |
         r8 e a r |
       }
     }
@@ -229,75 +229,75 @@
         s2 |
 
         %45
-        a8-2 r r16 b-4\3 \RH 2 a aes |
+        a8-2 r r16 b-4\3 \RH 2 a-2 aes-1 |
         r8 e a r |
       }
     }
   }
 
   %46
-  g16 \RH 3 c, \RH 1 e \RH 2 g \RH 3 c \RH 4 e \RH 3 g-1 gis-2 |
+  g16-0 \RH 3 c,-3 \RH 1 e-2 \RH 2 g \RH 3 c-1 \RH 4 e \RH 3 g-1 gis-2 |
   s2 |
 
   %47
-  a8.-3 \RH 4 <c,-2 f-4>16 r b a aes |
+  a8.-3 \RH 4 <c,-2 f-4>16 r b-0 a-2 aes-1 |
   d4 d8 r |
 
   %48
-  g16 b,-2 f'-4 g b d \RH 3 \barre 3 6 f-4 \RH 2 g \RH 3 |
+  g16-0 b,-1 f'-2 g b-0 d \RH 3 \startBarre 3 6 f-4 \RH 2 g \RH 3 |
   s2 |
 
   %49
-  a8.-4 \RH 4 <c,-2 e-3>16 r c'-4 c c |
+  a8.-4 \RH 4 <c,-2 e-3>16 \stopBarre r c'-4 c c |
   c4 r |
 
   %50
-  c16 \barre 5 6 c, e c' b-4 c, fis-3 b |
+  c16 \startBarre 5 3 c, e c'\glide-4 b-4 c, fis-3 b |
   e4-3 ees-2 |
 
   %51
-  a16 <c, f-2>8 <c f>16 r b' b b |
+  a16 <c, f-2>8 <c f>16 \stopBarre r b'-4 b b |
   d4-0 d |
 
   %52
-  b16 g,-0 b b' a-4 g, b a' |
-  g4-1_\4 f-1 |
+  b16 g,-0 b b'\glide-4 a-4 g, b a'\glide-4 |
+  g4\glide-1_\4 f-1 |
 
   %53
-  g8-4 _( e16 ) c g e c _( a ) |
+  g8-4 _( e16 ) c-1 g e c-3 _( a ) |
   e4-2 r |
 
   %54
-  g8-3 e'16 \RH 1 g \RH 2 c \RH 3 e \RH 4 g gis |
+  g8-3 e'16-2 \RH 1 g \RH 2 c-1 \RH 3 e \RH 4 g-1 gis-2 |
   s2 |
 
   %55
-  a8. <c, f>16 r b a aes |
+  a8.-3 <c,-4 f-2>16 r b-0 a-2 aes-1 |
   d4 d8 r |
 
   %56
-  g16 b, f' g b d \barre 3 6 f g |
+  g16 b,-1 f'-2 g b-0 d \startBarre 3 6 f-4 g |
   s2 |
 
   %57
-  a8. <c, e>16 r c b bes-3 |
+  a8.-4 <c,-2 e-3>16 \stopBarre r c-1 b-4 bes-3 |
   c4 r |
 
   %58
-  a16 \barre 1 6 _( gis ) a b-0 d-4 _( c ) b c |
+  a16-2 \startBarre 1 6 _( gis ) a \stopBarre b-0 d-4 _( c-1 ) b c |
   f,4 fis-2 |
 
   %59
-  e16 \RH 4 g, c e g \RH 3 _( fis ) f e |
-  g8 r r4 |
+  e16 \RH 4 g, c-1 e g-4 \RH 3 _( fis-2 ) f-1 e |
+  g8-3 r r4 |
 
   %60
-  d16 _( c ) b a g f e d |
-  r4 g |
+  d16-4 _( c-1 ) b-0 a-2 g-0 f-4 e-2 d |
+  r4 g-3 |
 
   %61
-  c8 r r16 e dis e |
-  r8 g8 c r |
+  c8-3 r r16 e-2 dis-1 e |
+  r8 g8-2 c r |
 
 
   \repeat volta 2 {
