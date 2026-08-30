@@ -105,6 +105,8 @@
     }
   }
 
+  \break
+
   \repeat volta 2 {
     % 19
     \key a \major
@@ -183,8 +185,9 @@
     }
   }
 
-  \key a \minor
+  \break
 
+  \key a \minor
   \repeat volta 2 {
 
     %36
@@ -234,6 +237,8 @@
       }
     }
   }
+
+  \break
 
   %46
   g16-0 \RH 3 c,-3 \RH 1 e-2 \RH 2 g \RH 3 c-1 \RH 4 e \RH 3 g-1 gis-2 |
@@ -299,6 +304,7 @@
   c8-3 r r16 e-2 dis-1 e |
   r8 g8-2 c r |
 
+  \break
 
   \repeat volta 2 {
 
@@ -344,7 +350,7 @@
         s2 |
 
         %71
-        a8-2 <gis b e> <c e a> \barre 5 6 r |
+        a8-2 <gis-1 b e> <c e a> \barre 5 6 r |
         r8 e a r  \fine |
       }
     }
