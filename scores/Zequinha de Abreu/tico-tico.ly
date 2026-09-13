@@ -3,7 +3,7 @@
 \header {
   title = "Tico-tico no Fubá"
   composer = "Zequinha de Abreu"
-  tagline = \markup{ \italic \small "Édition du 30/08/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 13/09/2026 par Benoît Pin"}
   %{
   sources :
   Guitar dell’ arte
@@ -19,6 +19,7 @@
 
   \set strokeFingerOrientations = #'(up)
   a'8-4\2 gis-3 g-2 |
+  \set strokeFingerOrientations = #'(down)
   s4. |
 
   %1
@@ -50,7 +51,7 @@
   <a-4 cis-3 e>2 |
 
   %8
-  e'4 \fermata r16 e,-2 \RH 2 dis-1 \RH 3 e \RH 2 |
+  e'4 \fermata r16 e,-2 \RH 3 _( dis-1 ) e \RH 2 |
   <e b'-2 d gis-1 b e>4 \arpeggio r |
 
   \key a \minor
@@ -58,19 +59,19 @@
   \repeat volta 2 {
 
     %9
-    f16-3 \RH 3 e8-2 \RH 2 <a-3 c-1 e-0 \RH 2 \RH 3 \RH 4 >16 ~ <a c e> e-2 \RH 2 dis-1 e |
+    f16-3 \RH 3 _( e8-2 ) <a-3 c-1 e-0 \RH 2 \RH 3 \RH 4 >16 ~ <a c e> e-2 \RH 3 _( dis-1 )  e |
     a4 a |
 
     %10
-    f16-3 e8-2 <gis-1 d'-4 e>16 ~ <gis d' e>16 e-2 dis-1 e |
+    f16-3 \RH 3 _( e8-2 ) <gis-1 d'-4 e>16 ~ <gis d' e>16 e-2 \RH 3 _( dis-1 ) e \RH 2 |
     e4 e |
 
     %11
-    f16-3 e-2 d'-4 _( b-0 ) gis-1 e-2 _( d-0 ) cis-4 |
+    f16-3 \RH 3 _( e-2 ) d'-4 \RH 4 _( b-0 ) gis-1 \RH 3  e-2 \RH 2 _( d-0 ) cis-4 \RH 3 |
     e4 r |
 
     %12
-    c16-3 \RH 1 <e-1 a-2 \RH 2 \RH 3 >8 <e a>16 r16 a-2 _( gis-1 ) g-0 |
+    c16-3 \RH 1 <e-1 a-2 \RH 2 \RH 3 >8 <e a>16 r16 a-2 \RH 3 _( gis-1 ) g-0 \RH 2 |
     r4 a |
 
     %13
@@ -78,18 +79,18 @@
     f4 f |
 
     %14
-    e16-2 a8-3 \once \set fingeringOrientations = #'(up) <e a c-1>16 ~ <e a c> c' _( b-0 ) ais-3 |
+    e16-2 \RH 2 a8-3 \RH 3 \once \set fingeringOrientations = #'(up) <e a c-1>16 ~ <e a c> c' \RH 3 _( b-0 ) ais-3 \RH 2 |
     a4 a |
 
     \alternative {
       \volta 1{
 
         %15
-        b16-0 b,-2 \RH 1 dis-1 \RH 1 _( fis-4 ) a-2 c-1 _( b-0 ) a |
+        b16-0 \RH 3 \set strokeFingerOrientations = #'(down) b,-2 \glide \RH 1 dis-1 \RH 1 _( fis-4 ) \set strokeFingerOrientations = #'(up) a-2 \RH 2 c-1 \RH 3 _( b-0 ) a \RH 2 |
         s2 |
 
         %16
-        gis16-1 <d'-4 e \RH 3 \RH 4 >8 <d e>16 ~ <d e> e,-2 dis-1 e |
+        gis16-1 \RH 2 <d'-4 e \RH 3 \RH 4 >8 <d e>16 ~ <d e> e,-2 \RH 3 _( dis-1 ) e \RH 2 |
         e4 e |
       }
 
@@ -232,7 +233,7 @@
         s2 |
 
         %45
-        a8-2 r r16 b-4\3 \RH 2 a-2 aes-1 |
+        a8-2 r r16 b-4\3 _( \RH 2 a-2 ) aes-1 \RH 3 |
         r8 e a r |
       }
     }
@@ -241,68 +242,68 @@
   \break
 
   %46
-  g16-0 \RH 3 c,-3 \RH 1 e-2 \RH 2 g \RH 3 c-1 \RH 4 e \RH 3 g-1 gis-2 |
+  g16-0 \RH 2 \set strokeFingerOrientations = #'(down) c,-3 \glide \RH 1 e-2 \RH 1 \set strokeFingerOrientations = #'(up) g \RH 2 c-1 \RH 3 e \RH 4 g-1 \RH 2 gis-2 \RH 3 |
   s2 |
 
   %47
-  a8.-3 \RH 4 <c,-2 f-4>16 r b-0 a-2 aes-1 |
+  a8.-3 \RH 4 <c,-2 f-4>16 r b-0 \RH 3 a-2 \RH 2 aes-1 \RH 3 |
   d4 d8 r |
 
   %48
-  g16-0 b,-1 f'-2 g b-0 d \RH 3 \startBarre 3 6 f-4 \RH 2 g \RH 3 |
+  g16-0 \RH 2 b,-1 \RH 1 f'-2 \RH 2 g \RH 3 b-0 \RH 4 d \RH 2 \startBarre 3 6 f-4 \RH 3 g \RH 2 |
   s2 |
 
   %49
-  a8.-4 \RH 4 <c,-2 e-3>16 \stopBarre r c'-4 c c |
+  a8.-4 \RH 4 <c,-2 e-3>16 \stopBarre r c'-4 \RH 2 c \RH 3 c \RH 2 |
   c4 r |
 
   %50
-  c16 \startBarre 5 3 c, e c'\glide-4 b-4 c, fis-3 b |
+  c16 \RH 4 \startBarre 5 3 c, \RH 2 e \RH 3 c'\glide-4 \RH 2 b-4 \RH 4 c, \RH 2 fis-3 \RH 3 b \RH 2 |
   e4-3 ees-2 |
 
   %51
-  a16 <c, f-2>8 <c f>16 \stopBarre r b'-4 b b |
+  a16 \RH 4 <c, f-2>8 <c f>16 \stopBarre r b'-4 \RH 2 b \RH 3 b \RH 2 |
   d4-0 d |
 
   %52
-  b16 g,-0 b b'\glide-4 a-4 g, b a'\glide-4 |
+  b16 \RH 4 g,-0 \RH 2 b \RH 3 b'\glide-4 \RH 2 a-4 \RH 4 g, \RH 2 b \RH 3 a'\glide-4 \RH 2 |
   g4\glide-1_\4 f-1 |
 
   %53
-  g8-4 _( e16 ) c-1 g e c-3 _( a ) |
+  g8-4 \RH 4 _( e16 ) c-1 \RH 3 g \RH 2 e \RH 3 c-3 \RH 2 _( a ) |
   e4-2 r |
 
   %54
-  g8-3 e'16-2 \RH 1 g \RH 2 c-1 \RH 3 e \RH 4 g-1 gis-2 |
+  g8-3 \RH 1 e'16-2 \RH 1 g \RH 2 c-1 \RH 3 e \RH 4 g-1 \RH 2 gis-2 \RH 3 |
   s2 |
 
   %55
-  a8.-3 <c,-4 f-2>16 r b-0 a-2 aes-1 |
+  a8.-3 \RH 4 <c,-4 f-2>16 r b-0 \RH 3 a-2 \RH 2 aes-1 \RH 3 |
   d4 d8 r |
 
   %56
-  g16 b,-1 f'-2 g b-0 d \startBarre 3 6 f-4 g |
+  g16 \RH 2 b,-1 \RH 1 f'-2 \RH 2 g \RH 3 b-0 \RH 4 d \RH 2 \startBarre 3 6 f-4 \RH 3 g \RH 2 |
   s2 |
 
   %57
-  a8.-4 <c,-2 e-3>16 \stopBarre r c-1 b-4 bes-3 |
+  a8.-4 \RH 4 <c,-2 e-3>16 \stopBarre r c-1 \RH 3 b-4 \RH 2 _( bes-3 ) |
   c4 r |
 
   %58
-  a16-2 \startBarre 1 6 _( gis ) a \stopBarre b-0 d-4 _( c-1 ) b c |
+  a16-2 \RH 3 \startBarre 1 6 _( gis ) a \RH 2 \stopBarre b-0 \RH 3 d-4 \RH 2 _( c-1 ) b \RH 3 c \RH 2 |
   f,4 fis-2 |
 
   %59
-  e16 \RH 4 g, c-1 e g-4 \RH 3 _( fis-2 ) f-1 e |
+  e16 \RH 4 g, \RH 2 c-1 \RH 3 e \RH 4 g-4 \RH 2 _( fis-2 ) f-1 _( \RH 3 e ) |
   g8-3 r r4 |
 
   %60
-  d16-4 _( c-1 ) b-0 a-2 g-0 f-4 e-2 d |
+  d16-4 \RH 2 _( c-1 ) b-0 \RH 3 a-2 \RH 2 g-0 \RH 3 f-4 \RH 2 e-2 \RH 3 d \RH 2 |
   r4 g-3 |
 
   %61
-  c8-3 r r16 e-2 dis-1 e |
-  r8 g8-2 c r |
+  c8-3 \RH 1 r r16 e-2 dis-1 e |
+  r8 g8-2 \RH 1 c \RH 1 r |
 
   \break
 
