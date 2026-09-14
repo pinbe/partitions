@@ -174,7 +174,7 @@
     \alternative {
       \volta 1 {
         %34
-        a8 \RH 2 r r16 a'-1 cis-2 e |
+        a8 \RH 2 r r16 a'-1 \RH 2 cis-2 \RH 3 e \RH 2 |
         r8 e \RH 1 a \RH 1 r |
       }
 
