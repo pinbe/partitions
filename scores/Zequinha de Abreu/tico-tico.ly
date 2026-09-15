@@ -3,7 +3,7 @@
 \header {
   title = "Tico-tico no Fubá"
   composer = "Zequinha de Abreu"
-  tagline = \markup{ \italic \small "Édition du 14/09/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 15/09/2026 par Benoît Pin"}
   %{
   sources :
   Guitar dell’ arte
@@ -335,7 +335,7 @@
   s2 |
 
   %57
-  a8.-4 \RH 4 <c,-2 e-3>16 \stopBarre r c-1 \RH 3 b-4 \RH 2 _( bes-3 ) |
+  a8.-4 \RH 4 <c,-2 e-3>16 \stopBarre r c-1 \RH 3 _( b-0 ) bes-3 \RH 2 |
   c4 r |
 
   %58
@@ -400,7 +400,7 @@
         s2 |
 
         %71
-        a8-2 <gis-1 b e> <c e a> \barre 5 6 r |
+        a8\glide-2 <gis-2 b e> <c e a> \barre 5 6 r |
         r8 e a r  \fine |
       }
     }
