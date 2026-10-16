@@ -18,7 +18,7 @@
   license = "Creative Commons Attribution-ShareAlike 3.0"
   %footer = "Mutopia-2019/05/30-1426"
   %copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2019 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
-  tagline = \markup{ \italic \small "Édition du 18/08/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 16/10/2026 par Benoît Pin"}
 }
 
 \paper {
@@ -40,7 +40,6 @@ fingeringVoiceA = {
 fingeringVoiceB = {
   \fingeringTweaks
   %\override Fingering.color = red
-  \override Fingering.extra-offset = #'(-1.5 . -1.5)
   \override Fingering.add-stem-support = ##f
 }
 
@@ -86,22 +85,22 @@ fingeringVoiceD = {
   <g-3 g'-4>4 <a f'-2> cis-3 |
 
   % 5
-  g16-4 [ _( e-1 )  f-2 _( d ) ] a'4. a8 |
+  g16-4 [ _( e-1 )  f-2 _( d ) ] a'4.-1 a8 |
   s2. |
   s2. |
-  <d, a'>4 <d' f>2 |
+  <d, a'>4 <d'-4 f-2>2 |
 
   % 6
-  e'4 e4. e8 |
+  e'4-0 e4. e8 |
   s2. |
   s2. |
-  <d g bes>4 <cis g' a>2 |
+  <d-3 g-4 bes-1>4 \once \set fingeringOrientations = #'(right) <cis-3 g'-4 a-1>2 |
 
   % 7
-  f4 d4. d8\3-4 |
+  f4-1 d4. d8\3-4 |
   s2. |
   s2. |
-  <d a' d>4 <bes f'>2 |
+  <d a'-2 d-4>4 <bes-1 f'-3>2 |
 
   % 8
   bes'4-2 a8.-4 \barre #2 #4  [ g32-4 _( f-1) ] g8. [ e16-0 ] |
@@ -120,46 +119,47 @@ fingeringVoiceD = {
   <bes-1 e-0>4 <a-1 e'-0>2 |
   s2. |
   \stemUp \shiftOn <g-4>8. f16-2
-  \override Fingering.extra-offset = #'()
-  g8.\tweak extra-offset #'(0.5 . 0)-4 bes16-2 a8.-1 g16-0
-  \override Fingering.extra-offset = #'(-1.25 . 1.5) |
+  g8.\tweak extra-offset #'(0.5 . 0)-4 bes16-2 a8.-1 g16-0 |
   d'4-3 cis2-3 |
 
   % 11
-  e'4 <d-4 f,-3>8. <f-1 a,-2>16  <e-0 g,-0>8. <d-2 f,-1>16 |
+  e'4 <f,-3 d'-4>8. <a-2 f'-1>16  <g-0 e'-0>8. <f-1 d'-2>16 |
   s2. |
   f8.\tweak extra-offset #'(0.9 . 0.8)-2 e16-2 s2 |
   <d-4 a'-1>4 bes4..-1 g16-4 |
 
   % 12
-  d4-2 cis4.. \startBarre #2 #4 s16 \stopBarre |
-  \once \override Fingering.extra-offset = #'() <e-1>8. ^[ d16-0 ]
+  d'4-2 cis4.. \startBarre #2 #4 s16 \stopBarre |
+  <e-1>8. ^[
+  \override Fingering.direction = -1
+  d16-0 ]
   \shiftOn
-  e8. ^[ g16-4 ] f8.-2 <e cis' a'\tweak Fingering.extra-offset #'()-4>16 |
+  e8. ^[ g16-4 ] f8.-2 <e cis' a'-4>16 |
   s2.|
   a4 a4.. a16 |
 
   % 13
   <f-1 d-4>8 s8  s2 |
   s2. |
-  \shiftOn d8.\tweak Fingering.extra-offset #'(-2 . 1.5)-0 [ e16 ] f8. [g32 a ]( bes8.) [ a16 ] |
+  <d-0>8. [ e16-2 ] f8.-3 [g32 _( a-2 ) ] bes8.-3 [ a16 ] |
   d,8. s16 s2 |
 
   % 14
-  e4 e2 |
-  \shiftOff bes'4 a2 |
-  \shiftOn g8. f16 g8. bes16 a8. g16 |
-  d'4 cis2 |
+  <bes,-1 e-0>4 <a-1 e'-0>2 |
+  s2. |
+  \stemUp \shiftOn <g-4>8. f16-2
+  g8.\tweak extra-offset #'(0.5 . 0)-4 bes16-2 a8.-1 g16-0 |
+  d'4-3 cis2-3 |
 
   % 15
-  e4  <d f,>8. <f a,>16 <e g,>8. <cis-4 e,-3>16 ] |
-  a4 s2 |
-  f8. [ e16 ] s2 | % f8. [ a16 ] g8. [ e16-3 ] |
-  d4 bes4.. bes16-1 |
+  e'4  <f,-3 d'-4>8. <a-2 f'-1>16 <g-0 e'-0>8. <cis-4 e,-3>16 ] |
+  s2. |
+  f8.\tweak extra-offset #'(0.9 . 0.8)-2 e16-2 s2 |
+  <d-4 a'-1>4 bes4..-1 bes16-1 |
 
   % 16
   <d-4 f,-3>8. <e-4 g,-3>16 d4-4 ( cis8.-2)\trill  d16 |
-  s4 e2-1 |
+  s4 <e-1>2 |
   s2. |
   a8. [ g16-2 ] a2 |
 
@@ -188,31 +188,31 @@ fingeringVoiceD = {
   a8.-2 [ b16-0 ] cis8.-2 [ d16-3 ] e8.-3 [ cis16-2 ] |
 
   % 21
-  f8.-1 [ d32\2-1_( e-3) ] f8.-4 [ g32 a  ] bes8. [ f16 ] |
+  f8.-1 [ d32\2-1_( e-3) ] f8.-4 [ g32-1 _( a-3 )  ] bes8.-4 [ f16-2 ] |
   \stemDown \once \override Fingering.extra-offset = #'() <d-3>4 s4 s8. d16-3 |
   s2. |
   d,4 s2 |
 
   % 22
-  e8. [ bes'16 ] a8. [ g16 ] a8. [ fis16 ] |
+  e8.-2 [ bes'16-4 ] a8.-4 [ g16-1 ] a8. [ fis16-2 ] |
   s2. |
   s2. |
-  cis'4 c r8. c16 |
+  cis'4-3 c-3 r8. c16-1 |
 
   % 23
-  g8. f16 e8. d32 _( cis) d8. <e-0 d-4 gis,-2>16 |
+  g8.-4 f16-1 e8. d32-4 _( cis-2 ) d8. <e-0 d-4 gis,-2>16 |
   s2. |
-  b'4 bes s4  |
+  b'4 bes-3 s4  |
   s2 s8. bes,16-1 |
 
   % 24
-  f8.-1 [ g16-4 ] d8. [ cis32-2_( b-0) ] cis8. [ g16-0 ] |
+  f8.-1 [ g16-4 ] d8.-3 [ cis32-2_( b-0) ] cis8. [ g16-0 ] |
   s4 e2 |
   s2. |
   <a a'-2 d-4>4 a s8. a16 |
 
   % 25
-  f8-1 [ f'\2-4 e-3 d-1 cis-1 d-2 ] |
+  f8-1 [ f'\2-4 e-3 d\glide-1 cis-1 d-2 ] |
   s2. |
   s2. |
   d,4 s2 |
@@ -230,7 +230,7 @@ fingeringVoiceD = {
   d4-4 bes2-1 |
 
   % 28
-  d8-4 [ f,8-1 ] e16-1 _( [ f-2) g-0 bes-3 _( ] a-1) [ g f-3 e-2 ] |
+  d8-4 [ f,8\glide-1 ] e16-1 _( [ f-2) g-0 bes-3 _( ] a-1) [ g f-3 e-2 ] |
   s2. |
   s2. |
   s8 g8-3 a2 |
@@ -336,7 +336,7 @@ fingeringVoiceD = {
   a4 a a |
 
   % 45
-  g'16-4 _( e-0) f-1 cis-2 d-4 _( c-1) bes-3 _( a-2) g-0 f-2 _( e-1) d-0 |
+  g'16-4 _( e-0) f-1 cis-2 d-4 _( c-1) bes-4 _( a-2) g-0 f-2 _( e-1) d-0 |
   s2. |
   s2. |
   d,4 d'4 r4 |
@@ -447,7 +447,7 @@ fingeringVoiceD = {
   a'4  a a |
 
   % 61
-  f8 s8 d8 s8 s4 |
+  f8-1 s8 d8 s8 s4 |
   \stemUp \shiftOn
   \override Fingering.direction = -1
   d16-4 cis-2 _( d) a-2
@@ -478,16 +478,16 @@ fingeringVoiceD = {
   s2. |
 
   % 65
-  d16-4 a32-1 _( g-0) f16-2 e-1 d-0 c-3 bes-1 a-0 bes d'32-3 _( c-1) bes-2 _( a-1 ) g-4 _( f\glide-2 ) ] |
+  d16-4 a32-1 _( g-0) f16-2 e-1 d-0 c-3 bes-1 a-0 bes d'32-4 _( c-1) bes-4 _( a-2 ) g-0 f-4 ] |
   s2. |
   s2. |
   d4 s2 |
 
   % 66
-  e16-2 [ g32-4 _(f-2) e16-1 d-0 ] c-3 [ bes-1 _( a-0) g-4 ] a [ c'32\3-4 _( bes-2) a-1 _( g-0) f-3 _( ees-1)] |
+  e16-1 [ g32-4 _(f-2) e16-1 d-0 ] c-3 [ bes-1 _( a-0) g-4 ] a [ c'32\3-4 _( bes-2) a-1 _( g-0) f-3 _( ees-1)] |
   s2. |
   s2. |
-  c'16-3 s s8 s2  |
+  c'16-2 s s8 s2  |
 
   % 67
   d16-0 [ f32-3 _( ees-1) d16 c ] bes-1 [ d32-4 _( c-2) bes16 a ] g-4 [ bes'32-2 _( a-1) g-4 _( f-2) e-1 _( d) ] |
@@ -1356,13 +1356,13 @@ fingeringVoiceD = {
   % 192
   e8-0 [ \set strokeFingerOrientations = #'(up) d-2 \RH #3 ]  d4. cis8-1 \RH #3 |
   <a-1 fis-3>4 s2 |
-  s4 \override Fingering.extra-offset = #'(-1.25 . 1.5) \stemUp e8-1 [ \set strokeFingerOrientations = #'(down) fis-3 \RH #3 ] \stemNeutral g4-4 \RH #2 |
+  s4 %{\override Fingering.extra-offset = #'(-1.25 . 1.5) %} \stemUp <e-1>8 [ \set strokeFingerOrientations = #'(down) fis-3 \RH #3 ] \stemNeutral g4-4 \RH #2 |
   d4-4 a2  |
 
   % 193
   d4-2 <fis-2 d-3 a-1>4. <fis d a>8 |
   s2. |
-  \shiftOn fis8-3 e-1 \RH #2 s2 |
+  \shiftOn <fis-3>8 e-1 \RH #2 s2 |
   d,4 d'4. d8 |
 
   % 194
