@@ -3,7 +3,7 @@
 \header {
   title = "Oblivion"
   composer = "Ástor Piazzolla"
-  tagline = \markup{ \italic \small "Édition du 21/10/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 26/10/2026 par Benoît Pin"}
   %{
   sources :
   Guitar dell’ arte
@@ -103,7 +103,7 @@
   g1-3 |
 
   %17 4:58
-  bes4 r r8 d-3 ~ \tuplet 3/2 { d g-4 a\glide-1 } |
+  bes4 r r8 d-3 _~ \tuplet 3/2 { d g-4 a\glide-1 } |
   r8 d-2 g\glide-3 a-3 bes4-4 r |
   f2-1 r |
 
@@ -147,6 +147,42 @@
   r2 r8 a d-3 e-0 |
   s1 |
   d,8 f' c'-4\3 d,, f' ~ f r4 |
+
+  %26
+  f2.-4 \startBarre 3 6 d8 e-4 |
+  \override Voice.Rest.staff-position = #-2
+  r4. f,8 bes2 |
+  g,1-3 |
+
+  %27
+  \tuplet 3/2 { f4-4 e g } c,4-4 bes \stopBarre |
+  r4 <g-3 bes>2. |
+  c1 |
+
+  %28
+  a4-2 <a c e-0 ~>2. |
+  s1 |
+  f,2 ~ f8 e' ~ \tuplet 3/2 {e8 d c} |
+
+  %29
+  \tuplet 3/2 {e'4 \startBarre 1 6 d-4 f} bes,4-4 a \stopBarre |
+  r4 <f a>2. |
+  bes1 |
+
+  %30
+  g4 d'2.-4 ~ |
+  b,4\rest g'8 d bes'2-3 |
+  e,2.-1 f8-2 e |
+
+  %31
+  \tuplet 3/2 {d4 cis e} a,4 g |
+  e,4\rest <e g>2. |
+  a1 |
+
+  %32
+  r1 |
+  \stemUp \override Fingering.direction = #UP  f4. g a4-2 |
+  d,4. e-1 f4-3 |
 
 
 }
@@ -196,6 +232,6 @@ zique = {
   }
 
   \midi {
-    \tempo 4.= #66
+    \tempo 4.= #39
   }
 }
