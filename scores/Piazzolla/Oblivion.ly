@@ -3,7 +3,7 @@
 \header {
   title = "Oblivion"
   composer = "Ástor Piazzolla"
-  tagline = \markup{ \italic \small "Édition du 26/10/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 27/10/2026 par Benoît Pin"}
   %{
   sources :
   Guitar dell’ arte
@@ -17,9 +17,12 @@
   \key d \minor
 
   %1
+  \set strokeFingerOrientations = #'(up)
   r1 |
+  \set strokeFingerOrientations = #'(up)
   \override Voice.Rest.staff-position = #-4
-  r8 a, bes-1 d e-2 f g4 |
+  r8 a, bes-1 d e-2 f-3 g4 |
+  \set strokeFingerOrientations = #'(up)
   d,1 |
 
   %2
@@ -29,7 +32,7 @@
 
   %3
   a'1-4 ~ |
-  r8 a, bes-1 d e-1 f g4 |
+  r8 a, bes-1 d e-1 f-2 g4 |
   d1 |
 
   %4
@@ -39,12 +42,12 @@
 
   %5
   f1-1 ~ |
-  r8 a, bes-2 d e f g4 |
+  r8 a, bes-2 d e-2 f-3 g4 |
   d1 |
 
   %6
-  f4. e16 d c4 ~ c8. bes16 \startBarre 3 6 |
-  r8 a, bes-2 d e f g4 |
+  f4. e16-0 d-4 c4-1 ~ c8. bes16 \startBarre 3 6 |
+  r8 a, bes-2 d e-2 f-3 g4 |
   d1 |
 
   %7
@@ -87,103 +90,294 @@
   r8 a, bes d e-2 f-3 g4 |
   d1 |
 
-  %14
+  %15
   d1-4 ~ |
   <ees-1 g-0>4 a-2 fis-4 g |
   a'1 |
 
-  %15
+  %16
   d4. c16-1 bes-3 a4.-2 g8 |
   bes4-2 fis2-4 d4 |
   d,1 |
 
-  %16
+  %17
   bes1-1 ~ |
   r4. d8\glide-4_\5 ees4\glide-4 d-4 |
   g1-3 |
 
-  %17 4:58
+  %18 4:58
   bes4 r r8 d-3 _~ \tuplet 3/2 { d g-4 a\glide-1 } |
   r8 d-2 g\glide-3 a-3 bes4-4 r |
   f2-1 r |
 
-  %18
+  %19
   bes4.-1 a16-1 g bes2 ~ |
   \override Voice.Rest.staff-position = #2
   r8 d8-3 g-4 r r d g4 |
   e'2-2_\5 ~ e4. e8 |
 
-  %19
+  %20
   bes4. a16 g-4 f4-2 e8 a ~ |
   r8 \startBarre 5 4 g, cis2.-2 |
   a,1 |
 
-  %20
+  %21
   a1 |
   r8 e g4-4 g \stopBarre f-2 |
   d,4. a'8 a4 d-0 |
 
-  %21
+  %22
   r4. d,16-4 a d e-0 g8-4 ~ g16 f-1 _( e ) d-3 |
   g,8\rest f-4 a2.-2 |
   c1-3 |
 
-  %22
-  gis,2.-1 ~ gis8 e-4 |
+  %23
+  gis,2.-1 ~ gis8 e\glide-4 |
   b,4.\rest b8-3 c4-4 b |
   e,1-2 |
 
-  %23
+  %24
   a2.-4\4 _~ a8. a16-2\3 |
-  g''8\rest cis,-2 \startBarre 6 3 bes'-3 \stopBarre e, \startBarre 5 3 a2 \stopBarre  |
+  g''8\rest cis, \startBarre 6 3 bes' \stopBarre e, \startBarre 5 3 a2 \stopBarre  |
   a1 |
 
-  %24
+  %25
   d1-3 |
   s1 |
-  d,8 f'-1 a-2 d,, f' bes-4 d,, <f' a> |
+  d,8 f'-2 a-1 d,, f' bes-4 d,, <f' a> |
 
-  %25
+  %26
   r2 r8 a d-3 e-0 |
   s1 |
   d,8 f' c'-4\3 d,, f' ~ f r4 |
 
-  %26
+  %27
   f2.-4 \startBarre 3 6 d8 e-4 |
   \override Voice.Rest.staff-position = #-2
   r4. f,8 bes2 |
   g,1-3 |
 
-  %27
-  \tuplet 3/2 { f4-4 e g } c,4-4 bes \stopBarre |
+  %28
+  \tuplet 3/2 { f4\glide-4 e-4 g } c,4-4 bes \stopBarre |
   r4 <g-3 bes>2. |
   c1 |
 
-  %28
-  a4-2 <a c e-0 ~>2. |
-  s1 |
-  f,2 ~ f8 e' ~ \tuplet 3/2 {e8 d c} |
-
   %29
-  \tuplet 3/2 {e'4 \startBarre 1 6 d-4 f} bes,4-4 a \stopBarre |
-  r4 <f a>2. |
-  bes1 |
+  a4-2 <a-2 c-1 e-0 ~>2. |
+  s1 |
+  f,2-3 ~ f8 e' ~ \tuplet 3/2 {e8 d c} |
 
   %30
+  \tuplet 3/2 {e'4 \startBarre 1 6 d-4 f} bes,4-4 a \stopBarre |
+  r4 <f-3 a-2>2. |
+  bes1 |
+
+  %31
   g4 d'2.-4 ~ |
   b,4\rest g'8 d bes'2-3 |
   e,2.-1 f8-2 e |
 
-  %31
-  \tuplet 3/2 {d4 cis e} a,4 g |
-  e,4\rest <e g>2. |
+  %32
+  \tuplet 3/2 {d4 cis-2 e} a,4 g |
+  e,4\rest <e-1 g-0>2. |
   a1 |
 
-  %32
+  %33
   r1 |
-  \stemUp \override Fingering.direction = #UP  f4. g a4-2 |
+  \stemUp \override Fingering.direction = #UP  f4.-3 g a4-2 |
   d,4. e-1 f4-3 |
 
+  %34
+  c2-1 ~ c8 a d-4 e |
+  \stemDown \override Fingering.direction = #DOWN
+  \override Voice.Rest.staff-position = #-6
+  r8 d, a' d, ~ d r r4 |
+  fis2 ~ fis8 s8 s4 |
+
+  %35
+  f2.-4 \startBarre 3 6 d8 e-4 |
+  \override Voice.Rest.staff-position = #-2
+  r4. f8 bes2 |
+  g1-3 |
+
+  %36
+  \tuplet 3/2 { f4\glide-4 e-4 g } c,4-4 bes \stopBarre |
+  r4 <g-3 bes>2. |
+  c1 |
+
+  %37
+  a4-2 <a-2 c-1 e-0 ~>2. |
+  s1 |
+  f,2-3 ~ f8 e' ~ \tuplet 3/2 {e8 d c} |
+
+  %38
+  \tuplet 3/2 {e'4 \startBarre 1 6 d-4 f} bes,4-4 a \stopBarre |
+  r4 <f-3 a-2>2. |
+  bes1 |
+
+  %39
+  gis1 |
+  b,4.\rest b8 f'4-4 e-4 |
+  e,1 |
+
+  %40
+  a2.-4\4 _~ a8. a16-2\3 |
+  g''8\rest cis,, \startBarre 6 3 bes' \stopBarre e, \startBarre 5 3 a2 \stopBarre  |
+  a1 |
+
+  %41
+  d,1 |
+  b,4.\rest bes8 ~ bes4 a |
+  d,1 |
+
+  %42
+  r2. r8 a'16 a' ~ |
+  c4.-4 bes8 ~ bes4 bes8 s |
+  d2. d8 r |
+
+  %43
+  a1-4 ~ |
+  r8 a, bes-1 d e-1 f-2 g4 |
+  d1 |
+
+  %44
+  a4. g16-4 _( f-2 ) e4 ~ \tuplet 3/2 {e8 e d} |
+  r8 a, bes-1 d e-1 f-2 g4 |
+  d1 |
+
+  %45
+  f1 ~ |
+  r8 a, bes-1 d e-1 f-2 g4 |
+  d1 |
+
+  %46
+  f4. e16-0 d-4 c4-1 ~ c8. bes16 \startBarre 3 6 |
+  r8 a, bes-2 d e-2 f-3 g4 |
+  d1 |
+
+  %47
+  d2. ~ d8 \stopBarre c16-1 bes-4 |
+  r8 f e-4 f bes f e4 |
+  g2-3 \once \shiftOn c2 |
+
+  %48
+  c4.-1 d4-4 c-2 bes16-4 _( a-2 ) |
+  r8 e-2 d e ~ \once \stemUp e e8\rest b'4\rest |
+  f,2-3 bes4-1 d |
+
+  %49
+  bes4.-4 a16-1 _( g ) f4.-1 \RH 2 e16-1 \RH 2 a-2 ~ \RH 3 |
+  \override Voice.Rest.staff-position = #-4
+  r8 e,-2 d4 c8\rest b'4.-0 \RH 4 |
+  e,4.-1 r8 gis4.-4 r8 |
+
+  %50
+  a2. r8 \tuplet 3/2 {a16 \barre 2 6 _( bes a )} |
+  s1 |
+  a8 d e-1 cis-3 a g-4 f-2 e |
+
+  %51
+  a'1-4 ~ |
+  r8 a, bes-1 d e-1 f-2 g4 |
+  d1 |
+
+  %52
+  a4 ~ a16 e g-4 _( f-1 ) e4 ~ e8. d16-4 |
+  r8 a, bes-1 d e-2 f-3 g4 |
+  d1 |
+
+  %53
+  f1-1 ~ |
+  r8 a, bes-2 d e-2 f-3 g4 |
+  d1 |
+
+  %54
+  f4. e16-0 d-4 c4-1 ~ c8. bes16-3 |
+  r8 a, bes d e-2 f-3 g4 |
+  d1 |
+
+  %55
+  d1-4 ~ |
+  <ees-1 g-0>4 a-2 fis-4 g |
+  a'1 |
+
+  %56
+  d4. \startBarre 3 4  d16 f-4 ees-3 _( d ) c-4 bes ~ bes8 \stopBarre a |
+  \override Voice.Rest.staff-position = #-5
+  bes4 f2-2 r4 |
+  d,2. d4 |
+
+  %57
+  bes1-1 ~ |
+  r4. d8\glide-4_\5 ees4\glide-4 d-4 |
+  g1-3 |
+
+  %58
+  bes4 r r8 d-3 _~ \tuplet 3/2 { d g-4 a\glide-1 } |
+  r8 d-2 g\glide-3 a-3 bes4-4 r |
+  f2-1 r |
+
+  %59
+  bes4.-1 a16-1 g bes2 ~ |
+  \override Voice.Rest.staff-position = #2
+  r8 d8-3 g-4 r r d g4 |
+  e'2-2_\5 ~ e4. e8 |
+
+  %60
+  bes8 a ~ a g-4 f4.-3 e16 a ~ |
+  r8 \startBarre 5 4 g, cis2.-2 |
+  a,1 |
+
+  %61
+  a1 |
+  r8 e g4-4 g \stopBarre f-2 |
+  d,4. a'8 a4 d-0 |
+
+  %62
+  r4. g16-4 _( f ) e4. d8-4 |
+  \override Voice.Rest.staff-position = #-2
+  r8 f, a2. |
+  c1-3 |
+
+  %63
+  gis,2. ~ gis8 f |
+  \override Voice.Rest.staff-position = #-6
+  r4. b,8 c4 b |
+  g1 |
+
+  %64
+  a2.-4\4 a4-2\3 |
+  \override Voice.Rest.staff-position = #-6
+  d8\rest cis' \startBarre 6 3 bes' \stopBarre e, \startBarre 5 3 a4 r4 \stopBarre  |
+  a1 |
+
+  %65
+  d1-4 ~ |
+  r8 a,, bes-1 d e-2 f-3 g4 |
+  d,1 |
+
+  %66
+  d1 |
+  r8 a, bes-2 d e-2 f-3 g4 |
+  d1 |
+
+  %67
+  r1 |
+  r8 a, bes-1 d e-2 f-3 g4 |
+  d1 |
+
+  %68
+  d,1 |
+  a,8\rest a bes-2 d e-2 f-3 g4 |
+  d1 |
+
+  %69
+  s1 |
+  s1 |
+  < d f' a d>1 \fine |
+
+
+  %}
 
 }
 
