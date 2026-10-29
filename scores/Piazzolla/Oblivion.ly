@@ -3,7 +3,7 @@
 \header {
   title = "Oblivion"
   composer = "Ástor Piazzolla"
-  tagline = \markup{ \italic \small "Édition du 27/10/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 29/10/2026 par Benoît Pin"}
   %{
   sources :
   Guitar dell’ arte
@@ -20,6 +20,7 @@
   \set strokeFingerOrientations = #'(up)
   r1 |
   \set strokeFingerOrientations = #'(up)
+  \override Fingering.direction = #UP
   \override Voice.Rest.staff-position = #-4
   r8 a, bes-1 d e-2 f-3 g4 |
   \set strokeFingerOrientations = #'(up)
@@ -27,7 +28,7 @@
 
   %2
   r1 |
-  r8 a, bes-1 d e-2 f g4 |
+  r8 a, bes-1 d e-2 f-3 g4 |
   d1 |
 
   %3
@@ -36,8 +37,8 @@
   d1 |
 
   %4
-  a4. g16-4 _( f-2 ) e4-0 ~ e8. d16-4 |
-  r8 a, bes d e-3 f-4 g4 |
+  a4. g16-4 _( f-1 ) e4-0 ~ e8. d16-4 |
+  r8 a, bes d e-2 f-3 g4 |
   d1 |
 
   %5
@@ -47,12 +48,13 @@
 
   %6
   f4. e16-0 d-4 c4-1 ~ c8. bes16 \startBarre 3 6 |
+  \override Fingering.direction = #DOWN
   r8 a, bes-2 d e-2 f-3 g4 |
   d1 |
 
   %7
   d2. ~ d8 \stopBarre c16-1 bes-4 |
-  r8 f e-4 f bes f e r |
+  r8 f e-4 f bes f e-2 r |
   g2-3 \once \shiftOn c4 r |
 
   %8
@@ -132,19 +134,20 @@
   c1-3 |
 
   %23
-  gis,2.-1 ~ gis8 e\glide-4 |
+  gis,2.-1 ~ gis8 e-4 |
   b,4.\rest b8-3 c4-4 b |
   e,1-2 |
 
   %24
-  a2.-4\4 _~ a8. a16-2\3 |
+  a2.-3\4 _~ a8. a16-1\3 |
   g''8\rest cis, \startBarre 6 3 bes' \stopBarre e, \startBarre 5 3 a2 \stopBarre  |
   a1 |
 
   %25
-  d1-3 |
+  d1-4 \RH 4 |
   s1 |
-  d,8 f'-2 a-1 d,, f' bes-4 d,, <f' a> |
+  \override Fingering.direction = #UP
+  d,8 f'-2 \RH 2 a-1 \RH 3 d,, f' bes-3 d,, <f' a> |
 
   %26
   r2 r8 a d-3 e-0 |
@@ -155,6 +158,7 @@
   f2.-4 \startBarre 3 6 d8 e-4 |
   \override Voice.Rest.staff-position = #-2
   r4. f,8 bes2 |
+  \override Fingering.direction = #DOWN
   g,1-3 |
 
   %28
@@ -192,7 +196,7 @@
   \stemDown \override Fingering.direction = #DOWN
   \override Voice.Rest.staff-position = #-6
   r8 d, a' d, ~ d r r4 |
-  fis2 ~ fis8 s8 s4 |
+  fis2-4 ~ fis8 s8 s4 |
 
   %35
   f2.-4 \startBarre 3 6 d8 e-4 |
@@ -216,38 +220,38 @@
   bes1 |
 
   %39
-  gis1 |
-  b,4.\rest b8 f'4-4 e-4 |
-  e,1 |
+  gis1-1 |
+  b,4.\rest b8-3 f'4-4 e-4 |
+  e,1-2 |
 
   %40
-  a2.-4\4 _~ a8. a16-2\3 |
+  a2.-3\4 _~ a8. a16-2\3 |
   g''8\rest cis,, \startBarre 6 3 bes' \stopBarre e, \startBarre 5 3 a2 \stopBarre  |
   a1 |
 
   %41
   d,1 |
-  b,4.\rest bes8 ~ bes4 a |
+  b,4.\rest bes4.-2 a4-1 |
   d,1 |
 
   %42
-  r2. r8 a'16 a' ~ |
-  c4.-4 bes8 ~ bes4 bes8 s |
+  r2. r8 a'16-1 a'-4 ~ |
+  c4.-4 \once \set fingeringOrientations = #'(up) <bes-2 ~ d,>8 <bes d,>4 bes8 s |
   d2. d8 r |
 
   %43
-  a1-4 ~ |
+  a1 ~ |
   r8 a, bes-1 d e-1 f-2 g4 |
   d1 |
 
   %44
-  a4. g16-4 _( f-2 ) e4 ~ \tuplet 3/2 {e8 e d} |
-  r8 a, bes-1 d e-1 f-2 g4 |
+  a4. g16-4 _( f-1 ) e4 ~ \tuplet 3/2 {e8 e d-4} |
+  r8 a, bes-1 d e-2 f-3 g4 |
   d1 |
 
   %45
-  f1 ~ |
-  r8 a, bes-1 d e-1 f-2 g4 |
+  f1-1 ~ |
+  r8 a, bes-2 d e-2 f-3 g4 |
   d1 |
 
   %46
@@ -257,7 +261,7 @@
 
   %47
   d2. ~ d8 \stopBarre c16-1 bes-4 |
-  r8 f e-4 f bes f e4 |
+  r8 f e-4 f bes f e4-2 |
   g2-3 \once \shiftOn c2 |
 
   %48
@@ -302,9 +306,9 @@
   a'1 |
 
   %56
-  d4. \startBarre 3 4  d16 f-4 ees-3 _( d ) c-4 bes ~ bes8 \stopBarre a |
+  d4. \startBarre 3 3  d16 f-4 ees-3 _( d ) c-4 bes ~ bes8 \stopBarre a\glide-1 |
   \override Voice.Rest.staff-position = #-5
-  bes4 f2-2 r4 |
+  bes4 fis2-2 r4 |
   d,2. d4 |
 
   %57
@@ -334,19 +338,19 @@
   d,4. a'8 a4 d-0 |
 
   %62
-  r4. g16-4 _( f ) e4. d8-4 |
+  r4. g16-4 _( f-1 ) e4. d8-4 |
   \override Voice.Rest.staff-position = #-2
-  r8 f, a2. |
+  r8 f,-4 a2.-2 |
   c1-3 |
 
   %63
-  gis,2. ~ gis8 f |
+  gis,2.-1 ~ gis8 f-4 |
   \override Voice.Rest.staff-position = #-6
-  r4. b,8 c4 b |
-  g1 |
+  r4. b,8-3 c4-4 b |
+  g1-2 |
 
   %64
-  a2.-4\4 a4-2\3 |
+  a2.-3\4 a4-2\3 |
   \override Voice.Rest.staff-position = #-6
   d8\rest cis' \startBarre 6 3 bes' \stopBarre e, \startBarre 5 3 a4 r4 \stopBarre  |
   a1 |
@@ -368,13 +372,13 @@
 
   %68
   d,1 |
-  a,8\rest a bes-2 d e-2 f-3 g4 |
+  a,8\rest a bes-1 d e-2 f-3 g4 |
   d1 |
 
   %69
   s1 |
   s1 |
-  < d f' a d>1 \fine |
+  < d f'-3 a-2 d-4>1 \fine |
 
 
   %}
