@@ -3,7 +3,7 @@
 \header {
   title = "Oblivion"
   composer = "Ástor Piazzolla"
-  tagline = \markup{ \italic \small "Édition du 29/10/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 01/11/2026 par Benoît Pin"}
   %{
   sources :
   Guitar dell’ arte
@@ -19,10 +19,13 @@
   %1
   \set strokeFingerOrientations = #'(up)
   r1 |
+
   \set strokeFingerOrientations = #'(up)
   \override Fingering.direction = #UP
   \override Voice.Rest.staff-position = #-4
+  \revert StrokeFinger.staff-padding
   r8 a, bes-1 d e-2 f-3 g4 |
+
   \set strokeFingerOrientations = #'(up)
   d,1 |
 
@@ -47,13 +50,13 @@
   d1 |
 
   %6
-  f4. e16-0 d-4 c4-1 ~ c8. bes16 \startBarre 3 6 |
+  f4. e16-0 d-4 c4-1 ~ c8. bes16 |
   \override Fingering.direction = #DOWN
   r8 a, bes-2 d e-2 f-3 g4 |
   d1 |
 
   %7
-  d2. ~ d8 \stopBarre c16-1 bes-4 |
+  d2. ~ d8 c16-1 bes-4 |
   r8 f e-4 f bes f e-2 r |
   g2-3 \once \shiftOn c4 r |
 
@@ -225,13 +228,13 @@
   e,1-2 |
 
   %40
-  a2.-3\4 _~ a8. a16-2\3 |
+  a2.-3\4 _~ a8. a16-1\3 |
   g''8\rest cis,, \startBarre 6 3 bes' \stopBarre e, \startBarre 5 3 a2 \stopBarre  |
   a1 |
 
   %41
   d,1 |
-  b,4.\rest bes4.-2 a4-1 |
+  b,4.\rest bes8-2 ~ bes4 a-1 |
   d,1 |
 
   %42
@@ -255,12 +258,12 @@
   d1 |
 
   %46
-  f4. e16-0 d-4 c4-1 ~ c8. bes16 \startBarre 3 6 |
+  f4. e16-0 d-4 c4-1 ~ c8. bes16 |
   r8 a, bes-2 d e-2 f-3 g4 |
   d1 |
 
   %47
-  d2. ~ d8 \stopBarre c16-1 bes-4 |
+  d2. ~ d8 c16-1 bes-4 |
   r8 f e-4 f bes f e4-2 |
   g2-3 \once \shiftOn c2 |
 
@@ -385,6 +388,27 @@
 
 }
 
+additionals = {
+  %{ Barre chords whose starts and stops
+     are not attached to the same voice.  %}
+  s1*5 |
+
+  %6
+  \barNumberCheck 6
+  s2. s8. s16 \startBarre 3 6 |
+  %7
+  s2 s8 s8 \stopBarre s4 |
+
+  s1*38 |
+
+  %46
+  \barNumberCheck 46
+  s2. s8. s16 \startBarre 3 6 |
+  %47
+  s2 s8 s8 \stopBarre s4 |
+
+
+}
 
 zique = {
   \clef "treble_8"
@@ -407,6 +431,9 @@ zique = {
       \voiceFour % bass
       \merges
       \voiceC
+    } \\
+    {
+      \additionals
     }
   >>
 }
