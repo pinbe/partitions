@@ -350,7 +350,7 @@
   gis,2.-1 ~ gis8 f-4 |
   \override Voice.Rest.staff-position = #-6
   r4. b,8-3 c4-4 b |
-  g1-2 |
+  e,1-2 |
 
   %64
   a2.-3\4 a4-2\3 |
