@@ -18,15 +18,18 @@
 
   %1
   \set strokeFingerOrientations = #'(up)
+  \override TupletBracket.bracket-visibility = ##t
   r1 |
 
   \set strokeFingerOrientations = #'(up)
   \override Fingering.direction = #UP
   \override Voice.Rest.staff-position = #-4
   \revert StrokeFinger.staff-padding
+  \override TupletBracket.bracket-visibility = ##t
   r8 a, bes-1 d e-2 f-3 g4 |
 
   \set strokeFingerOrientations = #'(up)
+  \override TupletBracket.bracket-visibility = ##t
   d,1 |
 
   %2
@@ -111,7 +114,6 @@
   g1-3 |
 
   %18 4:58
-  \override TupletBracket.bracket-visibility = ##t
   bes4 r r8 d-3 _~ \tuplet 3/2 { d g-4 a\glide-1 } |
   r8 d-2 g\glide-3 a-3 bes4-4 r |
   f2-1 r |
