@@ -3,7 +3,7 @@
 \header {
   title = "Oblivion"
   composer = "Ástor Piazzolla"
-  tagline = \markup{ \italic \small "Édition du 01/11/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 03/11/2026 par Benoît Pin"}
   %{
   sources :
   Guitar dell’ arte
@@ -111,6 +111,7 @@
   g1-3 |
 
   %18 4:58
+  \override TupletBracket.bracket-visibility = ##t
   bes4 r r8 d-3 _~ \tuplet 3/2 { d g-4 a\glide-1 } |
   r8 d-2 g\glide-3 a-3 bes4-4 r |
   f2-1 r |
@@ -122,7 +123,7 @@
   e'2-2_\5 ~ e4. e8 |
 
   %20
-  bes4. a16 g-4 f4-2 e8 a ~ |
+  bes4. a16 g-4 f4-3 e8 a ~ |
   r8 \startBarre 5 4 g, cis2.-2 |
   a,1 |
 
@@ -172,7 +173,8 @@
   %29
   a4-2 <a-2 c-1 e-0 ~>2. |
   s1 |
-  f,2-3 ~ f8 e' ~ \tuplet 3/2 {e8 d c} |
+  \override Fingering.direction = #UP
+  f,2-3 ~ f8 e'-2 ~ \tuplet 3/2 {e8 d c-3} |
 
   %30
   \tuplet 3/2 {e'4 \startBarre 1 6 d-4 f} bes,4-4 a \stopBarre |
@@ -182,10 +184,11 @@
   %31
   g4 d'2.-4 ~ |
   b,4\rest g'8 d bes'2-3 |
+  \override Fingering.direction = #DOWN
   e,2.-1 f8-2 e |
 
   %32
-  \tuplet 3/2 {d4 cis-2 e} a,4 g |
+  \tuplet 3/2 {d4 cis-2 e} a,4-2 g |
   e,4\rest <e-1 g-0>2. |
   a1 |
 
@@ -195,10 +198,10 @@
   d,4. e-1 f4-3 |
 
   %34
-  c2-1 ~ c8 a d-4 e |
+  c2-1 \RH 4 ~ c8 a d-4 e |
   \stemDown \override Fingering.direction = #DOWN
   \override Voice.Rest.staff-position = #-6
-  r8 d, a' d, ~ d r r4 |
+  r8 d, \RH 2 a'-2 \RH 3 d, ~ d r r4 |
   fis2-4 ~ fis8 s8 s4 |
 
   %35
@@ -215,7 +218,8 @@
   %37
   a4-2 <a-2 c-1 e-0 ~>2. |
   s1 |
-  f,2-3 ~ f8 e' ~ \tuplet 3/2 {e8 d c} |
+  \override Fingering.direction = #UP
+  f,2-3 ~ f8 e'-2 ~ \tuplet 3/2 {e8 d c-3} |
 
   %38
   \tuplet 3/2 {e'4 \startBarre 1 6 d-4 f} bes,4-4 a \stopBarre |
@@ -225,6 +229,7 @@
   %39
   gis1-1 |
   b,4.\rest b8-3 f'4-4 e-4 |
+  \override Fingering.direction = #DOWN
   e,1-2 |
 
   %40
@@ -279,7 +284,7 @@
   e,4.-1 r8 gis4.-4 r8 |
 
   %50
-  a2. r8 \tuplet 3/2 {a16 \barre 2 6 _( bes a )} |
+  a2. r8 \tuplet 3/2 {a16 \barre 2 6 _( bes-2 a )} |
   s1 |
   a8 d e-1 cis-3 a g-4 f-2 e |
 
@@ -355,7 +360,7 @@
   %64
   a2.-3\4 a4-2\3 |
   \override Voice.Rest.staff-position = #-6
-  d8\rest cis' \startBarre 6 3 bes' \stopBarre e, \startBarre 5 3 a4 r4 \stopBarre  |
+  d8\rest cis' \startBarre 6 3 bes' \stopBarre e, \startBarre 5 3 a4 \stopBarre r4  |
   a1 |
 
   %65
@@ -365,7 +370,7 @@
 
   %66
   d1 |
-  r8 a, bes-2 d e-2 f-3 g4 |
+  r8 a, bes-1 d e-2 f-3 g4 |
   d1 |
 
   %67
