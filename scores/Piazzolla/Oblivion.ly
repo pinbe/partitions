@@ -3,7 +3,7 @@
 \header {
   title = "Oblivion"
   composer = "Ástor Piazzolla"
-  tagline = \markup{ \italic \small "Édition du 03/11/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 05/11/2026 par Benoît Pin"}
   %{
   sources :
   Guitar dell’ arte
