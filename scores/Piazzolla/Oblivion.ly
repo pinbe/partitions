@@ -175,8 +175,7 @@
   %29
   a4-2 <a-2 c-1 e-0 ~>2. |
   s1 |
-  \override Fingering.direction = #UP
-  f,2-3 ~ f8 e'-2 ~ \tuplet 3/2 {e8 d c-3} |
+  f,2-3 ~ f8 \override Fingering.direction = #UP e'-2 ~ \tuplet 3/2 {e8 d c-3} |
 
   %30
   \tuplet 3/2 {e'4 \startBarre 1 6 d-4 f} bes,4-4 a \stopBarre |
@@ -220,8 +219,7 @@
   %37
   a4-2 <a-2 c-1 e-0 ~>2. |
   s1 |
-  \override Fingering.direction = #UP
-  f,2-3 ~ f8 e'-2 ~ \tuplet 3/2 {e8 d c-3} |
+  f,2-3 ~ f8 \override Fingering.direction = #UP e'-2 ~ \tuplet 3/2 {e8 d c-3} |
 
   %38
   \tuplet 3/2 {e'4 \startBarre 1 6 d-4 f} bes,4-4 a \stopBarre |
