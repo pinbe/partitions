@@ -3,7 +3,7 @@
 \header {
   title = "Oblivion"
   composer = "Ástor Piazzolla"
-  tagline = \markup{ \italic \small "Édition du 05/11/2026 par Benoît Pin"}
+  tagline = \markup{ \italic \small "Édition du 12/11/2026 par Benoît Pin"}
   %{
   sources :
   Guitar dell’ arte
@@ -189,8 +189,8 @@
   e,2.-1 f8-2 e |
 
   %32
-  \tuplet 3/2 {d4 cis-2 e} a,4-2 g |
-  e,4\rest <e-1 g-0>2. |
+  \tuplet 3/2 {d4 \once \override StrokeFinger.extra-offset = #'(0 . -0.5) cis-2  \RH 4 e} a,4-2 g |
+  e,4\rest \once \set strokeFingerOrientations = #'(down) <e-1 \RH 2 g-0 \RH 3 >2. |
   a1 |
 
   %33
